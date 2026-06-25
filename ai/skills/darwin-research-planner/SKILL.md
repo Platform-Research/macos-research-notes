@@ -9,7 +9,7 @@ Use this skill to prevent scope drift.
 
 ## Workflow
 
-1. Read `FOCUS.md`, `planning/ROADMAP.md`, and `docs/guidelines/scope-boundaries.md`.
+1. Read `FOCUS.md`, `planning/ROADMAP.md`, `docs/guidelines/scope-boundaries.md`, and `docs/guidelines/workflow-rules.md`.
 2. Restate the user's idea as one research question.
 3. Identify the smallest useful target: concept, artifact, version pair, log, class, kext, framework, or command output.
 4. Choose one output path under `knowledge/`, `docs/`, `experiments/`, or `planning/`.
@@ -21,6 +21,7 @@ Use this skill to prevent scope drift.
 Return:
 
 - Research question.
+- Branch name.
 - Target artifact or concept.
 - Output file.
 - Evidence needed.

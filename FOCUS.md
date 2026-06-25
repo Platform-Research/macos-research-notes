@@ -28,6 +28,7 @@ Create a serious Apple platform internals research lab: knowledge base, release-
 Before working, answer:
 
 - What is the single question for this session?
+- What branch am I working on?
 - Which folder will receive the result?
 - What would count as "done" in under two hours?
 - What evidence will support the conclusion?
@@ -42,3 +43,7 @@ After working, record:
 ## Parking Lot
 
 Use [planning/PARKING_LOT.md](planning/PARKING_LOT.md) for tempting ideas that are not today's work.
+
+## Workflow Rules
+
+Use [docs/guidelines/workflow-rules.md](docs/guidelines/workflow-rules.md) before creating new branches, folders, commits, experiments, or research outputs.
