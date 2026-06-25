@@ -4,18 +4,18 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`knowledge/iokit/IORegistry.md` was created in the `knowledge/iokit-ioregistry` cycle.
+`knowledge/iokit/IOPCIDevice.md` was created in the `knowledge/iokit-iopcidevice` cycle.
 
 ## Current Recommendation
 
-Continue the IOKit foundation track with PCI device matching.
+Continue the IOKit foundation track with user clients.
 
-Reason: `IOPCIDevice` is the concrete provider class that makes device-id, vendor-id, PCI matching, and many unsupported-hardware questions less abstract.
+Reason: `IOUserClient` is the bridge between user-space processes and kernel services, which matters for safe tooling, DriverKit boundaries, and understanding what "opening" a service means.
 
 ## Next Branch
 
 ```text
-knowledge/iokit-iopcidevice
+knowledge/iokit-iouserclient
 ```
 
 ## Session Goal
@@ -23,44 +23,44 @@ knowledge/iokit-iopcidevice
 Create the next atomic knowledge note:
 
 ```text
-knowledge/iokit/IOPCIDevice.md
+knowledge/iokit/IOUserClient.md
 ```
 
 ## Research Question
 
-How does `IOPCIDevice` represent PCI providers and participate in driver matching?
+How does `IOUserClient` expose controlled user-space access to kernel services?
 
 ## Target Output
 
 A small note using `docs/guidelines/note-template.md` that captures:
 
-- What `IOPCIDevice` is.
-- Which PCI identity and matching properties matter.
-- How `IOProviderClass`, `IOPCIMatch`, vendor ID, and device ID relate.
-- How a read-only `ioreg` query can inspect PCI services.
+- What `IOUserClient` is.
+- How `IOServiceOpen()` relates to `newUserClient`.
+- What should be considered risky about user clients.
+- How user clients appear in headers and runtime registry data.
 - What remains unknown or needs artifact-backed confirmation.
 
 ## Evidence To Collect
 
 - Apple documentation or headers when available.
-- Local SDK/header references for `IOPCIDevice`.
-- Apple matching documentation for PCI personalities.
-- Read-only `ioreg` output for `IOPCIDevice`.
-- Links back to `knowledge/iokit/IOService.md` and `knowledge/iokit/IORegistry.md`.
+- Local SDK/header references for `IOUserClient`.
+- `IOKitLib.h` references for `IOServiceOpen`.
+- Read-only `ioreg` output for user-client-related classes if useful.
+- Links back to `knowledge/iokit/IOService.md`.
 
 ## Definition Of Done
 
 Done means:
 
-- `knowledge/iokit/IOPCIDevice.md` exists.
+- `knowledge/iokit/IOUserClient.md` exists.
 - Observations, inferences, unknowns, and sources are separated.
 - No unsupported driver claims are made.
-- Follow-up experiments are listed for PCI inventory and kext personality extraction.
+- Follow-up experiments are listed for safe user-client inventory.
 
 ## Follow-Up Queue
 
-1. `knowledge/iokit/IOUserClient.md`
-2. `knowledge/iokit/kext-personalities.md`
-3. `experiments/iokit-registry-dump/`
-4. `experiments/pci-device-inventory/`
+1. `knowledge/iokit/kext-personalities.md`
+2. `experiments/iokit-registry-dump/`
+3. `experiments/pci-device-inventory/`
+4. `experiments/user-client-inventory/`
 5. `tools/ioreg-inventory/`
