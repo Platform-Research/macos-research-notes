@@ -5,7 +5,7 @@ This track documents IOKit concepts needed to understand macOS drivers, device m
 ## Start Here
 
 1. `IOService.md` - created.
-2. `IORegistry.md`
+2. `IORegistry.md` - created.
 3. `IOPCIDevice.md`
 4. `IOUserClient.md`
 5. `kext-personalities.md`
