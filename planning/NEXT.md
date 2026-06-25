@@ -2,59 +2,64 @@
 
 Use this file to choose the next focused session.
 
+## Last Completed
+
+`knowledge/iokit/IOService.md` was created in the `knowledge/iokit-ioservice` cycle.
+
 ## Current Recommendation
 
-Start with the IOKit foundation track.
+Continue the IOKit foundation track with the I/O Registry.
 
-Reason: nearly every macOS driver or device-support question eventually passes through IOKit concepts such as `IOService`, matching, providers, clients, registry entries, personalities, and kext metadata. This is useful before any hardware-specific ambition.
+Reason: `IOService` only becomes useful when understood as part of the provider/client graph in the I/O Registry. The next note should explain how services are arranged, found, and related.
 
 ## Next Branch
 
 ```text
-knowledge/iokit-ioservice
+knowledge/iokit-ioregistry
 ```
 
 ## Session Goal
 
-Create the first atomic knowledge note:
+Create the next atomic knowledge note:
 
 ```text
-knowledge/iokit/IOService.md
+knowledge/iokit/IORegistry.md
 ```
 
 ## Research Question
 
-What role does `IOService` play in macOS driver matching, lifecycle, and service registration?
+How does the I/O Registry represent provider/client relationships among active `IOService` objects?
 
 ## Target Output
 
 A small note using `docs/guidelines/note-template.md` that captures:
 
-- What `IOService` is.
-- Why it matters for kexts and drivers.
-- How it relates to matching and `registerService()`.
+- What the I/O Registry is.
+- What planes are, especially the service plane.
+- How providers and clients appear in registry relationships.
+- How user-space tools can inspect the registry safely.
 - What remains unknown or needs artifact-backed confirmation.
 
 ## Evidence To Collect
 
 - Apple documentation or headers when available.
-- Local SDK/header references if present.
-- Notes from IOKit examples.
-- Future artifact references from kext metadata or Ghidra analysis.
+- Local SDK/header references for `IORegistryEntry`.
+- `ioreg` command output from safe read-only inspection.
+- Links back to `knowledge/iokit/IOService.md`.
 
 ## Definition Of Done
 
 Done means:
 
-- `knowledge/iokit/IOService.md` exists.
+- `knowledge/iokit/IORegistry.md` exists.
 - Observations, inferences, unknowns, and sources are separated.
 - No unsupported driver claims are made.
-- Follow-up notes are listed for `IORegistry`, `IOPCIDevice`, `IOUserClient`, and kext personalities.
+- Follow-up experiments are listed for read-only `ioreg` inspection.
 
 ## Follow-Up Queue
 
-1. `knowledge/iokit/IORegistry.md`
-2. `knowledge/iokit/IOPCIDevice.md`
-3. `knowledge/iokit/IOUserClient.md`
-4. `knowledge/iokit/kext-personalities.md`
-5. `experiments/iokit-registry-dump/`
+1. `knowledge/iokit/IOPCIDevice.md`
+2. `knowledge/iokit/IOUserClient.md`
+3. `knowledge/iokit/kext-personalities.md`
+4. `experiments/iokit-registry-dump/`
+5. `tools/ioreg-inventory/`
