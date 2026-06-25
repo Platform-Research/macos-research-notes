@@ -1,0 +1,4 @@
+interface:
+  display_name: "macOS Release Diff"
+  short_description: "Compare macOS release artifacts"
+  default_prompt: "Use $macos-release-diff to compare two macOS releases and summarize changed internals."

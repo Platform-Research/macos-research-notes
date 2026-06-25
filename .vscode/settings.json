@@ -1,0 +1,13 @@
+{
+  "files.exclude": {
+    "**/.DS_Store": true
+  },
+  "search.exclude": {
+    "downloads/**": true,
+    "macos/**/raw/**": true
+  },
+  "files.associations": {
+    "*.ioreg": "xml",
+    "*.plist": "xml"
+  }
+}

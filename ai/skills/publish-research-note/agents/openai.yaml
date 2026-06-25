@@ -1,0 +1,4 @@
+interface:
+  display_name: "Publish Research Note"
+  short_description: "Turn findings into research notes"
+  default_prompt: "Use $publish-research-note to convert raw reverse-engineering findings into a Darwin Collective note."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "macOS Artifact Study"
+  short_description: "Study macOS binaries and internals"
+  default_prompt: "Use $macos-artifact-study to analyze a macOS kernel, kext, framework, or dyld artifact."
