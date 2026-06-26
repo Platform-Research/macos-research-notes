@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Darwin-Collective/darwin-collective/datasets/schemas/release-diff.schema.json",
+  "title": "Darwin Collective Release Diff",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "source",
+    "records"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.1.0"
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "from_release",
+        "to_release",
+        "policy"
+      ],
+      "properties": {
+        "from_release": {
+          "type": "string"
+        },
+        "to_release": {
+          "type": "string"
+        },
+        "policy": {
+          "type": "string",
+          "examples": [
+            "metadata-only",
+            "no-raw-artifacts"
+          ]
+        },
+        "provenance": {
+          "type": "string"
+        }
+      }
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "record_kind",
+          "state",
+          "subject",
+          "evidence"
+        ],
+        "properties": {
+          "record_kind": {
+            "const": "release_diff"
+          },
+          "state": {
+            "enum": [
+              "added",
+              "removed",
+              "changed",
+              "unchanged",
+              "unresolved"
+            ]
+          },
+          "subject": {
+            "type": "string"
+          },
+          "field": {
+            "type": "string"
+          },
+          "from_value": {
+            "type": [
+              "string",
+              "number",
+              "integer",
+              "boolean",
+              "null"
+            ]
+          },
+          "to_value": {
+            "type": [
+              "string",
+              "number",
+              "integer",
+              "boolean",
+              "null"
+            ]
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
