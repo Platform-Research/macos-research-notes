@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.1.0",
+  "source": {
+    "registry_inventory": {
+      "schema": "datasets/schemas/ioreg-inventory.schema.json",
+      "path": "datasets/examples/schema-validation/ioreg-user-client-key-counts.example.json"
+    },
+    "personality_inventory": {
+      "schema": "datasets/schemas/kext-personality.schema.json",
+      "path": "datasets/examples/schema-validation/kext-personality.example.json"
+    },
+    "policy": "candidate-only"
+  },
+  "edges": [
+    {
+      "record_kind": "registry_personality_join",
+      "state": "unresolved",
+      "registry_ref": {
+        "schema": "datasets/schemas/ioreg-inventory.schema.json",
+        "record_kind": "user_client_key_count",
+        "record_id": "example-user-client-key-count"
+      },
+      "personality_ref": {
+        "schema": "datasets/schemas/kext-personality.schema.json",
+        "record_kind": "kext_personality",
+        "personality_name": "IOHIDBTCETimeSyncService"
+      },
+      "join_reason": "insufficient_evidence",
+      "matched_fields": [
+        {
+          "registry_field": "key",
+          "personality_field": "IOClass",
+          "registry_value": "IOUserClientDefaultLocking",
+          "personality_value": "IOHIDBTCETimeSyncService",
+          "match_type": "missing"
+        }
+      ],
+      "confidence": "low",
+      "explanation": "The example intentionally demonstrates that unrelated schema-valid records should not be joined.",
+      "requires_runtime_confirmation": true
+    }
+  ],
+  "notes": [
+    "This is a negative fixture for unresolved joins."
+  ]
+}

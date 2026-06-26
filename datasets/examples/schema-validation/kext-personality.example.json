@@ -1,0 +1,38 @@
+{
+  "schema_version": "0.1.0",
+  "source": {
+    "tool": "tools/kext-personality-inventory/kext-personality-inventory.sh",
+    "command": "personalities-json",
+    "redaction": {
+      "raw_output_committed": false,
+      "policy": "allowlist-only",
+      "omitted_fields": [
+        "entitlements",
+        "large binary blobs",
+        "unmodeled family-specific dictionaries"
+      ]
+    }
+  },
+  "records": [
+    {
+      "record_kind": "kext_personality",
+      "source_path": "/System/Library/Extensions/IOHIDFamily.kext/Contents/Info.plist",
+      "bundle": {
+        "identifier": "com.apple.iokit.IOHIDFamily",
+        "executable": "IOHIDFamily",
+        "package_type": "KEXT",
+        "bundle_type": "kext",
+        "os_bundle_required": "Root"
+      },
+      "personality_name": "IOHIDBTCETimeSyncService",
+      "matching": {
+        "IOClass": "IOHIDBTCETimeSyncService",
+        "IOProviderClass": "IOHIDDevice",
+        "IOMatchCategory": "IOHIDTimeSyncService"
+      }
+    }
+  ],
+  "notes": [
+    "This fixture is a small allowlist example, not a full plist export."
+  ]
+}

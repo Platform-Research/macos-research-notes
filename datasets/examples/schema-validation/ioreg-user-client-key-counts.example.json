@@ -1,0 +1,31 @@
+{
+  "schema_version": "0.1.0",
+  "source": {
+    "tool": "tools/ioreg-inventory/ioreg-inventory.sh",
+    "command": "user-client-key-counts-json",
+    "mode": "user-client-key-counts",
+    "plane": "IOService",
+    "redaction": {
+      "raw_output_committed": false,
+      "policy": "values-stripped",
+      "omitted_fields": [
+        "IOUserClientCreator"
+      ]
+    }
+  },
+  "records": [
+    {
+      "record_kind": "user_client_key_count",
+      "key": "IOUserClientDefaultLocking",
+      "count": 407
+    },
+    {
+      "record_kind": "user_client_key_count",
+      "key": "IOUserClientCreator",
+      "count": 448
+    }
+  ],
+  "notes": [
+    "Counts are examples; values should be regenerated per host."
+  ]
+}
