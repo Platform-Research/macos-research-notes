@@ -4,18 +4,18 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`macos/26.5.1/artifacts.md` was created in the `macos/26.5.1-artifact-index` cycle.
+`docs/guidelines/release-provenance-template.md` was created in the `docs/release-provenance-template` cycle.
 
 ## Current Recommendation
 
-Continue by adding a release provenance template.
+Continue by adding a provider-class join fixture validation pair.
 
-Reason: release acquisition rules define required provenance fields, but there is no reusable template yet.
+Reason: provider-class join fixtures exist, but optional schema validation does not yet cover them.
 
 ## Next Branch
 
 ```text
-docs/release-provenance-template
+tools/validate-provider-class-fixture
 ```
 
 ## Session Goal
@@ -23,43 +23,43 @@ docs/release-provenance-template
 Create the next experiment note:
 
 ```text
-docs/guidelines/release-provenance-template.md
+tools/schema-validate/README.md
 ```
 
 ## Research Question
 
-What is the smallest reusable release provenance template?
+What is the smallest validation update for provider-class join fixtures?
 
 ## Target Output
 
 A bounded experiment README that captures:
 
 - Commands tested.
-- Source command or path.
-- Date and host context.
-- Redaction policy.
-- Raw/reduced/derived status.
+- Add provider-class fixture to known schema validation.
+- Run optional jsonschema validation.
+- Document the added coverage.
+- Keep syntax-only baseline unchanged.
 - What remains unknown or needs artifact-backed confirmation.
 
 ## Evidence To Collect
 
 - Apple documentation or headers when available.
 - `man ioreg`.
-- Existing release acquisition rules.
-- Existing workflow rules.
-- Existing macOS metadata index.
+- Existing provider-class join fixture.
+- Existing registry-personality join schema.
+- Existing optional schema validator.
 
 ## Definition Of Done
 
 Done means:
 
-- `docs/guidelines/release-provenance-template.md` exists.
+- `tools/schema-validate/README.md` documents provider-class fixture coverage.
 - Observations, inferences, unknowns, and sources are separated.
 - No unsupported driver claims are made.
-- Template can be copied into release notes.
+- Optional validator passes locally.
 
 ## Follow-Up Queue
 
-1. Add provider-class join fixture validation pair.
-2. Add requirements-dev.txt after adoption decision.
-3. Add macOS release diff planning note.
+1. Add requirements-dev.txt after adoption decision.
+2. Add macOS release diff planning note.
+3. Add artifact provenance to macOS 26.5.1 index.
