@@ -1,0 +1,55 @@
+{
+  "schema_version": "0.1.0",
+  "source": {
+    "tool": "tools/kext-personality-inventory/kext-personality-inventory.sh",
+    "command": "personalities-json",
+    "redaction": {
+      "raw_output_committed": false,
+      "policy": "allowlist-only",
+      "omitted_fields": [
+        "entitlements",
+        "large binary blobs",
+        "unmodeled family-specific dictionaries"
+      ]
+    }
+  },
+  "records": [
+    {
+      "record_kind": "kext_personality",
+      "source_path": "/System/Library/Extensions/IONVMeFamily.kext/Contents/Info.plist",
+      "bundle": {
+        "identifier": "com.apple.iokit.IONVMeFamily",
+        "bundle_type": "kext"
+      },
+      "personality_name": "AppleEmbeddedNVMeController",
+      "matching": {
+        "IOClass": "AppleEmbeddedNVMeController",
+        "IOProviderClass": "IOPCIDevice",
+        "IOPCIMatch": "0x2002106b",
+        "IOPCIClassMatch": "0x01800200&0xffffff00"
+      },
+      "family_specific": {
+        "pci_match_tokens": [
+          {
+            "source_key": "IOPCIMatch",
+            "raw_token": "0x2002106b",
+            "token_index": 0,
+            "parse_state": "parsed",
+            "normalized_value": "0x2002106b"
+          },
+          {
+            "source_key": "IOPCIClassMatch",
+            "raw_token": "0x01800200&0xffffff00",
+            "token_index": 0,
+            "parse_state": "parsed",
+            "normalized_value": "0x1800200",
+            "normalized_mask": "0xffffff00"
+          }
+        ]
+      }
+    }
+  ],
+  "notes": [
+    "Reduced fixture demonstrating parsed PCI match tokens. Parsing is not hardware matching."
+  ]
+}

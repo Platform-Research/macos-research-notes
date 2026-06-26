@@ -4,18 +4,18 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`macos/README.md` was created in the `macos/release-metadata-index` cycle.
+`datasets/fixtures/parsed-pci-matches/README.md` and `parsed-pci-matches.fixture.json` were created in the `datasets/fixtures/parsed-pci-matches` cycle.
 
 ## Current Recommendation
 
-Continue by adding a helper-output fixture with parsed PCI match tokens.
+Continue by adding an optional dependency lock strategy.
 
-Reason: personality JSON now includes parsed PCI match tokens, but the fixtures do not yet show that shape.
+Reason: optional `jsonschema` validation now works through `.venv`, but dependency version policy is not captured.
 
 ## Next Branch
 
 ```text
-datasets/fixtures/parsed-pci-matches
+docs/optional-dependency-lock-strategy
 ```
 
 ## Session Goal
@@ -23,43 +23,43 @@ datasets/fixtures/parsed-pci-matches
 Create the next experiment note:
 
 ```text
-datasets/fixtures/parsed-pci-matches/README.md
+docs/guidelines/optional-dependencies.md
 ```
 
 ## Research Question
 
-What is the smallest helper-output fixture with parsed PCI match tokens?
+What is the smallest optional dependency lock strategy for research tooling?
 
 ## Target Output
 
 A bounded experiment README that captures:
 
 - Commands tested.
-- A reduced personality JSON fixture from a PCI-bearing kext.
-- Parsed PCI match token examples.
-- Regeneration command.
-- Redaction and non-matching rules.
+- Which optional dependencies are allowed.
+- How to record versions.
+- When to avoid committing lockfiles.
+- How to reproduce `.venv` tooling.
 - What remains unknown or needs artifact-backed confirmation.
 
 ## Evidence To Collect
 
 - Apple documentation or headers when available.
 - `man ioreg`.
-- Existing tool: kext personality inventory and PCI match parser.
-- Existing experiment: PCI match-string parser.
-- Existing schemas and fixtures.
+- Existing jsonschema validation tooling.
+- Existing validation policy.
+- Existing workflow rules.
 
 ## Definition Of Done
 
 Done means:
 
-- `datasets/fixtures/parsed-pci-matches/README.md` exists.
+- `docs/guidelines/optional-dependencies.md` exists.
 - Observations, inferences, unknowns, and sources are separated.
 - No unsupported driver claims are made.
-- Fixture JSON parses locally.
+- The strategy does not require network access for ordinary cycles.
 
 ## Follow-Up Queue
 
-1. Add optional dependency lock strategy.
-2. Add macOS 26.5.1 local runtime note.
-3. Add release acquisition rules.
+1. Add macOS 26.5.1 local runtime note.
+2. Add release acquisition rules.
+3. Add parsed PCI match fixture validation pair.
