@@ -26,6 +26,8 @@ python3 -m venv .venv
 .venv/bin/python tools/schema-validate/validate-known-schemas.py
 ```
 
+Known validation pairs include IORegistry examples, kext personality examples, parsed PCI match fixtures, and registry-personality join fixtures.
+
 ## What It Checks
 
 - JSON syntax for every `*.json` file under the selected root.
@@ -63,6 +65,6 @@ Per `docs/guidelines/json-schema-validation.md`, full validation remains optiona
 
 ## Next Work
 
-- Provider-class join fixture.
-- Release-specific metadata index.
-- Helper-output fixture with parsed PCI match tokens.
+- Requirements-dev proposal.
+- macOS 26.5.1 artifact index stub.
+- Release provenance template.

@@ -21,6 +21,7 @@ PAIRS = [
     ("datasets/schemas/ioreg-inventory.schema.json", "datasets/fixtures/topology-json/ioreg-topology.fixture.json"),
     ("datasets/schemas/kext-personality.schema.json", "datasets/examples/schema-validation/kext-personality.example.json"),
     ("datasets/schemas/kext-personality.schema.json", "datasets/fixtures/helper-outputs/kext-personalities.fixture.json"),
+    ("datasets/schemas/kext-personality.schema.json", "datasets/fixtures/parsed-pci-matches/parsed-pci-matches.fixture.json"),
     ("datasets/schemas/registry-personality-join.schema.json", "datasets/examples/schema-validation/registry-personality-join.example.json"),
     ("datasets/schemas/registry-personality-join.schema.json", "datasets/fixtures/candidate-joins/registry-personality-candidates.fixture.json"),
 ]
