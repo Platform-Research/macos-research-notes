@@ -4,18 +4,18 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`tools/release-diff/README.md` and `tools/release-diff/release_diff.py` were created in the `tools/release-diff-prototype` cycle.
+`datasets/schemas/release-acquisition-manifest.schema.json` was created in the `datasets/schemas/release-acquisition-manifest` cycle.
 
 ## Current Recommendation
 
-Continue by adding a release acquisition manifest schema.
+Continue by adding a macOS 15.6 metadata stub.
 
-Reason: acquisition rules exist, but structured acquisition manifests do not yet have a schema.
+Reason: release diff planning references `macos/15.6/`, but that folder has no metadata note yet.
 
 ## Next Branch
 
 ```text
-datasets/schemas/release-acquisition-manifest
+macos/15.6-metadata-stub
 ```
 
 ## Session Goal
@@ -23,44 +23,43 @@ datasets/schemas/release-acquisition-manifest
 Create the next experiment note:
 
 ```text
-datasets/schemas/release-acquisition-manifest.schema.json
+macos/15.6/README.md
 ```
 
 ## Research Question
 
-What is the smallest schema for release acquisition manifests?
+What is the smallest metadata stub for macOS 15.6?
 
 ## Target Output
 
 A bounded experiment README that captures:
 
 - Commands tested.
-- Source references.
-- Acquisition date.
-- Artifact state.
-- Redaction policy.
-- Derived output paths.
+- Known folder purpose.
+- Current acquisition status.
+- Missing metadata.
+- Stop rules before claiming facts.
 - What remains unknown or needs artifact-backed confirmation.
 
 ## Evidence To Collect
 
 - Apple documentation or headers when available.
 - `man ioreg`.
+- Existing release diff plan.
 - Existing acquisition rules.
-- Existing provenance template.
-- Existing macOS metadata index.
+- Existing macOS folder structure.
 
 ## Definition Of Done
 
 Done means:
 
-- `datasets/schemas/release-acquisition-manifest.schema.json` exists.
+- `macos/15.6/README.md` exists.
 - Observations, inferences, unknowns, and sources are separated.
 - No unsupported driver claims are made.
-- JSON syntax validates locally.
+- Stub does not claim unavailable release facts.
 
 ## Follow-Up Queue
 
-1. Add macOS 15.6 metadata stub.
-2. Add generated release diff fixture.
-3. Add acquisition manifest fixture.
+1. Add generated release diff fixture.
+2. Add acquisition manifest fixture.
+3. Add acquisition manifest schema validation pair.

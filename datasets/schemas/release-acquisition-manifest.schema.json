@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Darwin-Collective/darwin-collective/datasets/schemas/release-acquisition-manifest.schema.json",
+  "title": "Darwin Collective Release Acquisition Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "release",
+    "artifacts"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.1.0"
+    },
+    "release": {
+      "type": "string"
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name",
+          "source",
+          "state",
+          "redaction"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "acquisition_date": {
+            "type": "string"
+          },
+          "state": {
+            "enum": [
+              "raw",
+              "reduced",
+              "derived",
+              "missing"
+            ]
+          },
+          "redaction": {
+            "type": "string"
+          },
+          "output_path": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
