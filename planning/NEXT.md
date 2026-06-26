@@ -4,18 +4,18 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`tools/ioreg-inventory/README.md` and `tools/ioreg-inventory/ioreg-inventory.sh` were updated with topology JSON output in the `tools/ioreg-ancestor-json` cycle.
+`tools/pci-match-parse/README.md`, `tools/pci-match-parse/pci_match_parse.py`, and tests were created in the `tools/pci-match-parse` cycle.
 
 ## Current Recommendation
 
-Continue by implementing the PCI match-string parser.
+Continue by adding a schema validation implementation if dependency policy allows.
 
-Reason: PCI match-string parser rules are documented, but no reusable parser exists yet.
+Reason: the validation policy exists; now check whether a local implementation can improve beyond syntax-only without external downloads.
 
 ## Next Branch
 
 ```text
-tools/pci-match-parse
+tools/schema-validation-implementation
 ```
 
 ## Session Goal
@@ -23,12 +23,12 @@ tools/pci-match-parse
 Create the next experiment note:
 
 ```text
-tools/pci-match-parse/README.md
+tools/schema-validate/README.md
 ```
 
 ## Research Question
 
-What is the smallest tested parser for PCI personality match strings?
+What is the smallest implementable schema validation improvement without downloading dependencies?
 
 ## Target Output
 
@@ -36,31 +36,31 @@ A bounded experiment README that captures:
 
 - Commands tested.
 - Commands tested.
-- Parser for plain and masked hex tokens.
-- Tests for supported and unsupported forms.
-- Output fields matching the parser experiment.
-- Documentation that parsing is not matching.
+- Available local validation capabilities.
+- Whether full JSON Schema validation is possible locally.
+- Any script improvements that do not require downloads.
+- Clear stop condition if a dependency is required.
 - What remains unknown or needs artifact-backed confirmation.
 
 ## Evidence To Collect
 
 - Apple documentation or headers when available.
 - `man ioreg`.
-- Existing experiment: PCI match-string parser.
-- Existing tool: PCI ID decoder.
-- Existing fixtures: candidate joins.
+- Existing policy: JSON Schema validation guideline.
+- Existing tool: syntax validator.
+- Existing schemas, examples, and fixtures.
 
 ## Definition Of Done
 
 Done means:
 
-- `tools/pci-match-parse/README.md` exists.
+- `tools/schema-validate/README.md` documents the result.
 - Observations, inferences, unknowns, and sources are separated.
 - No unsupported driver claims are made.
-- Parser tests pass locally.
+- Validation behavior is improved or the blocker is documented.
 
 ## Follow-Up Queue
 
-1. Add a schema validation implementation if dependency policy allows.
-2. Add provider-class candidate join tool.
-3. Add topology fixture from `topology-json`.
+1. Add provider-class candidate join tool.
+2. Add topology fixture from `topology-json`.
+3. Integrate PCI match parser into personality helper.
