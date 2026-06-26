@@ -4,18 +4,18 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`datasets/schemas/ioreg-inventory.schema.json` was created in the `datasets/schemas/ioreg-inventory` cycle.
+`tools/kext-personality-inventory/README.md` and `tools/kext-personality-inventory/kext-personality-inventory.sh` were created in the `tools/kext-personality-inventory` cycle.
 
 ## Current Recommendation
 
-Continue with the first kext personality inventory tool.
+Continue with the kext personality inventory schema.
 
-Reason: the kext personality experiment has an allowlist, and the registry side now has a helper plus schema.
+Reason: the personality helper now defines safe bounded outputs that need a stable record contract.
 
 ## Next Branch
 
 ```text
-tools/kext-personality-inventory
+datasets/schemas/kext-personality
 ```
 
 ## Session Goal
@@ -23,22 +23,22 @@ tools/kext-personality-inventory
 Create the next experiment note:
 
 ```text
-tools/kext-personality-inventory/README.md
+datasets/schemas/kext-personality.schema.json
 ```
 
 ## Research Question
 
-What is the smallest useful helper for safe kext and dext personality inventory?
+What is the smallest schema for safe kext and dext personality records?
 
 ## Target Output
 
 A bounded experiment README that captures:
 
 - Commands tested.
-- Commands supported by the helper.
-- Default allowlist and redaction behavior.
-- How the helper supports later personality schemas.
-- What remains intentionally out of scope.
+- Record fields supported by the schema.
+- Required source path and bundle metadata.
+- Generic matching keys and bounded family-specific fields.
+- Redaction metadata for user-client and entitlement-related values.
 - What remains unknown or needs artifact-backed confirmation.
 
 ## Evidence To Collect
@@ -46,18 +46,20 @@ A bounded experiment README that captures:
 - Apple documentation or headers when available.
 - `man ioreg`.
 - Existing experiment: kext personality extraction.
+- Existing tool: `tools/kext-personality-inventory/`.
 - Existing notes: `kext-personalities`, `IOPCIDevice`, `IOUserClient`.
-- A tiny script or documented command wrapper.
 
 ## Definition Of Done
 
 Done means:
 
-- `tools/kext-personality-inventory/README.md` exists.
+- `datasets/schemas/kext-personality.schema.json` exists.
 - Observations, inferences, unknowns, and sources are separated.
 - No unsupported driver claims are made.
-- Follow-up kext personality schema work is listed.
+- The next planning step is explicit after this schema.
 
 ## Follow-Up Queue
 
-1. `datasets/schemas/kext-personality.schema.json`
+1. Define first registry-to-personality join experiment.
+2. Implement structured JSON output for `tools/ioreg-inventory/`.
+3. Implement structured JSON output for `tools/kext-personality-inventory/`.
