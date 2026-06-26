@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1.0",
+  "release": "15.6",
+  "artifacts": [
+    {
+      "name": "release-folder-stub",
+      "source": "macos/15.6/README.md",
+      "state": "derived",
+      "redaction": "no raw local or registry data",
+      "output_path": "macos/15.6/README.md",
+      "notes": "Documents that no release-specific artifacts have been acquired yet."
+    },
+    {
+      "name": "artifact-index-stub",
+      "source": "macos/15.6/artifacts.md",
+      "state": "derived",
+      "redaction": "no raw local or registry data",
+      "output_path": "macos/15.6/artifacts.md",
+      "notes": "Tracks missing artifact classes without claiming acquisition."
+    },
+    {
+      "name": "installer-payload",
+      "source": "not acquired",
+      "state": "missing",
+      "redaction": "not applicable",
+      "notes": "No installer payload, IPSW, or extracted kernel artifact is committed."
+    }
+  ]
+}

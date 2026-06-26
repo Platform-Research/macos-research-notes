@@ -4,18 +4,18 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`datasets/fixtures/acquisition-manifest/README.md` was updated in the `datasets/fixtures/acquisition-manifest-readme` cycle.
+`datasets/fixtures/acquisition-manifest/15.6.fixture.json` was created in the `datasets/fixtures/acquisition-manifest-15.6` cycle.
 
 ## Current Recommendation
 
-Continue by adding a 15.6 acquisition manifest fixture.
+Continue by adding a 16.0 acquisition manifest fixture.
 
-Reason: release folders now have artifact stubs, but 15.6 has no acquisition manifest fixture.
+Reason: 15.6 now has an acquisition manifest fixture; 16.0 needs the same missing-artifact baseline.
 
 ## Next Branch
 
 ```text
-datasets/fixtures/acquisition-manifest-15.6
+datasets/fixtures/acquisition-manifest-16.0
 ```
 
 ## Session Goal
@@ -23,12 +23,12 @@ datasets/fixtures/acquisition-manifest-15.6
 Create the next experiment note:
 
 ```text
-datasets/fixtures/acquisition-manifest/15.6.fixture.json
+datasets/fixtures/acquisition-manifest/16.0.fixture.json
 ```
 
 ## Research Question
 
-What is the smallest acquisition manifest fixture for macOS 15.6?
+What is the smallest acquisition manifest fixture for macOS 16.0?
 
 ## Target Output
 
@@ -53,13 +53,13 @@ A bounded experiment README that captures:
 
 Done means:
 
-- `datasets/fixtures/acquisition-manifest/15.6.fixture.json` exists.
+- `datasets/fixtures/acquisition-manifest/16.0.fixture.json` exists.
 - Observations, inferences, unknowns, and sources are separated.
 - No unsupported driver claims are made.
 - Fixture does not claim acquired artifacts.
 
 ## Follow-Up Queue
 
-1. Add 16.0 acquisition manifest fixture.
-2. Add release manifest validation examples.
-3. Add 15.6/16.0 manifests to optional validator.
+1. Add release manifest validation examples.
+2. Add 15.6/16.0 manifests to optional validator.
+3. Link release folders to acquisition manifest fixtures.
