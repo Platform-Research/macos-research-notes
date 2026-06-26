@@ -7,6 +7,8 @@ Usage: ioreg-inventory.sh <command> [args]
 
 Commands:
   topology [depth]          Print IOService topology without properties.
+  topology-json [depth] [limit]
+                             Emit topology nodes as schema-shaped JSON.
   pci-count                 Count root IOPCIDevice matches.
   pci-allowlist             Print selected IOPCIDevice allowlist fields.
   pci-decode-field <kind> <blob>
@@ -33,6 +35,60 @@ case "$command" in
   topology)
     depth="${2:-2}"
     ioreg -p IOService -d "$depth" -w 0
+    ;;
+  topology-json)
+    depth="${2:-2}"
+    limit="${3:-100}"
+    topology_tmp="$(mktemp "${TMPDIR:-/tmp}/darwin-ioreg-topology.XXXXXX")"
+    trap 'rm -f "$topology_tmp"' EXIT
+    ioreg -p IOService -d "$depth" -w 0 > "$topology_tmp"
+    python3 - "$depth" "$limit" "$topology_tmp" <<'PY'
+import json
+import re
+import sys
+
+depth = int(sys.argv[1])
+limit = int(sys.argv[2])
+path = sys.argv[3]
+records = []
+pattern = re.compile(r"^(?P<indent>\s*)\+-o (?P<name>.*?)\s+<class (?P<class>[^,>]+)")
+
+with open(path, "r", encoding="utf-8", errors="replace") as handle:
+    for line in handle:
+        match = pattern.match(line)
+        if not match:
+            continue
+        item_depth = len(match.group("indent")) // 2
+        records.append({
+            "record_kind": "topology_node",
+            "object_name": match.group("name"),
+            "class_name": match.group("class"),
+            "plane": "IOService",
+            "depth": item_depth,
+        })
+        if len(records) >= limit:
+            break
+
+print(json.dumps({
+    "schema_version": "0.1.0",
+    "source": {
+        "tool": "tools/ioreg-inventory/ioreg-inventory.sh",
+        "command": "topology-json",
+        "mode": "topology",
+        "plane": "IOService",
+        "redaction": {
+            "raw_output_committed": False,
+            "policy": "topology-only",
+            "omitted_fields": ["all properties", "hex blobs", "process data"],
+        },
+    },
+    "records": records,
+    "notes": [
+        f"Depth limit: {depth}",
+        f"Record limit: {limit}",
+    ],
+}, indent=2))
+PY
     ;;
   pci-count)
     ioreg -p IOService -c IOPCIDevice -r -d 1 -w 0 | grep -c '^\+-o' || true

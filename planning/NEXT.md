@@ -4,18 +4,18 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`docs/guidelines/json-schema-validation.md` was created in the `docs/json-schema-validation-policy` cycle.
+`tools/ioreg-inventory/README.md` and `tools/ioreg-inventory/ioreg-inventory.sh` were updated with topology JSON output in the `tools/ioreg-ancestor-json` cycle.
 
 ## Current Recommendation
 
-Continue by adding an ancestor topology JSON mode.
+Continue by implementing the PCI match-string parser.
 
-Reason: provider-class joins need safe ancestor context, and the ancestor experiment defined a topology-only record shape.
+Reason: PCI match-string parser rules are documented, but no reusable parser exists yet.
 
 ## Next Branch
 
 ```text
-tools/ioreg-ancestor-json
+tools/pci-match-parse
 ```
 
 ## Session Goal
@@ -23,12 +23,12 @@ tools/ioreg-ancestor-json
 Create the next experiment note:
 
 ```text
-tools/ioreg-inventory/README.md
+tools/pci-match-parse/README.md
 ```
 
 ## Research Question
 
-What is the smallest safe ancestor topology JSON output in the IORegistry helper?
+What is the smallest tested parser for PCI personality match strings?
 
 ## Target Output
 
@@ -36,31 +36,31 @@ A bounded experiment README that captures:
 
 - Commands tested.
 - Commands tested.
-- A topology-only JSON command.
-- Header-line parsing without property dictionaries.
-- Redaction policy for object names and paths.
-- Smoke checks that output parses as JSON.
+- Parser for plain and masked hex tokens.
+- Tests for supported and unsupported forms.
+- Output fields matching the parser experiment.
+- Documentation that parsing is not matching.
 - What remains unknown or needs artifact-backed confirmation.
 
 ## Evidence To Collect
 
 - Apple documentation or headers when available.
 - `man ioreg`.
-- Existing experiment: registry ancestor capture.
-- Existing tool: IORegistry inventory.
-- Existing schema: IORegistry inventory.
+- Existing experiment: PCI match-string parser.
+- Existing tool: PCI ID decoder.
+- Existing fixtures: candidate joins.
 
 ## Definition Of Done
 
 Done means:
 
-- `tools/ioreg-inventory/README.md` documents ancestor topology JSON.
+- `tools/pci-match-parse/README.md` exists.
 - Observations, inferences, unknowns, and sources are separated.
 - No unsupported driver claims are made.
-- The new JSON output parses locally.
+- Parser tests pass locally.
 
 ## Follow-Up Queue
 
-1. Implement PCI match-string parser.
-2. Add a schema validation implementation if dependency policy allows.
-3. Add provider-class candidate join tool.
+1. Add a schema validation implementation if dependency policy allows.
+2. Add provider-class candidate join tool.
+3. Add topology fixture from `topology-json`.

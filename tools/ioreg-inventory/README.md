@@ -18,6 +18,12 @@ Print IOService topology without properties:
 tools/ioreg-inventory/ioreg-inventory.sh topology 2
 ```
 
+Emit IOService topology nodes as schema-shaped JSON:
+
+```sh
+tools/ioreg-inventory/ioreg-inventory.sh topology-json 2 100
+```
+
 Count root `IOPCIDevice` matches:
 
 ```sh
@@ -72,6 +78,7 @@ tools/ioreg-inventory/ioreg-inventory.sh user-client-flags
 - The helper does not call `IOServiceOpen()`.
 - The helper does not perform selector calls or memory mapping.
 - Broad raw `ioreg -l` dumps are not exposed as a public command.
+- Topology JSON parses object headers only and omits property dictionaries.
 - User-client creator values are not printed.
 - User-client key counting strips values before sorting.
 - JSON output includes source and redaction metadata.
@@ -82,6 +89,7 @@ tools/ioreg-inventory/ioreg-inventory.sh user-client-flags
 ## Supported Inventory Threads
 
 - `experiments/iokit-registry-dump/` uses `topology` as the safe baseline.
+- `experiments/registry-ancestor-capture/` uses `topology-json` as the future ancestor baseline.
 - `experiments/pci-device-inventory/` uses `pci-count` and `pci-allowlist`.
 - `experiments/user-client-inventory/` uses `user-client-key-counts` and `user-client-flags`.
 
@@ -92,6 +100,7 @@ tools/ioreg-inventory/ioreg-inventory.sh user-client-flags
 - Runtime opening of user clients.
 - Storing raw local registry artifacts in the repository.
 - Full normalized PCI inventory JSON.
+- Property-bearing ancestor JSON.
 
 ## Inferences
 
@@ -101,6 +110,7 @@ tools/ioreg-inventory/ioreg-inventory.sh user-client-flags
 - The first JSON mode maps to `datasets/schemas/ioreg-inventory.schema.json` with `user_client_key_count` records.
 - Normalized PCI fields can now be smoke-checked before future JSON integration.
 - The PCI sample JSON mode maps raw blob fields and decoded normalized values into one reduced `pci_device` record.
+- The topology JSON mode provides bounded ancestor context without property capture.
 
 ## Unknowns
 
