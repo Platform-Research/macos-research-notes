@@ -4,18 +4,18 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`macos/26.5.1/README.md` was created in the `macos/26.5.1-local-runtime` cycle.
+`docs/guidelines/release-acquisition.md` was created in the `docs/release-acquisition-rules` cycle.
 
 ## Current Recommendation
 
-Continue by adding release acquisition rules.
+Continue by adding the parsed PCI match fixture validation pair.
 
-Reason: release folders exist, but the project needs rules for what can be acquired and committed.
+Reason: the parsed PCI match fixture exists, but optional schema validation does not yet cover it.
 
 ## Next Branch
 
 ```text
-docs/release-acquisition-rules
+tools/validate-parsed-pci-fixture
 ```
 
 ## Session Goal
@@ -23,43 +23,43 @@ docs/release-acquisition-rules
 Create the next experiment note:
 
 ```text
-docs/guidelines/release-acquisition.md
+tools/schema-validate/README.md
 ```
 
 ## Research Question
 
-What are the minimum safe rules for macOS release artifact acquisition?
+What is the smallest validation update for parsed PCI match fixtures?
 
 ## Target Output
 
 A bounded experiment README that captures:
 
 - Commands tested.
-- Allowed acquisition locations.
-- What goes in `downloads/`, `macos/`, and `datasets/`.
-- Commit rules for raw artifacts.
-- Redaction and provenance requirements.
+- Add parsed PCI fixture to known schema validation.
+- Run syntax validation.
+- Run optional jsonschema validation.
+- Document the added coverage.
 - What remains unknown or needs artifact-backed confirmation.
 
 ## Evidence To Collect
 
 - Apple documentation or headers when available.
 - `man ioreg`.
-- Existing workflow rules.
-- Existing macOS metadata index.
-- Existing datasets and fixture policies.
+- Existing optional jsonschema validation.
+- Existing parsed PCI match fixture.
+- Existing kext personality schema.
 
 ## Definition Of Done
 
 Done means:
 
-- `docs/guidelines/release-acquisition.md` exists.
+- `tools/schema-validate/README.md` documents parsed PCI fixture coverage.
 - Observations, inferences, unknowns, and sources are separated.
 - No unsupported driver claims are made.
-- Rules avoid committing large raw artifacts.
+- Optional validator passes locally.
 
 ## Follow-Up Queue
 
-1. Add parsed PCI match fixture validation pair.
-2. Add requirements-dev proposal.
-3. Add macOS 26.5.1 artifact index stub.
+1. Add requirements-dev proposal.
+2. Add macOS 26.5.1 artifact index stub.
+3. Add release provenance template.
