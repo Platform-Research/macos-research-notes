@@ -1,0 +1,54 @@
+{
+  "schema_version": "0.1.0",
+  "source": {
+    "tool": "tools/kext-personality-inventory/kext-personality-inventory.sh",
+    "command": "personalities-json",
+    "redaction": {
+      "raw_output_committed": false,
+      "policy": "allowlist-only",
+      "omitted_fields": [
+        "entitlements",
+        "large binary blobs",
+        "unmodeled family-specific dictionaries"
+      ]
+    }
+  },
+  "records": [
+    {
+      "record_kind": "kext_personality",
+      "source_path": "/System/Library/Extensions/IOHIDFamily.kext/Contents/Info.plist",
+      "bundle": {
+        "bundle_type": "kext",
+        "executable": "IOHIDFamily",
+        "identifier": "com.apple.iokit.IOHIDFamily",
+        "os_bundle_required": "Root",
+        "package_type": "KEXT"
+      },
+      "personality_name": "HID Game Controller Pointing Driver",
+      "matching": {
+        "IOClass": "IOHIDEventDriver",
+        "IOProviderClass": "IOHIDInterface"
+      }
+    },
+    {
+      "record_kind": "kext_personality",
+      "source_path": "/System/Library/Extensions/IOHIDFamily.kext/Contents/Info.plist",
+      "bundle": {
+        "bundle_type": "kext",
+        "executable": "IOHIDFamily",
+        "identifier": "com.apple.iokit.IOHIDFamily",
+        "os_bundle_required": "Root",
+        "package_type": "KEXT"
+      },
+      "personality_name": "IOHIDBTCETimeSyncService",
+      "matching": {
+        "IOClass": "IOHIDBTCETimeSyncService",
+        "IOMatchCategory": "IOHIDTimeSyncService",
+        "IOProviderClass": "IOHIDDevice"
+      }
+    }
+  ],
+  "notes": [
+    "Reduced fixture from a safe generated helper output. It is not a complete export of IOHIDFamily."
+  ]
+}

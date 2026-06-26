@@ -1,0 +1,36 @@
+{
+  "schema_version": "0.1.0",
+  "source": {
+    "tool": "tools/ioreg-inventory/ioreg-inventory.sh",
+    "command": "user-client-key-counts-json",
+    "mode": "user-client-key-counts",
+    "plane": "IOService",
+    "redaction": {
+      "raw_output_committed": false,
+      "policy": "values-stripped",
+      "omitted_fields": [
+        "IOUserClientCreator"
+      ]
+    }
+  },
+  "records": [
+    {
+      "record_kind": "user_client_key_count",
+      "key": "IOUserClientCreator",
+      "count": 448
+    },
+    {
+      "record_kind": "user_client_key_count",
+      "key": "IOUserClientDefaultLocking",
+      "count": 407
+    },
+    {
+      "record_kind": "user_client_key_count",
+      "key": "IOUserClientEntitlements",
+      "count": 275
+    }
+  ],
+  "notes": [
+    "Reduced fixture from a safe generated helper output. Counts are host-specific and should not be treated as stable release facts."
+  ]
+}

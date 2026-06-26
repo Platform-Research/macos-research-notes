@@ -4,18 +4,18 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`datasets/examples/schema-validation/README.md` and JSON examples were created in the `datasets/examples/schema-validation` cycle.
+`datasets/fixtures/helper-outputs/README.md` and reduced helper output fixtures were created in the `datasets/fixtures/helper-outputs` cycle.
 
 ## Current Recommendation
 
-Continue by adding sample JSON fixtures for safe helper outputs.
+Continue by adding a candidate join fixture.
 
-Reason: static examples exist; the next step is to preserve generated safe outputs from the helpers as fixtures.
+Reason: helper-output fixtures now exist, so the next step is to add one join fixture that uses the join schema explicitly.
 
 ## Next Branch
 
 ```text
-datasets/fixtures/helper-outputs
+datasets/fixtures/candidate-joins
 ```
 
 ## Session Goal
@@ -23,43 +23,43 @@ datasets/fixtures/helper-outputs
 Create the next experiment note:
 
 ```text
-datasets/fixtures/helper-outputs/README.md
+datasets/fixtures/candidate-joins/README.md
 ```
 
 ## Research Question
 
-What is the smallest set of generated safe helper-output fixtures?
+What is the smallest candidate join fixture that demonstrates unresolved versus candidate behavior?
 
 ## Target Output
 
 A bounded experiment README that captures:
 
 - Commands tested.
-- One generated IORegistry JSON fixture.
-- One generated kext personality JSON fixture.
-- Commands used to regenerate them.
-- Redaction checks before commit.
+- One unresolved join fixture.
+- One candidate join fixture using normalized PCI IDs.
+- Explanation of why neither fixture proves runtime attachment.
+- Commands to parse JSON locally.
 - What remains unknown or needs artifact-backed confirmation.
 
 ## Evidence To Collect
 
 - Apple documentation or headers when available.
 - `man ioreg`.
-- Existing examples: schema validation examples.
-- Existing tools: IORegistry inventory and kext personality inventory.
-- Existing schemas: IORegistry inventory and kext personality inventory.
+- Existing fixtures: helper outputs.
+- Existing schemas: registry-personality join, IORegistry inventory, kext personality inventory.
+- Existing tool: PCI ID decoder.
 
 ## Definition Of Done
 
 Done means:
 
-- `datasets/fixtures/helper-outputs/README.md` exists.
+- `datasets/fixtures/candidate-joins/README.md` exists.
 - Observations, inferences, unknowns, and sources are separated.
 - No unsupported driver claims are made.
-- Fixture JSON files parse cleanly with local tooling.
+- Candidate join fixture JSON files parse cleanly with local tooling.
 
 ## Follow-Up Queue
 
-1. Add candidate join fixture.
-2. Integrate PCI decoder into IORegistry helper.
-3. Add schema validation script.
+1. Integrate PCI decoder into IORegistry helper.
+2. Add schema validation script.
+3. Add registry ancestor capture experiment.
