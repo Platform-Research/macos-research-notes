@@ -4,18 +4,18 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`datasets/schemas/registry-personality-join.schema.json` was created in the `datasets/schemas/registry-personality-join` cycle.
+`tools/pci-id-decode/README.md`, `tools/pci-id-decode/pci_id_decode.py`, and tests were created in the `tools/pci-id-decode` cycle.
 
 ## Current Recommendation
 
-Continue by adding PCI ID decoding tests.
+Continue by adding schema validation examples.
 
-Reason: PCI joins are intentionally blocked until little-endian registry blobs can be normalized and tested.
+Reason: the core schemas now exist and need small valid examples that future tools can validate against.
 
 ## Next Branch
 
 ```text
-tools/pci-id-decode
+datasets/examples/schema-validation
 ```
 
 ## Session Goal
@@ -23,43 +23,42 @@ tools/pci-id-decode
 Create the next experiment note:
 
 ```text
-tools/pci-id-decode/README.md
+datasets/examples/schema-validation/README.md
 ```
 
 ## Research Question
 
-What is the smallest tested decoder for PCI registry ID blobs?
+What is the smallest set of schema validation examples for current inventory records?
 
 ## Target Output
 
 A bounded experiment README that captures:
 
 - Commands tested.
-- Known input blob shapes from IORegistry.
-- Expected normalized vendor, device, class, and revision values.
-- A tiny decoder with tests.
-- Boundaries for unsupported encodings.
+- One valid IORegistry inventory example.
+- One valid kext personality example.
+- One valid registry-personality join example.
+- Commands to validate JSON syntax locally.
 - What remains unknown or needs artifact-backed confirmation.
 
 ## Evidence To Collect
 
 - Apple documentation or headers when available.
 - `man ioreg`.
-- Existing experiment: PCI inventory and registry-personality join.
-- Existing tool: `tools/ioreg-inventory/`.
-- Existing schemas: IORegistry inventory and registry-personality join.
+- Existing schemas: IORegistry inventory, kext personality inventory, registry-personality join.
+- Existing tools: IORegistry inventory, kext personality inventory, PCI ID decoder.
 
 ## Definition Of Done
 
 Done means:
 
-- `tools/pci-id-decode/README.md` exists.
+- `datasets/examples/schema-validation/README.md` exists.
 - Observations, inferences, unknowns, and sources are separated.
 - No unsupported driver claims are made.
-- Decoder behavior is tested without touching hardware.
+- Example JSON files parse cleanly with local tooling.
 
 ## Follow-Up Queue
 
-1. Add schema validation examples.
-2. Add sample JSON fixtures for safe helper outputs.
-3. Add candidate join fixture.
+1. Add sample JSON fixtures for safe helper outputs.
+2. Add candidate join fixture.
+3. Integrate PCI decoder into IORegistry helper.
