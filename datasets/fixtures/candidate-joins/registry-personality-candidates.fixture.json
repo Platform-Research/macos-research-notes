@@ -1,0 +1,82 @@
+{
+  "schema_version": "0.1.0",
+  "source": {
+    "registry_inventory": {
+      "schema": "datasets/schemas/ioreg-inventory.schema.json",
+      "path": "datasets/fixtures/helper-outputs/ioreg-user-client-key-counts.fixture.json"
+    },
+    "personality_inventory": {
+      "schema": "datasets/schemas/kext-personality.schema.json",
+      "path": "datasets/fixtures/helper-outputs/kext-personalities.fixture.json"
+    },
+    "policy": "candidate-only"
+  },
+  "edges": [
+    {
+      "record_kind": "registry_personality_join",
+      "state": "candidate",
+      "registry_ref": {
+        "schema": "datasets/schemas/ioreg-inventory.schema.json",
+        "record_kind": "pci_device",
+        "record_id": "fixture-pci14e4-4434",
+        "object_name": "pci14e4,4434"
+      },
+      "personality_ref": {
+        "schema": "datasets/schemas/kext-personality.schema.json",
+        "record_kind": "kext_personality",
+        "record_id": "fixture-bcm-pcie-personality",
+        "personality_name": "Example Broadcom PCI Personality"
+      },
+      "join_reason": "pci_id",
+      "matched_fields": [
+        {
+          "registry_field": "vendor-id",
+          "personality_field": "IOPCIPrimaryMatch",
+          "registry_value": "0x14e4",
+          "personality_value": "0x14e40000",
+          "match_type": "normalized"
+        },
+        {
+          "registry_field": "device-id",
+          "personality_field": "IOPCIPrimaryMatch",
+          "registry_value": "0x4434",
+          "personality_value": "0x00004434",
+          "match_type": "normalized"
+        }
+      ],
+      "confidence": "medium",
+      "explanation": "The fixture demonstrates a candidate edge after PCI registry blobs are normalized. It does not prove runtime attachment.",
+      "requires_runtime_confirmation": true
+    },
+    {
+      "record_kind": "registry_personality_join",
+      "state": "unresolved",
+      "registry_ref": {
+        "schema": "datasets/schemas/ioreg-inventory.schema.json",
+        "record_kind": "user_client_key_count",
+        "record_id": "fixture-user-client-key-count"
+      },
+      "personality_ref": {
+        "schema": "datasets/schemas/kext-personality.schema.json",
+        "record_kind": "kext_personality",
+        "personality_name": "IOHIDBTCETimeSyncService"
+      },
+      "join_reason": "insufficient_evidence",
+      "matched_fields": [
+        {
+          "registry_field": "key",
+          "personality_field": "IOClass",
+          "registry_value": "IOUserClientDefaultLocking",
+          "personality_value": "IOHIDBTCETimeSyncService",
+          "match_type": "missing"
+        }
+      ],
+      "confidence": "low",
+      "explanation": "The fixture demonstrates that schema-shaped records should remain unresolved when there is no valid join key.",
+      "requires_runtime_confirmation": true
+    }
+  ],
+  "notes": [
+    "This fixture is deliberately small and includes synthetic reduced references for the candidate PCI edge."
+  ]
+}
