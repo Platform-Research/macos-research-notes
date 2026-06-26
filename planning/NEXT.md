@@ -4,18 +4,18 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`docs/guidelines/optional-dependencies.md` was created in the `docs/optional-dependency-lock-strategy` cycle.
+`macos/26.5.1/README.md` was created in the `macos/26.5.1-local-runtime` cycle.
 
 ## Current Recommendation
 
-Continue by adding a macOS 26.5.1 local runtime note.
+Continue by adding release acquisition rules.
 
-Reason: the local runtime version is used throughout experiments and should have a release-scoped note.
+Reason: release folders exist, but the project needs rules for what can be acquired and committed.
 
 ## Next Branch
 
 ```text
-macos/26.5.1-local-runtime
+docs/release-acquisition-rules
 ```
 
 ## Session Goal
@@ -23,43 +23,43 @@ macos/26.5.1-local-runtime
 Create the next experiment note:
 
 ```text
-macos/26.5.1/README.md
+docs/guidelines/release-acquisition.md
 ```
 
 ## Research Question
 
-What is the smallest local runtime note for macOS 26.5.1?
+What are the minimum safe rules for macOS release artifact acquisition?
 
 ## Target Output
 
 A bounded experiment README that captures:
 
 - Commands tested.
-- Local product version and build.
-- Darwin kernel string.
-- Relationship to current experiments.
-- Boundaries around host-specific facts.
+- Allowed acquisition locations.
+- What goes in `downloads/`, `macos/`, and `datasets/`.
+- Commit rules for raw artifacts.
+- Redaction and provenance requirements.
 - What remains unknown or needs artifact-backed confirmation.
 
 ## Evidence To Collect
 
 - Apple documentation or headers when available.
 - `man ioreg`.
-- Existing `macos/README.md`.
-- Existing experiments and local runtime references.
 - Existing workflow rules.
+- Existing macOS metadata index.
+- Existing datasets and fixture policies.
 
 ## Definition Of Done
 
 Done means:
 
-- `macos/26.5.1/README.md` exists.
+- `docs/guidelines/release-acquisition.md` exists.
 - Observations, inferences, unknowns, and sources are separated.
 - No unsupported driver claims are made.
-- Note separates host facts from release facts.
+- Rules avoid committing large raw artifacts.
 
 ## Follow-Up Queue
 
-1. Add release acquisition rules.
-2. Add parsed PCI match fixture validation pair.
-3. Add requirements-dev proposal.
+1. Add parsed PCI match fixture validation pair.
+2. Add requirements-dev proposal.
+3. Add macOS 26.5.1 artifact index stub.
