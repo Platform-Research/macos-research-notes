@@ -10,7 +10,7 @@ Most Darwin Collective research cycles should run without downloading packages. 
 
 ```sh
 python3 -m venv .venv
-.venv/bin/python -m pip install jsonschema
+.venv/bin/python -m pip install -r requirements-dev.txt
 .venv/bin/python tools/schema-validate/validate-known-schemas.py
 ```
 
@@ -34,11 +34,12 @@ For quick checks:
 
 ## Lock Strategy
 
-Do not add lockfiles until the project chooses a stable package manager for research tooling.
+`requirements-dev.txt` is the current minimal optional dependency file.
+
+Do not add additional lockfiles until the project chooses a stable package manager for research tooling.
 
 Acceptable future options:
 
-- `requirements-dev.txt` for optional Python tooling;
 - `uv.lock` if `uv` becomes the project standard;
 - vendored single-file tooling when legally and operationally simple.
 
