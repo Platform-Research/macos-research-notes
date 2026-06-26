@@ -28,6 +28,11 @@ python3 -m venv .venv
 
 Known validation pairs include IORegistry examples, kext personality examples, parsed PCI match fixtures, provider-class join fixtures, registry-personality join fixtures, static and generated release diff fixtures, and acquisition manifest fixtures.
 
+Acquisition manifest coverage uses:
+
+- `datasets/schemas/release-acquisition-manifest.schema.json`
+- `datasets/fixtures/acquisition-manifest/acquisition-manifest.fixture.json`
+
 ## What It Checks
 
 - JSON syntax for every `*.json` file under the selected root.
