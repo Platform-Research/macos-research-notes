@@ -1,0 +1,37 @@
+{
+  "schema_version": "0.1.0",
+  "source": {
+    "tool": "tools/ioreg-inventory/ioreg-inventory.sh",
+    "command": "topology-json",
+    "mode": "topology",
+    "plane": "IOService",
+    "redaction": {
+      "raw_output_committed": false,
+      "policy": "topology-only",
+      "omitted_fields": [
+        "all properties",
+        "hex blobs",
+        "process data"
+      ]
+    }
+  },
+  "records": [
+    {
+      "record_kind": "topology_node",
+      "object_name": "Root",
+      "class_name": "IORegistryEntry",
+      "plane": "IOService",
+      "depth": 0
+    },
+    {
+      "record_kind": "topology_node",
+      "object_name": "J504AP",
+      "class_name": "IOPlatformExpertDevice",
+      "plane": "IOService",
+      "depth": 1
+    }
+  ],
+  "notes": [
+    "Reduced fixture from topology-json. This file intentionally omits properties and does not represent full host topology."
+  ]
+}
