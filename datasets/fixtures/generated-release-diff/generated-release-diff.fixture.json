@@ -1,0 +1,27 @@
+{
+  "schema_version": "0.1.0",
+  "source": {
+    "from_release": "15.6",
+    "to_release": "16.0",
+    "policy": "metadata-only",
+    "provenance": "Generated unresolved prototype; no raw artifacts compared."
+  },
+  "records": [
+    {
+      "record_kind": "release_diff",
+      "state": "unresolved",
+      "subject": "release-metadata",
+      "field": "records",
+      "from_value": null,
+      "to_value": null,
+      "evidence": [
+        "macos/15.6/",
+        "macos/16.0/"
+      ],
+      "notes": "Comparable reduced metadata has not been acquired for both releases."
+    }
+  ],
+  "notes": [
+    "Prototype output only. This does not claim a real release difference."
+  ]
+}
