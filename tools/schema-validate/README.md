@@ -18,6 +18,14 @@ Validate a subtree:
 tools/schema-validate/validate-json.sh datasets
 ```
 
+Optionally validate known examples and fixtures against schemas:
+
+```sh
+python3 -m venv .venv
+.venv/bin/python -m pip install jsonschema
+.venv/bin/python tools/schema-validate/validate-known-schemas.py
+```
+
 ## What It Checks
 
 - JSON syntax for every `*.json` file under the selected root.
@@ -31,7 +39,7 @@ tools/schema-validate/validate-json.sh datasets
 - Runtime helper output freshness.
 - Sensitive-value policy beyond syntax.
 
-## Full Schema Validation Status
+## Optional Schema Validation Status
 
 Checked local Python support:
 
@@ -39,22 +47,22 @@ Checked local Python support:
 python3 -c 'import jsonschema; print(jsonschema.__version__)'
 ```
 
-Result: `jsonschema` is not installed in the default local Python environment.
+Result: `jsonschema` is not installed in the default local Python environment, but validation works in a local `.venv` after installing `jsonschema`.
 
-Per `docs/guidelines/json-schema-validation.md`, do not download a validator during ordinary research cycles. Full JSON Schema validation remains blocked until the project chooses one of:
+Per `docs/guidelines/json-schema-validation.md`, full validation remains optional unless the project chooses one of:
 
 - commit a validator or validation script that has no external runtime dependency;
-- document a system-provided validator;
-- add an optional dependency with version policy and installation instructions.
+- document a system-provided validator; or
+- add a locked optional dependency policy.
 
 ## Inferences
 
 - A syntax-only gate is still useful because the repo now has multiple schemas and fixtures.
-- Full JSON Schema validation should wait until the project chooses whether to vendor a validator, use a system tool, or require Python packages.
-- The current dependency-free improvement is to run this syntax checker before every schema, fixture, or JSON-emitting helper commit.
+- Full JSON Schema validation is available through a local `.venv`, but remains optional.
+- The required dependency-free baseline is still `validate-json.sh`.
 
 ## Next Work
 
-- Provider-class candidate join tool.
-- Topology fixture from `topology-json`.
-- Integrate PCI match parser into personality helper.
+- Provider-class join fixture.
+- Release-specific metadata index.
+- Helper-output fixture with parsed PCI match tokens.

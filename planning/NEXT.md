@@ -4,18 +4,18 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`tools/kext-personality-inventory/README.md` and `tools/kext-personality-inventory/kext-personality-inventory.sh` were updated with PCI match parsing in the `tools/kext-personality-pci-match-parse` cycle.
+`tools/schema-validate/README.md`, `tools/schema-validate/validate-known-schemas.py`, and `.gitignore` were updated in the `tools/jsonschema-validator` cycle.
 
 ## Current Recommendation
 
-Continue by adding an optional JSON Schema validator after dependency decision.
+Continue by adding a provider-class join fixture.
 
-Reason: JSON Schema validation was previously blocked by missing `jsonschema`; downloading is now allowed by the user.
+Reason: the provider-class join helper exists and needs a small committed fixture for review and smoke tests.
 
 ## Next Branch
 
 ```text
-tools/jsonschema-validator
+datasets/fixtures/provider-class-join
 ```
 
 ## Session Goal
@@ -23,43 +23,43 @@ tools/jsonschema-validator
 Create the next experiment note:
 
 ```text
-tools/schema-validate/README.md
+datasets/fixtures/provider-class-join/README.md
 ```
 
 ## Research Question
 
-What is the smallest optional JSON Schema validator integration?
+What is the smallest provider-class join fixture?
 
 ## Target Output
 
 A bounded experiment README that captures:
 
 - Commands tested.
-- Dependency installation note.
-- Validator script or mode.
-- Validation commands for examples and fixtures.
-- Clear optional/offline behavior.
+- One reduced topology input.
+- One reduced personality input.
+- One provider-class join output.
+- Smoke commands to regenerate and parse.
 - What remains unknown or needs artifact-backed confirmation.
 
 ## Evidence To Collect
 
 - Apple documentation or headers when available.
 - `man ioreg`.
-- Existing policy: JSON Schema validation.
-- Existing tool: syntax validator.
-- Existing schemas, examples, and fixtures.
+- Existing tools: topology JSON, personality JSON, provider-class join.
+- Existing schemas: IORegistry, kext personality, registry-personality join.
+- Existing fixtures: topology JSON and helper outputs.
 
 ## Definition Of Done
 
 Done means:
 
-- `tools/schema-validate/README.md` documents optional schema validation.
+- `datasets/fixtures/provider-class-join/README.md` exists.
 - Observations, inferences, unknowns, and sources are separated.
 - No unsupported driver claims are made.
-- Validator smoke check passes or dependency install is documented.
+- Fixture JSON parses locally.
 
 ## Follow-Up Queue
 
-1. Add provider-class join fixture.
-2. Add release-specific metadata index.
-3. Add helper-output fixture with parsed PCI match tokens.
+1. Add release-specific metadata index.
+2. Add helper-output fixture with parsed PCI match tokens.
+3. Add optional dependency lock strategy.
