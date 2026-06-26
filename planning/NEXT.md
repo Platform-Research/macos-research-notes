@@ -4,18 +4,18 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`macos/15.6/artifacts.md` was created in the `macos/15.6-artifact-index` cycle.
+`macos/16.0/artifacts.md` was created in the `macos/16.0-artifact-index` cycle.
 
 ## Current Recommendation
 
-Continue by adding a macOS 16.0 artifact index stub.
+Continue by adding a release acquisition manifest README.
 
-Reason: the 16.0 metadata stub exists, but it needs an artifact index placeholder.
+Reason: acquisition manifest schema and fixture exist, but there is no README explaining the fixture directory.
 
 ## Next Branch
 
 ```text
-macos/16.0-artifact-index
+datasets/fixtures/acquisition-manifest-readme
 ```
 
 ## Session Goal
@@ -23,43 +23,43 @@ macos/16.0-artifact-index
 Create the next experiment note:
 
 ```text
-macos/16.0/artifacts.md
+datasets/fixtures/acquisition-manifest/README.md
 ```
 
 ## Research Question
 
-What is the smallest artifact index stub for macOS 16.0?
+What is the smallest README update for acquisition manifest fixtures?
 
 ## Target Output
 
 A bounded experiment README that captures:
 
 - Commands tested.
-- Artifact categories.
-- Current acquisition status.
-- Missing metadata.
-- Links to acquisition rules.
+- Schema link.
+- Fixture purpose.
+- Validation commands.
+- Regeneration boundaries.
 - What remains unknown or needs artifact-backed confirmation.
 
 ## Evidence To Collect
 
 - Apple documentation or headers when available.
 - `man ioreg`.
-- Existing macOS 16.0 metadata stub.
+- Existing acquisition manifest schema and fixture.
+- Existing validation tooling.
 - Existing acquisition rules.
-- Existing release diff plan.
 
 ## Definition Of Done
 
 Done means:
 
-- `macos/16.0/artifacts.md` exists.
+- `datasets/fixtures/acquisition-manifest/README.md` documents schema and validation.
 - Observations, inferences, unknowns, and sources are separated.
 - No unsupported driver claims are made.
-- Stub avoids unsupported release claims.
+- README avoids implying real acquisition.
 
 ## Follow-Up Queue
 
-1. Add release acquisition manifest README.
-2. Add 15.6 acquisition manifest fixture.
-3. Add 16.0 acquisition manifest fixture.
+1. Add 15.6 acquisition manifest fixture.
+2. Add 16.0 acquisition manifest fixture.
+3. Add release manifest validation examples.
