@@ -4,18 +4,18 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`macos/16.0/artifacts.md` was created in the `macos/16.0-artifact-index` cycle.
+`datasets/fixtures/acquisition-manifest/README.md` was updated in the `datasets/fixtures/acquisition-manifest-readme` cycle.
 
 ## Current Recommendation
 
-Continue by adding a release acquisition manifest README.
+Continue by adding a 15.6 acquisition manifest fixture.
 
-Reason: acquisition manifest schema and fixture exist, but there is no README explaining the fixture directory.
+Reason: release folders now have artifact stubs, but 15.6 has no acquisition manifest fixture.
 
 ## Next Branch
 
 ```text
-datasets/fixtures/acquisition-manifest-readme
+datasets/fixtures/acquisition-manifest-15.6
 ```
 
 ## Session Goal
@@ -23,43 +23,43 @@ datasets/fixtures/acquisition-manifest-readme
 Create the next experiment note:
 
 ```text
-datasets/fixtures/acquisition-manifest/README.md
+datasets/fixtures/acquisition-manifest/15.6.fixture.json
 ```
 
 ## Research Question
 
-What is the smallest README update for acquisition manifest fixtures?
+What is the smallest acquisition manifest fixture for macOS 15.6?
 
 ## Target Output
 
 A bounded experiment README that captures:
 
 - Commands tested.
-- Schema link.
-- Fixture purpose.
-- Validation commands.
-- Regeneration boundaries.
+- Release value.
+- Missing artifact states.
+- Redaction policy.
+- Syntax validation.
 - What remains unknown or needs artifact-backed confirmation.
 
 ## Evidence To Collect
 
 - Apple documentation or headers when available.
 - `man ioreg`.
-- Existing acquisition manifest schema and fixture.
-- Existing validation tooling.
+- Existing macOS 15.6 stubs.
+- Existing acquisition manifest schema.
 - Existing acquisition rules.
 
 ## Definition Of Done
 
 Done means:
 
-- `datasets/fixtures/acquisition-manifest/README.md` documents schema and validation.
+- `datasets/fixtures/acquisition-manifest/15.6.fixture.json` exists.
 - Observations, inferences, unknowns, and sources are separated.
 - No unsupported driver claims are made.
-- README avoids implying real acquisition.
+- Fixture does not claim acquired artifacts.
 
 ## Follow-Up Queue
 
-1. Add 15.6 acquisition manifest fixture.
-2. Add 16.0 acquisition manifest fixture.
-3. Add release manifest validation examples.
+1. Add 16.0 acquisition manifest fixture.
+2. Add release manifest validation examples.
+3. Add 15.6/16.0 manifests to optional validator.
