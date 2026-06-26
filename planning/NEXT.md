@@ -4,18 +4,18 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`tools/schema-validate/validate-known-schemas.py` was updated to validate parsed PCI match fixtures in the `tools/validate-parsed-pci-fixture` cycle.
+`docs/guidelines/requirements-dev.md` was created in the `docs/requirements-dev-proposal` cycle.
 
 ## Current Recommendation
 
-Continue by adding a requirements-dev proposal.
+Continue by adding a macOS 26.5.1 artifact index stub.
 
-Reason: optional validation now works, but the project has not captured a stable requirements proposal.
+Reason: the local runtime note exists, but the release folder still needs an artifact index placeholder.
 
 ## Next Branch
 
 ```text
-docs/requirements-dev-proposal
+macos/26.5.1-artifact-index
 ```
 
 ## Session Goal
@@ -23,43 +23,43 @@ docs/requirements-dev-proposal
 Create the next experiment note:
 
 ```text
-docs/guidelines/requirements-dev.md
+macos/26.5.1/artifacts.md
 ```
 
 ## Research Question
 
-What is the smallest development requirements proposal for optional tooling?
+What is the smallest artifact index stub for macOS 26.5.1?
 
 ## Target Output
 
 A bounded experiment README that captures:
 
 - Commands tested.
-- Proposed optional Python packages.
-- Version capture approach.
-- Install command.
-- Reasons not to enforce yet.
+- Artifact categories.
+- Current local artifacts used.
+- Acquisition status.
+- Links to tools and datasets.
 - What remains unknown or needs artifact-backed confirmation.
 
 ## Evidence To Collect
 
 - Apple documentation or headers when available.
 - `man ioreg`.
-- Existing optional dependency policy.
-- Existing jsonschema validation script.
-- Existing `.venv` workflow.
+- Existing macOS 26.5.1 runtime note.
+- Existing release acquisition rules.
+- Existing tools and datasets.
 
 ## Definition Of Done
 
 Done means:
 
-- `docs/guidelines/requirements-dev.md` exists.
+- `macos/26.5.1/artifacts.md` exists.
 - Observations, inferences, unknowns, and sources are separated.
 - No unsupported driver claims are made.
-- Proposal does not force network access.
+- Stub does not claim unavailable artifacts.
 
 ## Follow-Up Queue
 
-1. Add macOS 26.5.1 artifact index stub.
-2. Add release provenance template.
-3. Add provider-class join fixture validation pair.
+1. Add release provenance template.
+2. Add provider-class join fixture validation pair.
+3. Add requirements-dev.txt after adoption decision.
