@@ -4,18 +4,18 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`datasets/fixtures/acquisition-manifest/README.md` and `acquisition-manifest.fixture.json` were created in the `datasets/fixtures/acquisition-manifest` cycle.
+`tools/schema-validate/validate-known-schemas.py` was updated to validate acquisition manifest fixtures in the `tools/validate-acquisition-manifest` cycle.
 
 ## Current Recommendation
 
-Continue by adding an acquisition manifest schema validation pair.
+Continue by adding a macOS 16.0 metadata stub.
 
-Reason: the acquisition manifest fixture exists but optional validation does not yet cover it.
+Reason: release diff planning references `macos/16.0/`, but that folder has no metadata note yet.
 
 ## Next Branch
 
 ```text
-tools/validate-acquisition-manifest
+macos/16.0-metadata-stub
 ```
 
 ## Session Goal
@@ -23,43 +23,43 @@ tools/validate-acquisition-manifest
 Create the next experiment note:
 
 ```text
-tools/schema-validate/README.md
+macos/16.0/README.md
 ```
 
 ## Research Question
 
-What is the smallest validation update for acquisition manifest fixtures?
+What is the smallest metadata stub for macOS 16.0?
 
 ## Target Output
 
 A bounded experiment README that captures:
 
 - Commands tested.
-- Add acquisition manifest fixture to known schema validation.
-- Run syntax validation.
-- Run optional jsonschema validation.
-- Document coverage.
+- Known folder purpose.
+- Current acquisition status.
+- Missing metadata.
+- Stop rules before claiming facts.
 - What remains unknown or needs artifact-backed confirmation.
 
 ## Evidence To Collect
 
 - Apple documentation or headers when available.
 - `man ioreg`.
-- Existing acquisition manifest schema and fixture.
-- Existing optional schema validator.
+- Existing release diff plan.
 - Existing acquisition rules.
+- Existing macOS folder structure.
 
 ## Definition Of Done
 
 Done means:
 
-- `tools/schema-validate/README.md` documents acquisition manifest validation.
+- `macos/16.0/README.md` exists.
 - Observations, inferences, unknowns, and sources are separated.
 - No unsupported driver claims are made.
-- Optional validator passes locally.
+- Stub does not claim unavailable release facts.
 
 ## Follow-Up Queue
 
-1. Add macOS 16.0 metadata stub.
-2. Add generated release diff validation pair.
-3. Add release diff prototype validation pair.
+1. Add generated release diff validation pair.
+2. Add release diff prototype validation pair.
+3. Add release acquisition manifest validation to README.
