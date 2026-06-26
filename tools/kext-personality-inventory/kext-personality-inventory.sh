@@ -2,6 +2,8 @@
 set -eu
 
 roots="/System/Library/Extensions /Library/Extensions /System/Library/DriverExtensions /Library/DriverExtensions"
+repo_root="$(CDPATH= cd -- "$(dirname -- "$0")/../.." && pwd)"
+pci_match_parser="$repo_root/tools/pci-match-parse/pci_match_parse.py"
 
 usage() {
   cat <<'USAGE'
@@ -63,12 +65,14 @@ case "$command" in
   personalities-json)
     plist="${2:-}"
     require_plist "$plist"
-    python3 - "$plist" <<'PY'
+    python3 - "$plist" "$pci_match_parser" <<'PY'
 import json
 import plistlib
+import subprocess
 import sys
 
 plist_path = sys.argv[1]
+pci_match_parser = sys.argv[2]
 with open(plist_path, "rb") as handle:
     data = plistlib.load(handle)
 
@@ -103,6 +107,29 @@ matching_keys = [
     "idVendor",
     "idProduct",
 ]
+pci_match_keys = [
+    "IOPCIMatch",
+    "IOPCIPrimaryMatch",
+    "IOPCISecondaryMatch",
+    "IOPCIClassMatch",
+]
+
+
+def parse_pci_match(key, value):
+    if not isinstance(value, str):
+        return [{
+            "source_key": key,
+            "raw_token": str(value),
+            "token_index": 0,
+            "parse_state": "unsupported",
+        }]
+    result = subprocess.run(
+        [pci_match_parser, key, value],
+        check=True,
+        text=True,
+        stdout=subprocess.PIPE,
+    )
+    return json.loads(result.stdout)
 
 records = []
 for name, personality in sorted(data.get("IOKitPersonalities", {}).items()):
@@ -128,6 +155,14 @@ for name, personality in sorted(data.get("IOKitPersonalities", {}).items()):
             user_client["IOUserClientProperties"] = {}
             user_client["redacted"] = True
         record["user_client"] = user_client
+    pci_match_tokens = []
+    for key in pci_match_keys:
+        if key in personality:
+            pci_match_tokens.extend(parse_pci_match(key, personality[key]))
+    if pci_match_tokens:
+        record["family_specific"] = {
+            "pci_match_tokens": pci_match_tokens
+        }
     records.append(record)
 
 output = {

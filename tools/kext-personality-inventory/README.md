@@ -42,6 +42,12 @@ Emit personality records as schema-shaped JSON:
 tools/kext-personality-inventory/kext-personality-inventory.sh personalities-json /System/Library/Extensions/IOHIDFamily.kext/Contents/Info.plist
 ```
 
+When PCI match keys are present, JSON output includes parsed tokens under `family_specific.pci_match_tokens`:
+
+```sh
+tools/kext-personality-inventory/kext-personality-inventory.sh personalities-json /System/Library/Extensions/IONVMeFamily.kext/Contents/Info.plist
+```
+
 Count plist keys without preserving values:
 
 ```sh
@@ -55,6 +61,7 @@ tools/kext-personality-inventory/kext-personality-inventory.sh key-counts /Syste
 - The helper does not emit full plist dumps as a public command.
 - Matching inspection is restricted to an explicit allowlist.
 - JSON output parses plist structurally and emits one record per personality.
+- PCI match strings are parsed with `tools/pci-match-parse/pci_match_parse.py`.
 - Key counting strips values before sorting.
 - Bundle summaries include only basic bundle metadata.
 
@@ -91,6 +98,7 @@ The initial matching allowlist includes:
 - The future schema should store one record per personality, not one record per bundle.
 - Family-specific fields should live in bounded schema extension objects after examples are collected.
 - The first JSON mode maps to `datasets/schemas/kext-personality.schema.json`.
+- Parsed PCI tokens are not evaluated as hardware matches.
 
 ## Unknowns
 
