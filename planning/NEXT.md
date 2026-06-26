@@ -4,42 +4,41 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`macos/15.6/artifacts.md` and `macos/16.0/artifacts.md` now link to their acquisition manifest fixtures from the `macos/release-acquisition-links` cycle.
+`docs/guidelines/reduced-release-acquisition-checklist-example.md` was created in the `docs/reduced-release-acquisition-checklist-example` cycle.
 
 ## Current Recommendation
 
-Continue by adding a reduced release acquisition checklist example.
+Continue by adding a release diff input readiness note.
 
-Reason: release indexes now point to manifests, but reviewers still need a tiny example of the checklist applied to a reduced artifact.
+Reason: acquisition manifests and checklist guidance exist, but the release diff workflow still needs an explicit readiness gate before comparing releases.
 
 ## Next Branch
 
 ```text
-docs/reduced-release-acquisition-checklist-example
+docs/release-diff-input-readiness
 ```
 
 ## Session Goal
 
-Create the checklist example:
+Create the readiness note:
 
 ```text
-docs/guidelines/reduced-release-acquisition-checklist-example.md
+docs/guidelines/release-diff-input-readiness.md
 ```
 
 ## Research Question
 
-What is the smallest review checklist example for a reduced release artifact?
+What evidence is required before treating two releases as diff-ready?
 
 ## Target Output
 
-A bounded checklist example that captures:
+A bounded readiness note that captures:
 
-- Branch naming.
-- Allowed source.
-- Output path.
-- Redaction expectation.
-- Validation command.
-- Stop conditions.
+- Required manifest states.
+- Required reduced datasets.
+- Schema validation status.
+- Missing artifact handling.
+- Stop conditions before diffing.
 
 ## Evidence To Collect
 
@@ -53,13 +52,13 @@ A bounded checklist example that captures:
 
 Done means:
 
-- `docs/guidelines/reduced-release-acquisition-checklist-example.md` exists.
-- It is explicitly an example, not evidence of acquisition.
+- `docs/guidelines/release-diff-input-readiness.md` exists.
+- It does not require raw artifacts in git.
 - No unsupported driver claims are made.
-- It references the release acquisition rules and validation examples.
+- It links release acquisition, validation, and diff schemas.
 
 ## Follow-Up Queue
 
-1. Add release diff input readiness note.
-2. Add syntax validator ignore rules for local virtualenvs.
-3. Add release artifact provenance mini-template to macOS folders.
+1. Add syntax validator ignore rules for local virtualenvs.
+2. Add release artifact provenance mini-template to macOS folders.
+3. Add a release diff fixture generated from missing-artifact manifests.
