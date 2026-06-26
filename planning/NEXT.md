@@ -4,18 +4,18 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`datasets/fixtures/provider-class-join/README.md` and `provider-class-join.fixture.json` were created in the `datasets/fixtures/provider-class-join` cycle.
+`macos/README.md` was created in the `macos/release-metadata-index` cycle.
 
 ## Current Recommendation
 
-Continue by adding a release-specific metadata index.
+Continue by adding a helper-output fixture with parsed PCI match tokens.
 
-Reason: the project now has tools and fixtures, but release-specific organization needs an index before broader macOS comparisons.
+Reason: personality JSON now includes parsed PCI match tokens, but the fixtures do not yet show that shape.
 
 ## Next Branch
 
 ```text
-macos/release-metadata-index
+datasets/fixtures/parsed-pci-matches
 ```
 
 ## Session Goal
@@ -23,43 +23,43 @@ macos/release-metadata-index
 Create the next experiment note:
 
 ```text
-macos/README.md
+datasets/fixtures/parsed-pci-matches/README.md
 ```
 
 ## Research Question
 
-What is the smallest release metadata index for current macOS research?
+What is the smallest helper-output fixture with parsed PCI match tokens?
 
 ## Target Output
 
 A bounded experiment README that captures:
 
 - Commands tested.
-- Known local runtime version and build.
-- Existing release folders.
-- Which metadata belongs under `macos/<version>/`.
-- Links to current tools and schemas.
+- A reduced personality JSON fixture from a PCI-bearing kext.
+- Parsed PCI match token examples.
+- Regeneration command.
+- Redaction and non-matching rules.
 - What remains unknown or needs artifact-backed confirmation.
 
 ## Evidence To Collect
 
 - Apple documentation or headers when available.
 - `man ioreg`.
-- Existing folders: `macos/15.6/`, `macos/16.0/`.
-- Existing tools and schemas.
-- Existing workflow rules.
+- Existing tool: kext personality inventory and PCI match parser.
+- Existing experiment: PCI match-string parser.
+- Existing schemas and fixtures.
 
 ## Definition Of Done
 
 Done means:
 
-- `macos/README.md` exists.
+- `datasets/fixtures/parsed-pci-matches/README.md` exists.
 - Observations, inferences, unknowns, and sources are separated.
 - No unsupported driver claims are made.
-- The index does not claim unsupported release facts.
+- Fixture JSON parses locally.
 
 ## Follow-Up Queue
 
-1. Add helper-output fixture with parsed PCI match tokens.
-2. Add optional dependency lock strategy.
-3. Add macOS 26.5.1 local runtime note.
+1. Add optional dependency lock strategy.
+2. Add macOS 26.5.1 local runtime note.
+3. Add release acquisition rules.
