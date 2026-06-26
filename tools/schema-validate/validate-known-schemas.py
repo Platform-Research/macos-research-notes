@@ -28,6 +28,8 @@ PAIRS = [
     ("datasets/schemas/release-diff.schema.json", "datasets/fixtures/release-diff/release-diff.fixture.json"),
     ("datasets/schemas/release-diff.schema.json", "datasets/fixtures/generated-release-diff/generated-release-diff.fixture.json"),
     ("datasets/schemas/release-acquisition-manifest.schema.json", "datasets/fixtures/acquisition-manifest/acquisition-manifest.fixture.json"),
+    ("datasets/schemas/release-acquisition-manifest.schema.json", "datasets/fixtures/acquisition-manifest/15.6.fixture.json"),
+    ("datasets/schemas/release-acquisition-manifest.schema.json", "datasets/fixtures/acquisition-manifest/16.0.fixture.json"),
 ]
 
 

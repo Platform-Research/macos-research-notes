@@ -32,6 +32,8 @@ Acquisition manifest coverage uses:
 
 - `datasets/schemas/release-acquisition-manifest.schema.json`
 - `datasets/fixtures/acquisition-manifest/acquisition-manifest.fixture.json`
+- `datasets/fixtures/acquisition-manifest/15.6.fixture.json`
+- `datasets/fixtures/acquisition-manifest/16.0.fixture.json`
 
 ## What It Checks
 
