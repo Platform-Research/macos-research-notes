@@ -4,41 +4,41 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`datasets/fixtures/acquisition-manifest/16.0.fixture.json` was created in the `datasets/fixtures/acquisition-manifest-16.0` cycle.
+`docs/guidelines/release-manifest-validation-examples.md` was created in the `docs/release-manifest-validation-examples` cycle.
 
 ## Current Recommendation
 
-Continue by documenting release manifest validation examples.
+Continue by adding 15.6 and 16.0 acquisition manifests to the optional validator.
 
-Reason: both 15.6 and 16.0 now have minimal acquisition fixtures, but validation usage is still implicit.
+Reason: the validation note lists the release fixtures, but the schema validator still only checks the generic acquisition manifest fixture.
 
 ## Next Branch
 
 ```text
-docs/release-manifest-validation-examples
+tools/validate-release-acquisition-fixtures
 ```
 
 ## Session Goal
 
-Create the next validation note:
+Update the optional schema validator:
 
 ```text
-docs/guidelines/release-manifest-validation-examples.md
+tools/schema-validate/validate-known-schemas.py
 ```
 
 ## Research Question
 
-How should release acquisition manifest fixtures be validated before merge?
+How should the optional validator cover release-specific acquisition manifest fixtures?
 
 ## Target Output
 
-A bounded validation note that captures:
+A bounded validator update that captures:
 
-- JSON syntax validation.
-- Schema validation.
-- Fixture paths covered so far.
-- Boundary checks before adding release facts.
-- What remains unknown or needs artifact-backed confirmation.
+- 15.6 fixture validation.
+- 16.0 fixture validation.
+- Existing generic fixture validation.
+- A passing local validation command.
+- README coverage if wording changes.
 
 ## Evidence To Collect
 
@@ -52,13 +52,13 @@ A bounded validation note that captures:
 
 Done means:
 
-- `docs/guidelines/release-manifest-validation-examples.md` exists.
-- Commands are copy-pasteable from repo root.
+- `tools/schema-validate/validate-known-schemas.py` validates the 15.6 and 16.0 fixtures.
+- The validation command passes locally.
 - No unsupported driver claims are made.
-- The note distinguishes syntax validation from schema validation.
+- Validation docs mention the release-specific fixtures.
 
 ## Follow-Up Queue
 
-1. Add 15.6/16.0 manifests to optional validator.
-2. Link release folders to acquisition manifest fixtures.
-3. Add a reduced release acquisition checklist example.
+1. Link release folders to acquisition manifest fixtures.
+2. Add a reduced release acquisition checklist example.
+3. Add release diff input readiness note.
