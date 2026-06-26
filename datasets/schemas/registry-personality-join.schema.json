@@ -1,0 +1,212 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Darwin-Collective/darwin-collective/datasets/schemas/registry-personality-join.schema.json",
+  "title": "Darwin Collective Registry Personality Join",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "source",
+    "edges"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.1.0"
+    },
+    "source": {
+      "$ref": "#/$defs/source"
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/join_edge"
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "$defs": {
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "registry_inventory",
+        "personality_inventory",
+        "policy"
+      ],
+      "properties": {
+        "registry_inventory": {
+          "$ref": "#/$defs/input_reference"
+        },
+        "personality_inventory": {
+          "$ref": "#/$defs/input_reference"
+        },
+        "policy": {
+          "type": "string",
+          "examples": [
+            "candidate-only",
+            "no-runtime-claim"
+          ]
+        }
+      }
+    },
+    "input_reference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema",
+        "path"
+      ],
+      "properties": {
+        "schema": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        },
+        "record_id": {
+          "type": "string"
+        }
+      }
+    },
+    "join_edge": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "record_kind",
+        "state",
+        "registry_ref",
+        "personality_ref",
+        "join_reason",
+        "confidence"
+      ],
+      "properties": {
+        "record_kind": {
+          "const": "registry_personality_join"
+        },
+        "state": {
+          "enum": [
+            "candidate",
+            "unresolved",
+            "rejected"
+          ]
+        },
+        "registry_ref": {
+          "$ref": "#/$defs/record_reference"
+        },
+        "personality_ref": {
+          "$ref": "#/$defs/record_reference"
+        },
+        "join_reason": {
+          "enum": [
+            "provider_class",
+            "io_name",
+            "pci_id",
+            "pci_class",
+            "user_client_class",
+            "insufficient_evidence",
+            "ambiguous_match",
+            "policy_rejected"
+          ]
+        },
+        "matched_fields": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/matched_field"
+          }
+        },
+        "confidence": {
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        "explanation": {
+          "type": "string"
+        },
+        "requires_runtime_confirmation": {
+          "type": "boolean",
+          "default": true
+        }
+      }
+    },
+    "record_reference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema",
+        "record_kind"
+      ],
+      "properties": {
+        "schema": {
+          "type": "string"
+        },
+        "record_kind": {
+          "type": "string"
+        },
+        "record_id": {
+          "type": "string"
+        },
+        "source_path": {
+          "type": "string"
+        },
+        "object_name": {
+          "type": "string"
+        },
+        "personality_name": {
+          "type": "string"
+        }
+      }
+    },
+    "matched_field": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "registry_field",
+        "personality_field",
+        "match_type"
+      ],
+      "properties": {
+        "registry_field": {
+          "type": "string"
+        },
+        "personality_field": {
+          "type": "string"
+        },
+        "registry_value": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "null"
+          ]
+        },
+        "personality_value": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "null"
+          ]
+        },
+        "match_type": {
+          "enum": [
+            "exact",
+            "normalized",
+            "ancestor",
+            "declared-only",
+            "missing",
+            "conflict"
+          ]
+        }
+      }
+    }
+  }
+}
