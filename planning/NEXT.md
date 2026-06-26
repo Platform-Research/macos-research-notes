@@ -4,18 +4,18 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`datasets/fixtures/parsed-pci-matches/README.md` and `parsed-pci-matches.fixture.json` were created in the `datasets/fixtures/parsed-pci-matches` cycle.
+`docs/guidelines/optional-dependencies.md` was created in the `docs/optional-dependency-lock-strategy` cycle.
 
 ## Current Recommendation
 
-Continue by adding an optional dependency lock strategy.
+Continue by adding a macOS 26.5.1 local runtime note.
 
-Reason: optional `jsonschema` validation now works through `.venv`, but dependency version policy is not captured.
+Reason: the local runtime version is used throughout experiments and should have a release-scoped note.
 
 ## Next Branch
 
 ```text
-docs/optional-dependency-lock-strategy
+macos/26.5.1-local-runtime
 ```
 
 ## Session Goal
@@ -23,43 +23,43 @@ docs/optional-dependency-lock-strategy
 Create the next experiment note:
 
 ```text
-docs/guidelines/optional-dependencies.md
+macos/26.5.1/README.md
 ```
 
 ## Research Question
 
-What is the smallest optional dependency lock strategy for research tooling?
+What is the smallest local runtime note for macOS 26.5.1?
 
 ## Target Output
 
 A bounded experiment README that captures:
 
 - Commands tested.
-- Which optional dependencies are allowed.
-- How to record versions.
-- When to avoid committing lockfiles.
-- How to reproduce `.venv` tooling.
+- Local product version and build.
+- Darwin kernel string.
+- Relationship to current experiments.
+- Boundaries around host-specific facts.
 - What remains unknown or needs artifact-backed confirmation.
 
 ## Evidence To Collect
 
 - Apple documentation or headers when available.
 - `man ioreg`.
-- Existing jsonschema validation tooling.
-- Existing validation policy.
+- Existing `macos/README.md`.
+- Existing experiments and local runtime references.
 - Existing workflow rules.
 
 ## Definition Of Done
 
 Done means:
 
-- `docs/guidelines/optional-dependencies.md` exists.
+- `macos/26.5.1/README.md` exists.
 - Observations, inferences, unknowns, and sources are separated.
 - No unsupported driver claims are made.
-- The strategy does not require network access for ordinary cycles.
+- Note separates host facts from release facts.
 
 ## Follow-Up Queue
 
-1. Add macOS 26.5.1 local runtime note.
-2. Add release acquisition rules.
-3. Add parsed PCI match fixture validation pair.
+1. Add release acquisition rules.
+2. Add parsed PCI match fixture validation pair.
+3. Add requirements-dev proposal.
