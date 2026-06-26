@@ -36,6 +36,12 @@ Count user-client property keys without values:
 tools/ioreg-inventory/ioreg-inventory.sh user-client-key-counts
 ```
 
+Emit user-client property key counts as schema-shaped JSON:
+
+```sh
+tools/ioreg-inventory/ioreg-inventory.sh user-client-key-counts-json
+```
+
 Print selected user-client boolean flags:
 
 ```sh
@@ -50,6 +56,7 @@ tools/ioreg-inventory/ioreg-inventory.sh user-client-flags
 - Broad raw `ioreg -l` dumps are not exposed as a public command.
 - User-client creator values are not printed.
 - User-client key counting strips values before sorting.
+- JSON output includes source and redaction metadata.
 - PCI output is restricted to an explicit allowlist.
 
 ## Supported Inventory Threads
@@ -60,7 +67,6 @@ tools/ioreg-inventory/ioreg-inventory.sh user-client-flags
 
 ## Out Of Scope
 
-- JSON output.
 - Cross-machine normalization.
 - PCI byte-order decoding.
 - Kext or dext personality extraction.
@@ -72,6 +78,7 @@ tools/ioreg-inventory/ioreg-inventory.sh user-client-flags
 - A small helper makes repeated experiments less likely to drift into unsafe ad hoc commands.
 - The first registry schema should model the helper's bounded outputs before adding richer parsers.
 - Future JSON output should preserve command metadata and redaction policy alongside extracted records.
+- The first JSON mode maps to `datasets/schemas/ioreg-inventory.schema.json` with `user_client_key_count` records.
 
 ## Unknowns
 

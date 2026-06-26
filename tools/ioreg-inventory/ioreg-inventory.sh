@@ -10,6 +10,8 @@ Commands:
   pci-count                 Count root IOPCIDevice matches.
   pci-allowlist             Print selected IOPCIDevice allowlist fields.
   user-client-key-counts    Count IOUserClient property keys without values.
+  user-client-key-counts-json
+                             Emit user-client key counts as schema-shaped JSON.
   user-client-flags         Print selected IOUserClient boolean flags only.
 
 This helper is read-only. It intentionally avoids raw broad ioreg dumps.
@@ -39,6 +41,44 @@ case "$command" in
       | sort \
       | uniq -c \
       | sort -nr
+    ;;
+  user-client-key-counts-json)
+    ioreg -p IOService -c IOUserClient -r -l -w 0 \
+      | sed -n 's/.*"\([A-Za-z0-9,#_-][A-Za-z0-9,#_-]*\)" =.*/\1/p' \
+      | sort \
+      | uniq -c \
+      | sort -nr \
+      | awk '
+        BEGIN {
+          print "{"
+          print "  \"schema_version\": \"0.1.0\","
+          print "  \"source\": {"
+          print "    \"tool\": \"tools/ioreg-inventory/ioreg-inventory.sh\","
+          print "    \"command\": \"user-client-key-counts-json\","
+          print "    \"mode\": \"user-client-key-counts\","
+          print "    \"plane\": \"IOService\","
+          print "    \"redaction\": {"
+          print "      \"raw_output_committed\": false,"
+          print "      \"policy\": \"values-stripped\","
+          print "      \"omitted_fields\": [\"IOUserClientCreator\"]"
+          print "    }"
+          print "  },"
+          print "  \"records\": ["
+        }
+        {
+          if (seen) {
+            print ","
+          }
+          seen = 1
+          printf "    {\"record_kind\": \"user_client_key_count\", \"key\": \"%s\", \"count\": %d}", $2, $1
+        }
+        END {
+          if (seen) {
+            print ""
+          }
+          print "  ]"
+          print "}"
+        }'
     ;;
   user-client-flags)
     ioreg -p IOService -c IOUserClient -r -l -w 0 -d 1 \
