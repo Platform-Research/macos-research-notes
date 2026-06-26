@@ -4,18 +4,18 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`experiments/registry-ancestor-capture/README.md` was created in the `experiments/registry-ancestor-capture` cycle.
+`experiments/pci-match-string-parser/README.md` was created in the `experiments/pci-match-string-parser` cycle.
 
 ## Current Recommendation
 
-Continue with a PCI match-string parser experiment.
+Continue with normalized PCI JSON output.
 
-Reason: PCI joins need normalized registry IDs and parsed personality match strings before automation.
+Reason: PCI registry blobs can now be decoded, but the IORegistry helper still lacks schema-shaped normalized PCI output.
 
 ## Next Branch
 
 ```text
-experiments/pci-match-string-parser
+tools/ioreg-normalized-pci-json
 ```
 
 ## Session Goal
@@ -23,12 +23,12 @@ experiments/pci-match-string-parser
 Create the next experiment note:
 
 ```text
-experiments/pci-match-string-parser/README.md
+tools/ioreg-inventory/README.md
 ```
 
 ## Research Question
 
-What is the smallest parser shape for `IOPCIMatch` and `IOPCIPrimaryMatch` strings?
+What is the smallest schema-shaped normalized PCI JSON output for the IORegistry helper?
 
 ## Target Output
 
@@ -36,31 +36,31 @@ A bounded experiment README that captures:
 
 - Commands tested.
 - Commands tested.
-- Known personality match-string shapes.
-- Normalized vendor and device components.
-- Ambiguous or unsupported match strings.
-- Tests needed before join automation.
+- A bounded JSON command for known sample PCI fields.
+- Use of the PCI decoder for normalized values.
+- Clear distinction between sample mode and full inventory mode.
+- Smoke checks that output parses as JSON.
 - What remains unknown or needs artifact-backed confirmation.
 
 ## Evidence To Collect
 
 - Apple documentation or headers when available.
 - `man ioreg`.
-- Existing experiment: PCI inventory and registry-personality join.
-- Existing tool: PCI ID decoder and kext personality inventory.
-- Existing schemas and candidate join fixture.
+- Existing tool: IORegistry inventory and PCI ID decoder.
+- Existing schema: IORegistry inventory.
+- Existing experiments: PCI inventory and PCI match-string parser.
 
 ## Definition Of Done
 
 Done means:
 
-- `experiments/pci-match-string-parser/README.md` exists.
+- `tools/ioreg-inventory/README.md` documents normalized PCI JSON output.
 - Observations, inferences, unknowns, and sources are separated.
 - No unsupported driver claims are made.
-- No unsupported match-string claims are made.
+- The new JSON output parses locally.
 
 ## Follow-Up Queue
 
-1. Add normalized PCI JSON output.
-2. Add full JSON Schema validation policy.
-3. Add ancestor topology JSON mode.
+1. Add full JSON Schema validation policy.
+2. Add ancestor topology JSON mode.
+3. Implement PCI match-string parser.
