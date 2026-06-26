@@ -4,18 +4,18 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`docs/guidelines/requirements-dev.md` was created in the `docs/requirements-dev-proposal` cycle.
+`macos/26.5.1/artifacts.md` was created in the `macos/26.5.1-artifact-index` cycle.
 
 ## Current Recommendation
 
-Continue by adding a macOS 26.5.1 artifact index stub.
+Continue by adding a release provenance template.
 
-Reason: the local runtime note exists, but the release folder still needs an artifact index placeholder.
+Reason: release acquisition rules define required provenance fields, but there is no reusable template yet.
 
 ## Next Branch
 
 ```text
-macos/26.5.1-artifact-index
+docs/release-provenance-template
 ```
 
 ## Session Goal
@@ -23,43 +23,43 @@ macos/26.5.1-artifact-index
 Create the next experiment note:
 
 ```text
-macos/26.5.1/artifacts.md
+docs/guidelines/release-provenance-template.md
 ```
 
 ## Research Question
 
-What is the smallest artifact index stub for macOS 26.5.1?
+What is the smallest reusable release provenance template?
 
 ## Target Output
 
 A bounded experiment README that captures:
 
 - Commands tested.
-- Artifact categories.
-- Current local artifacts used.
-- Acquisition status.
-- Links to tools and datasets.
+- Source command or path.
+- Date and host context.
+- Redaction policy.
+- Raw/reduced/derived status.
 - What remains unknown or needs artifact-backed confirmation.
 
 ## Evidence To Collect
 
 - Apple documentation or headers when available.
 - `man ioreg`.
-- Existing macOS 26.5.1 runtime note.
 - Existing release acquisition rules.
-- Existing tools and datasets.
+- Existing workflow rules.
+- Existing macOS metadata index.
 
 ## Definition Of Done
 
 Done means:
 
-- `macos/26.5.1/artifacts.md` exists.
+- `docs/guidelines/release-provenance-template.md` exists.
 - Observations, inferences, unknowns, and sources are separated.
 - No unsupported driver claims are made.
-- Stub does not claim unavailable artifacts.
+- Template can be copied into release notes.
 
 ## Follow-Up Queue
 
-1. Add release provenance template.
-2. Add provider-class join fixture validation pair.
-3. Add requirements-dev.txt after adoption decision.
+1. Add provider-class join fixture validation pair.
+2. Add requirements-dev.txt after adoption decision.
+3. Add macOS release diff planning note.
