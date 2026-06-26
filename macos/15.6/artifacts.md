@@ -11,6 +11,12 @@ This is a placeholder index for macOS `15.6` release artifacts. No comparable re
 - IORegistry inventory: not acquired.
 - Release diff input: missing.
 
+## Acquisition Manifest
+
+- Fixture: `datasets/fixtures/acquisition-manifest/15.6.fixture.json`
+- Schema: `datasets/schemas/release-acquisition-manifest.schema.json`
+- Validation: `.venv/bin/python tools/schema-validate/validate-known-schemas.py`
+
 ## Not Yet Acquired
 
 - installer metadata;

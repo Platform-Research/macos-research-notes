@@ -4,42 +4,42 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`tools/schema-validate/validate-known-schemas.py` now validates 15.6 and 16.0 acquisition manifests from the `tools/validate-release-acquisition-fixtures` cycle.
+`macos/15.6/artifacts.md` and `macos/16.0/artifacts.md` now link to their acquisition manifest fixtures from the `macos/release-acquisition-links` cycle.
 
 ## Current Recommendation
 
-Continue by linking release folders to their acquisition manifest fixtures.
+Continue by adding a reduced release acquisition checklist example.
 
-Reason: release folders and fixtures now exist, but the release folders do not yet point reviewers to the corresponding acquisition manifests.
+Reason: release indexes now point to manifests, but reviewers still need a tiny example of the checklist applied to a reduced artifact.
 
 ## Next Branch
 
 ```text
-macos/release-acquisition-links
+docs/reduced-release-acquisition-checklist-example
 ```
 
 ## Session Goal
 
-Update the release folder notes:
+Create the checklist example:
 
 ```text
-macos/15.6/artifacts.md
-macos/16.0/artifacts.md
+docs/guidelines/reduced-release-acquisition-checklist-example.md
 ```
 
 ## Research Question
 
-How should release artifact indexes point to their acquisition manifest fixtures?
+What is the smallest review checklist example for a reduced release artifact?
 
 ## Target Output
 
-A bounded release index update that captures:
+A bounded checklist example that captures:
 
-- 15.6 acquisition manifest fixture link.
-- 16.0 acquisition manifest fixture link.
-- Missing-artifact status remains explicit.
-- No claim that raw artifacts were acquired.
-- Validation command remains available.
+- Branch naming.
+- Allowed source.
+- Output path.
+- Redaction expectation.
+- Validation command.
+- Stop conditions.
 
 ## Evidence To Collect
 
@@ -53,13 +53,13 @@ A bounded release index update that captures:
 
 Done means:
 
-- `macos/15.6/artifacts.md` links to the 15.6 acquisition manifest fixture.
-- `macos/16.0/artifacts.md` links to the 16.0 acquisition manifest fixture.
+- `docs/guidelines/reduced-release-acquisition-checklist-example.md` exists.
+- It is explicitly an example, not evidence of acquisition.
 - No unsupported driver claims are made.
-- Missing artifact states remain explicit.
+- It references the release acquisition rules and validation examples.
 
 ## Follow-Up Queue
 
-1. Add a reduced release acquisition checklist example.
-2. Add release diff input readiness note.
-3. Add syntax validator ignore rules for local virtualenvs.
+1. Add release diff input readiness note.
+2. Add syntax validator ignore rules for local virtualenvs.
+3. Add release artifact provenance mini-template to macOS folders.
