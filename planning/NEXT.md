@@ -4,18 +4,18 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`tools/schema-validate/README.md`, `tools/schema-validate/validate-known-schemas.py`, and `.gitignore` were updated in the `tools/jsonschema-validator` cycle.
+`datasets/fixtures/provider-class-join/README.md` and `provider-class-join.fixture.json` were created in the `datasets/fixtures/provider-class-join` cycle.
 
 ## Current Recommendation
 
-Continue by adding a provider-class join fixture.
+Continue by adding a release-specific metadata index.
 
-Reason: the provider-class join helper exists and needs a small committed fixture for review and smoke tests.
+Reason: the project now has tools and fixtures, but release-specific organization needs an index before broader macOS comparisons.
 
 ## Next Branch
 
 ```text
-datasets/fixtures/provider-class-join
+macos/release-metadata-index
 ```
 
 ## Session Goal
@@ -23,43 +23,43 @@ datasets/fixtures/provider-class-join
 Create the next experiment note:
 
 ```text
-datasets/fixtures/provider-class-join/README.md
+macos/README.md
 ```
 
 ## Research Question
 
-What is the smallest provider-class join fixture?
+What is the smallest release metadata index for current macOS research?
 
 ## Target Output
 
 A bounded experiment README that captures:
 
 - Commands tested.
-- One reduced topology input.
-- One reduced personality input.
-- One provider-class join output.
-- Smoke commands to regenerate and parse.
+- Known local runtime version and build.
+- Existing release folders.
+- Which metadata belongs under `macos/<version>/`.
+- Links to current tools and schemas.
 - What remains unknown or needs artifact-backed confirmation.
 
 ## Evidence To Collect
 
 - Apple documentation or headers when available.
 - `man ioreg`.
-- Existing tools: topology JSON, personality JSON, provider-class join.
-- Existing schemas: IORegistry, kext personality, registry-personality join.
-- Existing fixtures: topology JSON and helper outputs.
+- Existing folders: `macos/15.6/`, `macos/16.0/`.
+- Existing tools and schemas.
+- Existing workflow rules.
 
 ## Definition Of Done
 
 Done means:
 
-- `datasets/fixtures/provider-class-join/README.md` exists.
+- `macos/README.md` exists.
 - Observations, inferences, unknowns, and sources are separated.
 - No unsupported driver claims are made.
-- Fixture JSON parses locally.
+- The index does not claim unsupported release facts.
 
 ## Follow-Up Queue
 
-1. Add release-specific metadata index.
-2. Add helper-output fixture with parsed PCI match tokens.
-3. Add optional dependency lock strategy.
+1. Add helper-output fixture with parsed PCI match tokens.
+2. Add optional dependency lock strategy.
+3. Add macOS 26.5.1 local runtime note.

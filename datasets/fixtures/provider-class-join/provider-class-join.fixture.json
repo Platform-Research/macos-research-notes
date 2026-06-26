@@ -1,0 +1,73 @@
+{
+  "edges": [
+    {
+      "confidence": "low",
+      "explanation": "Provider-class candidate only; runtime attachment is not proven.",
+      "join_reason": "insufficient_evidence",
+      "matched_fields": [
+        {
+          "match_type": "missing",
+          "personality_field": "IOProviderClass",
+          "personality_value": "IOHIDInterface",
+          "registry_field": "class_name",
+          "registry_value": null
+        }
+      ],
+      "personality_ref": {
+        "personality_name": "HID Game Controller Pointing Driver",
+        "record_kind": "kext_personality",
+        "schema": "datasets/schemas/kext-personality.schema.json",
+        "source_path": "/System/Library/Extensions/IOHIDFamily.kext/Contents/Info.plist"
+      },
+      "record_kind": "registry_personality_join",
+      "registry_ref": {
+        "record_kind": "topology_node",
+        "schema": "datasets/schemas/ioreg-inventory.schema.json"
+      },
+      "requires_runtime_confirmation": true,
+      "state": "unresolved"
+    },
+    {
+      "confidence": "low",
+      "explanation": "Provider-class candidate only; runtime attachment is not proven.",
+      "join_reason": "insufficient_evidence",
+      "matched_fields": [
+        {
+          "match_type": "missing",
+          "personality_field": "IOProviderClass",
+          "personality_value": "IOHIDDevice",
+          "registry_field": "class_name",
+          "registry_value": null
+        }
+      ],
+      "personality_ref": {
+        "personality_name": "IOHIDBTCETimeSyncService",
+        "record_kind": "kext_personality",
+        "schema": "datasets/schemas/kext-personality.schema.json",
+        "source_path": "/System/Library/Extensions/IOHIDFamily.kext/Contents/Info.plist"
+      },
+      "record_kind": "registry_personality_join",
+      "registry_ref": {
+        "record_kind": "topology_node",
+        "schema": "datasets/schemas/ioreg-inventory.schema.json"
+      },
+      "requires_runtime_confirmation": true,
+      "state": "unresolved"
+    }
+  ],
+  "notes": [
+    "Provider-class joins are candidates only and do not prove runtime attachment."
+  ],
+  "schema_version": "0.1.0",
+  "source": {
+    "personality_inventory": {
+      "path": "datasets/fixtures/helper-outputs/kext-personalities.fixture.json",
+      "schema": "datasets/schemas/kext-personality.schema.json"
+    },
+    "policy": "candidate-only",
+    "registry_inventory": {
+      "path": "datasets/fixtures/topology-json/ioreg-topology.fixture.json",
+      "schema": "datasets/schemas/ioreg-inventory.schema.json"
+    }
+  }
+}
