@@ -1,0 +1,27 @@
+{
+  "schema_version": "0.1.0",
+  "source": {
+    "from_release": "15.6",
+    "to_release": "16.0",
+    "policy": "metadata-only",
+    "provenance": "Fixture only; no acquired release artifacts are compared."
+  },
+  "records": [
+    {
+      "record_kind": "release_diff",
+      "state": "unresolved",
+      "subject": "kext-personality-inventory",
+      "field": "records",
+      "from_value": null,
+      "to_value": null,
+      "evidence": [
+        "macos/15.6/.gitkeep",
+        "macos/16.0/.gitkeep"
+      ],
+      "notes": "Release folders exist, but no reduced comparable metadata has been acquired yet."
+    }
+  ],
+  "notes": [
+    "This fixture demonstrates unresolved diff state without claiming a real release difference."
+  ]
+}

@@ -4,18 +4,18 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`docs/guidelines/acquisition-checklist.md` was created in the `docs/acquisition-checklist` cycle.
+`datasets/fixtures/release-diff/README.md` and `release-diff.fixture.json` were created in the `datasets/fixtures/release-diff` cycle.
 
 ## Current Recommendation
 
-Continue by adding a release diff fixture.
+Continue by adding the release diff schema to the optional validator.
 
-Reason: the release diff schema exists and needs a minimal fixture.
+Reason: the release diff schema and fixture exist, but optional validation does not yet cover them.
 
 ## Next Branch
 
 ```text
-datasets/fixtures/release-diff
+tools/validate-release-diff
 ```
 
 ## Session Goal
@@ -23,43 +23,43 @@ datasets/fixtures/release-diff
 Create the next experiment note:
 
 ```text
-datasets/fixtures/release-diff/README.md
+tools/schema-validate/README.md
 ```
 
 ## Research Question
 
-What is the smallest release diff fixture?
+What is the smallest validation update for release diff fixtures?
 
 ## Target Output
 
 A bounded experiment README that captures:
 
 - Commands tested.
-- One unresolved release diff record.
-- Source release references.
-- Provenance policy.
-- Local JSON syntax validation.
+- Add release diff fixture to known schema validation.
+- Run syntax validation.
+- Run optional jsonschema validation.
+- Document coverage.
 - What remains unknown or needs artifact-backed confirmation.
 
 ## Evidence To Collect
 
 - Apple documentation or headers when available.
 - `man ioreg`.
-- Existing release diff schema.
-- Existing release diff plan.
-- Existing release acquisition rules.
+- Existing release diff schema and fixture.
+- Existing optional schema validator.
+- Existing acquisition rules.
 
 ## Definition Of Done
 
 Done means:
 
-- `datasets/fixtures/release-diff/README.md` exists.
+- `tools/schema-validate/README.md` documents release diff validation.
 - Observations, inferences, unknowns, and sources are separated.
 - No unsupported driver claims are made.
-- Fixture JSON parses locally.
+- Optional validator passes locally.
 
 ## Follow-Up Queue
 
-1. Add release diff schema to validator.
-2. Add release diff fixture validation pair.
-3. Add first generated release diff prototype.
+1. Add first generated release diff prototype.
+2. Add release acquisition manifest schema.
+3. Add macOS 15.6 metadata stub.
