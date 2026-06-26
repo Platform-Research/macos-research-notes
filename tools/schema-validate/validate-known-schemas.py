@@ -25,6 +25,7 @@ PAIRS = [
     ("datasets/schemas/registry-personality-join.schema.json", "datasets/examples/schema-validation/registry-personality-join.example.json"),
     ("datasets/schemas/registry-personality-join.schema.json", "datasets/fixtures/candidate-joins/registry-personality-candidates.fixture.json"),
     ("datasets/schemas/registry-personality-join.schema.json", "datasets/fixtures/provider-class-join/provider-class-join.fixture.json"),
+    ("datasets/schemas/release-diff.schema.json", "datasets/fixtures/release-diff/release-diff.fixture.json"),
 ]
 
 

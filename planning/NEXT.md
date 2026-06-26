@@ -4,18 +4,18 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`datasets/fixtures/release-diff/README.md` and `release-diff.fixture.json` were created in the `datasets/fixtures/release-diff` cycle.
+`tools/schema-validate/validate-known-schemas.py` was updated to validate release diff fixtures in the `tools/validate-release-diff` cycle.
 
 ## Current Recommendation
 
-Continue by adding the release diff schema to the optional validator.
+Continue by adding the first generated release diff prototype.
 
-Reason: the release diff schema and fixture exist, but optional validation does not yet cover them.
+Reason: release diff schemas and fixtures exist; a tiny generator can now produce unresolved diff output from known inputs.
 
 ## Next Branch
 
 ```text
-tools/validate-release-diff
+tools/release-diff-prototype
 ```
 
 ## Session Goal
@@ -23,22 +23,22 @@ tools/validate-release-diff
 Create the next experiment note:
 
 ```text
-tools/schema-validate/README.md
+tools/release-diff/README.md
 ```
 
 ## Research Question
 
-What is the smallest validation update for release diff fixtures?
+What is the smallest generated release diff prototype?
 
 ## Target Output
 
 A bounded experiment README that captures:
 
 - Commands tested.
-- Add release diff fixture to known schema validation.
-- Run syntax validation.
-- Run optional jsonschema validation.
-- Document coverage.
+- Inputs and output shape.
+- A tiny generator for unresolved metadata-only diffs.
+- Smoke check with placeholder release folders.
+- Boundaries around unsupported release claims.
 - What remains unknown or needs artifact-backed confirmation.
 
 ## Evidence To Collect
@@ -46,20 +46,20 @@ A bounded experiment README that captures:
 - Apple documentation or headers when available.
 - `man ioreg`.
 - Existing release diff schema and fixture.
-- Existing optional schema validator.
+- Existing macOS release folders.
 - Existing acquisition rules.
 
 ## Definition Of Done
 
 Done means:
 
-- `tools/schema-validate/README.md` documents release diff validation.
+- `tools/release-diff/README.md` exists.
 - Observations, inferences, unknowns, and sources are separated.
 - No unsupported driver claims are made.
-- Optional validator passes locally.
+- Generated output parses locally.
 
 ## Follow-Up Queue
 
-1. Add first generated release diff prototype.
-2. Add release acquisition manifest schema.
-3. Add macOS 15.6 metadata stub.
+1. Add release acquisition manifest schema.
+2. Add macOS 15.6 metadata stub.
+3. Add generated release diff fixture.
