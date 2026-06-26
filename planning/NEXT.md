@@ -4,18 +4,18 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`requirements-dev.txt` was created in the `tools/requirements-dev` cycle.
+`planning/macos-release-diff.md` was created in the `planning/macos-release-diff` cycle.
 
 ## Current Recommendation
 
-Continue by adding a macOS release diff planning note.
+Continue by adding artifact provenance to the macOS 26.5.1 index.
 
-Reason: release metadata and acquisition rules exist; next step is a focused plan for comparing release metadata.
+Reason: the artifact index exists, but it should include explicit provenance structure.
 
 ## Next Branch
 
 ```text
-planning/macos-release-diff
+macos/26.5.1-artifact-provenance
 ```
 
 ## Session Goal
@@ -23,43 +23,43 @@ planning/macos-release-diff
 Create the next experiment note:
 
 ```text
-planning/macos-release-diff.md
+macos/26.5.1/artifacts.md
 ```
 
 ## Research Question
 
-What is the smallest plan for macOS release metadata diffs?
+What is the smallest provenance update for the macOS 26.5.1 artifact index?
 
 ## Target Output
 
 A bounded experiment README that captures:
 
 - Commands tested.
-- Inputs and outputs.
-- First release pair.
-- Required schemas and fixtures.
-- Stop rules for raw artifacts.
+- Provenance section.
+- Current source commands.
+- Raw/reduced/derived status.
+- Redaction policy.
 - What remains unknown or needs artifact-backed confirmation.
 
 ## Evidence To Collect
 
 - Apple documentation or headers when available.
 - `man ioreg`.
+- Existing provenance template.
+- Existing macOS 26.5.1 artifact index.
 - Existing release acquisition rules.
-- Existing macOS metadata index.
-- Existing tools and schemas.
 
 ## Definition Of Done
 
 Done means:
 
-- `planning/macos-release-diff.md` exists.
+- `macos/26.5.1/artifacts.md` has a provenance section.
 - Observations, inferences, unknowns, and sources are separated.
 - No unsupported driver claims are made.
-- Plan avoids unsupported release claims.
+- Provenance remains host-specific and bounded.
 
 ## Follow-Up Queue
 
-1. Add artifact provenance to macOS 26.5.1 index.
-2. Add requirements-dev usage to optional dependencies doc.
-3. Add first release diff fixture schema.
+1. Add requirements-dev usage to optional dependencies doc.
+2. Add first release diff fixture schema.
+3. Add acquisition checklist.
