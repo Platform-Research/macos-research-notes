@@ -42,6 +42,12 @@ Run known PCI decode smoke checks:
 tools/ioreg-inventory/ioreg-inventory.sh pci-decode-smoke
 ```
 
+Emit a reduced normalized PCI sample JSON record:
+
+```sh
+tools/ioreg-inventory/ioreg-inventory.sh pci-sample-json
+```
+
 Count user-client property keys without values:
 
 ```sh
@@ -71,6 +77,7 @@ tools/ioreg-inventory/ioreg-inventory.sh user-client-flags
 - JSON output includes source and redaction metadata.
 - PCI output is restricted to an explicit allowlist.
 - PCI blob decoding delegates to `tools/pci-id-decode/pci_id_decode.py`.
+- `pci-sample-json` is a reduced sample record, not a full host inventory.
 
 ## Supported Inventory Threads
 
@@ -84,6 +91,7 @@ tools/ioreg-inventory/ioreg-inventory.sh user-client-flags
 - Kext or dext personality extraction.
 - Runtime opening of user clients.
 - Storing raw local registry artifacts in the repository.
+- Full normalized PCI inventory JSON.
 
 ## Inferences
 
@@ -92,6 +100,7 @@ tools/ioreg-inventory/ioreg-inventory.sh user-client-flags
 - Future JSON output should preserve command metadata and redaction policy alongside extracted records.
 - The first JSON mode maps to `datasets/schemas/ioreg-inventory.schema.json` with `user_client_key_count` records.
 - Normalized PCI fields can now be smoke-checked before future JSON integration.
+- The PCI sample JSON mode maps raw blob fields and decoded normalized values into one reduced `pci_device` record.
 
 ## Unknowns
 

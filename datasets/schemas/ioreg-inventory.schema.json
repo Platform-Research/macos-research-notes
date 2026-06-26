@@ -230,6 +230,30 @@
                   "type": "boolean"
                 }
               }
+            },
+            "normalized": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "vendor-id": {
+                  "$ref": "#/$defs/prefixed_hex"
+                },
+                "device-id": {
+                  "$ref": "#/$defs/prefixed_hex"
+                },
+                "class-code": {
+                  "$ref": "#/$defs/prefixed_hex"
+                },
+                "revision-id": {
+                  "$ref": "#/$defs/prefixed_hex"
+                },
+                "subsystem-id": {
+                  "$ref": "#/$defs/prefixed_hex"
+                },
+                "subsystem-vendor-id": {
+                  "$ref": "#/$defs/prefixed_hex"
+                }
+              }
             }
           }
         }
@@ -288,6 +312,10 @@
     "hex_blob": {
       "type": "string",
       "pattern": "^[0-9A-Fa-f]*$"
+    },
+    "prefixed_hex": {
+      "type": "string",
+      "pattern": "^0x[0-9A-Fa-f]+$"
     }
   }
 }

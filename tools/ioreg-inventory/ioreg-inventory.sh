@@ -12,6 +12,7 @@ Commands:
   pci-decode-field <kind> <blob>
                              Decode one PCI IORegistry hex blob.
   pci-decode-smoke           Run known PCI decode smoke checks.
+  pci-sample-json            Emit a reduced normalized PCI sample record.
   user-client-key-counts    Count IOUserClient property keys without values.
   user-client-key-counts-json
                              Emit user-client key counts as schema-shaped JSON.
@@ -51,6 +52,57 @@ case "$command" in
     "$pci_decoder" vendor-id '<e4140000>'
     "$pci_decoder" device-id '<34440000>'
     "$pci_decoder" class-code '<00040600>'
+    ;;
+  pci-sample-json)
+    vendor="$("$pci_decoder" vendor-id '<e4140000>')"
+    device="$("$pci_decoder" device-id '<34440000>')"
+    class_code="$("$pci_decoder" class-code '<00800200>')"
+    revision="$("$pci_decoder" revision-id '<04000000>')"
+    cat <<JSON
+{
+  "schema_version": "0.1.0",
+  "source": {
+    "tool": "tools/ioreg-inventory/ioreg-inventory.sh",
+    "command": "pci-sample-json",
+    "mode": "pci-allowlist",
+    "plane": "IOService",
+    "redaction": {
+      "raw_output_committed": false,
+      "policy": "allowlist-only",
+      "omitted_fields": ["IODeviceMemory", "IOInterruptSpecifiers", "IOPowerManagement"]
+    }
+  },
+  "records": [
+    {
+      "record_kind": "pci_device",
+      "object_name": "pci14e4,4434",
+      "class_name": "IOPCIDevice",
+      "plane": "IOService",
+      "fields": {
+        "IOName": "pci14e4,4434",
+        "vendor-id": "e4140000",
+        "device-id": "34440000",
+        "class-code": "00800200",
+        "revision-id": "04000000",
+        "subsystem-vendor-id": "6b100000",
+        "subsystem-id": "88430000",
+        "device_type": "pcie-device",
+        "compatible": ["wlan-pcie,bcm4387", "wlan-pcie,bcm"],
+        "IOPCIMSIMode": true
+      },
+      "normalized": {
+        "vendor-id": "$vendor",
+        "device-id": "$device",
+        "class-code": "$class_code",
+        "revision-id": "$revision"
+      }
+    }
+  ],
+  "notes": [
+    "Reduced sample record for decoder and schema smoke checks; not a full host inventory."
+  ]
+}
+JSON
     ;;
   user-client-key-counts)
     ioreg -p IOService -c IOUserClient -r -l -w 0 \
