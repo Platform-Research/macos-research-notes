@@ -1,0 +1,237 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Darwin-Collective/darwin-collective/datasets/schemas/kext-personality.schema.json",
+  "title": "Darwin Collective Kext Personality Inventory",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "source",
+    "records"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.1.0"
+    },
+    "source": {
+      "$ref": "#/$defs/source"
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/personality_record"
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "$defs": {
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tool",
+        "command",
+        "redaction"
+      ],
+      "properties": {
+        "tool": {
+          "type": "string",
+          "examples": [
+            "tools/kext-personality-inventory/kext-personality-inventory.sh"
+          ]
+        },
+        "command": {
+          "type": "string"
+        },
+        "redaction": {
+          "$ref": "#/$defs/redaction"
+        }
+      }
+    },
+    "redaction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "raw_output_committed",
+        "policy"
+      ],
+      "properties": {
+        "raw_output_committed": {
+          "const": false
+        },
+        "policy": {
+          "type": "string",
+          "examples": [
+            "allowlist-only",
+            "values-summarized"
+          ]
+        },
+        "omitted_fields": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "personality_record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "record_kind",
+        "source_path",
+        "bundle",
+        "personality_name",
+        "matching"
+      ],
+      "properties": {
+        "record_kind": {
+          "const": "kext_personality"
+        },
+        "source_path": {
+          "type": "string"
+        },
+        "bundle": {
+          "$ref": "#/$defs/bundle"
+        },
+        "personality_name": {
+          "type": "string"
+        },
+        "matching": {
+          "$ref": "#/$defs/matching"
+        },
+        "user_client": {
+          "$ref": "#/$defs/user_client"
+        },
+        "family_specific": {
+          "type": "object",
+          "additionalProperties": {
+            "type": [
+              "string",
+              "number",
+              "integer",
+              "boolean",
+              "array",
+              "object",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "bundle": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "identifier"
+      ],
+      "properties": {
+        "identifier": {
+          "type": "string"
+        },
+        "executable": {
+          "type": "string"
+        },
+        "package_type": {
+          "type": "string"
+        },
+        "bundle_type": {
+          "enum": [
+            "kext",
+            "dext",
+            "plugin",
+            "bundle",
+            "unknown"
+          ]
+        },
+        "os_bundle_required": {
+          "type": "string"
+        }
+      }
+    },
+    "matching": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "IOClass": {
+          "type": "string"
+        },
+        "IOProviderClass": {
+          "type": "string"
+        },
+        "IONameMatch": {
+          "$ref": "#/$defs/string_or_string_array"
+        },
+        "IOMatchCategory": {
+          "type": "string"
+        },
+        "IOProbeScore": {
+          "type": "integer"
+        },
+        "IOPCIMatch": {
+          "$ref": "#/$defs/string_or_string_array"
+        },
+        "IOPCIPrimaryMatch": {
+          "$ref": "#/$defs/string_or_string_array"
+        },
+        "IOPCISecondaryMatch": {
+          "$ref": "#/$defs/string_or_string_array"
+        },
+        "IOPCIClassMatch": {
+          "$ref": "#/$defs/string_or_string_array"
+        },
+        "idVendor": {
+          "$ref": "#/$defs/integer_or_hex_string"
+        },
+        "idProduct": {
+          "$ref": "#/$defs/integer_or_hex_string"
+        }
+      }
+    },
+    "user_client": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "IOUserClientClass": {
+          "type": "string"
+        },
+        "IOUserClientProperties": {
+          "type": "object",
+          "description": "Only redacted or summarized values are allowed."
+        },
+        "redacted": {
+          "type": "boolean"
+        }
+      }
+    },
+    "string_or_string_array": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "integer_or_hex_string": {
+      "oneOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "string",
+          "pattern": "^(0x)?[0-9A-Fa-f]+$"
+        }
+      ]
+    }
+  }
+}
