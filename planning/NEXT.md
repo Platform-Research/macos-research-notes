@@ -4,18 +4,18 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`tools/ioreg-inventory/README.md`, `tools/ioreg-inventory/ioreg-inventory.sh`, and `datasets/schemas/ioreg-inventory.schema.json` were updated with normalized PCI JSON support in the `tools/ioreg-normalized-pci-json` cycle.
+`docs/guidelines/json-schema-validation.md` was created in the `docs/json-schema-validation-policy` cycle.
 
 ## Current Recommendation
 
-Continue with the full JSON Schema validation policy.
+Continue by adding an ancestor topology JSON mode.
 
-Reason: syntax validation exists, but full schema validation still needs a dependency and policy decision.
+Reason: provider-class joins need safe ancestor context, and the ancestor experiment defined a topology-only record shape.
 
 ## Next Branch
 
 ```text
-docs/json-schema-validation-policy
+tools/ioreg-ancestor-json
 ```
 
 ## Session Goal
@@ -23,12 +23,12 @@ docs/json-schema-validation-policy
 Create the next experiment note:
 
 ```text
-docs/guidelines/json-schema-validation.md
+tools/ioreg-inventory/README.md
 ```
 
 ## Research Question
 
-What is the project policy for full JSON Schema validation?
+What is the smallest safe ancestor topology JSON output in the IORegistry helper?
 
 ## Target Output
 
@@ -36,31 +36,31 @@ A bounded experiment README that captures:
 
 - Commands tested.
 - Commands tested.
-- Whether to use vendored tooling, system tooling, or optional Python packages.
-- Which schemas and fixtures should be validated.
-- What stays as syntax-only validation for now.
-- When validation should run in the workflow.
+- A topology-only JSON command.
+- Header-line parsing without property dictionaries.
+- Redaction policy for object names and paths.
+- Smoke checks that output parses as JSON.
 - What remains unknown or needs artifact-backed confirmation.
 
 ## Evidence To Collect
 
 - Apple documentation or headers when available.
 - `man ioreg`.
-- Existing schemas, examples, fixtures, and syntax validator.
-- Existing workflow rules.
-- Existing helper outputs.
+- Existing experiment: registry ancestor capture.
+- Existing tool: IORegistry inventory.
+- Existing schema: IORegistry inventory.
 
 ## Definition Of Done
 
 Done means:
 
-- `docs/guidelines/json-schema-validation.md` exists.
+- `tools/ioreg-inventory/README.md` documents ancestor topology JSON.
 - Observations, inferences, unknowns, and sources are separated.
 - No unsupported driver claims are made.
-- The policy defines the next implementable validation step.
+- The new JSON output parses locally.
 
 ## Follow-Up Queue
 
-1. Add ancestor topology JSON mode.
-2. Implement PCI match-string parser.
-3. Add a schema validation implementation if dependency policy allows.
+1. Implement PCI match-string parser.
+2. Add a schema validation implementation if dependency policy allows.
+3. Add provider-class candidate join tool.
