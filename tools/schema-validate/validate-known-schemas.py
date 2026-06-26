@@ -24,6 +24,7 @@ PAIRS = [
     ("datasets/schemas/kext-personality.schema.json", "datasets/fixtures/parsed-pci-matches/parsed-pci-matches.fixture.json"),
     ("datasets/schemas/registry-personality-join.schema.json", "datasets/examples/schema-validation/registry-personality-join.example.json"),
     ("datasets/schemas/registry-personality-join.schema.json", "datasets/fixtures/candidate-joins/registry-personality-candidates.fixture.json"),
+    ("datasets/schemas/registry-personality-join.schema.json", "datasets/fixtures/provider-class-join/provider-class-join.fixture.json"),
 ]
 
 

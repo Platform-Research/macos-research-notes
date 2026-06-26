@@ -4,18 +4,18 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`docs/guidelines/release-provenance-template.md` was created in the `docs/release-provenance-template` cycle.
+`tools/schema-validate/validate-known-schemas.py` was updated to validate provider-class join fixtures in the `tools/validate-provider-class-fixture` cycle.
 
 ## Current Recommendation
 
-Continue by adding a provider-class join fixture validation pair.
+Continue by adding requirements-dev.txt after adoption decision.
 
-Reason: provider-class join fixtures exist, but optional schema validation does not yet cover them.
+Reason: optional validation has enough coverage to justify a tiny committed development requirements file.
 
 ## Next Branch
 
 ```text
-tools/validate-provider-class-fixture
+tools/requirements-dev
 ```
 
 ## Session Goal
@@ -23,43 +23,43 @@ tools/validate-provider-class-fixture
 Create the next experiment note:
 
 ```text
-tools/schema-validate/README.md
+requirements-dev.txt
 ```
 
 ## Research Question
 
-What is the smallest validation update for provider-class join fixtures?
+What is the smallest committed development requirements file?
 
 ## Target Output
 
 A bounded experiment README that captures:
 
 - Commands tested.
-- Add provider-class fixture to known schema validation.
-- Run optional jsonschema validation.
-- Document the added coverage.
-- Keep syntax-only baseline unchanged.
+- Pin `jsonschema`.
+- Document that it is optional development tooling.
+- Keep runtime scripts dependency-free unless invoked through `.venv`.
+- Smoke check validation command.
 - What remains unknown or needs artifact-backed confirmation.
 
 ## Evidence To Collect
 
 - Apple documentation or headers when available.
 - `man ioreg`.
-- Existing provider-class join fixture.
-- Existing registry-personality join schema.
-- Existing optional schema validator.
+- Existing requirements-dev proposal.
+- Existing optional dependency policy.
+- Existing jsonschema validator.
 
 ## Definition Of Done
 
 Done means:
 
-- `tools/schema-validate/README.md` documents provider-class fixture coverage.
+- `requirements-dev.txt` exists.
 - Observations, inferences, unknowns, and sources are separated.
 - No unsupported driver claims are made.
-- Optional validator passes locally.
+- Optional validator passes locally using `.venv`.
 
 ## Follow-Up Queue
 
-1. Add requirements-dev.txt after adoption decision.
-2. Add macOS release diff planning note.
-3. Add artifact provenance to macOS 26.5.1 index.
+1. Add macOS release diff planning note.
+2. Add artifact provenance to macOS 26.5.1 index.
+3. Add requirements-dev usage to optional dependencies doc.

@@ -26,7 +26,7 @@ python3 -m venv .venv
 .venv/bin/python tools/schema-validate/validate-known-schemas.py
 ```
 
-Known validation pairs include IORegistry examples, kext personality examples, parsed PCI match fixtures, and registry-personality join fixtures.
+Known validation pairs include IORegistry examples, kext personality examples, parsed PCI match fixtures, provider-class join fixtures, and registry-personality join fixtures.
 
 ## What It Checks
 
@@ -65,6 +65,6 @@ Per `docs/guidelines/json-schema-validation.md`, full validation remains optiona
 
 ## Next Work
 
-- Requirements-dev proposal.
-- macOS 26.5.1 artifact index stub.
-- Release provenance template.
+- requirements-dev.txt after adoption decision.
+- macOS release diff planning note.
+- artifact provenance in macOS 26.5.1 index.
