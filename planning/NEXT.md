@@ -4,18 +4,18 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`tools/pci-match-parse/README.md`, `tools/pci-match-parse/pci_match_parse.py`, and tests were created in the `tools/pci-match-parse` cycle.
+`tools/schema-validate/README.md` was updated with local full-schema validation status in the `tools/schema-validation-implementation` cycle.
 
 ## Current Recommendation
 
-Continue by adding a schema validation implementation if dependency policy allows.
+Continue by adding a provider-class candidate join tool.
 
-Reason: the validation policy exists; now check whether a local implementation can improve beyond syntax-only without external downloads.
+Reason: topology JSON and join schemas now exist, so provider-class candidate joins can be prototyped without claiming runtime attachment.
 
 ## Next Branch
 
 ```text
-tools/schema-validation-implementation
+tools/provider-class-join
 ```
 
 ## Session Goal
@@ -23,44 +23,43 @@ tools/schema-validation-implementation
 Create the next experiment note:
 
 ```text
-tools/schema-validate/README.md
+tools/provider-class-join/README.md
 ```
 
 ## Research Question
 
-What is the smallest implementable schema validation improvement without downloading dependencies?
+What is the smallest provider-class candidate join helper?
 
 ## Target Output
 
 A bounded experiment README that captures:
 
 - Commands tested.
-- Commands tested.
-- Available local validation capabilities.
-- Whether full JSON Schema validation is possible locally.
-- Any script improvements that do not require downloads.
-- Clear stop condition if a dependency is required.
+- Inputs from topology JSON and personality JSON.
+- Candidate edge output shape.
+- Rules for unresolved and ambiguous joins.
+- A small fixture or smoke check.
 - What remains unknown or needs artifact-backed confirmation.
 
 ## Evidence To Collect
 
 - Apple documentation or headers when available.
 - `man ioreg`.
-- Existing policy: JSON Schema validation guideline.
-- Existing tool: syntax validator.
-- Existing schemas, examples, and fixtures.
+- Existing schemas: IORegistry, kext personality, registry-personality join.
+- Existing tools: IORegistry inventory and kext personality inventory.
+- Existing fixture: candidate joins.
 
 ## Definition Of Done
 
 Done means:
 
-- `tools/schema-validate/README.md` documents the result.
+- `tools/provider-class-join/README.md` exists.
 - Observations, inferences, unknowns, and sources are separated.
 - No unsupported driver claims are made.
-- Validation behavior is improved or the blocker is documented.
+- The helper avoids runtime attachment claims.
 
 ## Follow-Up Queue
 
-1. Add provider-class candidate join tool.
-2. Add topology fixture from `topology-json`.
-3. Integrate PCI match parser into personality helper.
+1. Add topology fixture from `topology-json`.
+2. Integrate PCI match parser into personality helper.
+3. Add optional JSON Schema validator after dependency decision.
