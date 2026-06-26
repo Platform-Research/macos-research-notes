@@ -4,18 +4,18 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`experiments/user-client-inventory/README.md` was created in the `experiments/user-client-inventory` cycle.
+`experiments/kext-personality-extraction/README.md` was created in the `experiments/kext-personality-extraction` cycle.
 
 ## Current Recommendation
 
-Continue with a bounded kext personality extraction experiment.
+Continue with the first registry inventory tool.
 
-Reason: the registry and user-client experiments now need a structured way to connect runtime services with declared matching dictionaries.
+Reason: the registry experiments have enough allowlist rules to justify a small read-only helper that avoids raw dumps by default.
 
 ## Next Branch
 
 ```text
-experiments/kext-personality-extraction
+tools/ioreg-inventory
 ```
 
 ## Session Goal
@@ -23,43 +23,43 @@ experiments/kext-personality-extraction
 Create the next experiment note:
 
 ```text
-experiments/kext-personality-extraction/README.md
+tools/ioreg-inventory/README.md
 ```
 
 ## Research Question
 
-What is the smallest safe extraction shape for kext and dext IOKit personalities?
+What is the smallest useful read-only helper for safe IORegistry inventory experiments?
 
 ## Target Output
 
 A bounded experiment README that captures:
 
 - Commands tested.
-- Personality fields allowed for collection.
-- Personality fields to avoid or redact.
-- A tiny summary of observed matching keys, not a raw dump.
+- Commands supported by the helper.
+- Default redaction and allowlist behavior.
+- How the helper supports PCI and user-client experiments.
+- What remains intentionally out of scope.
 - What remains unknown or needs artifact-backed confirmation.
 
 ## Evidence To Collect
 
 - Apple documentation or headers when available.
 - `man ioreg`.
-- Local `Info.plist` files from system and library extension locations.
-- Existing notes: `IORegistry`, `IOPCIDevice`, `IOUserClient`, `kext-personalities`.
-- A personality field allowlist.
+- Existing experiments: registry dump, PCI inventory, user-client inventory.
+- Existing notes: `IORegistry`, `IOPCIDevice`, `IOUserClient`.
+- A tiny script or documented command wrapper.
 
 ## Definition Of Done
 
 Done means:
 
-- `experiments/kext-personality-extraction/README.md` exists.
+- `tools/ioreg-inventory/README.md` exists.
 - Observations, inferences, unknowns, and sources are separated.
 - No unsupported driver claims are made.
-- Follow-up tools and schemas are listed for registry and kext personality inventories.
+- Follow-up schemas and kext personality tooling are listed.
 
 ## Follow-Up Queue
 
-1. `tools/ioreg-inventory/`
-2. `datasets/schemas/ioreg-inventory.schema.json`
-3. `tools/kext-personality-inventory/`
-4. `datasets/schemas/kext-personality.schema.json`
+1. `datasets/schemas/ioreg-inventory.schema.json`
+2. `tools/kext-personality-inventory/`
+3. `datasets/schemas/kext-personality.schema.json`
