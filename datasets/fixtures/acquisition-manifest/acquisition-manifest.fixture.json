@@ -1,0 +1,22 @@
+{
+  "schema_version": "0.1.0",
+  "release": "26.5.1",
+  "artifacts": [
+    {
+      "name": "local-runtime",
+      "source": "sw_vers; uname -v",
+      "acquisition_date": "2026-06-26",
+      "state": "derived",
+      "redaction": "no raw registry or local process data",
+      "output_path": "macos/26.5.1/README.md",
+      "notes": "Host-local runtime facts only."
+    },
+    {
+      "name": "installer-payload",
+      "source": "not acquired",
+      "state": "missing",
+      "redaction": "not applicable",
+      "notes": "Placeholder to demonstrate missing acquisition state."
+    }
+  ]
+}
