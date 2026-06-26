@@ -30,6 +30,18 @@ Print selected PCI allowlist fields:
 tools/ioreg-inventory/ioreg-inventory.sh pci-allowlist
 ```
 
+Decode one PCI registry blob:
+
+```sh
+tools/ioreg-inventory/ioreg-inventory.sh pci-decode-field vendor-id '<e4140000>'
+```
+
+Run known PCI decode smoke checks:
+
+```sh
+tools/ioreg-inventory/ioreg-inventory.sh pci-decode-smoke
+```
+
 Count user-client property keys without values:
 
 ```sh
@@ -58,6 +70,7 @@ tools/ioreg-inventory/ioreg-inventory.sh user-client-flags
 - User-client key counting strips values before sorting.
 - JSON output includes source and redaction metadata.
 - PCI output is restricted to an explicit allowlist.
+- PCI blob decoding delegates to `tools/pci-id-decode/pci_id_decode.py`.
 
 ## Supported Inventory Threads
 
@@ -68,7 +81,6 @@ tools/ioreg-inventory/ioreg-inventory.sh user-client-flags
 ## Out Of Scope
 
 - Cross-machine normalization.
-- PCI byte-order decoding.
 - Kext or dext personality extraction.
 - Runtime opening of user clients.
 - Storing raw local registry artifacts in the repository.
@@ -79,6 +91,7 @@ tools/ioreg-inventory/ioreg-inventory.sh user-client-flags
 - The first registry schema should model the helper's bounded outputs before adding richer parsers.
 - Future JSON output should preserve command metadata and redaction policy alongside extracted records.
 - The first JSON mode maps to `datasets/schemas/ioreg-inventory.schema.json` with `user_client_key_count` records.
+- Normalized PCI fields can now be smoke-checked before future JSON integration.
 
 ## Unknowns
 

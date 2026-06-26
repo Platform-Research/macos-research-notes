@@ -4,18 +4,18 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`datasets/fixtures/candidate-joins/README.md` and a candidate join fixture were created in the `datasets/fixtures/candidate-joins` cycle.
+`tools/ioreg-inventory/README.md` and `tools/ioreg-inventory/ioreg-inventory.sh` were updated with PCI decode integration in the `tools/ioreg-pci-decode-integration` cycle.
 
 ## Current Recommendation
 
-Continue by integrating the PCI decoder into the IORegistry helper.
+Continue by adding a local schema validation script.
 
-Reason: the join fixture depends on normalized PCI IDs; the IORegistry helper should expose a safe normalized PCI mode.
+Reason: schemas, examples, and fixtures now exist; a local script can prevent malformed JSON from creeping in.
 
 ## Next Branch
 
 ```text
-tools/ioreg-pci-decode-integration
+tools/schema-validate
 ```
 
 ## Session Goal
@@ -23,43 +23,43 @@ tools/ioreg-pci-decode-integration
 Create the next experiment note:
 
 ```text
-tools/ioreg-inventory/README.md
+tools/schema-validate/README.md
 ```
 
 ## Research Question
 
-What is the smallest safe normalized PCI output mode in the IORegistry helper?
+What is the smallest local validation helper for schemas, examples, and fixtures?
 
 ## Target Output
 
 A bounded experiment README that captures:
 
 - Commands tested.
-- A helper command that emits decoded PCI identity fields.
-- Reuse of `tools/pci-id-decode/`.
-- Tests or smoke checks for known sample blobs.
-- Documentation of unsupported fields.
+- JSON syntax checks for schemas, examples, and fixtures.
+- Clear report output.
+- No external dependency requirement.
+- Documentation of what the script does not validate yet.
 - What remains unknown or needs artifact-backed confirmation.
 
 ## Evidence To Collect
 
 - Apple documentation or headers when available.
 - `man ioreg`.
-- Existing tool: IORegistry inventory and PCI ID decoder.
-- Existing experiments: PCI inventory and registry-personality join.
-- Existing fixtures: candidate joins.
+- Existing schemas, examples, and fixtures.
+- Existing helper outputs.
+- Existing workflow rules.
 
 ## Definition Of Done
 
 Done means:
 
-- `tools/ioreg-inventory/README.md` documents normalized PCI output.
+- `tools/schema-validate/README.md` exists.
 - Observations, inferences, unknowns, and sources are separated.
 - No unsupported driver claims are made.
-- The helper smoke check passes locally.
+- The validation helper passes locally.
 
 ## Follow-Up Queue
 
-1. Add schema validation script.
-2. Add registry ancestor capture experiment.
-3. Add PCI match-string parser experiment.
+1. Add registry ancestor capture experiment.
+2. Add PCI match-string parser experiment.
+3. Add normalized PCI JSON output.

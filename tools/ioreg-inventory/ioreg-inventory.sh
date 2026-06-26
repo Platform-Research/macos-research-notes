@@ -9,6 +9,9 @@ Commands:
   topology [depth]          Print IOService topology without properties.
   pci-count                 Count root IOPCIDevice matches.
   pci-allowlist             Print selected IOPCIDevice allowlist fields.
+  pci-decode-field <kind> <blob>
+                             Decode one PCI IORegistry hex blob.
+  pci-decode-smoke           Run known PCI decode smoke checks.
   user-client-key-counts    Count IOUserClient property keys without values.
   user-client-key-counts-json
                              Emit user-client key counts as schema-shaped JSON.
@@ -19,6 +22,8 @@ USAGE
 }
 
 command="${1:-help}"
+repo_root="$(CDPATH= cd -- "$(dirname -- "$0")/../.." && pwd)"
+pci_decoder="$repo_root/tools/pci-id-decode/pci_id_decode.py"
 
 case "$command" in
   help|-h|--help)
@@ -34,6 +39,18 @@ case "$command" in
   pci-allowlist)
     ioreg -p IOService -c IOPCIDevice -r -l -w 0 \
       | grep -E '"(IOName|vendor-id|device-id|class-code|revision-id|subsystem-id|subsystem-vendor-id|compatible|device_type|IOPCIMSIMode)" ='
+    ;;
+  pci-decode-field)
+    if [ "$#" -ne 3 ]; then
+      echo "error: expected kind and blob" >&2
+      exit 2
+    fi
+    "$pci_decoder" "$2" "$3"
+    ;;
+  pci-decode-smoke)
+    "$pci_decoder" vendor-id '<e4140000>'
+    "$pci_decoder" device-id '<34440000>'
+    "$pci_decoder" class-code '<00040600>'
     ;;
   user-client-key-counts)
     ioreg -p IOService -c IOUserClient -r -l -w 0 \
