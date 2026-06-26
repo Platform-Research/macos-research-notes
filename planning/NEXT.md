@@ -4,18 +4,18 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`experiments/kext-personality-extraction/README.md` was created in the `experiments/kext-personality-extraction` cycle.
+`tools/ioreg-inventory/README.md` and `tools/ioreg-inventory/ioreg-inventory.sh` were created in the `tools/ioreg-inventory` cycle.
 
 ## Current Recommendation
 
-Continue with the first registry inventory tool.
+Continue with the first registry inventory schema.
 
-Reason: the registry experiments have enough allowlist rules to justify a small read-only helper that avoids raw dumps by default.
+Reason: the helper now defines bounded outputs that need a stable schema before richer tooling is added.
 
 ## Next Branch
 
 ```text
-tools/ioreg-inventory
+datasets/schemas/ioreg-inventory
 ```
 
 ## Session Goal
@@ -23,22 +23,22 @@ tools/ioreg-inventory
 Create the next experiment note:
 
 ```text
-tools/ioreg-inventory/README.md
+datasets/schemas/ioreg-inventory.schema.json
 ```
 
 ## Research Question
 
-What is the smallest useful read-only helper for safe IORegistry inventory experiments?
+What is the smallest schema for safe IORegistry inventory records?
 
 ## Target Output
 
 A bounded experiment README that captures:
 
 - Commands tested.
-- Commands supported by the helper.
-- Default redaction and allowlist behavior.
-- How the helper supports PCI and user-client experiments.
-- What remains intentionally out of scope.
+- Record kinds supported by the schema.
+- Required source command and redaction metadata.
+- PCI and user-client inventory fields.
+- What remains intentionally out of scope for later schemas.
 - What remains unknown or needs artifact-backed confirmation.
 
 ## Evidence To Collect
@@ -46,20 +46,19 @@ A bounded experiment README that captures:
 - Apple documentation or headers when available.
 - `man ioreg`.
 - Existing experiments: registry dump, PCI inventory, user-client inventory.
+- Existing tool: `tools/ioreg-inventory/`.
 - Existing notes: `IORegistry`, `IOPCIDevice`, `IOUserClient`.
-- A tiny script or documented command wrapper.
 
 ## Definition Of Done
 
 Done means:
 
-- `tools/ioreg-inventory/README.md` exists.
+- `datasets/schemas/ioreg-inventory.schema.json` exists.
 - Observations, inferences, unknowns, and sources are separated.
 - No unsupported driver claims are made.
-- Follow-up schemas and kext personality tooling are listed.
+- Follow-up kext personality tooling and schemas are listed.
 
 ## Follow-Up Queue
 
-1. `datasets/schemas/ioreg-inventory.schema.json`
-2. `tools/kext-personality-inventory/`
-3. `datasets/schemas/kext-personality.schema.json`
+1. `tools/kext-personality-inventory/`
+2. `datasets/schemas/kext-personality.schema.json`
