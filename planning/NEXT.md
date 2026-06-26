@@ -4,18 +4,18 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`tools/schema-validate/README.md` was updated with local full-schema validation status in the `tools/schema-validation-implementation` cycle.
+`tools/provider-class-join/README.md` and `tools/provider-class-join/provider_class_join.py` were created in the `tools/provider-class-join` cycle.
 
 ## Current Recommendation
 
-Continue by adding a provider-class candidate join tool.
+Continue by adding a topology fixture from `topology-json`.
 
-Reason: topology JSON and join schemas now exist, so provider-class candidate joins can be prototyped without claiming runtime attachment.
+Reason: topology JSON is now available and provider-class joins need a small committed fixture for smoke checks.
 
 ## Next Branch
 
 ```text
-tools/provider-class-join
+datasets/fixtures/topology-json
 ```
 
 ## Session Goal
@@ -23,43 +23,43 @@ tools/provider-class-join
 Create the next experiment note:
 
 ```text
-tools/provider-class-join/README.md
+datasets/fixtures/topology-json/README.md
 ```
 
 ## Research Question
 
-What is the smallest provider-class candidate join helper?
+What is the smallest safe topology JSON fixture?
 
 ## Target Output
 
 A bounded experiment README that captures:
 
 - Commands tested.
-- Inputs from topology JSON and personality JSON.
-- Candidate edge output shape.
-- Rules for unresolved and ambiguous joins.
-- A small fixture or smoke check.
+- Reduced topology JSON output.
+- Regeneration command.
+- Redaction checks.
+- Use in provider-class join smoke tests.
 - What remains unknown or needs artifact-backed confirmation.
 
 ## Evidence To Collect
 
 - Apple documentation or headers when available.
 - `man ioreg`.
-- Existing schemas: IORegistry, kext personality, registry-personality join.
-- Existing tools: IORegistry inventory and kext personality inventory.
-- Existing fixture: candidate joins.
+- Existing tool: IORegistry inventory and provider-class join.
+- Existing schema: IORegistry inventory.
+- Existing experiment: registry ancestor capture.
 
 ## Definition Of Done
 
 Done means:
 
-- `tools/provider-class-join/README.md` exists.
+- `datasets/fixtures/topology-json/README.md` exists.
 - Observations, inferences, unknowns, and sources are separated.
 - No unsupported driver claims are made.
-- The helper avoids runtime attachment claims.
+- Fixture JSON parses locally.
 
 ## Follow-Up Queue
 
-1. Add topology fixture from `topology-json`.
-2. Integrate PCI match parser into personality helper.
-3. Add optional JSON Schema validator after dependency decision.
+1. Integrate PCI match parser into personality helper.
+2. Add optional JSON Schema validator after dependency decision.
+3. Add provider-class join fixture.
