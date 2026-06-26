@@ -26,7 +26,7 @@ python3 -m venv .venv
 .venv/bin/python tools/schema-validate/validate-known-schemas.py
 ```
 
-Known validation pairs include IORegistry examples, kext personality examples, parsed PCI match fixtures, provider-class join fixtures, registry-personality join fixtures, release diff fixtures, and acquisition manifest fixtures.
+Known validation pairs include IORegistry examples, kext personality examples, parsed PCI match fixtures, provider-class join fixtures, registry-personality join fixtures, static and generated release diff fixtures, and acquisition manifest fixtures.
 
 ## What It Checks
 

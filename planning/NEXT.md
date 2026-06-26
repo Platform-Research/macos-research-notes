@@ -4,18 +4,18 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`macos/16.0/README.md` was created in the `macos/16.0-metadata-stub` cycle.
+`tools/schema-validate/validate-known-schemas.py` was updated to validate generated release diff fixtures in the `tools/validate-generated-release-diff` cycle.
 
 ## Current Recommendation
 
-Continue by adding generated release diff validation pair.
+Continue by adding release diff prototype validation pair.
 
-Reason: generated release diff fixtures exist, but optional validation does not yet cover them.
+Reason: release diff generated fixtures are validated, but the prototype command itself still lacks a documented validation path.
 
 ## Next Branch
 
 ```text
-tools/validate-generated-release-diff
+tools/release-diff-validation-doc
 ```
 
 ## Session Goal
@@ -23,43 +23,43 @@ tools/validate-generated-release-diff
 Create the next experiment note:
 
 ```text
-tools/schema-validate/README.md
+tools/release-diff/README.md
 ```
 
 ## Research Question
 
-What is the smallest validation update for generated release diff fixtures?
+What is the smallest validation note for the release diff prototype?
 
 ## Target Output
 
 A bounded experiment README that captures:
 
 - Commands tested.
-- Add generated release diff fixture to known schema validation.
-- Run optional jsonschema validation.
-- Document coverage.
-- Keep prototype boundary clear.
+- Syntax validation command.
+- Optional schema validation path.
+- Regeneration command for fixture.
+- Prototype boundary.
 - What remains unknown or needs artifact-backed confirmation.
 
 ## Evidence To Collect
 
 - Apple documentation or headers when available.
 - `man ioreg`.
-- Existing release diff schema and generated fixture.
-- Existing optional schema validator.
 - Existing release diff prototype.
+- Existing release diff schema and fixtures.
+- Existing validators.
 
 ## Definition Of Done
 
 Done means:
 
-- `tools/schema-validate/README.md` documents generated release diff validation.
+- `tools/release-diff/README.md` documents validation.
 - Observations, inferences, unknowns, and sources are separated.
 - No unsupported driver claims are made.
-- Optional validator passes locally.
+- Validation commands pass locally.
 
 ## Follow-Up Queue
 
-1. Add release diff prototype validation pair.
-2. Add release acquisition manifest validation to README.
-3. Add macOS 15.6 artifact index stub.
+1. Add release acquisition manifest validation to README.
+2. Add macOS 15.6 artifact index stub.
+3. Add macOS 16.0 artifact index stub.
