@@ -1,0 +1,293 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Darwin-Collective/darwin-collective/datasets/schemas/ioreg-inventory.schema.json",
+  "title": "Darwin Collective IORegistry Inventory",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "source",
+    "records"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.1.0"
+    },
+    "source": {
+      "$ref": "#/$defs/source"
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/record"
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "$defs": {
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tool",
+        "command",
+        "mode",
+        "plane",
+        "redaction"
+      ],
+      "properties": {
+        "tool": {
+          "type": "string",
+          "examples": [
+            "tools/ioreg-inventory/ioreg-inventory.sh"
+          ]
+        },
+        "command": {
+          "type": "string"
+        },
+        "mode": {
+          "enum": [
+            "topology",
+            "pci-count",
+            "pci-allowlist",
+            "user-client-key-counts",
+            "user-client-flags"
+          ]
+        },
+        "plane": {
+          "type": "string",
+          "default": "IOService"
+        },
+        "redaction": {
+          "$ref": "#/$defs/redaction"
+        }
+      }
+    },
+    "redaction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "raw_output_committed",
+        "policy"
+      ],
+      "properties": {
+        "raw_output_committed": {
+          "const": false
+        },
+        "policy": {
+          "type": "string",
+          "examples": [
+            "allowlist-only",
+            "values-stripped"
+          ]
+        },
+        "omitted_fields": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "record": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/topology_node"
+        },
+        {
+          "$ref": "#/$defs/pci_device"
+        },
+        {
+          "$ref": "#/$defs/user_client_key_count"
+        },
+        {
+          "$ref": "#/$defs/user_client_flag"
+        }
+      ]
+    },
+    "base_record": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "record_kind"
+      ],
+      "properties": {
+        "record_kind": {
+          "type": "string"
+        },
+        "object_name": {
+          "type": "string"
+        },
+        "class_name": {
+          "type": "string"
+        },
+        "plane": {
+          "type": "string"
+        }
+      }
+    },
+    "topology_node": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/base_record"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "record_kind",
+            "object_name",
+            "class_name"
+          ],
+          "properties": {
+            "record_kind": {
+              "const": "topology_node"
+            },
+            "object_name": {
+              "type": "string"
+            },
+            "class_name": {
+              "type": "string"
+            },
+            "plane": {
+              "type": "string"
+            },
+            "depth": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        }
+      ]
+    },
+    "pci_device": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/base_record"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "record_kind",
+            "object_name",
+            "class_name",
+            "fields"
+          ],
+          "properties": {
+            "record_kind": {
+              "const": "pci_device"
+            },
+            "object_name": {
+              "type": "string"
+            },
+            "class_name": {
+              "type": "string"
+            },
+            "plane": {
+              "type": "string"
+            },
+            "fields": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "IOName": {
+                  "type": "string"
+                },
+                "vendor-id": {
+                  "$ref": "#/$defs/hex_blob"
+                },
+                "device-id": {
+                  "$ref": "#/$defs/hex_blob"
+                },
+                "class-code": {
+                  "$ref": "#/$defs/hex_blob"
+                },
+                "revision-id": {
+                  "$ref": "#/$defs/hex_blob"
+                },
+                "subsystem-id": {
+                  "$ref": "#/$defs/hex_blob"
+                },
+                "subsystem-vendor-id": {
+                  "$ref": "#/$defs/hex_blob"
+                },
+                "compatible": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "device_type": {
+                  "type": "string"
+                },
+                "IOPCIMSIMode": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "user_client_key_count": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "record_kind",
+        "key",
+        "count"
+      ],
+      "properties": {
+        "record_kind": {
+          "const": "user_client_key_count"
+        },
+        "key": {
+          "type": "string"
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "user_client_flag": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "record_kind",
+        "flag",
+        "value"
+      ],
+      "properties": {
+        "record_kind": {
+          "const": "user_client_flag"
+        },
+        "flag": {
+          "enum": [
+            "IOUserClientDefaultLocking",
+            "IOUserClientDefaultLockingSetProperties",
+            "IOUserClientDefaultLockingSingleThreadExternalMethod",
+            "IOUserClientCrossEndianCompatible"
+          ]
+        },
+        "value": {
+          "type": "boolean"
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "hex_blob": {
+      "type": "string",
+      "pattern": "^[0-9A-Fa-f]*$"
+    }
+  }
+}
