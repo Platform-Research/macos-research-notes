@@ -36,6 +36,12 @@ Print selected personality matching keys:
 tools/kext-personality-inventory/kext-personality-inventory.sh matching-keys /System/Library/Extensions/IOHIDFamily.kext/Contents/Info.plist
 ```
 
+Emit personality records as schema-shaped JSON:
+
+```sh
+tools/kext-personality-inventory/kext-personality-inventory.sh personalities-json /System/Library/Extensions/IOHIDFamily.kext/Contents/Info.plist
+```
+
 Count plist keys without preserving values:
 
 ```sh
@@ -48,6 +54,7 @@ tools/kext-personality-inventory/kext-personality-inventory.sh key-counts /Syste
 - The helper does not load, unload, start, or stop extensions.
 - The helper does not emit full plist dumps as a public command.
 - Matching inspection is restricted to an explicit allowlist.
+- JSON output parses plist structurally and emits one record per personality.
 - Key counting strips values before sorting.
 - Bundle summaries include only basic bundle metadata.
 
@@ -72,7 +79,6 @@ The initial matching allowlist includes:
 
 ## Out Of Scope
 
-- JSON output.
 - Full recursive plist extraction.
 - Binary or firmware analysis.
 - Extension loading state.
@@ -84,6 +90,7 @@ The initial matching allowlist includes:
 - A helper should make personality exploration repeatable before a full extractor exists.
 - The future schema should store one record per personality, not one record per bundle.
 - Family-specific fields should live in bounded schema extension objects after examples are collected.
+- The first JSON mode maps to `datasets/schemas/kext-personality.schema.json`.
 
 ## Unknowns
 

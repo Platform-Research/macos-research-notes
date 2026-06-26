@@ -4,18 +4,18 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`tools/ioreg-inventory/README.md` and `tools/ioreg-inventory/ioreg-inventory.sh` were updated with JSON output in the `tools/ioreg-inventory-json` cycle.
+`tools/kext-personality-inventory/README.md` and `tools/kext-personality-inventory/kext-personality-inventory.sh` were updated with JSON output in the `tools/kext-personality-inventory-json` cycle.
 
 ## Current Recommendation
 
-Continue by adding structured JSON output to the kext personality inventory helper.
+Continue by adding the first join schema.
 
-Reason: IORegistry now has a minimal JSON mode; personality records need the same before join automation.
+Reason: both inventory helpers now have bounded JSON outputs, so candidate joins can get a small schema.
 
 ## Next Branch
 
 ```text
-tools/kext-personality-inventory-json
+datasets/schemas/registry-personality-join
 ```
 
 ## Session Goal
@@ -23,43 +23,43 @@ tools/kext-personality-inventory-json
 Create the next experiment note:
 
 ```text
-tools/kext-personality-inventory/README.md
+datasets/schemas/registry-personality-join.schema.json
 ```
 
 ## Research Question
 
-What is the smallest JSON output mode for safe kext personality inventory records?
+What is the smallest schema for candidate registry-to-personality joins?
 
 ## Target Output
 
 A bounded experiment README that captures:
 
 - Commands tested.
-- JSON modes to add.
-- How output maps to `datasets/schemas/kext-personality.schema.json`.
-- Redaction metadata included in every output.
-- What remains intentionally text-only.
+- Candidate edge fields.
+- Confidence and reason fields.
+- Required unresolved-state handling.
+- Source references to both input records.
 - What remains unknown or needs artifact-backed confirmation.
 
 ## Evidence To Collect
 
 - Apple documentation or headers when available.
 - `man ioreg`.
-- Existing experiment: kext personality extraction and registry-personality join.
-- Existing tool: `tools/kext-personality-inventory/`.
-- Existing schema: `datasets/schemas/kext-personality.schema.json`.
+- Existing experiment: registry-personality join.
+- Existing tools: `tools/ioreg-inventory/`, `tools/kext-personality-inventory/`.
+- Existing schemas: IORegistry inventory and kext personality inventory.
 
 ## Definition Of Done
 
 Done means:
 
-- `tools/kext-personality-inventory/README.md` documents JSON output.
+- `datasets/schemas/registry-personality-join.schema.json` exists.
 - Observations, inferences, unknowns, and sources are separated.
 - No unsupported driver claims are made.
-- The helper emits at least one bounded JSON mode.
+- The schema records candidate, unresolved, and rejected join states.
 
 ## Follow-Up Queue
 
-1. Add a join schema after sample records exist.
-2. Add PCI ID decoding tests.
-3. Add schema validation examples.
+1. Add PCI ID decoding tests.
+2. Add schema validation examples.
+3. Add sample JSON fixtures for safe helper outputs.
