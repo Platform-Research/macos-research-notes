@@ -4,48 +4,47 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`datasets/fixtures/acquisition-manifest/15.6.fixture.json` was created in the `datasets/fixtures/acquisition-manifest-15.6` cycle.
+`datasets/fixtures/acquisition-manifest/16.0.fixture.json` was created in the `datasets/fixtures/acquisition-manifest-16.0` cycle.
 
 ## Current Recommendation
 
-Continue by adding a 16.0 acquisition manifest fixture.
+Continue by documenting release manifest validation examples.
 
-Reason: 15.6 now has an acquisition manifest fixture; 16.0 needs the same missing-artifact baseline.
+Reason: both 15.6 and 16.0 now have minimal acquisition fixtures, but validation usage is still implicit.
 
 ## Next Branch
 
 ```text
-datasets/fixtures/acquisition-manifest-16.0
+docs/release-manifest-validation-examples
 ```
 
 ## Session Goal
 
-Create the next experiment note:
+Create the next validation note:
 
 ```text
-datasets/fixtures/acquisition-manifest/16.0.fixture.json
+docs/guidelines/release-manifest-validation-examples.md
 ```
 
 ## Research Question
 
-What is the smallest acquisition manifest fixture for macOS 16.0?
+How should release acquisition manifest fixtures be validated before merge?
 
 ## Target Output
 
-A bounded experiment README that captures:
+A bounded validation note that captures:
 
-- Commands tested.
-- Release value.
-- Missing artifact states.
-- Redaction policy.
-- Syntax validation.
+- JSON syntax validation.
+- Schema validation.
+- Fixture paths covered so far.
+- Boundary checks before adding release facts.
 - What remains unknown or needs artifact-backed confirmation.
 
 ## Evidence To Collect
 
 - Apple documentation or headers when available.
 - `man ioreg`.
-- Existing macOS 15.6 stubs.
+- Existing macOS 15.6 and 16.0 stubs.
 - Existing acquisition manifest schema.
 - Existing acquisition rules.
 
@@ -53,13 +52,13 @@ A bounded experiment README that captures:
 
 Done means:
 
-- `datasets/fixtures/acquisition-manifest/16.0.fixture.json` exists.
-- Observations, inferences, unknowns, and sources are separated.
+- `docs/guidelines/release-manifest-validation-examples.md` exists.
+- Commands are copy-pasteable from repo root.
 - No unsupported driver claims are made.
-- Fixture does not claim acquired artifacts.
+- The note distinguishes syntax validation from schema validation.
 
 ## Follow-Up Queue
 
-1. Add release manifest validation examples.
-2. Add 15.6/16.0 manifests to optional validator.
-3. Link release folders to acquisition manifest fixtures.
+1. Add 15.6/16.0 manifests to optional validator.
+2. Link release folders to acquisition manifest fixtures.
+3. Add a reduced release acquisition checklist example.
