@@ -4,41 +4,41 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`ai/agents/artifact-analyst.md` now explains fallback to small notes from the `ai/artifact-analyst-note-template-fallback` cycle.
+`ai/agents/release-diff-analyst.md` now requires validation results in reports when fixtures or schemas change from the `ai/release-diff-analyst-validation-results` cycle.
 
 ## Current Recommendation
 
-Continue by adding release diff analyst validation result reminder.
+Continue by adding publisher validation command examples.
 
-Reason: release diff analyst validates fixtures, but should explicitly carry validation results into reports.
+Reason: publisher now preserves validation results, but concrete commands make the rule easier to apply.
 
 ## Next Branch
 
 ```text
-ai/release-diff-analyst-validation-results
+ai/publisher-validation-command-examples
 ```
 
 ## Session Goal
 
-Update release diff analyst agent:
+Update publisher agent:
 
 ```text
-ai/agents/release-diff-analyst.md
+ai/agents/publisher.md
 ```
 
 ## Research Question
 
-How should release diff analyst preserve validation results?
+What validation command examples should publisher preserve?
 
 ## Target Output
 
 A bounded agent update that captures:
 
-- Validation command.
-- Validation result.
-- Report template validation section.
-- Fixture changed condition.
-- Unknowns remain explicit.
+- JSON syntax command.
+- Known schema validation command.
+- Report validation section.
+- Fixture/schema changed condition.
+- Evidence path reminder.
 
 ## Evidence To Collect
 
@@ -52,13 +52,13 @@ A bounded agent update that captures:
 
 Done means:
 
-- `ai/agents/release-diff-analyst.md` requires validation results in reports when fixtures change.
+- `ai/agents/publisher.md` includes validation command examples.
 - It keeps report/fixture distinction clear.
 - No unsupported driver claims are made.
 - It retains unresolved-state handling.
 
 ## Follow-Up Queue
 
-1. Add publisher validation command examples.
-2. Add research lead evidence-gap parking lot template.
-3. Add artifact analyst command provenance reminder.
+1. Add research lead evidence-gap parking lot template.
+2. Add artifact analyst command provenance reminder.
+3. Add release diff analyst report destination examples.

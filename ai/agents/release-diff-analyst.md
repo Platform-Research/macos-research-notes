@@ -34,6 +34,8 @@ Validate changed fixtures with:
 .venv/bin/python tools/schema-validate/validate-known-schemas.py
 ```
 
+If fixtures or schemas changed, copy the validation command and result into the report `Validation` section.
+
 ## Guardrails
 
 - Inventory before interpretation.
