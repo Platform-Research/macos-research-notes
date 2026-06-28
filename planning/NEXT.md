@@ -4,42 +4,41 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`prompts/research/compare-releases.md` now includes a report skeleton from the `prompts/release-diff-report-template` cycle.
+`macos/15.6/README.md` and `macos/16.0/README.md` now link release diff readiness guidance from the `macos/release-readme-readiness-links` cycle.
 
 ## Current Recommendation
 
-Continue by adding release README readiness links.
+Continue by adding a docs/reports directory README.
 
-Reason: release stubs link manifest coverage, but they do not yet point directly to release diff readiness guidance.
+Reason: the compare prompt now directs evidence-backed reports to `docs/reports`, but that folder does not yet describe expectations.
 
 ## Next Branch
 
 ```text
-macos/release-readme-readiness-links
+docs/reports-readme
 ```
 
 ## Session Goal
 
-Update release README stubs:
+Create reports directory guidance:
 
 ```text
-macos/15.6/README.md
-macos/16.0/README.md
+docs/reports/README.md
 ```
 
 ## Research Question
 
-How should release README stubs link readiness guidance?
+What should evidence-backed reports under docs/reports contain?
 
 ## Target Output
 
 A bounded README update that captures:
 
-- Release diff readiness link.
-- Acquisition checklist link.
-- Artifact index link.
-- Manifest fixture link.
-- No comparison readiness claim.
+- Report purpose.
+- Filename convention preview.
+- Evidence requirements.
+- Unknowns and unresolved handling.
+- Validation notes.
 
 ## Evidence To Collect
 
@@ -53,13 +52,13 @@ A bounded README update that captures:
 
 Done means:
 
-- `macos/15.6/README.md` links release diff readiness guidance.
-- `macos/16.0/README.md` links release diff readiness guidance.
+- `docs/reports/README.md` exists.
+- It states reports require evidence paths and uncertainty handling.
 - No unsupported driver claims are made.
-- The stubs still state comparable artifacts are missing.
+- It keeps fixtures and reports distinct.
 
 ## Follow-Up Queue
 
-1. Add docs/reports directory README.
-2. Add report filename convention to workflow rules.
-3. Add release comparison report template file.
+1. Add report filename convention to workflow rules.
+2. Add release comparison report template file.
+3. Add report destination links to compare prompt.

@@ -17,6 +17,14 @@ This folder is reserved for reduced macOS `15.6` metadata. No release-specific a
 - Coverage state: release folder and artifact index are derived; comparable reduced artifacts are missing.
 - Raw artifacts acquired: no.
 
+## Readiness Links
+
+- Artifact index: `macos/15.6/artifacts.md`
+- Acquisition checklist: `docs/guidelines/acquisition-checklist.md`
+- Release diff readiness: `docs/guidelines/release-diff-input-readiness.md`
+
+This release is not comparison-ready until comparable reduced artifacts exist or gaps are represented as `unresolved`.
+
 ## Before Adding Data
 
 - Follow `docs/guidelines/release-acquisition.md`.
