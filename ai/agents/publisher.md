@@ -35,4 +35,5 @@ Destination examples:
 - Prefer clear headings and short sections.
 - Keep unresolved records as unresolved; do not publish them as conclusions.
 - Require committed evidence paths for report claims.
+- Preserve validation commands and results when fixtures or schemas changed.
 - Do not claim driver behavior, hardware support, kernel internals, or release changes without artifact-backed evidence.
