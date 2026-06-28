@@ -4,41 +4,41 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`ai/agents/publisher.md` now distinguishes reports, fixtures, and knowledge promotion from the `ai/publisher-report-boundary-guidance` cycle.
+`ai/agents/release-diff-analyst.md` now links release diff fixture examples from the `ai/release-diff-analyst-fixture-guidance` cycle.
 
 ## Current Recommendation
 
-Continue by adding release diff analyst fixture reference guidance.
+Continue by adding research lead report promotion guidance.
 
-Reason: the release diff analyst now handles reports safely, but it should also point directly to fixture examples and schema validation.
+Reason: report and fixture boundaries now appear in specialist agents, but the research lead should govern when reports are promoted to knowledge.
 
 ## Next Branch
 
 ```text
-ai/release-diff-analyst-fixture-guidance
+ai/research-lead-report-promotion
 ```
 
 ## Session Goal
 
-Update release diff analyst agent:
+Update research lead agent:
 
 ```text
-ai/agents/release-diff-analyst.md
+ai/agents/research-lead.md
 ```
 
 ## Research Question
 
-How should the release diff analyst use fixture examples safely?
+How should the research lead decide whether reports become knowledge?
 
 ## Target Output
 
 A bounded agent update that captures:
 
-- Fixture README path.
-- Missing-artifact fixture path.
-- Generated fixture path.
-- Schema validation command.
-- Unresolved records.
+- `docs/reports/README.md` link.
+- Knowledge promotion boundary.
+- Evidence path requirement.
+- Unknowns stay in reports.
+- No unsupported claims.
 
 ## Evidence To Collect
 
@@ -52,13 +52,13 @@ A bounded agent update that captures:
 
 Done means:
 
-- `ai/agents/release-diff-analyst.md` links release diff fixture examples.
+- `ai/agents/research-lead.md` explains report-to-knowledge promotion criteria.
 - It keeps report/fixture distinction clear.
 - No unsupported driver claims are made.
 - It retains unresolved-state handling.
 
 ## Follow-Up Queue
 
-1. Add research lead report promotion guidance.
-2. Add artifact analyst report evidence guidance.
-3. Add publisher fixture boundary examples.
+1. Add artifact analyst report evidence guidance.
+2. Add publisher fixture boundary examples.
+3. Add research lead release-readiness checklist.

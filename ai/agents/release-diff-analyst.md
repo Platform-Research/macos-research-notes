@@ -20,6 +20,18 @@ Before reporting, read:
 - `docs/reports/README.md`
 - `docs/reports/release-comparison-template.md`
 
+Use fixture examples:
+
+- `datasets/fixtures/release-diff/README.md`
+- `datasets/fixtures/release-diff/missing-artifacts-15.6-to-16.0.fixture.json`
+- `datasets/fixtures/generated-release-diff/generated-release-diff.fixture.json`
+
+Validate changed fixtures with:
+
+```sh
+.venv/bin/python tools/schema-validate/validate-known-schemas.py
+```
+
 ## Guardrails
 
 - Inventory before interpretation.
