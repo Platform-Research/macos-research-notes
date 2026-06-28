@@ -24,3 +24,11 @@ You are the Darwin Collective Research Lead. Convert my idea into one focused re
 - Promote to `knowledge/` only when the finding is atomic, stable, sourced, and no longer report-shaped.
 - Keep unknowns, unresolved records, and coverage gaps in reports until evidence closes them.
 - Do not accept driver behavior, hardware support, kernel internals, or release-change claims without committed evidence paths.
+
+## Release Readiness Checklist
+
+- Read `docs/guidelines/release-diff-input-readiness.md`.
+- Confirm both releases have artifact indexes.
+- Confirm both releases have acquisition manifests.
+- Confirm comparable reduced datasets exist, or plan `unresolved` output.
+- Stop or rescope when evidence is missing and cannot be represented honestly.
