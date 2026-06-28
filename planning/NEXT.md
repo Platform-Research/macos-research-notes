@@ -4,41 +4,41 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`tools/schema-validate/README.md` now explains release diff readiness from the `docs/release-diff-validator-readiness` cycle.
+`datasets/fixtures/acquisition-manifest/README.md` now links release diff readiness guidance from the `docs/acquisition-manifest-readiness-links` cycle.
 
 ## Current Recommendation
 
-Continue by adding acquisition manifest README links to release readiness guidance.
+Continue by adding the missing-artifact release diff fixture to the optional validator.
 
-Reason: acquisition manifest docs explain validation, but they do not yet point to release diff readiness before comparisons.
+Reason: the fixture exists and is syntax-valid, but `validate-known-schemas.py` does not yet validate it as a known release-diff schema pair.
 
 ## Next Branch
 
 ```text
-docs/acquisition-manifest-readiness-links
+tools/validate-missing-artifact-release-diff
 ```
 
 ## Session Goal
 
-Update acquisition manifest documentation:
+Update the optional schema validator:
 
 ```text
-datasets/fixtures/acquisition-manifest/README.md
+tools/schema-validate/validate-known-schemas.py
 ```
 
 ## Research Question
 
-How should acquisition manifest docs point reviewers toward release diff readiness?
+How should the optional validator cover the missing-artifact release diff fixture?
 
 ## Target Output
 
-A bounded documentation update that captures:
+A bounded validator update that captures:
 
-- Release readiness guidance link.
-- Manifest fixture list.
-- Missing-artifact interpretation.
-- Validation command.
-- Boundary between acquisition and comparison.
+- New release diff schema pair.
+- Passing validation command.
+- README coverage.
+- Missing-artifact fixture remains unresolved.
+- No evidence claims are added.
 
 ## Evidence To Collect
 
@@ -52,13 +52,13 @@ A bounded documentation update that captures:
 
 Done means:
 
-- `datasets/fixtures/acquisition-manifest/README.md` links `docs/guidelines/release-diff-input-readiness.md`.
-- The README distinguishes acquisition state from comparison readiness.
+- `tools/schema-validate/validate-known-schemas.py` validates `missing-artifacts-15.6-to-16.0.fixture.json`.
+- `tools/schema-validate/README.md` lists the fixture in release diff coverage.
 - No unsupported driver claims are made.
 - The validation command remains accurate.
 
 ## Follow-Up Queue
 
-1. Add missing-artifact release diff fixture to optional validator.
-2. Add missing-artifact release diff README note.
-3. Add manifest coverage table for 15.6 and 16.0.
+1. Add missing-artifact release diff README note.
+2. Add manifest coverage table for 15.6 and 16.0.
+3. Add release diff unresolved-state guidance to compare prompt.
