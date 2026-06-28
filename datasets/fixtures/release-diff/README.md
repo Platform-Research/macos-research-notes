@@ -2,26 +2,41 @@
 
 ## Summary
 
-This directory contains a minimal release diff fixture. It demonstrates the `unresolved` state for release folders that exist before comparable reduced metadata has been acquired.
+This directory contains release diff fixtures. They demonstrate schema shape and unresolved states without claiming real release differences.
 
-## Fixture
+## Fixtures
 
 - `release-diff.fixture.json`
+- `missing-artifacts-15.6-to-16.0.fixture.json`
+- `datasets/fixtures/generated-release-diff/generated-release-diff.fixture.json`
+
+## Missing-Artifact Fixture
+
+`missing-artifacts-15.6-to-16.0.fixture.json` records that comparable reduced inputs are missing for the 15.6 to 16.0 pair.
+
+It uses `state: "unresolved"` because the current evidence supports only this conclusion:
+
+- release folders exist;
+- acquisition manifests exist;
+- artifact indexes mark comparable inputs as not acquired;
+- no raw artifacts are compared.
+
+`unresolved` does not mean added, removed, changed, or unchanged. It means the fixture is preserving uncertainty instead of inventing a release difference.
 
 ## Local Syntax Check
 
 ```sh
-python3 -m json.tool datasets/fixtures/release-diff/release-diff.fixture.json >/dev/null
+.venv/bin/python tools/schema-validate/validate-known-schemas.py
 ```
 
 ## Boundaries
 
 - This fixture does not claim a real release difference.
 - This fixture does not compare raw artifacts.
-- This fixture uses placeholder release folders only.
+- Missing-artifact fixtures are evidence-bound placeholders.
+- Use `docs/guidelines/release-diff-input-readiness.md` before promoting any release diff as evidence.
 
 ## Next Work
 
-- Add release diff schema to optional validator.
-- Add release diff fixture validation pair.
-- Add first generated release diff prototype.
+- Add artifact-backed reduced datasets before interpreting release changes.
+- Keep missing inputs represented as `unresolved`.

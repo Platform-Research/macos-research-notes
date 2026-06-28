@@ -4,41 +4,41 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`tools/schema-validate/validate-known-schemas.py` now validates the missing-artifact release diff fixture from the `tools/validate-missing-artifact-release-diff` cycle.
+`datasets/fixtures/release-diff/README.md` now documents missing-artifact release diff fixtures from the `docs/missing-artifact-release-diff-readme` cycle.
 
 ## Current Recommendation
 
-Continue by adding a missing-artifact release diff README note.
+Continue by adding a manifest coverage table for 15.6 and 16.0.
 
-Reason: the fixture is now validated, but the release-diff fixture folder does not yet explain why this unresolved example exists.
+Reason: acquisition manifest fixtures exist, but reviewers still need a compact table showing each release fixture and current evidence state.
 
 ## Next Branch
 
 ```text
-docs/missing-artifact-release-diff-readme
+docs/acquisition-manifest-coverage-table
 ```
 
 ## Session Goal
 
-Create or update the release diff fixture README:
+Update acquisition manifest documentation:
 
 ```text
-datasets/fixtures/release-diff/README.md
+datasets/fixtures/acquisition-manifest/README.md
 ```
 
 ## Research Question
 
-How should the release diff fixtures document unresolved missing-artifact examples?
+How should acquisition manifest docs summarize 15.6 and 16.0 coverage?
 
 ## Target Output
 
 A bounded README update that captures:
 
-- Fixture list.
-- Missing-artifact fixture purpose.
-- Unresolved-state meaning.
+- Coverage table.
+- Release fixture paths.
+- Current state.
 - Validation command.
-- Evidence boundary.
+- Missing-artifact boundary.
 
 ## Evidence To Collect
 
@@ -52,13 +52,13 @@ A bounded README update that captures:
 
 Done means:
 
-- `datasets/fixtures/release-diff/README.md` exists.
-- It lists the missing-artifact fixture and explains `unresolved`.
+- `datasets/fixtures/acquisition-manifest/README.md` includes a coverage table.
+- The table lists 15.6 and 16.0 fixture paths.
 - No unsupported driver claims are made.
 - The validation command remains accurate.
 
 ## Follow-Up Queue
 
-1. Add manifest coverage table for 15.6 and 16.0.
-2. Add release diff unresolved-state guidance to compare prompt.
-3. Add release diff fixture coverage to readiness guide.
+1. Add release diff unresolved-state guidance to compare prompt.
+2. Add release diff fixture coverage to readiness guide.
+3. Add acquisition manifest coverage to release artifact indexes.
