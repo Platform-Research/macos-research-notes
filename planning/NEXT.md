@@ -4,41 +4,41 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`datasets/fixtures/acquisition-manifest/README.md` now includes a 15.6/16.0 coverage table from the `docs/acquisition-manifest-coverage-table` cycle.
+`prompts/research/compare-releases.md` now requires unresolved output for missing comparable release inputs from the `prompts/release-diff-unresolved-guidance` cycle.
 
 ## Current Recommendation
 
-Continue by adding release diff unresolved-state guidance to the compare prompt.
+Continue by adding release diff fixture coverage to the readiness guide.
 
-Reason: the docs now preserve unresolved missing-artifact states, but the reusable compare prompt should explicitly ask assistants to avoid inventing differences.
+Reason: the readiness guide explains input gates, but it does not yet point to the concrete release-diff fixtures that demonstrate valid unresolved output.
 
 ## Next Branch
 
 ```text
-prompts/release-diff-unresolved-guidance
+docs/release-diff-fixture-coverage-readiness
 ```
 
 ## Session Goal
 
-Update compare prompt:
+Update release diff readiness guidance:
 
 ```text
-prompts/research/compare-releases.md
+docs/guidelines/release-diff-input-readiness.md
 ```
 
 ## Research Question
 
-How should the compare prompt handle missing comparable release inputs?
+How should release diff readiness guidance point to fixture coverage?
 
 ## Target Output
 
-A bounded prompt update that captures:
+A bounded readiness update that captures:
 
-- Unresolved state requirement.
-- Missing comparable input handling.
-- Evidence path requirement.
-- No unsupported driver claims.
-- Release readiness link.
+- Fixture examples.
+- Missing-artifact unresolved fixture link.
+- Validation command.
+- Evidence sufficiency boundary.
+- Schema reference.
 
 ## Evidence To Collect
 
@@ -52,13 +52,13 @@ A bounded prompt update that captures:
 
 Done means:
 
-- `prompts/research/compare-releases.md` instructs unresolved output for missing comparable inputs.
-- The prompt links release diff readiness guidance.
+- `docs/guidelines/release-diff-input-readiness.md` links release diff fixtures.
+- The guide mentions the missing-artifact unresolved fixture.
 - No unsupported driver claims are made.
-- The prompt requires evidence paths.
+- The validation command remains accurate.
 
 ## Follow-Up Queue
 
-1. Add release diff fixture coverage to readiness guide.
-2. Add acquisition manifest coverage to release artifact indexes.
-3. Add compare prompt schema references.
+1. Add acquisition manifest coverage to release artifact indexes.
+2. Add compare prompt schema references.
+3. Add release diff prompt output checklist.
