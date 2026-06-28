@@ -29,6 +29,16 @@ Relevant schemas:
 - `datasets/schemas/release-acquisition-manifest.schema.json`
 - `datasets/schemas/release-diff.schema.json`
 
+## Fixture Examples
+
+Use these fixtures to check expected shape before publishing new release diff outputs:
+
+- `datasets/fixtures/release-diff/release-diff.fixture.json`
+- `datasets/fixtures/generated-release-diff/generated-release-diff.fixture.json`
+- `datasets/fixtures/release-diff/missing-artifacts-15.6-to-16.0.fixture.json`
+
+The missing-artifact fixture is schema-valid and intentionally `unresolved`. It is an example of preserving evidence gaps, not evidence that the releases differ.
+
 Relevant guidance:
 
 - `docs/guidelines/release-acquisition.md`

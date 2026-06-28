@@ -4,41 +4,42 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`prompts/research/compare-releases.md` now requires unresolved output for missing comparable release inputs from the `prompts/release-diff-unresolved-guidance` cycle.
+`docs/guidelines/release-diff-input-readiness.md` now links release diff fixture coverage from the `docs/release-diff-fixture-coverage-readiness` cycle.
 
 ## Current Recommendation
 
-Continue by adding release diff fixture coverage to the readiness guide.
+Continue by adding acquisition manifest coverage to release artifact indexes.
 
-Reason: the readiness guide explains input gates, but it does not yet point to the concrete release-diff fixtures that demonstrate valid unresolved output.
+Reason: acquisition manifest coverage is documented in the fixture README, but the release indexes do not summarize their manifest coverage state.
 
 ## Next Branch
 
 ```text
-docs/release-diff-fixture-coverage-readiness
+macos/acquisition-manifest-coverage-indexes
 ```
 
 ## Session Goal
 
-Update release diff readiness guidance:
+Update release artifact indexes:
 
 ```text
-docs/guidelines/release-diff-input-readiness.md
+macos/15.6/artifacts.md
+macos/16.0/artifacts.md
 ```
 
 ## Research Question
 
-How should release diff readiness guidance point to fixture coverage?
+How should release artifact indexes summarize manifest coverage?
 
 ## Target Output
 
-A bounded readiness update that captures:
+A bounded index update that captures:
 
-- Fixture examples.
-- Missing-artifact unresolved fixture link.
-- Validation command.
-- Evidence sufficiency boundary.
-- Schema reference.
+- Manifest fixture path.
+- Current evidence state.
+- Missing reduced inputs.
+- Link to coverage README.
+- No raw artifacts acquired.
 
 ## Evidence To Collect
 
@@ -52,13 +53,13 @@ A bounded readiness update that captures:
 
 Done means:
 
-- `docs/guidelines/release-diff-input-readiness.md` links release diff fixtures.
-- The guide mentions the missing-artifact unresolved fixture.
+- `macos/15.6/artifacts.md` summarizes acquisition manifest coverage.
+- `macos/16.0/artifacts.md` summarizes acquisition manifest coverage.
 - No unsupported driver claims are made.
-- The validation command remains accurate.
+- Existing validation command remains visible.
 
 ## Follow-Up Queue
 
-1. Add acquisition manifest coverage to release artifact indexes.
-2. Add compare prompt schema references.
-3. Add release diff prompt output checklist.
+1. Add compare prompt schema references.
+2. Add release diff prompt output checklist.
+3. Add release diff fixture coverage to compare prompt.
