@@ -85,6 +85,10 @@ Use predictable path names:
 
 Choose exact casing for Apple class names and symbols. Use lowercase hyphenated names for project-created files.
 
+Report topics should be lowercase and hyphenated. Use `docs/reports/README.md` for report expectations.
+
+Reports are evidence-backed narrative outputs. Keep structured examples and generated fixtures under `datasets/fixtures/`. Promote only stable atomic findings into `knowledge/`.
+
 ## Research Promotion Path
 
 Raw work should move through stages:

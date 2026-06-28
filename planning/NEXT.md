@@ -4,41 +4,42 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`docs/reports/README.md` was created in the `docs/reports-readme` cycle.
+`docs/guidelines/workflow-rules.md` now documents report filename and destination boundaries from the `docs/report-filename-convention` cycle.
 
 ## Current Recommendation
 
-Continue by adding report filename convention to workflow rules.
+Continue by adding a release comparison report template file.
 
-Reason: the reports README previews the naming convention, but `docs/guidelines/workflow-rules.md` should make it canonical.
+Reason: report naming and destination rules are now documented, but `docs/reports` still needs a copyable release comparison template.
 
 ## Next Branch
 
 ```text
-docs/report-filename-convention
+docs/release-comparison-report-template
 ```
 
 ## Session Goal
 
-Update workflow rules:
+Create report template:
 
 ```text
-docs/guidelines/workflow-rules.md
+docs/reports/release-comparison-template.md
 ```
 
 ## Research Question
 
-How should report filenames be named consistently?
+What reusable template should evidence-backed release comparison reports use?
 
 ## Target Output
 
-A bounded workflow-rules update that captures:
+A bounded report template that captures:
 
-- `docs/reports/<yyyy-mm-dd>-<topic>.md` convention.
-- Lowercase hyphenated topic.
-- Evidence-backed report distinction.
-- Fixtures remain under datasets.
-- Knowledge promotion boundary.
+- Summary.
+- Inputs.
+- Evidence table.
+- Diff records.
+- Unknowns and unresolved items.
+- Validation.
 
 ## Evidence To Collect
 
@@ -52,13 +53,13 @@ A bounded workflow-rules update that captures:
 
 Done means:
 
-- `docs/guidelines/workflow-rules.md` documents the report filename convention.
-- It distinguishes reports from fixtures and knowledge notes.
+- `docs/reports/release-comparison-template.md` exists.
+- It separates observations, inferences, unknowns, and follow-ups.
 - No unsupported driver claims are made.
-- Existing workflow rules remain consistent.
+- It links release diff readiness guidance.
 
 ## Follow-Up Queue
 
-1. Add release comparison report template file.
-2. Add report destination links to compare prompt.
-3. Add docs/reports README link to workflow rules.
+1. Add report destination links to compare prompt.
+2. Add docs/reports README link to compare prompt.
+3. Add release comparison template link to reports README.
