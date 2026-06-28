@@ -4,42 +4,42 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`docs/guidelines/workflow-rules.md` now links report guidance and templates from the `docs/workflow-report-template-reference` cycle.
+`ai/agents/release-diff-analyst.md` now links report guidance and readiness rules from the `ai/release-diff-analyst-report-guidance` cycle.
 
 ## Current Recommendation
 
-Continue by adding release diff analyst agent report guidance.
+Continue by adding report template link to the compare prompt checklist.
 
-Reason: report templates are now documented, but the release diff analyst agent should also follow the same output and uncertainty rules.
+Reason: the compare prompt links the template near the report skeleton, but the finish checklist should explicitly require template use for reports.
 
 ## Next Branch
 
 ```text
-ai/release-diff-analyst-report-guidance
+prompts/compare-checklist-template-link
 ```
 
 ## Session Goal
 
-Update release diff analyst agent:
+Update compare prompt:
 
 ```text
-ai/agents/release-diff-analyst.md
+prompts/research/compare-releases.md
 ```
 
 ## Research Question
 
-How should the release diff analyst agent produce reports safely?
+How should the compare prompt checklist require report template usage?
 
 ## Target Output
 
-A bounded agent update that captures:
+A bounded prompt update that captures:
 
-- `docs/reports/README.md` link.
 - `docs/reports/release-comparison-template.md` link.
-- `docs/guidelines/release-diff-input-readiness.md` link.
-- Unresolved state handling.
+- Finish checklist item.
+- Report/fixture boundary.
 - Evidence paths.
-- No unsupported claims.
+- Unresolved records.
+- Validation command remains visible.
 
 ## Evidence To Collect
 
@@ -53,13 +53,13 @@ A bounded agent update that captures:
 
 Done means:
 
-- `ai/agents/release-diff-analyst.md` links report guidance and release diff readiness.
+- `prompts/research/compare-releases.md` checklist requires the report template for reports.
 - It keeps report/fixture distinction clear.
 - No unsupported driver claims are made.
-- The agent requires evidence paths and unresolved states for missing inputs.
+- It retains unresolved-state handling.
 
 ## Follow-Up Queue
 
-1. Add report template link to compare prompt checklist.
-2. Add publisher agent report boundary guidance.
-3. Add release diff analyst fixture reference guidance.
+1. Add publisher agent report boundary guidance.
+2. Add release diff analyst fixture reference guidance.
+3. Add research lead report promotion guidance.
