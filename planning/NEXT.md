@@ -4,38 +4,38 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`docs/reports/release-comparison-template.md` was created in the `docs/release-comparison-report-template` cycle.
+`prompts/research/compare-releases.md` now links reports guidance and template files from the `prompts/compare-report-links` cycle.
 
 ## Current Recommendation
 
-Continue by adding report destination links to the compare prompt.
+Continue by adding the release comparison template link to reports README.
 
-Reason: the report template exists, but the reusable compare prompt should point directly to reports guidance and the template.
+Reason: the prompt links the report template, but `docs/reports/README.md` should also point to the copyable template.
 
 ## Next Branch
 
 ```text
-prompts/compare-report-links
+docs/reports-template-link
 ```
 
 ## Session Goal
 
-Update compare prompt:
+Update reports README:
 
 ```text
-prompts/research/compare-releases.md
+docs/reports/README.md
 ```
 
 ## Research Question
 
-How should the compare prompt link report guidance and templates?
+How should the reports README expose the release comparison template?
 
 ## Target Output
 
-A bounded prompt update that captures:
+A bounded README update that captures:
 
-- `docs/reports/README.md` link.
 - `docs/reports/release-comparison-template.md` link.
+- Template purpose.
 - Report destination guidance.
 - Fixture/report boundary.
 - Evidence requirement.
@@ -52,13 +52,13 @@ A bounded prompt update that captures:
 
 Done means:
 
-- `prompts/research/compare-releases.md` links reports README and release comparison template.
+- `docs/reports/README.md` links `docs/reports/release-comparison-template.md`.
 - It keeps report/fixture distinction clear.
 - No unsupported driver claims are made.
-- It retains unresolved-state handling.
+- It keeps evidence and uncertainty requirements visible.
 
 ## Follow-Up Queue
 
-1. Add release comparison template link to reports README.
-2. Add report template references to workflow rules.
-3. Add release diff analyst agent report guidance.
+1. Add report template references to workflow rules.
+2. Add release diff analyst agent report guidance.
+3. Add report template link to compare prompt checklist.

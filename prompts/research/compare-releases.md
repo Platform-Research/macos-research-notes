@@ -37,6 +37,8 @@ Before finishing, check the output includes:
 - validation command and result when fixtures changed.
 
 Use this report skeleton for `docs/reports/`:
+- `docs/reports/README.md`
+- `docs/reports/release-comparison-template.md`
 - Summary
 - Inputs
 - Evidence Table
