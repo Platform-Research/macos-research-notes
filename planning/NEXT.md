@@ -4,42 +4,42 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`prompts/research/compare-releases.md` now includes report destination guidance from the `prompts/compare-report-destination-guidance` cycle.
+`prompts/research/compare-releases.md` now includes a report skeleton from the `prompts/release-diff-report-template` cycle.
 
 ## Current Recommendation
 
-Continue by adding a release diff prompt report template.
+Continue by adding release README readiness links.
 
-Reason: the prompt now tells where outputs belong, but it still needs a compact report skeleton for evidence-backed release comparisons.
+Reason: release stubs link manifest coverage, but they do not yet point directly to release diff readiness guidance.
 
 ## Next Branch
 
 ```text
-prompts/release-diff-report-template
+macos/release-readme-readiness-links
 ```
 
 ## Session Goal
 
-Update compare prompt:
+Update release README stubs:
 
 ```text
-prompts/research/compare-releases.md
+macos/15.6/README.md
+macos/16.0/README.md
 ```
 
 ## Research Question
 
-What report skeleton should the release comparison prompt produce?
+How should release README stubs link readiness guidance?
 
 ## Target Output
 
-A bounded prompt update that captures:
+A bounded README update that captures:
 
-- Summary.
-- Inputs.
-- Evidence table.
-- Diff records.
-- Unknowns.
-- Validation.
+- Release diff readiness link.
+- Acquisition checklist link.
+- Artifact index link.
+- Manifest fixture link.
+- No comparison readiness claim.
 
 ## Evidence To Collect
 
@@ -53,13 +53,13 @@ A bounded prompt update that captures:
 
 Done means:
 
-- `prompts/research/compare-releases.md` includes a report skeleton.
-- The prompt keeps report/fixture distinction clear.
+- `macos/15.6/README.md` links release diff readiness guidance.
+- `macos/16.0/README.md` links release diff readiness guidance.
 - No unsupported driver claims are made.
-- The prompt keeps unresolved-state handling.
+- The stubs still state comparable artifacts are missing.
 
 ## Follow-Up Queue
 
-1. Add release README readiness links.
-2. Add docs/reports directory README.
-3. Add report filename convention to workflow rules.
+1. Add docs/reports directory README.
+2. Add report filename convention to workflow rules.
+3. Add release comparison report template file.

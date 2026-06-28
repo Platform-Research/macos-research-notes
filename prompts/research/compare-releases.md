@@ -36,6 +36,15 @@ Before finishing, check the output includes:
 - unknowns and unresolved records separated from conclusions;
 - validation command and result when fixtures changed.
 
+Use this report skeleton for `docs/reports/`:
+- Summary
+- Inputs
+- Evidence Table
+- Diff Records
+- Unknowns and Unresolved Items
+- Validation
+- Follow-Up Queue
+
 Choose the output destination by maturity:
 - `datasets/fixtures/` for structured examples or generated fixtures;
 - `docs/guidelines/` for reusable workflow guidance;
