@@ -4,18 +4,18 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`macos/15.6/README.md` and `macos/16.0/README.md` now point to manifest coverage from the `macos/release-readme-manifest-coverage` cycle.
+`prompts/research/compare-releases.md` now includes report destination guidance from the `prompts/compare-report-destination-guidance` cycle.
 
 ## Current Recommendation
 
-Continue by adding compare prompt report destination guidance.
+Continue by adding a release diff prompt report template.
 
-Reason: the compare prompt currently says `docs/ or knowledge/`, but it should guide report placement by maturity.
+Reason: the prompt now tells where outputs belong, but it still needs a compact report skeleton for evidence-backed release comparisons.
 
 ## Next Branch
 
 ```text
-prompts/compare-report-destination-guidance
+prompts/release-diff-report-template
 ```
 
 ## Session Goal
@@ -28,17 +28,18 @@ prompts/research/compare-releases.md
 
 ## Research Question
 
-How should the compare prompt choose docs, knowledge, or datasets outputs?
+What report skeleton should the release comparison prompt produce?
 
 ## Target Output
 
 A bounded prompt update that captures:
 
-- `datasets/fixtures` for structured fixtures.
-- `docs/guidelines` for workflow guidance.
-- `docs/reports` for evidence-backed reports.
-- `knowledge` for promoted atomic findings.
-- Keep unresolved prototypes out of promoted conclusions.
+- Summary.
+- Inputs.
+- Evidence table.
+- Diff records.
+- Unknowns.
+- Validation.
 
 ## Evidence To Collect
 
@@ -52,13 +53,13 @@ A bounded prompt update that captures:
 
 Done means:
 
-- `prompts/research/compare-releases.md` includes destination guidance.
-- The prompt keeps fixture/report distinction clear.
+- `prompts/research/compare-releases.md` includes a report skeleton.
+- The prompt keeps report/fixture distinction clear.
 - No unsupported driver claims are made.
 - The prompt keeps unresolved-state handling.
 
 ## Follow-Up Queue
 
-1. Add release diff prompt report template.
-2. Add release README readiness links.
-3. Add docs/reports directory README.
+1. Add release README readiness links.
+2. Add docs/reports directory README.
+3. Add report filename convention to workflow rules.

@@ -36,5 +36,11 @@ Before finishing, check the output includes:
 - unknowns and unresolved records separated from conclusions;
 - validation command and result when fixtures changed.
 
-Produce a concise report under docs/ or knowledge/.
+Choose the output destination by maturity:
+- `datasets/fixtures/` for structured examples or generated fixtures;
+- `docs/guidelines/` for reusable workflow guidance;
+- `docs/reports/` for evidence-backed release comparison reports;
+- `knowledge/` only for promoted atomic findings with stable evidence.
+
+Keep unresolved prototypes out of promoted conclusions.
 ```
