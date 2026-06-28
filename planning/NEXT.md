@@ -4,41 +4,41 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`datasets/fixtures/acquisition-manifest/README.md` now links release diff readiness guidance from the `docs/acquisition-manifest-readiness-links` cycle.
+`tools/schema-validate/validate-known-schemas.py` now validates the missing-artifact release diff fixture from the `tools/validate-missing-artifact-release-diff` cycle.
 
 ## Current Recommendation
 
-Continue by adding the missing-artifact release diff fixture to the optional validator.
+Continue by adding a missing-artifact release diff README note.
 
-Reason: the fixture exists and is syntax-valid, but `validate-known-schemas.py` does not yet validate it as a known release-diff schema pair.
+Reason: the fixture is now validated, but the release-diff fixture folder does not yet explain why this unresolved example exists.
 
 ## Next Branch
 
 ```text
-tools/validate-missing-artifact-release-diff
+docs/missing-artifact-release-diff-readme
 ```
 
 ## Session Goal
 
-Update the optional schema validator:
+Create or update the release diff fixture README:
 
 ```text
-tools/schema-validate/validate-known-schemas.py
+datasets/fixtures/release-diff/README.md
 ```
 
 ## Research Question
 
-How should the optional validator cover the missing-artifact release diff fixture?
+How should the release diff fixtures document unresolved missing-artifact examples?
 
 ## Target Output
 
-A bounded validator update that captures:
+A bounded README update that captures:
 
-- New release diff schema pair.
-- Passing validation command.
-- README coverage.
-- Missing-artifact fixture remains unresolved.
-- No evidence claims are added.
+- Fixture list.
+- Missing-artifact fixture purpose.
+- Unresolved-state meaning.
+- Validation command.
+- Evidence boundary.
 
 ## Evidence To Collect
 
@@ -52,13 +52,13 @@ A bounded validator update that captures:
 
 Done means:
 
-- `tools/schema-validate/validate-known-schemas.py` validates `missing-artifacts-15.6-to-16.0.fixture.json`.
-- `tools/schema-validate/README.md` lists the fixture in release diff coverage.
+- `datasets/fixtures/release-diff/README.md` exists.
+- It lists the missing-artifact fixture and explains `unresolved`.
 - No unsupported driver claims are made.
 - The validation command remains accurate.
 
 ## Follow-Up Queue
 
-1. Add missing-artifact release diff README note.
-2. Add manifest coverage table for 15.6 and 16.0.
-3. Add release diff unresolved-state guidance to compare prompt.
+1. Add manifest coverage table for 15.6 and 16.0.
+2. Add release diff unresolved-state guidance to compare prompt.
+3. Add release diff fixture coverage to readiness guide.

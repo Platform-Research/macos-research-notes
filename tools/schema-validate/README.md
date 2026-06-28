@@ -37,6 +37,7 @@ Release diff validation uses:
 - `datasets/schemas/release-diff.schema.json`
 - `datasets/fixtures/release-diff/release-diff.fixture.json`
 - `datasets/fixtures/generated-release-diff/generated-release-diff.fixture.json`
+- `datasets/fixtures/release-diff/missing-artifacts-15.6-to-16.0.fixture.json`
 
 Schema-valid release diff JSON is not automatically evidence-sufficient. Before treating a release pair as comparable, use `docs/guidelines/release-diff-input-readiness.md`.
 
