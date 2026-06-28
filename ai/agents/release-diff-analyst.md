@@ -28,6 +28,12 @@ Use fixture examples:
 - `datasets/fixtures/release-diff/missing-artifacts-15.6-to-16.0.fixture.json`
 - `datasets/fixtures/generated-release-diff/generated-release-diff.fixture.json`
 
+Destination examples:
+
+- Fixture example: `datasets/fixtures/release-diff/<name>.fixture.json`
+- Report example: `docs/reports/<yyyy-mm-dd>-<topic>.md`
+- Unresolved output: keep as a fixture or report until evidence is sufficient
+
 Validate changed fixtures with:
 
 ```sh
