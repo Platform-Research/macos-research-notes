@@ -21,6 +21,8 @@ Use:
 - `datasets/fixtures/` for structured examples and generated fixtures.
 - `knowledge/` only for promoted atomic findings with stable evidence.
 
+If the output is a report, use `docs/reports/release-comparison-template.md` instead of improvising a new structure.
+
 Destination examples:
 
 - Fixture example: `datasets/fixtures/release-diff/<name>.fixture.json`.
