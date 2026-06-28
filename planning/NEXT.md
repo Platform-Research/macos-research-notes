@@ -4,41 +4,41 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`ai/agents/artifact-analyst.md` now includes fixture validation guidance from the `ai/artifact-analyst-fixture-validation` cycle.
+`ai/agents/release-diff-analyst.md` now requires the release comparison report template from the `ai/release-diff-analyst-template-reminder` cycle.
 
 ## Current Recommendation
 
-Continue by adding release diff analyst report template reminder.
+Continue by adding publisher validation result guidance.
 
-Reason: the release diff analyst links report guidance, but should explicitly use the release comparison template when producing reports.
+Reason: publisher requires evidence paths, but should also preserve validation commands and results in reports when fixtures change.
 
 ## Next Branch
 
 ```text
-ai/release-diff-analyst-template-reminder
+ai/publisher-validation-result-guidance
 ```
 
 ## Session Goal
 
-Update release diff analyst agent:
+Update publisher agent:
 
 ```text
-ai/agents/release-diff-analyst.md
+ai/agents/publisher.md
 ```
 
 ## Research Question
 
-How should release diff analyst remember the report template?
+How should publisher preserve validation results?
 
 ## Target Output
 
 A bounded agent update that captures:
 
-- Template usage requirement.
-- Report destination.
-- Evidence table requirement.
-- Unknowns and unresolved section.
-- Validation result requirement.
+- Validation command.
+- Validation result.
+- Fixture/report distinction.
+- Evidence path requirement.
+- Unknowns remain explicit.
 
 ## Evidence To Collect
 
@@ -52,13 +52,13 @@ A bounded agent update that captures:
 
 Done means:
 
-- `ai/agents/release-diff-analyst.md` requires the report template for reports.
+- `ai/agents/publisher.md` requires validation commands and results when fixtures or schemas change.
 - It keeps report/fixture distinction clear.
 - No unsupported driver claims are made.
 - It retains unresolved-state handling.
 
 ## Follow-Up Queue
 
-1. Add publisher validation result guidance.
-2. Add research lead parking-lot evidence-gap guidance.
-3. Add artifact analyst note-template fallback guidance.
+1. Add research lead parking-lot evidence-gap guidance.
+2. Add artifact analyst note-template fallback guidance.
+3. Add release diff analyst validation result reminder.

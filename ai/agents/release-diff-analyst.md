@@ -20,6 +20,8 @@ Before reporting, read:
 - `docs/reports/README.md`
 - `docs/reports/release-comparison-template.md`
 
+When producing a report, use `docs/reports/release-comparison-template.md` and include an evidence table, unknowns and unresolved items, and validation results.
+
 Use fixture examples:
 
 - `datasets/fixtures/release-diff/README.md`
