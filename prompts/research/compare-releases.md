@@ -24,5 +24,12 @@ Then compare inventory metadata, symbols, strings, dependencies, and class relat
 
 Label coverage gaps clearly. Do not claim driver behavior, hardware support, kernel internals, or release changes without artifact-backed evidence.
 
+Before finishing, check the output includes:
+- source release and target release;
+- evidence paths for every record;
+- state labels from `added`, `removed`, `changed`, `unchanged`, or `unresolved`;
+- unknowns and unresolved records separated from conclusions;
+- validation command and result when fixtures changed.
+
 Produce a concise report under docs/ or knowledge/.
 ```
