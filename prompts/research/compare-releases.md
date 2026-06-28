@@ -15,6 +15,11 @@ Use these schemas to shape structured outputs:
 - `datasets/schemas/release-acquisition-manifest.schema.json`
 - `datasets/schemas/release-diff.schema.json`
 
+Use these fixtures as examples:
+- `datasets/fixtures/release-diff/README.md`
+- `datasets/fixtures/release-diff/missing-artifacts-15.6-to-16.0.fixture.json`
+- `datasets/fixtures/generated-release-diff/generated-release-diff.fixture.json`
+
 Run validation when producing or updating fixtures:
 - `.venv/bin/python tools/schema-validate/validate-known-schemas.py`
 
