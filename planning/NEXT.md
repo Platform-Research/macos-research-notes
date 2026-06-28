@@ -4,41 +4,41 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`docs/guidelines/reduced-release-acquisition-checklist-example.md` was created in the `docs/reduced-release-acquisition-checklist-example` cycle.
+`docs/guidelines/release-diff-input-readiness.md` was created in the `docs/release-diff-input-readiness` cycle.
 
 ## Current Recommendation
 
-Continue by adding a release diff input readiness note.
+Continue by adding syntax validator ignore rules for local virtualenvs.
 
-Reason: acquisition manifests and checklist guidance exist, but the release diff workflow still needs an explicit readiness gate before comparing releases.
+Reason: `tools/schema-validate/validate-json.sh` currently walks `.venv`, which makes local validation noisy when optional dependencies are installed.
 
 ## Next Branch
 
 ```text
-docs/release-diff-input-readiness
+tools/validate-json-ignore-venv
 ```
 
 ## Session Goal
 
-Create the readiness note:
+Update the syntax validator:
 
 ```text
-docs/guidelines/release-diff-input-readiness.md
+tools/schema-validate/validate-json.sh
 ```
 
 ## Research Question
 
-What evidence is required before treating two releases as diff-ready?
+How should JSON syntax validation avoid local virtualenv noise?
 
 ## Target Output
 
-A bounded readiness note that captures:
+A bounded tooling update that captures:
 
-- Required manifest states.
-- Required reduced datasets.
-- Schema validation status.
-- Missing artifact handling.
-- Stop conditions before diffing.
+- Ignore `.venv`.
+- Keep deterministic ordering.
+- Preserve subtree validation.
+- Document the exclusion.
+- Keep schema validation separate.
 
 ## Evidence To Collect
 
@@ -52,13 +52,13 @@ A bounded readiness note that captures:
 
 Done means:
 
-- `docs/guidelines/release-diff-input-readiness.md` exists.
-- It does not require raw artifacts in git.
+- `tools/schema-validate/validate-json.sh` does not scan `.venv` during repo-wide validation.
+- The syntax validator still accepts explicit subtree arguments.
 - No unsupported driver claims are made.
-- It links release acquisition, validation, and diff schemas.
+- `tools/schema-validate/README.md` documents the exclusion.
 
 ## Follow-Up Queue
 
-1. Add syntax validator ignore rules for local virtualenvs.
-2. Add release artifact provenance mini-template to macOS folders.
-3. Add a release diff fixture generated from missing-artifact manifests.
+1. Add release artifact provenance mini-template to macOS folders.
+2. Add a release diff fixture generated from missing-artifact manifests.
+3. Add release diff readiness checks to optional validator docs.
