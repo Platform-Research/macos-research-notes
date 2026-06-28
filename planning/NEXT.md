@@ -4,41 +4,41 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`datasets/fixtures/release-diff/missing-artifacts-15.6-to-16.0.fixture.json` was created in the `datasets/fixtures/missing-artifact-release-diff` cycle.
+`tools/schema-validate/README.md` now explains release diff readiness from the `docs/release-diff-validator-readiness` cycle.
 
 ## Current Recommendation
 
-Continue by adding release diff readiness checks to optional validator docs.
+Continue by adding acquisition manifest README links to release readiness guidance.
 
-Reason: the missing-artifact diff fixture exists, but the validator docs do not yet explain how readiness relates to schema validation.
+Reason: acquisition manifest docs explain validation, but they do not yet point to release diff readiness before comparisons.
 
 ## Next Branch
 
 ```text
-docs/release-diff-validator-readiness
+docs/acquisition-manifest-readiness-links
 ```
 
 ## Session Goal
 
-Update validator documentation:
+Update acquisition manifest documentation:
 
 ```text
-tools/schema-validate/README.md
+datasets/fixtures/acquisition-manifest/README.md
 ```
 
 ## Research Question
 
-How should schema validation docs describe release diff readiness checks?
+How should acquisition manifest docs point reviewers toward release diff readiness?
 
 ## Target Output
 
 A bounded documentation update that captures:
 
-- Release diff schema coverage.
-- Readiness guidance link.
-- Unresolved missing-artifact fixture status.
-- Difference between schema validity and evidence sufficiency.
+- Release readiness guidance link.
+- Manifest fixture list.
+- Missing-artifact interpretation.
 - Validation command.
+- Boundary between acquisition and comparison.
 
 ## Evidence To Collect
 
@@ -52,13 +52,13 @@ A bounded documentation update that captures:
 
 Done means:
 
-- `tools/schema-validate/README.md` links release diff readiness guidance.
-- The README distinguishes valid JSON from diff-ready evidence.
+- `datasets/fixtures/acquisition-manifest/README.md` links `docs/guidelines/release-diff-input-readiness.md`.
+- The README distinguishes acquisition state from comparison readiness.
 - No unsupported driver claims are made.
 - The validation command remains accurate.
 
 ## Follow-Up Queue
 
-1. Add acquisition manifest README links to release readiness guidance.
-2. Add missing-artifact release diff fixture to optional validator.
-3. Add missing-artifact release diff README note.
+1. Add missing-artifact release diff fixture to optional validator.
+2. Add missing-artifact release diff README note.
+3. Add manifest coverage table for 15.6 and 16.0.

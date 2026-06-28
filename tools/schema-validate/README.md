@@ -32,6 +32,16 @@ python3 -m venv .venv
 
 Known validation pairs include IORegistry examples, kext personality examples, parsed PCI match fixtures, provider-class join fixtures, registry-personality join fixtures, static and generated release diff fixtures, and acquisition manifest fixtures.
 
+Release diff validation uses:
+
+- `datasets/schemas/release-diff.schema.json`
+- `datasets/fixtures/release-diff/release-diff.fixture.json`
+- `datasets/fixtures/generated-release-diff/generated-release-diff.fixture.json`
+
+Schema-valid release diff JSON is not automatically evidence-sufficient. Before treating a release pair as comparable, use `docs/guidelines/release-diff-input-readiness.md`.
+
+The missing-artifact fixture at `datasets/fixtures/release-diff/missing-artifacts-15.6-to-16.0.fixture.json` is intentionally `unresolved`; it documents absent comparable inputs rather than a real release difference.
+
 Acquisition manifest coverage uses:
 
 - `datasets/schemas/release-acquisition-manifest.schema.json`
@@ -47,10 +57,10 @@ Acquisition manifest coverage uses:
 
 ## What It Does Not Check Yet
 
-- JSON Schema conformance.
 - Cross-file references.
 - Runtime helper output freshness.
 - Sensitive-value policy beyond syntax.
+- Whether a schema-valid release diff is evidence-sufficient.
 
 ## Optional Schema Validation Status
 
