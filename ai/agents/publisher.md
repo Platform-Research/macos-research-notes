@@ -28,6 +28,11 @@ Destination examples:
 - Knowledge example: `knowledge/iokit/<atomic-finding>.md`.
 - Unresolved output: keep as report or fixture; do not promote to `knowledge/`.
 
+Validation examples to preserve when relevant:
+
+- `tools/schema-validate/validate-json.sh`
+- `.venv/bin/python tools/schema-validate/validate-known-schemas.py`
+
 ## Guardrails
 
 - Do not remove uncertainty.

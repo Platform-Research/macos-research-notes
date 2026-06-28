@@ -4,41 +4,41 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`ai/agents/release-diff-analyst.md` now requires validation results in reports when fixtures or schemas change from the `ai/release-diff-analyst-validation-results` cycle.
+`ai/agents/publisher.md` now includes validation command examples from the `ai/publisher-validation-command-examples` cycle.
 
 ## Current Recommendation
 
-Continue by adding publisher validation command examples.
+Continue by adding research lead evidence-gap parking lot template.
 
-Reason: publisher now preserves validation results, but concrete commands make the rule easier to apply.
+Reason: research lead now routes evidence gaps to parking lot, but needs a repeatable template for those parked items.
 
 ## Next Branch
 
 ```text
-ai/publisher-validation-command-examples
+ai/research-lead-evidence-gap-template
 ```
 
 ## Session Goal
 
-Update publisher agent:
+Update research lead agent:
 
 ```text
-ai/agents/publisher.md
+ai/agents/research-lead.md
 ```
 
 ## Research Question
 
-What validation command examples should publisher preserve?
+What template should research lead use for evidence gaps?
 
 ## Target Output
 
 A bounded agent update that captures:
 
-- JSON syntax command.
-- Known schema validation command.
-- Report validation section.
-- Fixture/schema changed condition.
-- Evidence path reminder.
+- `evidence-gap:` label.
+- Missing artifact.
+- Desired source.
+- Proposed next branch.
+- Stop condition.
 
 ## Evidence To Collect
 
@@ -52,13 +52,13 @@ A bounded agent update that captures:
 
 Done means:
 
-- `ai/agents/publisher.md` includes validation command examples.
+- `ai/agents/research-lead.md` includes an evidence-gap parking lot template.
 - It keeps report/fixture distinction clear.
 - No unsupported driver claims are made.
 - It retains unresolved-state handling.
 
 ## Follow-Up Queue
 
-1. Add research lead evidence-gap parking lot template.
-2. Add artifact analyst command provenance reminder.
-3. Add release diff analyst report destination examples.
+1. Add artifact analyst command provenance reminder.
+2. Add release diff analyst report destination examples.
+3. Add publisher report template reminder.
