@@ -11,6 +11,13 @@ First read `docs/guidelines/release-diff-input-readiness.md`.
 
 Start with acquisition manifests and artifact indexes. Require committed evidence paths for every comparison record.
 
+Use these schemas to shape structured outputs:
+- `datasets/schemas/release-acquisition-manifest.schema.json`
+- `datasets/schemas/release-diff.schema.json`
+
+Run validation when producing or updating fixtures:
+- `.venv/bin/python tools/schema-validate/validate-known-schemas.py`
+
 If comparable reduced inputs are missing, emit `state: "unresolved"` rather than inferring added, removed, changed, or unchanged.
 
 Then compare inventory metadata, symbols, strings, dependencies, and class relationships only when both releases have comparable reduced inputs.

@@ -4,18 +4,18 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`macos/15.6/artifacts.md` and `macos/16.0/artifacts.md` now summarize acquisition manifest coverage from the `macos/acquisition-manifest-coverage-indexes` cycle.
+`prompts/research/compare-releases.md` now references release acquisition and release diff schemas from the `prompts/compare-release-schema-references` cycle.
 
 ## Current Recommendation
 
-Continue by adding compare prompt schema references.
+Continue by adding a release diff prompt output checklist.
 
-Reason: the compare prompt now handles unresolved states, but it should also name the schemas that shape valid outputs.
+Reason: the compare prompt now references schemas, but it still lacks a compact output checklist for reports and fixtures.
 
 ## Next Branch
 
 ```text
-prompts/compare-release-schema-references
+prompts/release-diff-output-checklist
 ```
 
 ## Session Goal
@@ -28,17 +28,17 @@ prompts/research/compare-releases.md
 
 ## Research Question
 
-How should the compare prompt reference release acquisition and diff schemas?
+What output checklist should the release comparison prompt require?
 
 ## Target Output
 
 A bounded prompt update that captures:
 
-- Release diff schema path.
-- Acquisition manifest schema path.
-- Validator command.
-- Evidence path requirement.
-- Readiness link remains visible.
+- Source release and target release.
+- Evidence paths.
+- State labels.
+- Unknowns and unresolved records.
+- Validation command.
 
 ## Evidence To Collect
 
@@ -52,13 +52,13 @@ A bounded prompt update that captures:
 
 Done means:
 
-- `prompts/research/compare-releases.md` references release diff and acquisition manifest schemas.
+- `prompts/research/compare-releases.md` includes an output checklist.
 - The prompt retains unresolved-state handling.
 - No unsupported driver claims are made.
 - The prompt keeps evidence path requirements.
 
 ## Follow-Up Queue
 
-1. Add release diff prompt output checklist.
-2. Add release diff fixture coverage to compare prompt.
-3. Add manifest coverage notes to release README stubs.
+1. Add release diff fixture coverage to compare prompt.
+2. Add manifest coverage notes to release README stubs.
+3. Add compare prompt report destination guidance.
