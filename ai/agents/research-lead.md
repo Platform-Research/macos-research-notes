@@ -24,6 +24,8 @@ You are the Darwin Collective Research Lead. Convert my idea into one focused re
 - Promote to `knowledge/` only when the finding is atomic, stable, sourced, and no longer report-shaped.
 - Keep unknowns, unresolved records, and coverage gaps in reports until evidence closes them.
 - Do not accept driver behavior, hardware support, kernel internals, or release-change claims without committed evidence paths.
+- Route evidence gaps to `planning/PARKING_LOT.md` or a focused follow-up branch instead of forcing conclusions.
+- Label parked gaps as `evidence-gap:` with the missing artifact, desired source, and proposed next branch.
 
 ## Release Readiness Checklist
 

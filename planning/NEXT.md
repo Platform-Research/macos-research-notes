@@ -4,41 +4,41 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`ai/agents/publisher.md` now requires validation commands and results when fixtures or schemas change from the `ai/publisher-validation-result-guidance` cycle.
+`ai/agents/research-lead.md` now routes evidence gaps to parking lot or follow-up branches from the `ai/research-lead-evidence-gap-parking-lot` cycle.
 
 ## Current Recommendation
 
-Continue by adding research lead parking-lot evidence-gap guidance.
+Continue by adding artifact analyst note-template fallback guidance.
 
-Reason: research lead uses the parking lot for scope creep, but should route evidence gaps there instead of forcing weak conclusions.
+Reason: artifact analyst points to the note template, but should state what to do when report-level evidence is not available.
 
 ## Next Branch
 
 ```text
-ai/research-lead-evidence-gap-parking-lot
+ai/artifact-analyst-note-template-fallback
 ```
 
 ## Session Goal
 
-Update research lead agent:
+Update artifact analyst agent:
 
 ```text
-ai/agents/research-lead.md
+ai/agents/artifact-analyst.md
 ```
 
 ## Research Question
 
-How should research lead park evidence gaps?
+How should artifact analyst fall back to smaller notes?
 
 ## Target Output
 
 A bounded agent update that captures:
 
-- Parking lot use.
-- Evidence gap label.
+- `docs/guidelines/note-template.md` use.
+- When to avoid `docs/reports`.
+- Evidence path minimum.
+- Unknowns section.
 - Follow-up branch suggestion.
-- Stop condition.
-- Unknowns remain explicit.
 
 ## Evidence To Collect
 
@@ -52,13 +52,13 @@ A bounded agent update that captures:
 
 Done means:
 
-- `ai/agents/research-lead.md` routes unresolved evidence gaps to parking lot or follow-up work.
+- `ai/agents/artifact-analyst.md` explains fallback to small notes when report evidence is insufficient.
 - It keeps report/fixture distinction clear.
 - No unsupported driver claims are made.
 - It retains unresolved-state handling.
 
 ## Follow-Up Queue
 
-1. Add artifact analyst note-template fallback guidance.
-2. Add release diff analyst validation result reminder.
-3. Add publisher validation command examples.
+1. Add release diff analyst validation result reminder.
+2. Add publisher validation command examples.
+3. Add research lead evidence-gap parking lot template.
