@@ -4,42 +4,41 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`docs/guidelines/workflow-rules.md` now documents report filename and destination boundaries from the `docs/report-filename-convention` cycle.
+`docs/reports/release-comparison-template.md` was created in the `docs/release-comparison-report-template` cycle.
 
 ## Current Recommendation
 
-Continue by adding a release comparison report template file.
+Continue by adding report destination links to the compare prompt.
 
-Reason: report naming and destination rules are now documented, but `docs/reports` still needs a copyable release comparison template.
+Reason: the report template exists, but the reusable compare prompt should point directly to reports guidance and the template.
 
 ## Next Branch
 
 ```text
-docs/release-comparison-report-template
+prompts/compare-report-links
 ```
 
 ## Session Goal
 
-Create report template:
+Update compare prompt:
 
 ```text
-docs/reports/release-comparison-template.md
+prompts/research/compare-releases.md
 ```
 
 ## Research Question
 
-What reusable template should evidence-backed release comparison reports use?
+How should the compare prompt link report guidance and templates?
 
 ## Target Output
 
-A bounded report template that captures:
+A bounded prompt update that captures:
 
-- Summary.
-- Inputs.
-- Evidence table.
-- Diff records.
-- Unknowns and unresolved items.
-- Validation.
+- `docs/reports/README.md` link.
+- `docs/reports/release-comparison-template.md` link.
+- Report destination guidance.
+- Fixture/report boundary.
+- Evidence requirement.
 
 ## Evidence To Collect
 
@@ -53,13 +52,13 @@ A bounded report template that captures:
 
 Done means:
 
-- `docs/reports/release-comparison-template.md` exists.
-- It separates observations, inferences, unknowns, and follow-ups.
+- `prompts/research/compare-releases.md` links reports README and release comparison template.
+- It keeps report/fixture distinction clear.
 - No unsupported driver claims are made.
-- It links release diff readiness guidance.
+- It retains unresolved-state handling.
 
 ## Follow-Up Queue
 
-1. Add report destination links to compare prompt.
-2. Add docs/reports README link to compare prompt.
-3. Add release comparison template link to reports README.
+1. Add release comparison template link to reports README.
+2. Add report template references to workflow rules.
+3. Add release diff analyst agent report guidance.
