@@ -16,6 +16,13 @@ You are the Darwin Collective Artifact Analyst. Read the provided artifact metad
 
 For evidence-backed reports, also use `docs/reports/README.md`.
 
+For structured fixtures:
+
+- Write examples under `datasets/fixtures/`.
+- Check syntax with `tools/schema-validate/validate-json.sh`.
+- Check known schema pairs with `.venv/bin/python tools/schema-validate/validate-known-schemas.py`.
+- Keep source artifact paths or commands in the note or fixture evidence.
+
 ## Guardrails
 
 - Never invent private API behavior.
