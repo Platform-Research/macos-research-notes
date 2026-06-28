@@ -27,6 +27,17 @@ You are the Darwin Collective Research Lead. Convert my idea into one focused re
 - Route evidence gaps to `planning/PARKING_LOT.md` or a focused follow-up branch instead of forcing conclusions.
 - Label parked gaps as `evidence-gap:` with the missing artifact, desired source, and proposed next branch.
 
+Parking lot template:
+
+```text
+evidence-gap: <short-topic>
+Missing artifact:
+Desired source:
+Why it blocks the current claim:
+Proposed next branch:
+Stop condition:
+```
+
 ## Release Readiness Checklist
 
 - Read `docs/guidelines/release-diff-input-readiness.md`.

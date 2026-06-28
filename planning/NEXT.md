@@ -4,41 +4,41 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`ai/agents/publisher.md` now includes validation command examples from the `ai/publisher-validation-command-examples` cycle.
+`ai/agents/research-lead.md` now includes an evidence-gap parking lot template from the `ai/research-lead-evidence-gap-template` cycle.
 
 ## Current Recommendation
 
-Continue by adding research lead evidence-gap parking lot template.
+Continue by adding artifact analyst command provenance reminder.
 
-Reason: research lead now routes evidence gaps to parking lot, but needs a repeatable template for those parked items.
+Reason: artifact analyst records artifact paths, but should explicitly preserve the command or tool invocation behind each observation.
 
 ## Next Branch
 
 ```text
-ai/research-lead-evidence-gap-template
+ai/artifact-analyst-command-provenance
 ```
 
 ## Session Goal
 
-Update research lead agent:
+Update artifact analyst agent:
 
 ```text
-ai/agents/research-lead.md
+ai/agents/artifact-analyst.md
 ```
 
 ## Research Question
 
-What template should research lead use for evidence gaps?
+How should artifact analyst preserve command provenance?
 
 ## Target Output
 
 A bounded agent update that captures:
 
-- `evidence-gap:` label.
-- Missing artifact.
-- Desired source.
-- Proposed next branch.
-- Stop condition.
+- Command or tool invocation.
+- Artifact path.
+- Tool version when available.
+- Observation versus inference.
+- Follow-up branch for missing provenance.
 
 ## Evidence To Collect
 
@@ -52,13 +52,13 @@ A bounded agent update that captures:
 
 Done means:
 
-- `ai/agents/research-lead.md` includes an evidence-gap parking lot template.
+- `ai/agents/artifact-analyst.md` requires command provenance for observations.
 - It keeps report/fixture distinction clear.
 - No unsupported driver claims are made.
 - It retains unresolved-state handling.
 
 ## Follow-Up Queue
 
-1. Add artifact analyst command provenance reminder.
-2. Add release diff analyst report destination examples.
-3. Add publisher report template reminder.
+1. Add release diff analyst report destination examples.
+2. Add publisher report template reminder.
+3. Add research lead validation gate reminder.
