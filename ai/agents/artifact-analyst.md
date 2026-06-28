@@ -36,3 +36,7 @@ For structured fixtures:
 - Keep structured examples and fixtures under `datasets/fixtures/`.
 - Mark missing comparable artifacts as unknown or `unresolved`; do not turn gaps into conclusions.
 - Do not claim driver behavior, hardware support, kernel internals, or release changes without artifact-backed evidence.
+
+Unresolved example:
+
+`IORegistry inventory is unavailable for release 16.0. Observation: no comparable reduced dataset is committed. Inference: release comparison remains unresolved. Follow-up branch: macos/16.0-ioreg-acquisition.`
