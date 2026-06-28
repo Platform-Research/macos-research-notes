@@ -4,41 +4,41 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`datasets/fixtures/release-diff/README.md` now documents missing-artifact release diff fixtures from the `docs/missing-artifact-release-diff-readme` cycle.
+`datasets/fixtures/acquisition-manifest/README.md` now includes a 15.6/16.0 coverage table from the `docs/acquisition-manifest-coverage-table` cycle.
 
 ## Current Recommendation
 
-Continue by adding a manifest coverage table for 15.6 and 16.0.
+Continue by adding release diff unresolved-state guidance to the compare prompt.
 
-Reason: acquisition manifest fixtures exist, but reviewers still need a compact table showing each release fixture and current evidence state.
+Reason: the docs now preserve unresolved missing-artifact states, but the reusable compare prompt should explicitly ask assistants to avoid inventing differences.
 
 ## Next Branch
 
 ```text
-docs/acquisition-manifest-coverage-table
+prompts/release-diff-unresolved-guidance
 ```
 
 ## Session Goal
 
-Update acquisition manifest documentation:
+Update compare prompt:
 
 ```text
-datasets/fixtures/acquisition-manifest/README.md
+prompts/research/compare-releases.md
 ```
 
 ## Research Question
 
-How should acquisition manifest docs summarize 15.6 and 16.0 coverage?
+How should the compare prompt handle missing comparable release inputs?
 
 ## Target Output
 
-A bounded README update that captures:
+A bounded prompt update that captures:
 
-- Coverage table.
-- Release fixture paths.
-- Current state.
-- Validation command.
-- Missing-artifact boundary.
+- Unresolved state requirement.
+- Missing comparable input handling.
+- Evidence path requirement.
+- No unsupported driver claims.
+- Release readiness link.
 
 ## Evidence To Collect
 
@@ -52,13 +52,13 @@ A bounded README update that captures:
 
 Done means:
 
-- `datasets/fixtures/acquisition-manifest/README.md` includes a coverage table.
-- The table lists 15.6 and 16.0 fixture paths.
+- `prompts/research/compare-releases.md` instructs unresolved output for missing comparable inputs.
+- The prompt links release diff readiness guidance.
 - No unsupported driver claims are made.
-- The validation command remains accurate.
+- The prompt requires evidence paths.
 
 ## Follow-Up Queue
 
-1. Add release diff unresolved-state guidance to compare prompt.
-2. Add release diff fixture coverage to readiness guide.
-3. Add acquisition manifest coverage to release artifact indexes.
+1. Add release diff fixture coverage to readiness guide.
+2. Add acquisition manifest coverage to release artifact indexes.
+3. Add compare prompt schema references.
