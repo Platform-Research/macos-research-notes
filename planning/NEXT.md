@@ -4,42 +4,41 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`ai/agents/release-diff-analyst.md` now links report guidance and readiness rules from the `ai/release-diff-analyst-report-guidance` cycle.
+`prompts/research/compare-releases.md` checklist now requires the release comparison report template from the `prompts/compare-checklist-template-link` cycle.
 
 ## Current Recommendation
 
-Continue by adding report template link to the compare prompt checklist.
+Continue by adding publisher agent report boundary guidance.
 
-Reason: the compare prompt links the template near the report skeleton, but the finish checklist should explicitly require template use for reports.
+Reason: reports and fixtures now have stronger boundaries, but the publisher agent should avoid promoting unresolved prototypes.
 
 ## Next Branch
 
 ```text
-prompts/compare-checklist-template-link
+ai/publisher-report-boundary-guidance
 ```
 
 ## Session Goal
 
-Update compare prompt:
+Update publisher agent:
 
 ```text
-prompts/research/compare-releases.md
+ai/agents/publisher.md
 ```
 
 ## Research Question
 
-How should the compare prompt checklist require report template usage?
+How should the publisher agent handle reports, fixtures, and unresolved outputs?
 
 ## Target Output
 
-A bounded prompt update that captures:
+A bounded agent update that captures:
 
-- `docs/reports/release-comparison-template.md` link.
-- Finish checklist item.
-- Report/fixture boundary.
-- Evidence paths.
+- `docs/reports/README.md` link.
+- Fixtures stay under datasets.
+- Reports require evidence paths.
 - Unresolved records.
-- Validation command remains visible.
+- Knowledge promotion boundary.
 
 ## Evidence To Collect
 
@@ -53,13 +52,13 @@ A bounded prompt update that captures:
 
 Done means:
 
-- `prompts/research/compare-releases.md` checklist requires the report template for reports.
+- `ai/agents/publisher.md` distinguishes reports, fixtures, and knowledge promotion.
 - It keeps report/fixture distinction clear.
 - No unsupported driver claims are made.
 - It retains unresolved-state handling.
 
 ## Follow-Up Queue
 
-1. Add publisher agent report boundary guidance.
-2. Add release diff analyst fixture reference guidance.
-3. Add research lead report promotion guidance.
+1. Add release diff analyst fixture reference guidance.
+2. Add research lead report promotion guidance.
+3. Add artifact analyst report evidence guidance.

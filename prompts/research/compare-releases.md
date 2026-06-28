@@ -34,6 +34,7 @@ Before finishing, check the output includes:
 - evidence paths for every record;
 - state labels from `added`, `removed`, `changed`, `unchanged`, or `unresolved`;
 - unknowns and unresolved records separated from conclusions;
+- `docs/reports/release-comparison-template.md` used when the output is a report;
 - validation command and result when fixtures changed.
 
 Use this report skeleton for `docs/reports/`:
