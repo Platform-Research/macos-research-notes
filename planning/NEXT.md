@@ -4,41 +4,41 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`macos/15.6/README.md` and `macos/16.0/README.md` now link release diff readiness guidance from the `macos/release-readme-readiness-links` cycle.
+`docs/reports/README.md` was created in the `docs/reports-readme` cycle.
 
 ## Current Recommendation
 
-Continue by adding a docs/reports directory README.
+Continue by adding report filename convention to workflow rules.
 
-Reason: the compare prompt now directs evidence-backed reports to `docs/reports`, but that folder does not yet describe expectations.
+Reason: the reports README previews the naming convention, but `docs/guidelines/workflow-rules.md` should make it canonical.
 
 ## Next Branch
 
 ```text
-docs/reports-readme
+docs/report-filename-convention
 ```
 
 ## Session Goal
 
-Create reports directory guidance:
+Update workflow rules:
 
 ```text
-docs/reports/README.md
+docs/guidelines/workflow-rules.md
 ```
 
 ## Research Question
 
-What should evidence-backed reports under docs/reports contain?
+How should report filenames be named consistently?
 
 ## Target Output
 
-A bounded README update that captures:
+A bounded workflow-rules update that captures:
 
-- Report purpose.
-- Filename convention preview.
-- Evidence requirements.
-- Unknowns and unresolved handling.
-- Validation notes.
+- `docs/reports/<yyyy-mm-dd>-<topic>.md` convention.
+- Lowercase hyphenated topic.
+- Evidence-backed report distinction.
+- Fixtures remain under datasets.
+- Knowledge promotion boundary.
 
 ## Evidence To Collect
 
@@ -52,13 +52,13 @@ A bounded README update that captures:
 
 Done means:
 
-- `docs/reports/README.md` exists.
-- It states reports require evidence paths and uncertainty handling.
+- `docs/guidelines/workflow-rules.md` documents the report filename convention.
+- It distinguishes reports from fixtures and knowledge notes.
 - No unsupported driver claims are made.
-- It keeps fixtures and reports distinct.
+- Existing workflow rules remain consistent.
 
 ## Follow-Up Queue
 
-1. Add report filename convention to workflow rules.
-2. Add release comparison report template file.
-3. Add report destination links to compare prompt.
+1. Add release comparison report template file.
+2. Add report destination links to compare prompt.
+3. Add docs/reports README link to workflow rules.
