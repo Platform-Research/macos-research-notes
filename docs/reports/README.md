@@ -12,6 +12,12 @@ Use lowercase date-prefixed names:
 yyyy-mm-dd-<topic>.md
 ```
 
+## Templates
+
+- `docs/reports/release-comparison-template.md` for evidence-backed release comparison reports.
+
+Use templates to keep observations, inferences, unknowns, validation, and follow-ups separated.
+
 ## Report Requirements
 
 Reports should include:

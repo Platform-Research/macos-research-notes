@@ -4,41 +4,41 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`prompts/research/compare-releases.md` now links reports guidance and template files from the `prompts/compare-report-links` cycle.
+`docs/reports/README.md` now links the release comparison template from the `docs/reports-template-link` cycle.
 
 ## Current Recommendation
 
-Continue by adding the release comparison template link to reports README.
+Continue by adding report template references to workflow rules.
 
-Reason: the prompt links the report template, but `docs/reports/README.md` should also point to the copyable template.
+Reason: reports guidance now links the template, but workflow rules should make template usage discoverable during normal project navigation.
 
 ## Next Branch
 
 ```text
-docs/reports-template-link
+docs/workflow-report-template-reference
 ```
 
 ## Session Goal
 
-Update reports README:
+Update workflow rules:
 
 ```text
-docs/reports/README.md
+docs/guidelines/workflow-rules.md
 ```
 
 ## Research Question
 
-How should the reports README expose the release comparison template?
+How should workflow rules reference report templates?
 
 ## Target Output
 
-A bounded README update that captures:
+A bounded workflow update that captures:
 
+- `docs/reports/README.md` link.
 - `docs/reports/release-comparison-template.md` link.
-- Template purpose.
 - Report destination guidance.
 - Fixture/report boundary.
-- Evidence requirement.
+- Knowledge promotion boundary.
 
 ## Evidence To Collect
 
@@ -52,13 +52,13 @@ A bounded README update that captures:
 
 Done means:
 
-- `docs/reports/README.md` links `docs/reports/release-comparison-template.md`.
+- `docs/guidelines/workflow-rules.md` links report guidance and template.
 - It keeps report/fixture distinction clear.
 - No unsupported driver claims are made.
-- It keeps evidence and uncertainty requirements visible.
+- Existing workflow rules remain consistent.
 
 ## Follow-Up Queue
 
-1. Add report template references to workflow rules.
-2. Add release diff analyst agent report guidance.
-3. Add report template link to compare prompt checklist.
+1. Add release diff analyst agent report guidance.
+2. Add report template link to compare prompt checklist.
+3. Add publisher agent report boundary guidance.
