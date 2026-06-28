@@ -7,7 +7,7 @@ paths="$(mktemp "${TMPDIR:-/tmp}/darwin-json-paths.XXXXXX")"
 trap 'rm -f "$paths"' EXIT
 
 find "$root" \
-  \( -path './.git' -o -path '*/__pycache__' \) -prune \
+  \( -path './.git' -o -path './.venv' -o -path '*/__pycache__' \) -prune \
   -o -name '*.json' -type f -print \
   | sort > "$paths"
 

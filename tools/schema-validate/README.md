@@ -12,11 +12,15 @@ Validate all JSON files in the repository:
 tools/schema-validate/validate-json.sh
 ```
 
+Repo-wide validation skips local-only folders such as `.git`, `.venv`, and `__pycache__`.
+
 Validate a subtree:
 
 ```sh
 tools/schema-validate/validate-json.sh datasets
 ```
+
+Subtree validation preserves the same local-folder exclusions.
 
 Optionally validate known examples and fixtures against schemas:
 
