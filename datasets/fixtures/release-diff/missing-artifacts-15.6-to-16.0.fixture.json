@@ -1,0 +1,45 @@
+{
+  "schema_version": "0.1.0",
+  "source": {
+    "from_release": "15.6",
+    "to_release": "16.0",
+    "policy": "metadata-only",
+    "provenance": "Derived from acquisition manifests and release artifact indexes; no raw artifacts compared."
+  },
+  "records": [
+    {
+      "record_kind": "release_diff",
+      "state": "unresolved",
+      "subject": "kext-personality-inventory",
+      "field": "records",
+      "from_value": null,
+      "to_value": null,
+      "evidence": [
+        "datasets/fixtures/acquisition-manifest/15.6.fixture.json",
+        "datasets/fixtures/acquisition-manifest/16.0.fixture.json",
+        "macos/15.6/artifacts.md",
+        "macos/16.0/artifacts.md"
+      ],
+      "notes": "Both release indexes mark kext personality inventory as not acquired, so no added, removed, or changed records can be inferred."
+    },
+    {
+      "record_kind": "release_diff",
+      "state": "unresolved",
+      "subject": "ioregistry-inventory",
+      "field": "records",
+      "from_value": null,
+      "to_value": null,
+      "evidence": [
+        "datasets/fixtures/acquisition-manifest/15.6.fixture.json",
+        "datasets/fixtures/acquisition-manifest/16.0.fixture.json",
+        "macos/15.6/artifacts.md",
+        "macos/16.0/artifacts.md"
+      ],
+      "notes": "Both release indexes mark IORegistry inventory as not acquired, so comparable registry topology is unavailable."
+    }
+  ],
+  "notes": [
+    "This fixture records missing comparable inputs; it does not claim a real release difference.",
+    "Use docs/guidelines/release-diff-input-readiness.md before promoting any release diff as evidence."
+  ]
+}

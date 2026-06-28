@@ -4,41 +4,41 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`macos/15.6/artifacts.md` and `macos/16.0/artifacts.md` now include a provenance mini-template from the `macos/release-provenance-mini-template` cycle.
+`datasets/fixtures/release-diff/missing-artifacts-15.6-to-16.0.fixture.json` was created in the `datasets/fixtures/missing-artifact-release-diff` cycle.
 
 ## Current Recommendation
 
-Continue by adding a release diff fixture generated from missing-artifact manifests.
+Continue by adding release diff readiness checks to optional validator docs.
 
-Reason: the release diff schema exists, and the current 15.6/16.0 state can be represented honestly as unresolved because comparable artifacts are missing.
+Reason: the missing-artifact diff fixture exists, but the validator docs do not yet explain how readiness relates to schema validation.
 
 ## Next Branch
 
 ```text
-datasets/fixtures/missing-artifact-release-diff
+docs/release-diff-validator-readiness
 ```
 
 ## Session Goal
 
-Create the release diff fixture:
+Update validator documentation:
 
 ```text
-datasets/fixtures/release-diff/missing-artifacts-15.6-to-16.0.fixture.json
+tools/schema-validate/README.md
 ```
 
 ## Research Question
 
-How should missing-artifact manifests produce an unresolved release diff fixture?
+How should schema validation docs describe release diff readiness checks?
 
 ## Target Output
 
-A bounded fixture update that captures:
+A bounded documentation update that captures:
 
-- From release and to release.
-- Metadata-only policy.
-- Unresolved records for missing comparable artifacts.
-- Evidence paths.
-- Schema validation.
+- Release diff schema coverage.
+- Readiness guidance link.
+- Unresolved missing-artifact fixture status.
+- Difference between schema validity and evidence sufficiency.
+- Validation command.
 
 ## Evidence To Collect
 
@@ -52,13 +52,13 @@ A bounded fixture update that captures:
 
 Done means:
 
-- `datasets/fixtures/release-diff/missing-artifacts-15.6-to-16.0.fixture.json` exists.
-- The fixture validates against `release-diff.schema.json`.
+- `tools/schema-validate/README.md` links release diff readiness guidance.
+- The README distinguishes valid JSON from diff-ready evidence.
 - No unsupported driver claims are made.
-- Records use `unresolved` where evidence is missing.
+- The validation command remains accurate.
 
 ## Follow-Up Queue
 
-1. Add release diff readiness checks to optional validator docs.
-2. Add acquisition manifest README links to release readiness guidance.
-3. Add missing-artifact release diff fixture to optional validator.
+1. Add acquisition manifest README links to release readiness guidance.
+2. Add missing-artifact release diff fixture to optional validator.
+3. Add missing-artifact release diff README note.
