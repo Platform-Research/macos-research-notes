@@ -17,6 +17,13 @@ This is a placeholder index for macOS `15.6` release artifacts. No comparable re
 - Schema: `datasets/schemas/release-acquisition-manifest.schema.json`
 - Validation: `.venv/bin/python tools/schema-validate/validate-known-schemas.py`
 
+## Manifest Coverage
+
+- Coverage README: `datasets/fixtures/acquisition-manifest/README.md`
+- Current evidence state: release folder and artifact index are derived.
+- Missing reduced inputs: kext personality inventory, IORegistry inventory, release diff input.
+- Raw artifacts acquired: no.
+
 ## Provenance Template
 
 Use this block when a reduced artifact is added. Until populated, it is not evidence of acquisition.
