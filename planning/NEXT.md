@@ -4,41 +4,41 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`ai/agents/research-lead.md` now explains report-to-knowledge promotion criteria from the `ai/research-lead-report-promotion` cycle.
+`ai/agents/artifact-analyst.md` now requires evidence paths for report claims from the `ai/artifact-analyst-report-evidence` cycle.
 
 ## Current Recommendation
 
-Continue by adding artifact analyst report evidence guidance.
+Continue by adding publisher fixture boundary examples.
 
-Reason: the artifact analyst should also require evidence paths and avoid converting artifact gaps into conclusions.
+Reason: publisher has report boundaries, but examples would make fixture versus report placement easier to apply.
 
 ## Next Branch
 
 ```text
-ai/artifact-analyst-report-evidence
+ai/publisher-fixture-boundary-examples
 ```
 
 ## Session Goal
 
-Update artifact analyst agent:
+Update publisher agent:
 
 ```text
-ai/agents/artifact-analyst.md
+ai/agents/publisher.md
 ```
 
 ## Research Question
 
-How should the artifact analyst cite evidence in reports?
+How should publisher examples distinguish fixtures from reports?
 
 ## Target Output
 
 A bounded agent update that captures:
 
-- `docs/reports/README.md` link.
-- Evidence path requirement.
-- Unknowns and unresolved artifact gaps.
-- Fixture/report boundary.
-- No unsupported claims.
+- Fixture destination example.
+- Report destination example.
+- Knowledge destination example.
+- Unresolved output example.
+- Evidence path reminder.
 
 ## Evidence To Collect
 
@@ -52,13 +52,13 @@ A bounded agent update that captures:
 
 Done means:
 
-- `ai/agents/artifact-analyst.md` requires committed evidence paths for report claims.
+- `ai/agents/publisher.md` includes concrete destination examples.
 - It keeps report/fixture distinction clear.
 - No unsupported driver claims are made.
 - It retains unresolved-state handling.
 
 ## Follow-Up Queue
 
-1. Add publisher fixture boundary examples.
-2. Add research lead release-readiness checklist.
-3. Add artifact analyst fixture validation guidance.
+1. Add research lead release-readiness checklist.
+2. Add artifact analyst fixture validation guidance.
+3. Add release diff analyst report template reminder.
