@@ -24,12 +24,14 @@ For structured fixtures:
 - Check syntax with `tools/schema-validate/validate-json.sh`.
 - Check known schema pairs with `.venv/bin/python tools/schema-validate/validate-known-schemas.py`.
 - Keep source artifact paths or commands in the note or fixture evidence.
+- Preserve the exact command or tool invocation behind each observation when available.
 
 ## Guardrails
 
 - Never invent private API behavior.
 - State tool versions and artifact paths.
 - Prefer exact names, paths, and commands.
+- Record command provenance for observations: command or tool invocation, artifact path, and tool version when available.
 - Require committed evidence paths for report claims.
 - Keep structured examples and fixtures under `datasets/fixtures/`.
 - Mark missing comparable artifacts as unknown or `unresolved`; do not turn gaps into conclusions.

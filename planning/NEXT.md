@@ -4,41 +4,41 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`ai/agents/research-lead.md` now includes an evidence-gap parking lot template from the `ai/research-lead-evidence-gap-template` cycle.
+`ai/agents/artifact-analyst.md` now requires command provenance for observations from the `ai/artifact-analyst-command-provenance` cycle.
 
 ## Current Recommendation
 
-Continue by adding artifact analyst command provenance reminder.
+Continue by adding release diff analyst report destination examples.
 
-Reason: artifact analyst records artifact paths, but should explicitly preserve the command or tool invocation behind each observation.
+Reason: release diff analyst distinguishes fixtures and reports, but concrete destination examples would make the output routing more repeatable.
 
 ## Next Branch
 
 ```text
-ai/artifact-analyst-command-provenance
+ai/release-diff-analyst-destination-examples
 ```
 
 ## Session Goal
 
-Update artifact analyst agent:
+Update release diff analyst agent:
 
 ```text
-ai/agents/artifact-analyst.md
+ai/agents/release-diff-analyst.md
 ```
 
 ## Research Question
 
-How should artifact analyst preserve command provenance?
+How should release diff analyst choose between fixtures and reports?
 
 ## Target Output
 
 A bounded agent update that captures:
 
-- Command or tool invocation.
-- Artifact path.
-- Tool version when available.
-- Observation versus inference.
-- Follow-up branch for missing provenance.
+- Fixture destination example.
+- Report destination example.
+- Validation result location.
+- Unresolved output example.
+- Evidence path reminder.
 
 ## Evidence To Collect
 
@@ -52,13 +52,13 @@ A bounded agent update that captures:
 
 Done means:
 
-- `ai/agents/artifact-analyst.md` requires command provenance for observations.
+- `ai/agents/release-diff-analyst.md` includes destination examples for fixtures and reports.
 - It keeps report/fixture distinction clear.
 - No unsupported driver claims are made.
 - It retains unresolved-state handling.
 
 ## Follow-Up Queue
 
-1. Add release diff analyst report destination examples.
-2. Add publisher report template reminder.
-3. Add research lead validation gate reminder.
+1. Add publisher report template reminder.
+2. Add research lead validation gate reminder.
+3. Add artifact analyst unresolved example guidance.
