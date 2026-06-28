@@ -4,42 +4,41 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`tools/schema-validate/validate-json.sh` now skips local virtualenv noise from the `tools/validate-json-ignore-venv` cycle.
+`macos/15.6/artifacts.md` and `macos/16.0/artifacts.md` now include a provenance mini-template from the `macos/release-provenance-mini-template` cycle.
 
 ## Current Recommendation
 
-Continue by adding a release artifact provenance mini-template to macOS folders.
+Continue by adding a release diff fixture generated from missing-artifact manifests.
 
-Reason: release folders link manifests, but they still lack a tiny copyable provenance block for future reduced artifacts.
+Reason: the release diff schema exists, and the current 15.6/16.0 state can be represented honestly as unresolved because comparable artifacts are missing.
 
 ## Next Branch
 
 ```text
-macos/release-provenance-mini-template
+datasets/fixtures/missing-artifact-release-diff
 ```
 
 ## Session Goal
 
-Update release folder notes:
+Create the release diff fixture:
 
 ```text
-macos/15.6/artifacts.md
-macos/16.0/artifacts.md
+datasets/fixtures/release-diff/missing-artifacts-15.6-to-16.0.fixture.json
 ```
 
 ## Research Question
 
-What minimal provenance fields should every release artifact index expose?
+How should missing-artifact manifests produce an unresolved release diff fixture?
 
 ## Target Output
 
-A bounded release index update that captures:
+A bounded fixture update that captures:
 
-- Source path or command.
-- Artifact state.
-- Redaction policy.
-- Output path.
-- Validation command.
+- From release and to release.
+- Metadata-only policy.
+- Unresolved records for missing comparable artifacts.
+- Evidence paths.
+- Schema validation.
 
 ## Evidence To Collect
 
@@ -53,13 +52,13 @@ A bounded release index update that captures:
 
 Done means:
 
-- `macos/15.6/artifacts.md` contains a provenance mini-template.
-- `macos/16.0/artifacts.md` contains a provenance mini-template.
+- `datasets/fixtures/release-diff/missing-artifacts-15.6-to-16.0.fixture.json` exists.
+- The fixture validates against `release-diff.schema.json`.
 - No unsupported driver claims are made.
-- The template remains clearly non-evidence until populated.
+- Records use `unresolved` where evidence is missing.
 
 ## Follow-Up Queue
 
-1. Add a release diff fixture generated from missing-artifact manifests.
-2. Add release diff readiness checks to optional validator docs.
-3. Add acquisition manifest README links to release readiness guidance.
+1. Add release diff readiness checks to optional validator docs.
+2. Add acquisition manifest README links to release readiness guidance.
+3. Add missing-artifact release diff fixture to optional validator.

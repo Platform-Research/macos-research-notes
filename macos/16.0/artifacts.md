@@ -17,6 +17,19 @@ This is a placeholder index for macOS `16.0` release artifacts. No comparable re
 - Schema: `datasets/schemas/release-acquisition-manifest.schema.json`
 - Validation: `.venv/bin/python tools/schema-validate/validate-known-schemas.py`
 
+## Provenance Template
+
+Use this block when a reduced artifact is added. Until populated, it is not evidence of acquisition.
+
+```text
+Artifact:
+Source path or command:
+State: raw | reduced | derived | missing
+Redaction policy:
+Output path:
+Validation:
+```
+
 ## Not Yet Acquired
 
 - installer metadata;
