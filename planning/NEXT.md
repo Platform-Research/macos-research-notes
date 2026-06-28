@@ -4,42 +4,41 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`prompts/research/compare-releases.md` now references release diff fixture examples from the `prompts/release-diff-fixture-coverage` cycle.
+`macos/15.6/README.md` and `macos/16.0/README.md` now point to manifest coverage from the `macos/release-readme-manifest-coverage` cycle.
 
 ## Current Recommendation
 
-Continue by adding manifest coverage notes to release README stubs.
+Continue by adding compare prompt report destination guidance.
 
-Reason: artifact indexes now summarize manifest coverage, but the top-level release stubs do not point to that coverage.
+Reason: the compare prompt currently says `docs/ or knowledge/`, but it should guide report placement by maturity.
 
 ## Next Branch
 
 ```text
-macos/release-readme-manifest-coverage
+prompts/compare-report-destination-guidance
 ```
 
 ## Session Goal
 
-Update release README stubs:
+Update compare prompt:
 
 ```text
-macos/15.6/README.md
-macos/16.0/README.md
+prompts/research/compare-releases.md
 ```
 
 ## Research Question
 
-How should release README stubs point to manifest coverage?
+How should the compare prompt choose docs, knowledge, or datasets outputs?
 
 ## Target Output
 
-A bounded README update that captures:
+A bounded prompt update that captures:
 
-- Artifact index link.
-- Acquisition manifest fixture link.
-- Coverage state.
-- No raw artifacts acquired.
-- No behavior claims.
+- `datasets/fixtures` for structured fixtures.
+- `docs/guidelines` for workflow guidance.
+- `docs/reports` for evidence-backed reports.
+- `knowledge` for promoted atomic findings.
+- Keep unresolved prototypes out of promoted conclusions.
 
 ## Evidence To Collect
 
@@ -53,13 +52,13 @@ A bounded README update that captures:
 
 Done means:
 
-- `macos/15.6/README.md` links its artifact index and acquisition manifest fixture.
-- `macos/16.0/README.md` links its artifact index and acquisition manifest fixture.
+- `prompts/research/compare-releases.md` includes destination guidance.
+- The prompt keeps fixture/report distinction clear.
 - No unsupported driver claims are made.
-- The stubs remain clear that release-specific artifacts are not acquired.
+- The prompt keeps unresolved-state handling.
 
 ## Follow-Up Queue
 
-1. Add compare prompt report destination guidance.
-2. Add release diff prompt report template.
-3. Add release README readiness links.
+1. Add release diff prompt report template.
+2. Add release README readiness links.
+3. Add docs/reports directory README.

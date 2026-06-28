@@ -7,9 +7,15 @@ This folder is reserved for reduced macOS `16.0` metadata. No release-specific a
 ## Current Status
 
 - Runtime facts: not recorded.
-- Artifact index: not created.
+- Artifact index: `macos/16.0/artifacts.md`.
 - Reduced datasets: not created.
 - Raw artifacts: not committed.
+
+## Manifest Coverage
+
+- Acquisition manifest fixture: `datasets/fixtures/acquisition-manifest/16.0.fixture.json`
+- Coverage state: release folder and artifact index are derived; comparable reduced artifacts are missing.
+- Raw artifacts acquired: no.
 
 ## Before Adding Data
 
