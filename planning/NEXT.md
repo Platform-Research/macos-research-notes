@@ -4,41 +4,42 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`docs/reports/README.md` now links the release comparison template from the `docs/reports-template-link` cycle.
+`docs/guidelines/workflow-rules.md` now links report guidance and templates from the `docs/workflow-report-template-reference` cycle.
 
 ## Current Recommendation
 
-Continue by adding report template references to workflow rules.
+Continue by adding release diff analyst agent report guidance.
 
-Reason: reports guidance now links the template, but workflow rules should make template usage discoverable during normal project navigation.
+Reason: report templates are now documented, but the release diff analyst agent should also follow the same output and uncertainty rules.
 
 ## Next Branch
 
 ```text
-docs/workflow-report-template-reference
+ai/release-diff-analyst-report-guidance
 ```
 
 ## Session Goal
 
-Update workflow rules:
+Update release diff analyst agent:
 
 ```text
-docs/guidelines/workflow-rules.md
+ai/agents/release-diff-analyst.md
 ```
 
 ## Research Question
 
-How should workflow rules reference report templates?
+How should the release diff analyst agent produce reports safely?
 
 ## Target Output
 
-A bounded workflow update that captures:
+A bounded agent update that captures:
 
 - `docs/reports/README.md` link.
 - `docs/reports/release-comparison-template.md` link.
-- Report destination guidance.
-- Fixture/report boundary.
-- Knowledge promotion boundary.
+- `docs/guidelines/release-diff-input-readiness.md` link.
+- Unresolved state handling.
+- Evidence paths.
+- No unsupported claims.
 
 ## Evidence To Collect
 
@@ -52,13 +53,13 @@ A bounded workflow update that captures:
 
 Done means:
 
-- `docs/guidelines/workflow-rules.md` links report guidance and template.
+- `ai/agents/release-diff-analyst.md` links report guidance and release diff readiness.
 - It keeps report/fixture distinction clear.
 - No unsupported driver claims are made.
-- Existing workflow rules remain consistent.
+- The agent requires evidence paths and unresolved states for missing inputs.
 
 ## Follow-Up Queue
 
-1. Add release diff analyst agent report guidance.
-2. Add report template link to compare prompt checklist.
-3. Add publisher agent report boundary guidance.
+1. Add report template link to compare prompt checklist.
+2. Add publisher agent report boundary guidance.
+3. Add release diff analyst fixture reference guidance.
