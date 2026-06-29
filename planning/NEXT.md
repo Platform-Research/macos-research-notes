@@ -4,60 +4,60 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`ai/agents/release-diff-analyst.md` now includes an unresolved example from the `ai/release-diff-analyst-unresolved-example` cycle.
+`ai/agents/publisher.md` now includes a report title example from the `ai/publisher-report-title-example` cycle.
 
 ## Current Recommendation
 
-Continue by adding a publisher report title example.
+Continue by adding a research lead fixture naming example.
 
-Reason: the publisher already knows report destinations, but a concrete report title example will make final outputs more uniform and easier to scan.
+Reason: the research lead already scopes output paths, but a fixture naming example will keep structured outputs easier to predict before implementation starts.
 
 ## Next Branch
 
 ```text
-ai/publisher-report-title-example
+ai/research-lead-fixture-naming-example
 ```
 
 ## Session Goal
 
-Update publisher agent:
+Update research lead agent:
 
 ```text
-ai/agents/publisher.md
+ai/agents/research-lead.md
 ```
 
 ## Research Question
 
-How should publisher show report title patterns?
+How should research lead show fixture naming?
 
 ## Target Output
 
 A bounded agent update that captures:
 
-- Report title example.
-- Report naming consistency.
+- Fixture naming example.
+- Structured output predictability.
 - Workflow alignment.
-- No unsupported publication claims.
+- No unsupported planning claims.
 - Existing validation expectations remain intact.
 
 ## Evidence To Collect
 
-- Existing publisher instructions.
+- Existing research lead instructions.
 - Existing workflow rules.
-- Existing report destination examples.
-- Existing report template guidance.
+- Existing fixture destination examples.
+- Existing note and report guidance.
 
 ## Definition Of Done
 
 Done means:
 
-- `ai/agents/publisher.md` includes a report title example.
-- It keeps report naming consistent with existing destinations.
-- No unsupported publication claims are made.
+- `ai/agents/research-lead.md` includes a fixture naming example.
+- It keeps structured output naming predictable.
+- No unsupported planning claims are made.
 - It keeps validation and unresolved handling intact.
 
 ## Follow-Up Queue
 
-1. Add research lead fixture naming example.
-2. Add artifact analyst fixture title example.
-3. Add release diff analyst fixture title example.
+1. Add artifact analyst fixture title example.
+2. Add release diff analyst fixture title example.
+3. Add publisher unresolved report reminder.
