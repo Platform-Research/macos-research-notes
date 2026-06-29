@@ -25,6 +25,7 @@ When evidence is too narrow for a report, use `docs/guidelines/note-template.md`
 For structured fixtures:
 
 - Write examples under `datasets/fixtures/`.
+- Fixture title example: `ioreg-user-client-key-counts.fixture.json`.
 - Check syntax with `tools/schema-validate/validate-json.sh`.
 - Check known schema pairs with `.venv/bin/python tools/schema-validate/validate-known-schemas.py`.
 - Keep source artifact paths or commands in the note or fixture evidence.
