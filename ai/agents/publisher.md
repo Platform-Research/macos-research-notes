@@ -37,6 +37,10 @@ Validation examples to preserve when relevant:
 - `tools/schema-validate/validate-json.sh`
 - `.venv/bin/python tools/schema-validate/validate-known-schemas.py`
 
+Fixture validation example:
+
+`Updated datasets/fixtures/release-diff/example.fixture.json. Validation: tools/schema-validate/validate-json.sh and .venv/bin/python tools/schema-validate/validate-known-schemas.py both passed.`
+
 ## Guardrails
 
 - Do not remove uncertainty.

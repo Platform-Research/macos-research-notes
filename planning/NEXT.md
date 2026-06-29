@@ -4,41 +4,41 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`ai/agents/research-lead.md` now distinguishes fixture, report, and evidence-gap branching from the `ai/research-lead-branching-cue` cycle.
+`ai/agents/publisher.md` now includes a fixture validation example from the `ai/publisher-fixture-validation-example` cycle.
 
 ## Current Recommendation
 
-Continue by adding publisher fixture validation example.
+Continue by adding artifact analyst report destination example.
 
-Reason: publisher preserves validation commands in general, but a fixture-shaped example would make that rule easier to apply.
+Reason: artifact analyst already handles notes and fixtures, but a concrete report destination example will make escalations clearer.
 
 ## Next Branch
 
 ```text
-ai/publisher-fixture-validation-example
+ai/artifact-analyst-report-destination
 ```
 
 ## Session Goal
 
-Update publisher agent:
+Update artifact analyst agent:
 
 ```text
-ai/agents/publisher.md
+ai/agents/artifact-analyst.md
 ```
 
 ## Research Question
 
-How should publisher describe fixture validation?
+How should artifact analyst show report destinations?
 
 ## Target Output
 
 A bounded agent update that captures:
 
-- Fixture example.
-- Validation commands.
-- Validation result reminder.
-- Evidence path reminder.
-- Report/fixture boundary.
+- Report destination example.
+- Note fallback example.
+- Fixture/report boundary.
+- Evidence path requirement.
+- Unknowns remain explicit.
 
 ## Evidence To Collect
 
@@ -52,13 +52,13 @@ A bounded agent update that captures:
 
 Done means:
 
-- `ai/agents/publisher.md` includes a fixture validation example.
+- `ai/agents/artifact-analyst.md` includes a report destination example.
 - It keeps report/fixture distinction clear.
 - No unsupported driver claims are made.
 - It retains unresolved-state handling.
 
 ## Follow-Up Queue
 
-1. Add artifact analyst report destination example.
-2. Add release diff analyst branch naming example.
-3. Add publisher knowledge-promotion reminder.
+1. Add release diff analyst branch naming example.
+2. Add publisher knowledge-promotion reminder.
+3. Add research lead report-promotion example.
