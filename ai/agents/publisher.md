@@ -21,6 +21,8 @@ Use:
 - `datasets/fixtures/` for structured examples and generated fixtures.
 - `knowledge/` only for promoted atomic findings with stable evidence.
 
+Promote material into `knowledge/` only after the claim is stable, evidence-backed, and no longer depends on unresolved report-level comparisons.
+
 If the output is a report, use `docs/reports/release-comparison-template.md` instead of improvising a new structure.
 
 When the output is a report, preserve the `Evidence Table` section instead of flattening evidence into prose only.
@@ -50,3 +52,4 @@ Fixture validation example:
 - Require committed evidence paths for report claims.
 - Preserve validation commands and results when fixtures or schemas changed.
 - Do not claim driver behavior, hardware support, kernel internals, or release changes without artifact-backed evidence.
+- Do not promote unresolved, comparative, or provisional findings into `knowledge/`.

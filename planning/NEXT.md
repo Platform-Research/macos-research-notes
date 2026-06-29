@@ -4,46 +4,45 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`ai/agents/release-diff-analyst.md` now includes a branch naming example from the `ai/release-diff-analyst-branch-naming-example` cycle.
+`ai/agents/publisher.md` now includes a knowledge-promotion reminder from the `ai/publisher-knowledge-promotion-reminder` cycle.
 
 ## Current Recommendation
 
-Continue by adding a publisher knowledge-promotion reminder.
+Continue by adding a research lead report-promotion example.
 
-Reason: the publisher already distinguishes reports, fixtures, and knowledge, but it should also explicitly block premature promotion of unresolved findings into stable knowledge.
+Reason: the research lead already separates outputs, but a concrete report-promotion example will make it easier to decide when to keep work in reports versus when to split stable findings into knowledge.
 
 ## Next Branch
 
 ```text
-ai/publisher-knowledge-promotion-reminder
+ai/research-lead-report-promotion-example
 ```
 
 ## Session Goal
 
-Update publisher agent:
+Update research lead agent:
 
 ```text
-ai/agents/publisher.md
+ai/agents/research-lead.md
 ```
 
 ## Research Question
 
-How should publisher warn against premature knowledge promotion?
+How should research lead show report-to-knowledge promotion decisions?
 
 ## Target Output
 
 A bounded agent update that captures:
 
-- Branch naming example.
-- Knowledge promotion reminder.
-- Report/knowledge boundary reinforcement.
+- Report-promotion example.
+- Stable-knowledge split guidance.
 - Workflow alignment.
 - No unsupported stable claims.
 - Existing validation expectations remain intact.
 
 ## Evidence To Collect
 
-- Existing publisher instructions.
+- Existing research lead instructions.
 - Existing workflow rules.
 - Existing knowledge and report boundaries.
 - Existing report template guidance.
@@ -52,13 +51,13 @@ A bounded agent update that captures:
 
 Done means:
 
-- `ai/agents/publisher.md` includes a knowledge-promotion reminder.
+- `ai/agents/research-lead.md` includes a report-promotion example.
 - It keeps reports and knowledge clearly separated.
 - No unsupported stable claims are made.
 - It keeps validation and unresolved handling intact.
 
 ## Follow-Up Queue
 
-1. Add research lead report-promotion example.
-2. Add artifact analyst note destination example.
-3. Add release diff analyst unresolved example.
+1. Add artifact analyst note destination example.
+2. Add release diff analyst unresolved example.
+3. Add publisher report title example.
