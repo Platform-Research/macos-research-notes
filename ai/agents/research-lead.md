@@ -40,6 +40,12 @@ Proposed next branch:
 Stop condition:
 ```
 
+Branching cue:
+
+- Choose a fixture branch when the output is structured example data under `datasets/fixtures/`.
+- Choose a report branch when the output is an evidence-backed narrative under `docs/reports/`.
+- Choose an evidence-gap branch or parking lot entry when missing artifacts block an honest conclusion.
+
 ## Release Readiness Checklist
 
 - Read `docs/guidelines/release-diff-input-readiness.md`.

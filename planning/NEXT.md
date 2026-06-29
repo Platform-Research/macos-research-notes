@@ -4,41 +4,41 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`ai/agents/release-diff-analyst.md` now includes a concrete release diff report path example from the `ai/release-diff-analyst-report-path-example` cycle.
+`ai/agents/research-lead.md` now distinguishes fixture, report, and evidence-gap branching from the `ai/research-lead-branching-cue` cycle.
 
 ## Current Recommendation
 
-Continue by adding research lead fixture/report branching cue.
+Continue by adding publisher fixture validation example.
 
-Reason: research lead governs output paths, and a direct branch cue between fixture and report work will reduce mixed-intent sessions.
+Reason: publisher preserves validation commands in general, but a fixture-shaped example would make that rule easier to apply.
 
 ## Next Branch
 
 ```text
-ai/research-lead-branching-cue
+ai/publisher-fixture-validation-example
 ```
 
 ## Session Goal
 
-Update research lead agent:
+Update publisher agent:
 
 ```text
-ai/agents/research-lead.md
+ai/agents/publisher.md
 ```
 
 ## Research Question
 
-How should research lead cue fixture versus report branching?
+How should publisher describe fixture validation?
 
 ## Target Output
 
 A bounded agent update that captures:
 
-- Fixture branch cue.
-- Report branch cue.
-- Output path cue.
-- Evidence gap branch cue.
-- One branch, one intent reminder.
+- Fixture example.
+- Validation commands.
+- Validation result reminder.
+- Evidence path reminder.
+- Report/fixture boundary.
 
 ## Evidence To Collect
 
@@ -52,13 +52,13 @@ A bounded agent update that captures:
 
 Done means:
 
-- `ai/agents/research-lead.md` distinguishes fixture, report, and evidence-gap branching choices.
+- `ai/agents/publisher.md` includes a fixture validation example.
 - It keeps report/fixture distinction clear.
 - No unsupported driver claims are made.
 - It retains unresolved-state handling.
 
 ## Follow-Up Queue
 
-1. Add publisher fixture validation example.
-2. Add artifact analyst report destination example.
-3. Add release diff analyst branch naming example.
+1. Add artifact analyst report destination example.
+2. Add release diff analyst branch naming example.
+3. Add publisher knowledge-promotion reminder.
