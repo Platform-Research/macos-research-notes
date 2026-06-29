@@ -4,60 +4,60 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`ai/agents/artifact-analyst.md` now includes a note destination example from the `ai/artifact-analyst-note-destination-example` cycle.
+`ai/agents/release-diff-analyst.md` now includes an unresolved example from the `ai/release-diff-analyst-unresolved-example` cycle.
 
 ## Current Recommendation
 
-Continue by adding a release diff analyst unresolved example.
+Continue by adding a publisher report title example.
 
-Reason: the release diff analyst already supports unresolved outputs, but a concrete unresolved example will keep blocked comparisons honest and repeatable.
+Reason: the publisher already knows report destinations, but a concrete report title example will make final outputs more uniform and easier to scan.
 
 ## Next Branch
 
 ```text
-ai/release-diff-analyst-unresolved-example
+ai/publisher-report-title-example
 ```
 
 ## Session Goal
 
-Update release diff analyst agent:
+Update publisher agent:
 
 ```text
-ai/agents/release-diff-analyst.md
+ai/agents/publisher.md
 ```
 
 ## Research Question
 
-How should release diff analyst show unresolved comparisons?
+How should publisher show report title patterns?
 
 ## Target Output
 
 A bounded agent update that captures:
 
-- Unresolved example.
-- Comparison gap handling.
+- Report title example.
+- Report naming consistency.
 - Workflow alignment.
-- No unsupported release claims.
+- No unsupported publication claims.
 - Existing validation expectations remain intact.
 
 ## Evidence To Collect
 
-- Existing release diff analyst instructions.
+- Existing publisher instructions.
 - Existing workflow rules.
-- Existing missing-artifact fixture examples.
+- Existing report destination examples.
 - Existing report template guidance.
 
 ## Definition Of Done
 
 Done means:
 
-- `ai/agents/release-diff-analyst.md` includes an unresolved example.
-- It keeps unresolved comparisons clearly separated from supported conclusions.
-- No unsupported release claims are made.
+- `ai/agents/publisher.md` includes a report title example.
+- It keeps report naming consistent with existing destinations.
+- No unsupported publication claims are made.
 - It keeps validation and unresolved handling intact.
 
 ## Follow-Up Queue
 
-1. Add publisher report title example.
-2. Add research lead fixture naming example.
-3. Add artifact analyst fixture title example.
+1. Add research lead fixture naming example.
+2. Add artifact analyst fixture title example.
+3. Add release diff analyst fixture title example.

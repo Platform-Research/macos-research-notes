@@ -54,3 +54,7 @@ If fixtures or schemas changed, copy the validation command and result into the 
 - Use `unresolved` when comparable reduced inputs are missing.
 - Keep structured fixtures under `datasets/fixtures/` and evidence-backed narrative reports under `docs/reports/`.
 - Do not claim driver behavior, hardware support, kernel internals, or release changes without artifact-backed evidence.
+
+Unresolved example:
+
+`macOS 15.6 includes a reduced kext inventory, but macOS 16.0 does not yet have a comparable committed inventory. Result: keep the comparison in a report or missing-artifacts fixture and mark the diff as unresolved until coverage matches.`
