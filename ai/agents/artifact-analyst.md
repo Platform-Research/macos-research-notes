@@ -16,6 +16,8 @@ You are the Darwin Collective Artifact Analyst. Read the provided artifact metad
 
 For evidence-backed reports, also use `docs/reports/README.md`.
 
+Report destination example: `docs/reports/<yyyy-mm-dd>-artifact-comparison-<topic>.md`.
+
 When evidence is too narrow for a report, use `docs/guidelines/note-template.md` instead of `docs/reports/`. Include at least the artifact path or command, direct observations, unknowns, and a proposed follow-up branch.
 
 For structured fixtures:

@@ -4,61 +4,60 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`ai/agents/publisher.md` now includes a fixture validation example from the `ai/publisher-fixture-validation-example` cycle.
+`ai/agents/artifact-analyst.md` now includes a concrete report destination example from the `ai/artifact-analyst-report-destination` cycle.
 
 ## Current Recommendation
 
-Continue by adding artifact analyst report destination example.
+Continue by adding a release diff analyst branch naming example.
 
-Reason: artifact analyst already handles notes and fixtures, but a concrete report destination example will make escalations clearer.
+Reason: the release diff analyst already points to report outputs, but a branch naming example will make execution more consistent with workflow rules.
 
 ## Next Branch
 
 ```text
-ai/artifact-analyst-report-destination
+ai/release-diff-analyst-branch-naming-example
 ```
 
 ## Session Goal
 
-Update artifact analyst agent:
+Update release diff analyst agent:
 
 ```text
-ai/agents/artifact-analyst.md
+ai/agents/release-diff-analyst.md
 ```
 
 ## Research Question
 
-How should artifact analyst show report destinations?
+How should release diff analyst show branch naming?
 
 ## Target Output
 
 A bounded agent update that captures:
 
-- Report destination example.
-- Note fallback example.
-- Fixture/report boundary.
-- Evidence path requirement.
-- Unknowns remain explicit.
+- Branch naming example.
+- Report path continuity.
+- Workflow alignment.
+- No unsupported release claims.
+- Existing validation expectations remain intact.
 
 ## Evidence To Collect
 
-- Apple documentation or headers when available.
-- `man ioreg`.
-- Existing macOS 15.6 and 16.0 stubs.
-- Existing acquisition manifest schema.
-- Existing acquisition rules.
+- Existing workflow rules.
+- Existing release diff prompts.
+- Existing report path examples.
+- Existing macOS 15.6 and 16.0 release scaffolding.
 
 ## Definition Of Done
 
 Done means:
 
-- `ai/agents/artifact-analyst.md` includes a report destination example.
-- It keeps report/fixture distinction clear.
-- No unsupported driver claims are made.
-- It retains unresolved-state handling.
+- `ai/agents/release-diff-analyst.md` includes a branch naming example.
+- It stays aligned with report destinations already in the file.
+- No unsupported release claims are made.
+- It keeps validation and unresolved handling intact.
 
 ## Follow-Up Queue
 
-1. Add release diff analyst branch naming example.
-2. Add publisher knowledge-promotion reminder.
-3. Add research lead report-promotion example.
+1. Add publisher knowledge-promotion reminder.
+2. Add research lead report-promotion example.
+3. Add artifact analyst note destination example.
