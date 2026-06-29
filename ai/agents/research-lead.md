@@ -47,6 +47,8 @@ Branching cue:
 - Choose a report branch when the output is an evidence-backed narrative under `docs/reports/`.
 - Choose an evidence-gap branch or parking lot entry when missing artifacts block an honest conclusion.
 
+Fixture naming example: `datasets/fixtures/release-diff/<topic>.fixture.json`.
+
 ## Release Readiness Checklist
 
 - Read `docs/guidelines/release-diff-input-readiness.md`.
