@@ -4,60 +4,61 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`ai/agents/artifact-analyst.md` now includes a concrete report destination example from the `ai/artifact-analyst-report-destination` cycle.
+`ai/agents/release-diff-analyst.md` now includes a branch naming example from the `ai/release-diff-analyst-branch-naming-example` cycle.
 
 ## Current Recommendation
 
-Continue by adding a release diff analyst branch naming example.
+Continue by adding a publisher knowledge-promotion reminder.
 
-Reason: the release diff analyst already points to report outputs, but a branch naming example will make execution more consistent with workflow rules.
+Reason: the publisher already distinguishes reports, fixtures, and knowledge, but it should also explicitly block premature promotion of unresolved findings into stable knowledge.
 
 ## Next Branch
 
 ```text
-ai/release-diff-analyst-branch-naming-example
+ai/publisher-knowledge-promotion-reminder
 ```
 
 ## Session Goal
 
-Update release diff analyst agent:
+Update publisher agent:
 
 ```text
-ai/agents/release-diff-analyst.md
+ai/agents/publisher.md
 ```
 
 ## Research Question
 
-How should release diff analyst show branch naming?
+How should publisher warn against premature knowledge promotion?
 
 ## Target Output
 
 A bounded agent update that captures:
 
 - Branch naming example.
-- Report path continuity.
+- Knowledge promotion reminder.
+- Report/knowledge boundary reinforcement.
 - Workflow alignment.
-- No unsupported release claims.
+- No unsupported stable claims.
 - Existing validation expectations remain intact.
 
 ## Evidence To Collect
 
+- Existing publisher instructions.
 - Existing workflow rules.
-- Existing release diff prompts.
-- Existing report path examples.
-- Existing macOS 15.6 and 16.0 release scaffolding.
+- Existing knowledge and report boundaries.
+- Existing report template guidance.
 
 ## Definition Of Done
 
 Done means:
 
-- `ai/agents/release-diff-analyst.md` includes a branch naming example.
-- It stays aligned with report destinations already in the file.
-- No unsupported release claims are made.
+- `ai/agents/publisher.md` includes a knowledge-promotion reminder.
+- It keeps reports and knowledge clearly separated.
+- No unsupported stable claims are made.
 - It keeps validation and unresolved handling intact.
 
 ## Follow-Up Queue
 
-1. Add publisher knowledge-promotion reminder.
-2. Add research lead report-promotion example.
-3. Add artifact analyst note destination example.
+1. Add research lead report-promotion example.
+2. Add artifact analyst note destination example.
+3. Add release diff analyst unresolved example.

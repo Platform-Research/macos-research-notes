@@ -35,6 +35,8 @@ Destination examples:
 - Release diff report example: `docs/reports/<yyyy-mm-dd>-macos-15.6-to-16.0-release-diff.md`
 - Unresolved output: keep as a fixture or report until evidence is sufficient
 
+Branch naming example: `macos/15.6-to-16.0-release-diff`.
+
 Validate changed fixtures with:
 
 ```sh
