@@ -23,6 +23,8 @@ Use:
 
 If the output is a report, use `docs/reports/release-comparison-template.md` instead of improvising a new structure.
 
+When the output is a report, preserve the `Evidence Table` section instead of flattening evidence into prose only.
+
 Destination examples:
 
 - Fixture example: `datasets/fixtures/release-diff/<name>.fixture.json`.

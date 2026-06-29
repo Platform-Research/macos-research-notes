@@ -4,41 +4,41 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`ai/agents/artifact-analyst.md` now includes an unresolved example from the `ai/artifact-analyst-unresolved-example` cycle.
+`ai/agents/publisher.md` now reminds authors to preserve evidence tables in reports from the `ai/publisher-evidence-table-reminder` cycle.
 
 ## Current Recommendation
 
-Continue by adding publisher evidence-table reminder.
+Continue by adding release diff analyst report path example.
 
-Reason: publisher preserves evidence paths, but should also remind authors not to drop the evidence table from report-shaped outputs.
+Reason: release diff analyst chooses between fixtures and reports, but should point to a concrete report path example as well as fixture paths.
 
 ## Next Branch
 
 ```text
-ai/publisher-evidence-table-reminder
+ai/release-diff-analyst-report-path-example
 ```
 
 ## Session Goal
 
-Update publisher agent:
+Update release diff analyst agent:
 
 ```text
-ai/agents/publisher.md
+ai/agents/release-diff-analyst.md
 ```
 
 ## Research Question
 
-How should publisher preserve evidence tables?
+How should release diff analyst show report path examples?
 
 ## Target Output
 
 A bounded agent update that captures:
 
-- Evidence table reminder.
-- Report template reminder.
-- Evidence path requirement.
-- Validation result reminder.
-- No unsupported claim.
+- Report path example.
+- Fixture path example.
+- Validation result location.
+- Evidence path reminder.
+- Unresolved output boundary.
 
 ## Evidence To Collect
 
@@ -52,13 +52,13 @@ A bounded agent update that captures:
 
 Done means:
 
-- `ai/agents/publisher.md` reminds authors to preserve evidence tables in reports.
+- `ai/agents/release-diff-analyst.md` includes a concrete report path example.
 - It keeps report/fixture distinction clear.
 - No unsupported driver claims are made.
 - It retains unresolved-state handling.
 
 ## Follow-Up Queue
 
-1. Add release diff analyst report path example.
-2. Add research lead fixture/report branching cue.
-3. Add publisher fixture validation example.
+1. Add research lead fixture/report branching cue.
+2. Add publisher fixture validation example.
+3. Add artifact analyst report destination example.
