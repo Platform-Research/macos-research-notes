@@ -4,41 +4,41 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`ai/agents/publisher.md` now reminds authors to preserve evidence tables in reports from the `ai/publisher-evidence-table-reminder` cycle.
+`ai/agents/release-diff-analyst.md` now includes a concrete release diff report path example from the `ai/release-diff-analyst-report-path-example` cycle.
 
 ## Current Recommendation
 
-Continue by adding release diff analyst report path example.
+Continue by adding research lead fixture/report branching cue.
 
-Reason: release diff analyst chooses between fixtures and reports, but should point to a concrete report path example as well as fixture paths.
+Reason: research lead governs output paths, and a direct branch cue between fixture and report work will reduce mixed-intent sessions.
 
 ## Next Branch
 
 ```text
-ai/release-diff-analyst-report-path-example
+ai/research-lead-branching-cue
 ```
 
 ## Session Goal
 
-Update release diff analyst agent:
+Update research lead agent:
 
 ```text
-ai/agents/release-diff-analyst.md
+ai/agents/research-lead.md
 ```
 
 ## Research Question
 
-How should release diff analyst show report path examples?
+How should research lead cue fixture versus report branching?
 
 ## Target Output
 
 A bounded agent update that captures:
 
-- Report path example.
-- Fixture path example.
-- Validation result location.
-- Evidence path reminder.
-- Unresolved output boundary.
+- Fixture branch cue.
+- Report branch cue.
+- Output path cue.
+- Evidence gap branch cue.
+- One branch, one intent reminder.
 
 ## Evidence To Collect
 
@@ -52,13 +52,13 @@ A bounded agent update that captures:
 
 Done means:
 
-- `ai/agents/release-diff-analyst.md` includes a concrete report path example.
+- `ai/agents/research-lead.md` distinguishes fixture, report, and evidence-gap branching choices.
 - It keeps report/fixture distinction clear.
 - No unsupported driver claims are made.
 - It retains unresolved-state handling.
 
 ## Follow-Up Queue
 
-1. Add research lead fixture/report branching cue.
-2. Add publisher fixture validation example.
-3. Add artifact analyst report destination example.
+1. Add publisher fixture validation example.
+2. Add artifact analyst report destination example.
+3. Add release diff analyst branch naming example.

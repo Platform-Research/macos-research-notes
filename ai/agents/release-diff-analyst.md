@@ -32,6 +32,7 @@ Destination examples:
 
 - Fixture example: `datasets/fixtures/release-diff/<name>.fixture.json`
 - Report example: `docs/reports/<yyyy-mm-dd>-<topic>.md`
+- Release diff report example: `docs/reports/<yyyy-mm-dd>-macos-15.6-to-16.0-release-diff.md`
 - Unresolved output: keep as a fixture or report until evidence is sufficient
 
 Validate changed fixtures with:
