@@ -4,45 +4,45 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`ai/agents/artifact-analyst.md` now includes an evidence-path reminder from the `ai/artifact-analyst-evidence-path-reminder` cycle.
+`docs/reports/2026-06-29-macos-15.6-to-16.0-release-diff.md` now captures the first honest release-diff result: current committed inputs are insufficient for a real diff, so the output remains unresolved.
 
 ## Current Recommendation
 
-Framework phase complete. Pivot to the first macOS research cycle.
+Continue the macOS release-diff research by closing the first blocking evidence gap.
 
-Reason: the framework is now good enough to support real work. Further process polish should happen only when the research itself exposes a gap.
+Reason: the first report now records why the diff is unresolved. The next useful step is to acquire one comparable reduced dataset rather than rephrase the absence again.
 
 ## Next Branch
 
 ```text
-macos/release-diff-research-kickoff
+macos/15.6-kext-personality-acquisition
 ```
 
 ## Session Goal
 
-Start the first research note:
+Start the first acquisition-backed research step:
 
 ```text
-docs/reports/<yyyy-mm-dd>-macos-15.6-to-16.0-release-diff.md
+experiments/kext-personality-extraction/README.md
 ```
 
 ## Research Question
 
-What is the first honest release-diff question we can answer with committed artifacts?
+What is the smallest committed reduced dataset that unlocks the next real release comparison?
 
 ## Target Output
 
 A bounded agent update that captures:
 
-- A bounded research kickoff.
-- One concrete macOS 15.6 -> 16.0 question.
-- One report or unresolved note path.
-- One explicit evidence gap if blocking.
-- No framework-only polishing unless the research run exposes a need.
+- One bounded acquisition step.
+- One concrete reduced dataset target.
+- One evidence-backed experiment or fixture update.
+- One explicit stop condition if local artifacts are still unavailable.
+- No new framework work unless the acquisition step exposes a tooling gap.
 
 ## Evidence To Collect
 
-- Existing release-diff guidance.
+- Existing release-diff report.
 - Existing workflow rules.
 - Existing macOS 15.6 and 16.0 artifacts.
 - Existing fixture and report guidance.
@@ -51,13 +51,13 @@ A bounded agent update that captures:
 
 Done means:
 
-- A first macOS research branch is created.
-- The session produces either a real report update or an explicit unresolved record.
+- A focused acquisition or reduction branch is created.
+- The session updates one experiment, fixture, or report with committed evidence.
 - The work uses committed evidence paths only.
-- Any new process changes are justified by the research itself.
+- The step clearly reduces one unresolved item from the current report.
 
 ## Follow-Up Queue
 
-1. Compare currently committed 15.6 and 16.0 inputs.
-2. Identify the first evidence-backed diff or blocking gap.
-3. Update the report or missing-artifacts fixture accordingly.
+1. Identify whether any local source for `15.6` kext personality extraction already exists.
+2. If yes, reduce it into a committed dataset; if not, record the blocker explicitly.
+3. Update the release-diff report after the acquisition step.
