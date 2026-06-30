@@ -2,7 +2,7 @@
 
 ## Summary
 
-This note records the local runtime context used by current Darwin Collective experiments. It is a host observation, not a complete macOS release profile.
+This note records the local runtime context used by current macOS Research Notes experiments. It is a host observation, not a complete macOS release profile.
 
 ## Observed Runtime
 

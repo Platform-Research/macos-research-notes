@@ -1,8 +1,8 @@
-# Darwin Collective
+# macOS Research Notes
 
 Open research collective for documenting, reverse engineering, and preserving Apple platform internals.
 
-Darwin Collective is a research workspace first. The goal is to build durable knowledge, repeatable analysis workflows, and tooling around Apple platform internals before attempting risky or low-viability targets such as new macOS GPU drivers.
+macOS Research Notes is a research workspace first. The goal is to build durable knowledge, repeatable analysis workflows, and tooling around Apple platform internals before attempting risky or low-viability targets such as new macOS GPU drivers.
 
 ## Current Mission
 

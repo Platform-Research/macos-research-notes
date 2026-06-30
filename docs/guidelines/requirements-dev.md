@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This proposal records optional Python tooling used by Darwin Collective without making network access mandatory for ordinary research cycles.
+This proposal records optional Python tooling used by macOS Research Notes without making network access mandatory for ordinary research cycles.
 
 ## Proposed Optional File
 

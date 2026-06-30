@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Most Darwin Collective research cycles should run without downloading packages. Optional dependencies are allowed when they unlock a clearly scoped tool, but they must not become hidden requirements for ordinary note-taking or read-only inspection.
+Most macOS Research Notes cycles should run without downloading packages. Optional dependencies are allowed when they unlock a clearly scoped tool, but they must not become hidden requirements for ordinary note-taking or read-only inspection.
 
 ## Current Optional Dependency
 

@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/Darwin-Collective/darwin-collective/datasets/schemas/ioreg-inventory.schema.json",
-  "title": "Darwin Collective IORegistry Inventory",
+  "$id": "https://github.com/platform-research/macos-research-notes/datasets/schemas/ioreg-inventory.schema.json",
+  "title": "macOS Research Notes IORegistry Inventory",
   "type": "object",
   "additionalProperties": false,
   "required": [

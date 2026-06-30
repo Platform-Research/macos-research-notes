@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This directory organizes release-specific metadata for Darwin Collective. Keep release folders focused on derived metadata, indexes, and notes that can be traced back to local artifacts or documented acquisition steps.
+This directory organizes release-specific metadata for macOS Research Notes. Keep release folders focused on derived metadata, indexes, and notes that can be traced back to local artifacts or documented acquisition steps.
 
 ## Current Local Runtime
 

@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Darwin Collective stores schemas, examples, fixtures, and generated helper outputs. Validation should prevent malformed records without forcing every local research session to install extra tooling.
+macOS Research Notes stores schemas, examples, fixtures, and generated helper outputs. Validation should prevent malformed records without forcing every local research session to install extra tooling.
 
 ## Current Policy
 

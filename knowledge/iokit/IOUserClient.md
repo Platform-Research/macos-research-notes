@@ -31,7 +31,7 @@
 ## Inferences
 
 - `IOUserClient` is a security boundary, not just an object model convenience: it represents callable kernel or DriverKit-facing interfaces reachable from user-space.
-- A safe Darwin Collective inventory should enumerate user-client classes and high-level flags, but redact or avoid process-specific `IOUserClientCreator` values.
+- A safe macOS Research Notes inventory should enumerate user-client classes and high-level flags, but redact or avoid process-specific `IOUserClientCreator` values.
 - Opening a service with `IOServiceOpen()` is qualitatively different from enumerating services with `IOServiceGetMatchingServices()`; opening may create state and expose methods.
 - User-client research should begin with read-only registry inspection and header analysis before attempting any `IOServiceOpen()` calls.
 - DriverKit user-client access appears entitlement-mediated, so notes about dexts should capture entitlement keys and access policy separately from kernel kext user clients.

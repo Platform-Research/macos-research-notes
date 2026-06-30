@@ -1,6 +1,6 @@
 # Workflow Rules
 
-These rules keep Darwin Collective easy to navigate as the research grows.
+These rules keep macOS Research Notes easy to navigate as the research grows.
 
 ## Branches
 

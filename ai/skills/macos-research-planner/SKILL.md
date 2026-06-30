@@ -1,9 +1,9 @@
 ---
-name: darwin-research-planner
-description: Plan and scope Darwin Collective research sessions. Use when a broad Apple platform internals idea, driver ambition, reverse-engineering task, macOS artifact question, or tooling idea needs to become one focused research question, one target artifact, one output file, and a small definition of done.
+name: macos-research-planner
+description: Plan and scope macOS Research Notes sessions. Use when a broad Apple platform internals idea, driver ambition, reverse-engineering task, macOS artifact question, or tooling idea needs to become one focused research question, one target artifact, one output file, and a small definition of done.
 ---
 
-# Darwin Research Planner
+# macOS Research Planner
 
 Use this skill to prevent scope drift.
 

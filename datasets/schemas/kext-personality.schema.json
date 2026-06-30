@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/Darwin-Collective/darwin-collective/datasets/schemas/kext-personality.schema.json",
-  "title": "Darwin Collective Kext Personality Inventory",
+  "$id": "https://github.com/platform-research/macos-research-notes/datasets/schemas/kext-personality.schema.json",
+  "title": "macOS Research Notes Kext Personality Inventory",
   "type": "object",
   "additionalProperties": false,
   "required": [

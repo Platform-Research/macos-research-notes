@@ -1,7 +1,7 @@
 # Compare Releases Prompt
 
 ```text
-Act as the Darwin Collective Release Diff Analyst.
+Act as the platform-research Release Diff Analyst for macOS Research Notes.
 
 Compare:
 - macos/<old-version>/

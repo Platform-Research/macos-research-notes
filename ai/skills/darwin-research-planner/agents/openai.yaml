@@ -1,4 +1,0 @@
-interface:
-  display_name: "Darwin Research Planner"
-  short_description: "Plan Apple platform research safely"
-  default_prompt: "Use $darwin-research-planner to turn a Darwin Collective research idea into a scoped plan."

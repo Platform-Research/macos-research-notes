@@ -1,6 +1,6 @@
 ---
 name: publish-research-note
-description: Convert raw Darwin Collective research findings into clear Markdown notes. Use when publishing observations from macOS internals research, reverse-engineering logs, release diffs, artifact analysis, or experiments while preserving uncertainty and evidence boundaries.
+description: Convert raw macOS Research Notes findings into clear Markdown notes. Use when publishing observations from macOS internals research, reverse-engineering logs, release diffs, artifact analysis, or experiments while preserving uncertainty and evidence boundaries.
 ---
 
 # Publish Research Note

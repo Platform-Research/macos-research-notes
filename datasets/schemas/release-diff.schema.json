@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/Darwin-Collective/darwin-collective/datasets/schemas/release-diff.schema.json",
-  "title": "Darwin Collective Release Diff",
+  "$id": "https://github.com/platform-research/macos-research-notes/datasets/schemas/release-diff.schema.json",
+  "title": "macOS Research Notes Release Diff",
   "type": "object",
   "additionalProperties": false,
   "required": [

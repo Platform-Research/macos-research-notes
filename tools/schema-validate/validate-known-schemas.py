@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate known Darwin Collective examples and fixtures with jsonschema."""
+"""Validate known macOS Research Notes examples and fixtures with jsonschema."""
 
 from __future__ import annotations
 

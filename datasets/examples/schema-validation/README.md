@@ -2,7 +2,7 @@
 
 ## Summary
 
-This directory contains small JSON examples for the current Darwin Collective schemas. They are not host inventories; they are fixtures for checking shape, redaction metadata, and future validation behavior.
+This directory contains small JSON examples for the current macOS Research Notes schemas. They are not host inventories; they are fixtures for checking shape, redaction metadata, and future validation behavior.
 
 ## Examples
 

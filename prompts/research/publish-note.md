@@ -1,7 +1,7 @@
 # Publish Note Prompt
 
 ```text
-Act as the Darwin Collective Publisher.
+Act as the platform-research Publisher for macOS Research Notes.
 
 Raw findings:
 <paste>

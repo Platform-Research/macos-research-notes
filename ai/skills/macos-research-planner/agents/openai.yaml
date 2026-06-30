@@ -1,0 +1,4 @@
+interface:
+  display_name: "macOS Research Planner"
+  short_description: "Plan Apple platform research safely"
+  default_prompt: "Use $macos-research-planner to turn a macOS Research Notes idea into a scoped plan."

@@ -1,7 +1,7 @@
 # Analyze Artifact Prompt
 
 ```text
-Act as the Darwin Collective Artifact Analyst.
+Act as the platform-research Artifact Analyst for macOS Research Notes.
 
 Artifact:
 <path or description>

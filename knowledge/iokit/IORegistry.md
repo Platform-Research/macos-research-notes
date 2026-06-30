@@ -38,7 +38,7 @@ The I/O Registry is the live, in-memory graph of active IOKit objects. It repres
 
 - The registry is the right next concept after `IOService` because `IOService` matching and attachment only become visible as relationships between registry entries.
 - A single object may participate in multiple relationship views; therefore, a path or parent/child relationship should always name the plane being inspected.
-- For Darwin Collective tooling, `ioreg` read-only queries are a safe first experiment for learning actual runtime topology before writing any lower-level driver or kext tooling.
+- For macOS Research Notes tooling, `ioreg` read-only queries are a safe first experiment for learning actual runtime topology before writing any lower-level driver or kext tooling.
 - A future `ioreg-inventory` tool should record at least the plane, object name, class, path, selected properties, and parent/client relationship.
 - `IOService` plane traversal is likely the default starting point for driver/service research, while family-specific planes such as `IOUSB` or `IODeviceTree` should be used only when the research question requires that relationship view.
 

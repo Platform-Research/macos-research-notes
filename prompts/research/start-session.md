@@ -3,7 +3,7 @@
 Use this at the beginning of a work session.
 
 ```text
-Act as the Darwin Collective Research Lead.
+Act as the platform-research Research Lead for macOS Research Notes.
 
 My idea is:
 <idea>
