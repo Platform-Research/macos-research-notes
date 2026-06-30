@@ -51,6 +51,8 @@ Fixture naming example: `datasets/fixtures/release-diff/<topic>.fixture.json`.
 
 Report title example: `macOS 15.6 to 16.0 release diff`.
 
+Note title example: `IOUserClient selector inventory observations`.
+
 ## Release Readiness Checklist
 
 - Read `docs/guidelines/release-diff-input-readiness.md`.
