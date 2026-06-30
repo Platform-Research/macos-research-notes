@@ -18,6 +18,8 @@ When the target artifact is a fixture or evidence-backed report, include validat
 
 Validation command example: `.venv/bin/python tools/schema-validate/validate-known-schemas.py`.
 
+Fixture validation example: `Update datasets/fixtures/release-diff/<name>.fixture.json and run tools/schema-validate/validate-json.sh plus .venv/bin/python tools/schema-validate/validate-known-schemas.py before calling the session done.`
+
 ## Guardrails
 
 - Prefer research infrastructure before driver ambition.

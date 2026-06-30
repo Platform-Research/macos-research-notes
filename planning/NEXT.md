@@ -4,60 +4,60 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`ai/agents/publisher.md` now includes an unresolved title reminder from the `ai/publisher-unresolved-title-reminder` cycle.
+`ai/agents/research-lead.md` now includes a fixture validation example from the `ai/research-lead-fixture-validation-example` cycle.
 
 ## Current Recommendation
 
-Continue by adding a research lead fixture validation example.
+Continue by adding an artifact analyst evidence-path reminder.
 
-Reason: the research lead already asks for validation gates, but a fixture-specific validation example will make structured work easier to scope precisely.
+Reason: the artifact analyst already requires evidence paths for reports, but a more explicit reminder will make narrow artifact notes easier to audit.
 
 ## Next Branch
 
 ```text
-ai/research-lead-fixture-validation-example
+ai/artifact-analyst-evidence-path-reminder
 ```
 
 ## Session Goal
 
-Update research lead agent:
+Update artifact analyst agent:
 
 ```text
-ai/agents/research-lead.md
+ai/agents/artifact-analyst.md
 ```
 
 ## Research Question
 
-How should research lead describe fixture validation?
+How should artifact analyst preserve evidence paths?
 
 ## Target Output
 
 A bounded agent update that captures:
 
-- Fixture validation example.
-- Structured-session scoping consistency.
+- Evidence-path reminder.
+- Artifact-note auditability.
 - Workflow alignment.
-- No unsupported planning claims.
+- No unsupported artifact claims.
 - Existing validation expectations remain intact.
 
 ## Evidence To Collect
 
-- Existing research lead instructions.
+- Existing artifact analyst instructions.
 - Existing workflow rules.
-- Existing validation commands.
+- Existing evidence-path guidance.
 - Existing note and report guidance.
 
 ## Definition Of Done
 
 Done means:
 
-- `ai/agents/research-lead.md` includes a fixture validation example.
-- It keeps structured-session scoping easier to standardize.
-- No unsupported planning claims are made.
+- `ai/agents/artifact-analyst.md` includes an evidence-path reminder.
+- It keeps artifact outputs easier to audit.
+- No unsupported artifact claims are made.
 - It keeps validation and unresolved handling intact.
 
 ## Follow-Up Queue
 
-1. Add artifact analyst evidence-path reminder.
-2. Mark framework phase complete and pivot to macOS research.
-3. Start release-diff research kickoff.
+1. Mark framework phase complete and pivot to macOS research.
+2. Start release-diff research kickoff.
+3. Capture first concrete research question.
