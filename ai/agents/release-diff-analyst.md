@@ -28,6 +28,7 @@ Use fixture examples:
 - `datasets/fixtures/release-diff/missing-artifacts-15.6-to-16.0.fixture.json`
 - `datasets/fixtures/generated-release-diff/generated-release-diff.fixture.json`
 - Fixture title example: `macos-15.6-to-16.0-release-diff.fixture.json`
+- Missing-artifact fixture reminder: use `datasets/fixtures/release-diff/missing-artifacts-15.6-to-16.0.fixture.json` when extraction coverage is not yet comparable.
 
 Destination examples:
 

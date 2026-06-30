@@ -4,60 +4,60 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`ai/agents/artifact-analyst.md` now includes a validation example from the `ai/artifact-analyst-validation-example` cycle.
+`ai/agents/release-diff-analyst.md` now includes a missing-artifact fixture reminder from the `ai/release-diff-analyst-missing-artifact-fixture-reminder` cycle.
 
 ## Current Recommendation
 
-Continue by adding a release diff analyst missing-artifact fixture reminder.
+Continue by adding a publisher fixture title example.
 
-Reason: the release diff analyst already supports unresolved outputs, but an explicit missing-artifact fixture reminder will reduce the chance of inventing symmetry across releases.
+Reason: the publisher already knows fixture paths, but a fixture title example will make structured outputs easier to refer to consistently in prose.
 
 ## Next Branch
 
 ```text
-ai/release-diff-analyst-missing-artifact-fixture-reminder
+ai/publisher-fixture-title-example
 ```
 
 ## Session Goal
 
-Update release diff analyst agent:
+Update publisher agent:
 
 ```text
-ai/agents/release-diff-analyst.md
+ai/agents/publisher.md
 ```
 
 ## Research Question
 
-How should release diff analyst handle missing-artifact fixtures?
+How should publisher show fixture title patterns?
 
 ## Target Output
 
 A bounded agent update that captures:
 
-- Missing-artifact fixture reminder.
-- Coverage-gap consistency.
+- Fixture title example.
+- Structured-output naming consistency.
 - Workflow alignment.
-- No unsupported release claims.
+- No unsupported publication claims.
 - Existing validation expectations remain intact.
 
 ## Evidence To Collect
 
-- Existing release diff analyst instructions.
+- Existing publisher instructions.
 - Existing workflow rules.
-- Existing missing-artifact examples.
+- Existing fixture examples.
 - Existing note and report guidance.
 
 ## Definition Of Done
 
 Done means:
 
-- `ai/agents/release-diff-analyst.md` includes a missing-artifact fixture reminder.
-- It keeps coverage gaps easier to represent honestly.
-- No unsupported release claims are made.
+- `ai/agents/publisher.md` includes a fixture title example.
+- It keeps structured outputs easier to name in prose.
+- No unsupported publication claims are made.
 - It keeps validation and unresolved handling intact.
 
 ## Follow-Up Queue
 
-1. Add publisher fixture title example.
-2. Add research lead validation command example.
-3. Add artifact analyst follow-up branch example.
+1. Add research lead validation command example.
+2. Add artifact analyst follow-up branch example.
+3. Add release diff analyst report section reminder.
