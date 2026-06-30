@@ -33,6 +33,7 @@ Destination examples:
 
 - Fixture example: `datasets/fixtures/release-diff/<name>.fixture.json`.
 - Report example: `docs/reports/<yyyy-mm-dd>-<topic>.md`.
+- Release report path example: `docs/reports/2026-06-29-macos-15.6-to-16.0-release-diff.md`.
 - Report title example: `macOS 15.6 to 16.0 release diff`.
 - Note title example: `IOUserClient selector inventory observations`.
 - Knowledge example: `knowledge/iokit/<atomic-finding>.md`.

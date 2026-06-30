@@ -4,60 +4,60 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`ai/agents/release-diff-analyst.md` now includes a follow-up branch example from the `ai/release-diff-analyst-follow-up-branch-example` cycle.
+`ai/agents/publisher.md` now includes a report path example from the `ai/publisher-report-path-example` cycle.
 
 ## Current Recommendation
 
-Continue by adding a publisher report path example.
+Continue by adding a research lead unresolved output example.
 
-Reason: the publisher already has report path guidance, but another concrete report path example will make publication targets easier to keep consistent.
+Reason: the research lead already talks about reports and parking-lot entries, but an explicit unresolved output example will make rescoping decisions easier to keep honest.
 
 ## Next Branch
 
 ```text
-ai/publisher-report-path-example
+ai/research-lead-unresolved-output-example
 ```
 
 ## Session Goal
 
-Update publisher agent:
+Update research lead agent:
 
 ```text
-ai/agents/publisher.md
+ai/agents/research-lead.md
 ```
 
 ## Research Question
 
-How should publisher show report paths?
+How should research lead show unresolved outputs?
 
 ## Target Output
 
 A bounded agent update that captures:
 
-- Report path example.
-- Publication target consistency.
+- Unresolved output example.
+- Honest rescoping consistency.
 - Workflow alignment.
-- No unsupported publication claims.
+- No unsupported planning claims.
 - Existing validation expectations remain intact.
 
 ## Evidence To Collect
 
-- Existing publisher instructions.
+- Existing research lead instructions.
 - Existing workflow rules.
-- Existing report destination guidance.
+- Existing unresolved-output guidance.
 - Existing note and report guidance.
 
 ## Definition Of Done
 
 Done means:
 
-- `ai/agents/publisher.md` includes a report path example.
-- It keeps publication targets easier to standardize.
-- No unsupported publication claims are made.
+- `ai/agents/research-lead.md` includes an unresolved output example.
+- It keeps rescoping decisions easier to standardize.
+- No unsupported planning claims are made.
 - It keeps validation and unresolved handling intact.
 
 ## Follow-Up Queue
 
-1. Add research lead unresolved output example.
-2. Add artifact analyst validation example.
-3. Add release diff analyst missing-artifact fixture reminder.
+1. Add artifact analyst validation example.
+2. Add release diff analyst missing-artifact fixture reminder.
+3. Add publisher fixture title example.
