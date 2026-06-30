@@ -4,60 +4,60 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`ai/agents/artifact-analyst.md` now includes a fixture title example from the `ai/artifact-analyst-fixture-title-example` cycle.
+`ai/agents/release-diff-analyst.md` now includes a fixture title example from the `ai/release-diff-analyst-fixture-title-example` cycle.
 
 ## Current Recommendation
 
-Continue by adding a release diff analyst fixture title example.
+Continue by adding a publisher unresolved report reminder.
 
-Reason: the release diff analyst already points to fixture destinations, but a fixture title example will make diff artifacts easier to name consistently.
+Reason: the publisher already preserves uncertainty, but an explicit unresolved-report reminder will reduce the chance of flattening open questions into final prose.
 
 ## Next Branch
 
 ```text
-ai/release-diff-analyst-fixture-title-example
+ai/publisher-unresolved-report-reminder
 ```
 
 ## Session Goal
 
-Update release diff analyst agent:
+Update publisher agent:
 
 ```text
-ai/agents/release-diff-analyst.md
+ai/agents/publisher.md
 ```
 
 ## Research Question
 
-How should release diff analyst show fixture title patterns?
+How should publisher handle unresolved report material?
 
 ## Target Output
 
 A bounded agent update that captures:
 
-- Fixture title example.
-- Diff artifact naming consistency.
+- Unresolved report reminder.
+- Report uncertainty preservation.
 - Workflow alignment.
-- No unsupported release claims.
+- No unsupported publication claims.
 - Existing validation expectations remain intact.
 
 ## Evidence To Collect
 
-- Existing release diff analyst instructions.
+- Existing publisher instructions.
 - Existing workflow rules.
-- Existing fixture destination examples.
-- Existing report and missing-artifact guidance.
+- Existing unresolved output guidance.
+- Existing report template guidance.
 
 ## Definition Of Done
 
 Done means:
 
-- `ai/agents/release-diff-analyst.md` includes a fixture title example.
-- It keeps structured output naming predictable.
-- No unsupported release claims are made.
+- `ai/agents/publisher.md` includes an unresolved report reminder.
+- It keeps unresolved report material separate from conclusions.
+- No unsupported publication claims are made.
 - It keeps validation and unresolved handling intact.
 
 ## Follow-Up Queue
 
-1. Add publisher unresolved report reminder.
-2. Add research lead report title example.
-3. Add artifact analyst unresolved fixture reminder.
+1. Add research lead report title example.
+2. Add artifact analyst unresolved fixture reminder.
+3. Add release diff analyst validation example reminder.
