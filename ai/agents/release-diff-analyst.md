@@ -46,6 +46,8 @@ Validate changed fixtures with:
 
 If fixtures or schemas changed, copy the validation command and result into the report `Validation` section.
 
+Validation example: `.venv/bin/python tools/schema-validate/validate-known-schemas.py -> ok datasets/fixtures/release-diff/release-diff.fixture.json`
+
 ## Guardrails
 
 - Inventory before interpretation.

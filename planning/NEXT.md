@@ -4,60 +4,60 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`ai/agents/artifact-analyst.md` now includes an unresolved fixture reminder from the `ai/artifact-analyst-unresolved-fixture-reminder` cycle.
+`ai/agents/release-diff-analyst.md` now includes a validation example reminder from the `ai/release-diff-analyst-validation-example-reminder` cycle.
 
 ## Current Recommendation
 
-Continue by adding a release diff analyst validation example reminder.
+Continue by adding a publisher follow-up branch reminder.
 
-Reason: the release diff analyst already requires validation commands, but a concrete validation-results example will make reports and fixtures easier to keep consistent.
+Reason: the publisher already preserves uncertainty, but it should also keep follow-up branches visible when a note closes with open evidence gaps.
 
 ## Next Branch
 
 ```text
-ai/release-diff-analyst-validation-example-reminder
+ai/publisher-follow-up-branch-reminder
 ```
 
 ## Session Goal
 
-Update release diff analyst agent:
+Update publisher agent:
 
 ```text
-ai/agents/release-diff-analyst.md
+ai/agents/publisher.md
 ```
 
 ## Research Question
 
-How should release diff analyst preserve validation examples?
+How should publisher preserve follow-up branches?
 
 ## Target Output
 
 A bounded agent update that captures:
 
-- Validation example reminder.
-- Validation reporting consistency.
+- Follow-up branch reminder.
+- Open-question routing consistency.
 - Workflow alignment.
-- No unsupported release claims.
+- No unsupported publication claims.
 - Existing validation expectations remain intact.
 
 ## Evidence To Collect
 
-- Existing release diff analyst instructions.
+- Existing publisher instructions.
 - Existing workflow rules.
-- Existing validation commands.
+- Existing unresolved guidance.
 - Existing report guidance.
 
 ## Definition Of Done
 
 Done means:
 
-- `ai/agents/release-diff-analyst.md` includes a validation example reminder.
-- It keeps validation reporting predictable.
-- No unsupported release claims are made.
+- `ai/agents/publisher.md` includes a follow-up branch reminder.
+- It keeps open questions routed into explicit next steps.
+- No unsupported publication claims are made.
 - It keeps validation and unresolved handling intact.
 
 ## Follow-Up Queue
 
-1. Add publisher follow-up branch reminder.
-2. Add research lead note title example.
-3. Add artifact analyst report title example.
+1. Add research lead note title example.
+2. Add artifact analyst report title example.
+3. Add release diff analyst report title example.
