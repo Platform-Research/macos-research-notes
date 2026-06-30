@@ -94,3 +94,14 @@ Initial personality inventory fields:
 - `datasets/schemas/ioreg-inventory.schema.json`
 - `tools/kext-personality-inventory/`
 - `datasets/schemas/kext-personality.schema.json`
+
+## 15.6 Acquisition Blocker
+
+- Branch context: `macos/15.6-kext-personality-acquisition`
+- Current repository state: no committed macOS `15.6` installer payload, extracted extension tree, or reduced kext personality source exists under `macos/` or `downloads/`.
+- Available local assets: extraction tooling, schema, helper fixture, and knowledge notes are ready.
+- Blocking condition: without a committed `15.6` source artifact, no evidence-backed `15.6` personality dataset can be derived in this repository.
+
+### Immediate Next Step
+
+Acquire one `15.6` source that can legally and reproducibly feed personality extraction, then record provenance before generating a reduced dataset.
