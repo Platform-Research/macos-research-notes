@@ -4,60 +4,60 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`ai/agents/release-diff-analyst.md` now includes a fixture title example from the `ai/release-diff-analyst-fixture-title-example` cycle.
+`ai/agents/publisher.md` now includes an unresolved report reminder from the `ai/publisher-unresolved-report-reminder` cycle.
 
 ## Current Recommendation
 
-Continue by adding a publisher unresolved report reminder.
+Continue by adding a research lead report title example.
 
-Reason: the publisher already preserves uncertainty, but an explicit unresolved-report reminder will reduce the chance of flattening open questions into final prose.
+Reason: the research lead already chooses report paths, but a concrete report title example will make session framing faster and more consistent.
 
 ## Next Branch
 
 ```text
-ai/publisher-unresolved-report-reminder
+ai/research-lead-report-title-example
 ```
 
 ## Session Goal
 
-Update publisher agent:
+Update research lead agent:
 
 ```text
-ai/agents/publisher.md
+ai/agents/research-lead.md
 ```
 
 ## Research Question
 
-How should publisher handle unresolved report material?
+How should research lead show report title patterns?
 
 ## Target Output
 
 A bounded agent update that captures:
 
-- Unresolved report reminder.
-- Report uncertainty preservation.
+- Report title example.
+- Session framing consistency.
 - Workflow alignment.
-- No unsupported publication claims.
+- No unsupported planning claims.
 - Existing validation expectations remain intact.
 
 ## Evidence To Collect
 
-- Existing publisher instructions.
+- Existing research lead instructions.
 - Existing workflow rules.
-- Existing unresolved output guidance.
-- Existing report template guidance.
+- Existing report destination examples.
+- Existing note and report guidance.
 
 ## Definition Of Done
 
 Done means:
 
-- `ai/agents/publisher.md` includes an unresolved report reminder.
-- It keeps unresolved report material separate from conclusions.
-- No unsupported publication claims are made.
+- `ai/agents/research-lead.md` includes a report title example.
+- It keeps session framing for reports predictable.
+- No unsupported planning claims are made.
 - It keeps validation and unresolved handling intact.
 
 ## Follow-Up Queue
 
-1. Add research lead report title example.
-2. Add artifact analyst unresolved fixture reminder.
-3. Add release diff analyst validation example reminder.
+1. Add artifact analyst unresolved fixture reminder.
+2. Add release diff analyst validation example reminder.
+3. Add publisher follow-up branch reminder.

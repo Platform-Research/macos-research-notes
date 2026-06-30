@@ -27,6 +27,8 @@ If the output is a report, use `docs/reports/release-comparison-template.md` ins
 
 When the output is a report, preserve the `Evidence Table` section instead of flattening evidence into prose only.
 
+When a report still contains unresolved comparisons or missing artifacts, keep that uncertainty visible in headings, tables, and conclusions instead of smoothing it away.
+
 Destination examples:
 
 - Fixture example: `datasets/fixtures/release-diff/<name>.fixture.json`.
