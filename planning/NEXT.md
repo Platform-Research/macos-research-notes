@@ -4,7 +4,7 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`macos/15.6/source-acquisition-log.md` records forty bounded acquisition cycles for `15.6`: the target is reduced kext or DriverKit `Info.plist` personality metadata, the current host was rejected as a `15.6` source because it reports `26.5.1` build `25F80`, and no raw source artifact is present in `downloads/`.
+`macos/15.6/source-acquisition-log.md` records sixty bounded acquisition cycles for `15.6`: the target is reduced kext or DriverKit `Info.plist` personality metadata, the current host was rejected as a `15.6` source, no raw source artifact is present in `downloads/`, and the PCI match parser is ready as optional enrichment once a verified `15.6` source exists.
 
 ## Current Recommendation
 
@@ -38,6 +38,7 @@ A bounded agent update that captures:
 - One bounded acquisition step using the candidate order in `macos/15.6/artifacts.md`.
 - One concrete source artifact target.
 - One provenance-backed update to release metadata.
+- Optional PCI match parsing only when the verified source contains PCI match keys.
 - One explicit stop condition if the source still is unavailable.
 - No new framework work unless acquisition exposes a tooling gap.
 
@@ -60,5 +61,5 @@ Done means:
 
 1. Supply or acquire a legal `15.6` installer, mounted system volume, or other source with documented provenance.
 2. Record provenance and legality constraints for that source.
-3. Derive one reduced kext or DriverKit personality dataset.
+3. Derive one reduced kext or DriverKit personality dataset, preferably including PCI match keys if present.
 4. Re-enter release-diff work only after comparable reduced metadata exists.

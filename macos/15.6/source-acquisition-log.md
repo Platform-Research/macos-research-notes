@@ -70,6 +70,31 @@ The first committed output should be reduced metadata, not a raw installer, IPSW
 | 39 | Keep tooling unchanged | Existing extraction tooling remains sufficient for the next step once a source plist exists. |
 | 40 | Define branch outcome | This branch now records target selection, host rejection, empty acquisition area, and provenance requirements. |
 
+## Cycles 41-60
+
+| Cycle | Focus | Result |
+| --- | --- | --- |
+| 41 | Check PCI parser context | `experiments/pci-match-string-parser/README.md` defines conservative parsing for `IOPCIMatch`, `IOPCIPrimaryMatch`, and `IOPCIClassMatch`. |
+| 42 | Check parser implementation | `tools/pci-match-parse/pci_match_parse.py` exists and parses value/mask tokens without evaluating hardware matches. |
+| 43 | Check parser tests | `python3 -m unittest discover -s tools/pci-match-parse` passes 5 tests. |
+| 44 | Check schema compatibility | `datasets/schemas/kext-personality.schema.json` allows `family_specific` extension data for parsed PCI tokens. |
+| 45 | Check fixture precedent | `datasets/fixtures/parsed-pci-matches/parsed-pci-matches.fixture.json` demonstrates parsed PCI tokens in a reduced personality record. |
+| 46 | Preserve evidence boundary | Existing PCI parser fixtures are local runtime examples, not `15.6` release evidence. |
+| 47 | Identify first high-value source type | A verified `15.6` `Info.plist` containing PCI match keys would exercise both personality extraction and PCI token parsing. |
+| 48 | Identify minimum useful record | One `15.6` personality record with `IOProviderClass: IOPCIDevice` and a PCI match key would be a strong first reduced dataset. |
+| 49 | Identify fallback record | If no PCI personality is available in the first source, any allowlisted `IOKitPersonalities` record still improves acquisition state. |
+| 50 | Avoid semantic leap | Parsed PCI tokens must not be interpreted as supported hardware or runtime attachment. |
+| 51 | Avoid default-mask inference | Do not apply default masks during acquisition unless the source field and rule are explicitly documented. |
+| 52 | Keep parser independent | PCI token parsing can be attached to reduced personality records without adding a registry join. |
+| 53 | Keep join work blocked | Registry-to-personality joins remain out of scope until `15.6` registry or comparable metadata exists. |
+| 54 | Define reduction command | For a verified source plist, use `tools/kext-personality-inventory/kext-personality-inventory.sh personalities-json <Info.plist>`. |
+| 55 | Define parser validation command | Use `python3 -m unittest discover -s tools/pci-match-parse` when PCI parsing behavior is relevant. |
+| 56 | Define dataset validation command | Use `.venv/bin/python tools/schema-validate/validate-known-schemas.py` after adding reduced JSON. |
+| 57 | Identify metadata placement | Put release-specific reduced outputs under `macos/15.6/` or `datasets/` according to the existing promotion path. |
+| 58 | Identify manifest update | Add a `reduced` manifest record only after a verified `15.6` source produces committed reduced output. |
+| 59 | Update active experiment link | The PCI parser experiment should note its role as an optional enrichment for future `15.6` personality acquisition. |
+| 60 | Define next branch threshold | Stay on acquisition until there is a verified source; open parser or join work only if a real `15.6` sample exposes a tooling gap. |
+
 ## Local Host Source Check
 
 The current host was checked as a possible local source and rejected for `15.6` acquisition.
@@ -99,6 +124,25 @@ Result: stubs and acquisition log only
 
 Result: no committed or temporary `15.6` source artifact is currently available in the repository workspace.
 
+## Parser Readiness Check
+
+The PCI match parser is ready to support a future reduced `15.6` personality dataset, but it does not itself provide `15.6` evidence.
+
+```text
+Command: python3 -m unittest discover -s tools/pci-match-parse
+Result: 5 tests passed
+```
+
+Relevant paths:
+
+- `experiments/pci-match-string-parser/README.md`
+- `tools/pci-match-parse/pci_match_parse.py`
+- `datasets/fixtures/parsed-pci-matches/parsed-pci-matches.fixture.json`
+- `datasets/schemas/kext-personality.schema.json`
+
+Result: if the first verified `15.6` source includes PCI match keys, the existing parser can produce normalized value/mask tokens inside `family_specific.pci_match_tokens`. Those parsed tokens are still parsing evidence only, not hardware support or runtime matching evidence.
+
+
 ## Required Provenance For The Next Artifact
 
 Use this minimum block before committing any reduced `15.6` output:
@@ -118,4 +162,4 @@ Stop condition, if unavailable:
 
 ## Next Step
 
-Acquire one legal `15.6` source artifact outside git or identify an existing mounted/user-provided source, then derive a minimal kext personality JSON record set with committed provenance. Do not use the current `26.5.1` host as a substitute for `15.6`.
+Acquire one legal `15.6` source artifact outside git or identify an existing mounted/user-provided source, then derive a minimal kext personality JSON record set with committed provenance. Prefer a source plist with PCI match keys if one is available, because it exercises both personality extraction and existing PCI token parsing. Do not use the current `26.5.1` host as a substitute for `15.6`.

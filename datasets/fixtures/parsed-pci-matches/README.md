@@ -25,9 +25,9 @@ python3 -m json.tool datasets/fixtures/parsed-pci-matches/parsed-pci-matches.fix
 - PCI match strings are parsed into value and optional mask tokens.
 - Parsed tokens do not prove hardware match.
 - Raw plist output is not committed.
+- Fixture records demonstrate shape only and are not macOS `15.6` release evidence.
 
 ## Next Work
 
-- Optional dependency lock strategy.
-- macOS 26.5.1 local runtime note.
-- Release acquisition rules.
+- Use the same parsed-token shape for a verified `15.6` reduced personality dataset when a source artifact exists.
+- Keep registry matching and release-diff interpretation out of parser fixtures.

@@ -78,6 +78,12 @@ The first parser should not:
 - parse non-hex tokens;
 - treat a parsed token as runtime attachment evidence.
 
+## Release Acquisition Relevance
+
+For future macOS `15.6` acquisition, PCI match parsing is an optional enrichment for reduced kext or DriverKit personality records. A verified `15.6` `Info.plist` containing `IOPCIMatch`, `IOPCIPrimaryMatch`, `IOPCISecondaryMatch`, or `IOPCIClassMatch` can be reduced with `tools/kext-personality-inventory/` and normalized with `tools/pci-match-parse/`.
+
+This experiment remains parser evidence only. Local examples from build `25F80` must not be used as `15.6` release evidence.
+
 ## Inferences
 
 - Token parsing can be independent from PCI registry blob decoding.
@@ -92,6 +98,6 @@ The first parser should not:
 
 ## Next Work
 
-- Normalized PCI JSON output.
-- Full JSON Schema validation policy.
-- Ancestor topology JSON mode.
+- Acquire a verified release source before treating parsed PCI tokens as release-specific evidence.
+- Keep hardware matching and registry joins separate from token parsing.
+- Add field-specific interpretation only after source-backed examples require it.
