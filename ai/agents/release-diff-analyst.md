@@ -39,6 +39,8 @@ Destination examples:
 
 Branch naming example: `macos/15.6-to-16.0-release-diff`.
 
+Follow-up branch example: `macos/16.0-kext-inventory-acquisition`.
+
 Validate changed fixtures with:
 
 ```sh

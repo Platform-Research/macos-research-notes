@@ -4,60 +4,60 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`ai/agents/artifact-analyst.md` now includes a note title example from the `ai/artifact-analyst-note-title-example` cycle.
+`ai/agents/release-diff-analyst.md` now includes a follow-up branch example from the `ai/release-diff-analyst-follow-up-branch-example` cycle.
 
 ## Current Recommendation
 
-Continue by adding a release diff analyst follow-up branch example.
+Continue by adding a publisher report path example.
 
-Reason: the release diff analyst already marks unresolved outputs, but a concrete follow-up branch example will make blocked comparisons easier to route.
+Reason: the publisher already has report path guidance, but another concrete report path example will make publication targets easier to keep consistent.
 
 ## Next Branch
 
 ```text
-ai/release-diff-analyst-follow-up-branch-example
+ai/publisher-report-path-example
 ```
 
 ## Session Goal
 
-Update release diff analyst agent:
+Update publisher agent:
 
 ```text
-ai/agents/release-diff-analyst.md
+ai/agents/publisher.md
 ```
 
 ## Research Question
 
-How should release diff analyst show follow-up branches?
+How should publisher show report paths?
 
 ## Target Output
 
 A bounded agent update that captures:
 
-- Follow-up branch example.
-- Blocked-comparison routing consistency.
+- Report path example.
+- Publication target consistency.
 - Workflow alignment.
-- No unsupported release claims.
+- No unsupported publication claims.
 - Existing validation expectations remain intact.
 
 ## Evidence To Collect
 
-- Existing release diff analyst instructions.
+- Existing publisher instructions.
 - Existing workflow rules.
-- Existing unresolved output guidance.
+- Existing report destination guidance.
 - Existing note and report guidance.
 
 ## Definition Of Done
 
 Done means:
 
-- `ai/agents/release-diff-analyst.md` includes a follow-up branch example.
-- It keeps blocked comparisons easier to route.
-- No unsupported release claims are made.
+- `ai/agents/publisher.md` includes a report path example.
+- It keeps publication targets easier to standardize.
+- No unsupported publication claims are made.
 - It keeps validation and unresolved handling intact.
 
 ## Follow-Up Queue
 
-1. Add publisher report path example.
-2. Add research lead unresolved output example.
-3. Add artifact analyst validation example.
+1. Add research lead unresolved output example.
+2. Add artifact analyst validation example.
+3. Add release diff analyst missing-artifact fixture reminder.
