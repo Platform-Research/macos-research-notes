@@ -8,6 +8,7 @@ Platform-facing metadata is the reduced evidence layer that connects boot artifa
 
 - Planning guide: `planning/PLATFORM_DIRECTION.md`
 - Related notes: `knowledge/iokit/IORegistry.md`, `knowledge/iokit/IOService.md`, `knowledge/iokit/IOPCIDevice.md`, `knowledge/iokit/kext-personalities.md`
+- Related platform notes: `knowledge/platform/matching-path.md`
 - Related experiments: `experiments/registry-ancestor-capture/README.md`, `experiments/registry-personality-join/README.md`, `experiments/pci-match-string-parser/README.md`
 - Related tools: `tools/ioreg-inventory/`, `tools/kext-personality-inventory/`, `tools/provider-class-join/`, `tools/pci-match-parse/`
 
