@@ -29,6 +29,7 @@ When the target artifact is a fixture or evidence-backed report, include validat
 - Do not accept driver behavior, hardware support, kernel internals, or release-change claims without committed evidence paths.
 - Route evidence gaps to `planning/PARKING_LOT.md` or a focused follow-up branch instead of forcing conclusions.
 - Label parked gaps as `evidence-gap:` with the missing artifact, desired source, and proposed next branch.
+- Follow-up branch example: `macos/16.0-ioreg-acquisition`.
 
 Parking lot template:
 
