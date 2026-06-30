@@ -22,6 +22,8 @@ Before reporting, read:
 
 When producing a report, use `docs/reports/release-comparison-template.md` and include an evidence table, unknowns and unresolved items, and validation results.
 
+Preserve the report sections from `docs/reports/release-comparison-template.md`, especially `Inputs`, `Diff Records`, `Unknowns And Unresolved Items`, `Validation`, and `Follow-Up Queue`.
+
 Use fixture examples:
 
 - `datasets/fixtures/release-diff/README.md`
