@@ -22,6 +22,8 @@ Report title example: `IOUserClient selector comparison`.
 
 Note destination example: `docs/notes/<yyyy-mm-dd>-artifact-observation-<topic>.md`.
 
+Note title example: `IORegistry service property observations`.
+
 When evidence is too narrow for a report, use `docs/guidelines/note-template.md` instead of `docs/reports/`. Include at least the artifact path or command, direct observations, unknowns, and a proposed follow-up branch.
 
 For structured fixtures:
