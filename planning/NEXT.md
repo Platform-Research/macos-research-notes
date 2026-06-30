@@ -4,60 +4,60 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`ai/agents/research-lead.md` now includes a fixture validation example from the `ai/research-lead-fixture-validation-example` cycle.
+`ai/agents/artifact-analyst.md` now includes an evidence-path reminder from the `ai/artifact-analyst-evidence-path-reminder` cycle.
 
 ## Current Recommendation
 
-Continue by adding an artifact analyst evidence-path reminder.
+Framework phase complete. Pivot to the first macOS research cycle.
 
-Reason: the artifact analyst already requires evidence paths for reports, but a more explicit reminder will make narrow artifact notes easier to audit.
+Reason: the framework is now good enough to support real work. Further process polish should happen only when the research itself exposes a gap.
 
 ## Next Branch
 
 ```text
-ai/artifact-analyst-evidence-path-reminder
+macos/release-diff-research-kickoff
 ```
 
 ## Session Goal
 
-Update artifact analyst agent:
+Start the first research note:
 
 ```text
-ai/agents/artifact-analyst.md
+docs/reports/<yyyy-mm-dd>-macos-15.6-to-16.0-release-diff.md
 ```
 
 ## Research Question
 
-How should artifact analyst preserve evidence paths?
+What is the first honest release-diff question we can answer with committed artifacts?
 
 ## Target Output
 
 A bounded agent update that captures:
 
-- Evidence-path reminder.
-- Artifact-note auditability.
-- Workflow alignment.
-- No unsupported artifact claims.
-- Existing validation expectations remain intact.
+- A bounded research kickoff.
+- One concrete macOS 15.6 -> 16.0 question.
+- One report or unresolved note path.
+- One explicit evidence gap if blocking.
+- No framework-only polishing unless the research run exposes a need.
 
 ## Evidence To Collect
 
-- Existing artifact analyst instructions.
+- Existing release-diff guidance.
 - Existing workflow rules.
-- Existing evidence-path guidance.
-- Existing note and report guidance.
+- Existing macOS 15.6 and 16.0 artifacts.
+- Existing fixture and report guidance.
 
 ## Definition Of Done
 
 Done means:
 
-- `ai/agents/artifact-analyst.md` includes an evidence-path reminder.
-- It keeps artifact outputs easier to audit.
-- No unsupported artifact claims are made.
-- It keeps validation and unresolved handling intact.
+- A first macOS research branch is created.
+- The session produces either a real report update or an explicit unresolved record.
+- The work uses committed evidence paths only.
+- Any new process changes are justified by the research itself.
 
 ## Follow-Up Queue
 
-1. Mark framework phase complete and pivot to macOS research.
-2. Start release-diff research kickoff.
-3. Capture first concrete research question.
+1. Compare currently committed 15.6 and 16.0 inputs.
+2. Identify the first evidence-backed diff or blocking gap.
+3. Update the report or missing-artifacts fixture accordingly.

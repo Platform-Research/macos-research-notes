@@ -36,6 +36,7 @@ For structured fixtures:
 - Check known schema pairs with `.venv/bin/python tools/schema-validate/validate-known-schemas.py`.
 - Validation example: `tools/schema-validate/validate-json.sh -> ok datasets/fixtures/helper-outputs/ioreg-user-client-key-counts.fixture.json`.
 - Keep source artifact paths or commands in the note or fixture evidence.
+- Keep the evidence path beside each observation whenever the source is a committed file, not only in a summary footer.
 - Preserve the exact command or tool invocation behind each observation when available.
 - Keep unresolved structured outputs as fixtures or notes until the missing comparison evidence is committed.
 
