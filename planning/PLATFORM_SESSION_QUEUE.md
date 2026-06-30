@@ -54,6 +54,56 @@ Each cycle should produce one small committed result and stop before boot modifi
 | 39 | Which tool README needs the clearest boundary against runtime claims? | provider-class join, PCI parser, kext personality tool READMEs | Boundary wording update. |
 | 40 | Which small dataset would best validate the platform-facing metadata note? | existing fixtures and schemas | One-dataset validation plan. |
 
+## Cycles 41-60
+
+| Cycle | Question | Evidence | Target Output |
+| --- | --- | --- | --- |
+| 41 | Which matching-path concepts should be promoted into a platform note? | `IOService`, `IORegistry`, kext personality notes | Matching path synthesis note. |
+| 42 | Which topology-only fields should become the default ancestor vocabulary? | registry ancestor experiment and topology schema | Ancestor vocabulary note. |
+| 43 | Which provider-class candidates are too broad without plane context? | provider-class join fixture and topology fixture | Broad-provider caution note. |
+| 44 | Which fixture records mention `IOResources` or virtual providers? | kext personality fixture | Virtual-provider boundary note. |
+| 45 | Which fixture records mention `IOPCIDevice` or PCI-specific keys? | parsed PCI fixture and kext personality fixture | PCI surface summary. |
+| 46 | Which source artifacts would let the same query run across releases? | acquisition manifests and release folders | Cross-release source checklist. |
+| 47 | Which platform-facing outputs should never include raw blobs? | acquisition rules and redaction sections | Blob redaction checklist. |
+| 48 | Which command outputs need host/build labeling? | runtime experiments and fixture READMEs | Runtime provenance checklist. |
+| 49 | Which schema fields carry enough provenance today? | acquisition manifest and dataset schemas | Provenance gap note. |
+| 50 | Which tool outputs already separate parsing from interpretation? | PCI parser and provider join tools | Interpretation-boundary note. |
+| 51 | Which registry object names might still be identifying? | ancestor capture experiment | Object-name redaction decision. |
+| 52 | Which class paths are stable enough for fixtures? | topology fixture and schema | Class-path stability note. |
+| 53 | Which bundle identifiers can seed a platform-facing service map? | kext personality fixture | Bundle service-map draft. |
+| 54 | Which personality fields imply probing priority? | `IOProbeScore`, `IOMatchCategory` fields | Probe metadata note. |
+| 55 | Which personality fields imply family-specific matching? | PCI keys, USB name matches, vendor/product keys | Family-specific matching note. |
+| 56 | Which first-pass questions are answerable without binary analysis? | current notes and fixtures | No-binary research checklist. |
+| 57 | Which questions require kernel collection metadata before continuing? | platform note unknowns | Kernel-collection blocker note. |
+| 58 | Which release-diff states should map to platform-facing unknowns? | release-diff schema and fixtures | Unknown-state mapping note. |
+| 59 | Which reduced examples should be duplicated for docs? | fixtures and README guidance | Example selection note. |
+| 60 | Which platform queue cycles can be done entirely offline? | current repository files | Offline-session shortlist. |
+
+## Cycles 61-80
+
+| Cycle | Question | Evidence | Target Output |
+| --- | --- | --- | --- |
+| 61 | Which IOKit notes should link back to platform-facing metadata? | `knowledge/iokit/` notes | Related-links update. |
+| 62 | Which platform notes should exist before boot artifacts are acquired? | `planning/PLATFORM_DIRECTION.md` | Pre-boot note backlog. |
+| 63 | Which boot artifact terms need glossary treatment first? | acquisition rules and roadmap | Boot glossary stub. |
+| 64 | Which kernel collection terms need glossary treatment first? | roadmap and acquisition rules | Kernel collection glossary stub. |
+| 65 | Which device-tree questions can be asked without raw dumps? | IORegistry plane notes | Device-tree question note. |
+| 66 | Which `IODeviceTree` registry plane facts are already known? | `IORegistry.md` runtime plane list | Device-tree plane note. |
+| 67 | Which power-management data should be omitted until a schema exists? | redaction rules and registry notes | Power redaction note. |
+| 68 | Which interrupt/timer concepts need artifact-backed sources? | platform direction guide | Interrupt/timer source plan. |
+| 69 | Which PCIe bridge metadata can be studied safely? | IOPCIDevice note and topology fixtures | PCIe bridge metadata note. |
+| 70 | Which USB metadata can be studied safely? | existing USB personality examples | USB metadata note. |
+| 71 | Which NVMe metadata can be studied safely? | parsed PCI fixture and IOPCIDevice note | NVMe metadata note. |
+| 72 | Which display metadata can be studied safely? | personality schemas and redaction rules | Display metadata note. |
+| 73 | Which networking metadata can be studied safely? | PCI and personality tooling | Networking metadata note. |
+| 74 | Which storage metadata can be studied safely? | NVMe and PCI notes | Storage metadata note. |
+| 75 | Which user-client metadata is platform-relevant but sensitive? | IOUserClient note and fixture rules | User-client sensitivity note. |
+| 76 | Which DriverKit metadata should be separated from kext metadata? | kext personality schema and tool README | DriverKit split note. |
+| 77 | Which release folders need platform-facing artifact indexes later? | `macos/15.6`, `macos/16.0`, `macos/26.5.1` | Release index follow-up. |
+| 78 | Which datasets should eventually move from fixtures to examples? | fixture README files | Dataset promotion note. |
+| 79 | Which claims should be blocked in reviews? | scope boundaries and platform direction | Review checklist update. |
+| 80 | Which next concrete note has the highest value today? | session queue and existing notes | Next-note decision. |
+
 ## Selection Rule
 
 Choose the first cycle whose evidence already exists locally. If the evidence does not exist, either acquire it under the release acquisition rules or leave the cycle unresolved.
