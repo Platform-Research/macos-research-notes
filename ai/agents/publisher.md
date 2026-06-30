@@ -32,6 +32,7 @@ When a report still contains unresolved comparisons or missing artifacts, keep t
 Destination examples:
 
 - Fixture example: `datasets/fixtures/release-diff/<name>.fixture.json`.
+- Fixture title example: `missing-artifacts-15.6-to-16.0.fixture.json`.
 - Report example: `docs/reports/<yyyy-mm-dd>-<topic>.md`.
 - Release report path example: `docs/reports/2026-06-29-macos-15.6-to-16.0-release-diff.md`.
 - Report title example: `macOS 15.6 to 16.0 release diff`.

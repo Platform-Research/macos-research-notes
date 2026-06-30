@@ -4,60 +4,60 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`ai/agents/release-diff-analyst.md` now includes a missing-artifact fixture reminder from the `ai/release-diff-analyst-missing-artifact-fixture-reminder` cycle.
+`ai/agents/publisher.md` now includes a fixture title example from the `ai/publisher-fixture-title-example` cycle.
 
 ## Current Recommendation
 
-Continue by adding a publisher fixture title example.
+Continue by adding a research lead validation command example.
 
-Reason: the publisher already knows fixture paths, but a fixture title example will make structured outputs easier to refer to consistently in prose.
+Reason: the research lead already asks for validation gates, but a concrete validation command example will make scoped completion definitions faster to write.
 
 ## Next Branch
 
 ```text
-ai/publisher-fixture-title-example
+ai/research-lead-validation-command-example
 ```
 
 ## Session Goal
 
-Update publisher agent:
+Update research lead agent:
 
 ```text
-ai/agents/publisher.md
+ai/agents/research-lead.md
 ```
 
 ## Research Question
 
-How should publisher show fixture title patterns?
+How should research lead show validation commands?
 
 ## Target Output
 
 A bounded agent update that captures:
 
-- Fixture title example.
-- Structured-output naming consistency.
+- Validation command example.
+- Completion-definition consistency.
 - Workflow alignment.
-- No unsupported publication claims.
+- No unsupported planning claims.
 - Existing validation expectations remain intact.
 
 ## Evidence To Collect
 
-- Existing publisher instructions.
+- Existing research lead instructions.
 - Existing workflow rules.
-- Existing fixture examples.
+- Existing validation commands.
 - Existing note and report guidance.
 
 ## Definition Of Done
 
 Done means:
 
-- `ai/agents/publisher.md` includes a fixture title example.
-- It keeps structured outputs easier to name in prose.
-- No unsupported publication claims are made.
+- `ai/agents/research-lead.md` includes a validation command example.
+- It keeps completion definitions easier to standardize.
+- No unsupported planning claims are made.
 - It keeps validation and unresolved handling intact.
 
 ## Follow-Up Queue
 
-1. Add research lead validation command example.
-2. Add artifact analyst follow-up branch example.
-3. Add release diff analyst report section reminder.
+1. Add artifact analyst follow-up branch example.
+2. Add release diff analyst report section reminder.
+3. Add publisher unresolved title reminder.
