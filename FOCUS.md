@@ -6,6 +6,8 @@ Use this file before starting any work session.
 
 Create a serious Apple platform internals research lab: knowledge base, release-diff pipeline, artifact indexing, graph of relationships, and publishable documentation.
 
+Favor work that maps platform assumptions, boot artifacts, hardware-facing metadata, and IOKit matching before any hardware-specific enablement work.
+
 ## Do First
 
 1. Capture raw material.
@@ -19,6 +21,7 @@ Create a serious Apple platform internals research lab: knowledge base, release-
 
 - Building a full macOS GPU driver.
 - Chasing unsupported hardware before understanding the supported path.
+- Treating platform portability as an implementation task before the boot, registry, driver, and artifact layers are documented.
 - Writing large essays before small atomic notes exist.
 - Creating complex tools before the manual workflow is understood.
 - Treating AI output as evidence without logs, artifacts, or references.
@@ -43,6 +46,8 @@ After working, record:
 ## Parking Lot
 
 Use [planning/PARKING_LOT.md](planning/PARKING_LOT.md) for tempting ideas that are not today's work.
+
+Use [planning/PLATFORM_DIRECTION.md](planning/PLATFORM_DIRECTION.md) when choosing between acquisition, IOKit, boot, registry, and hardware-facing research tasks.
 
 ## Workflow Rules
 

@@ -9,6 +9,14 @@ Ideas that matter, but are not the current focus.
 - Study framebuffer and device-id patching patterns.
 - Understand Metal/userland requirements.
 
+## Platform Foundations
+
+- Map boot handoff artifacts and kernel collection metadata.
+- Catalog platform-facing kexts, dexts, and provider classes.
+- Study DeviceTree, registry ancestry, and provider matching paths.
+- Compare controller-facing personalities for PCIe, USB, NVMe, display, timers, interrupts, and power management.
+- Identify which questions can be answered from reduced metadata before any boot or patching work exists.
+
 ## Platform Ideas
 
 - VS Code extension: Darwin Research.

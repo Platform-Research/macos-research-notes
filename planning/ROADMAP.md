@@ -9,20 +9,20 @@
 
 ## Phase 1: Knowledge Base
 
-- Build atomic notes for IOKit, kernel, kexts, dyld, frameworks, Metal, USB, NVMe, and boot.
+- Build atomic notes for IOKit, kernel, kexts, dyld, frameworks, Metal, USB, NVMe, boot, platform services, and hardware-facing controllers.
 - Prefer one concept per Markdown file.
 - Add source, confidence, related artifacts, and open questions to each note.
 
 ## Phase 2: Artifact Workflow
 
 - Store macOS release materials under `macos/<version>/`.
-- Track extracted kernels, kexts, frameworks, dyld shared cache metadata, and symbol data.
+- Track extracted kernels, kernel collections, kexts, dexts, frameworks, dyld shared cache metadata, symbol data, and reduced platform-facing metadata.
 - Keep raw downloads out of Git unless they are tiny metadata files.
 
 ## Phase 3: Comparison Pipeline
 
 - Compare macOS versions by artifact inventory first.
-- Then compare symbols, class names, strings, entitlements, kext metadata, and dependency graphs.
+- Then compare symbols, class names, strings, entitlements, kext metadata, platform-facing personalities, and dependency graphs.
 - Publish short change reports.
 
 ## Phase 4: Research Tooling
@@ -36,3 +36,4 @@
 - Publish notes only when they separate observation, inference, and speculation.
 - Prefer reproducible findings over impressive claims.
 - Keep risky driver work as a long-range research theme, not the first milestone.
+- Keep platform enablement claims out of public output until supported by reproducible artifacts and bounded experiments.
