@@ -4,60 +4,60 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`ai/agents/research-lead.md` now includes an unresolved output example from the `ai/research-lead-unresolved-output-example` cycle.
+`ai/agents/artifact-analyst.md` now includes a validation example from the `ai/artifact-analyst-validation-example` cycle.
 
 ## Current Recommendation
 
-Continue by adding an artifact analyst validation example.
+Continue by adding a release diff analyst missing-artifact fixture reminder.
 
-Reason: the artifact analyst already points to validation commands, but a concrete validation example will help keep structured artifact outputs auditable.
+Reason: the release diff analyst already supports unresolved outputs, but an explicit missing-artifact fixture reminder will reduce the chance of inventing symmetry across releases.
 
 ## Next Branch
 
 ```text
-ai/artifact-analyst-validation-example
+ai/release-diff-analyst-missing-artifact-fixture-reminder
 ```
 
 ## Session Goal
 
-Update artifact analyst agent:
+Update release diff analyst agent:
 
 ```text
-ai/agents/artifact-analyst.md
+ai/agents/release-diff-analyst.md
 ```
 
 ## Research Question
 
-How should artifact analyst show validation results?
+How should release diff analyst handle missing-artifact fixtures?
 
 ## Target Output
 
 A bounded agent update that captures:
 
-- Validation example.
-- Structured evidence consistency.
+- Missing-artifact fixture reminder.
+- Coverage-gap consistency.
 - Workflow alignment.
-- No unsupported artifact claims.
+- No unsupported release claims.
 - Existing validation expectations remain intact.
 
 ## Evidence To Collect
 
-- Existing artifact analyst instructions.
+- Existing release diff analyst instructions.
 - Existing workflow rules.
-- Existing validation commands.
+- Existing missing-artifact examples.
 - Existing note and report guidance.
 
 ## Definition Of Done
 
 Done means:
 
-- `ai/agents/artifact-analyst.md` includes a validation example.
-- It keeps structured artifact outputs easier to audit.
-- No unsupported artifact claims are made.
+- `ai/agents/release-diff-analyst.md` includes a missing-artifact fixture reminder.
+- It keeps coverage gaps easier to represent honestly.
+- No unsupported release claims are made.
 - It keeps validation and unresolved handling intact.
 
 ## Follow-Up Queue
 
-1. Add release diff analyst missing-artifact fixture reminder.
-2. Add publisher fixture title example.
-3. Add research lead validation command example.
+1. Add publisher fixture title example.
+2. Add research lead validation command example.
+3. Add artifact analyst follow-up branch example.
