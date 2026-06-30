@@ -4,60 +4,60 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`ai/agents/research-lead.md` now includes a validation command example from the `ai/research-lead-validation-command-example` cycle.
+`ai/agents/artifact-analyst.md` now includes a follow-up branch example from the `ai/artifact-analyst-follow-up-branch-example` cycle.
 
 ## Current Recommendation
 
-Continue by adding an artifact analyst follow-up branch example.
+Continue by adding a release diff analyst report section reminder.
 
-Reason: the artifact analyst already asks for follow-up branches in notes, but a concrete example will make unresolved observations easier to hand off cleanly.
+Reason: the release diff analyst already points at the report template, but an explicit section reminder will make final outputs more uniform.
 
 ## Next Branch
 
 ```text
-ai/artifact-analyst-follow-up-branch-example
+ai/release-diff-analyst-report-section-reminder
 ```
 
 ## Session Goal
 
-Update artifact analyst agent:
+Update release diff analyst agent:
 
 ```text
-ai/agents/artifact-analyst.md
+ai/agents/release-diff-analyst.md
 ```
 
 ## Research Question
 
-How should artifact analyst show follow-up branches?
+How should release diff analyst preserve report sections?
 
 ## Target Output
 
 A bounded agent update that captures:
 
-- Follow-up branch example.
-- Handoff consistency.
+- Report section reminder.
+- Report structure consistency.
 - Workflow alignment.
-- No unsupported artifact claims.
+- No unsupported release claims.
 - Existing validation expectations remain intact.
 
 ## Evidence To Collect
 
-- Existing artifact analyst instructions.
+- Existing release diff analyst instructions.
 - Existing workflow rules.
-- Existing follow-up examples.
+- Existing report template guidance.
 - Existing note and report guidance.
 
 ## Definition Of Done
 
 Done means:
 
-- `ai/agents/artifact-analyst.md` includes a follow-up branch example.
-- It keeps unresolved handoffs easier to standardize.
-- No unsupported artifact claims are made.
+- `ai/agents/release-diff-analyst.md` includes a report section reminder.
+- It keeps release reports easier to structure consistently.
+- No unsupported release claims are made.
 - It keeps validation and unresolved handling intact.
 
 ## Follow-Up Queue
 
-1. Add release diff analyst report section reminder.
-2. Add publisher unresolved title reminder.
-3. Add research lead fixture validation example.
+1. Add publisher unresolved title reminder.
+2. Add research lead fixture validation example.
+3. Add artifact analyst evidence-path reminder.

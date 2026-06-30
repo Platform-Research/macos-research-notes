@@ -26,6 +26,8 @@ Note title example: `IORegistry service property observations`.
 
 When evidence is too narrow for a report, use `docs/guidelines/note-template.md` instead of `docs/reports/`. Include at least the artifact path or command, direct observations, unknowns, and a proposed follow-up branch.
 
+Follow-up branch example: `macos/16.0-ioreg-service-property-capture`.
+
 For structured fixtures:
 
 - Write examples under `datasets/fixtures/`.
