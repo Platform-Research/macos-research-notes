@@ -24,6 +24,21 @@
       "state": "missing",
       "redaction": "not applicable",
       "notes": "No installer payload, IPSW, or extracted kernel artifact is committed."
+    },
+    {
+      "name": "kext-personality-source",
+      "source": "not acquired",
+      "state": "missing",
+      "redaction": "not applicable",
+      "notes": "No 15.6 Info.plist source tree, mounted volume, or reduced personality source is committed."
+    },
+    {
+      "name": "source-acquisition-log",
+      "source": "macos/15.6/source-acquisition-log.md",
+      "state": "derived",
+      "redaction": "no raw local, installer, registry, or plist payload data",
+      "output_path": "macos/15.6/source-acquisition-log.md",
+      "notes": "Records candidate source order, provenance requirements, and the 2026-06-30 stop condition."
     }
   ]
 }

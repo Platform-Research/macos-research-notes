@@ -8,6 +8,7 @@ This folder is reserved for reduced macOS `15.6` metadata. No release-specific a
 
 - Runtime facts: not recorded.
 - Artifact index: `macos/15.6/artifacts.md`.
+- Source acquisition log: `macos/15.6/source-acquisition-log.md`.
 - Reduced datasets: not created.
 - Raw artifacts: not committed.
 
@@ -20,6 +21,7 @@ This folder is reserved for reduced macOS `15.6` metadata. No release-specific a
 ## Readiness Links
 
 - Artifact index: `macos/15.6/artifacts.md`
+- Source acquisition log: `macos/15.6/source-acquisition-log.md`
 - Acquisition checklist: `docs/guidelines/acquisition-checklist.md`
 - Release diff readiness: `docs/guidelines/release-diff-input-readiness.md`
 
@@ -34,3 +36,7 @@ This release is not comparison-ready until comparable reduced artifacts exist or
 ## Boundaries
 
 This stub does not claim any macOS `15.6` behavior, build number, kernel version, or driver metadata.
+
+## Current Acquisition Decision
+
+The next useful source target is reduced kext or DriverKit `Info.plist` personality metadata derived from a legal `15.6` source. Raw installers, IPSWs, full plist dumps, and binary payloads remain out of scope for committed files.

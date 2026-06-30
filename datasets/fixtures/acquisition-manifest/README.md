@@ -18,7 +18,7 @@ This fixture demonstrates release acquisition manifest shape without committing 
 
 | Release | Fixture | Current State | Evidence Boundary |
 | --- | --- | --- | --- |
-| `15.6` | `datasets/fixtures/acquisition-manifest/15.6.fixture.json` | release folder and artifact index are derived; installer and comparable reduced artifacts are missing | no raw artifacts acquired |
+| `15.6` | `datasets/fixtures/acquisition-manifest/15.6.fixture.json` | release folder, artifact index, and source acquisition log are derived; installer, personality source, and comparable reduced artifacts are missing | no raw artifacts acquired |
 | `16.0` | `datasets/fixtures/acquisition-manifest/16.0.fixture.json` | release folder and artifact index are derived; installer and comparable reduced artifacts are missing | no raw artifacts acquired |
 
 ## Validation

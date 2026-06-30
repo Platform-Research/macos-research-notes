@@ -8,6 +8,7 @@ This is a placeholder index for macOS `15.6` release artifacts. No comparable re
 
 - Runtime commands: not recorded.
 - Kext personality inventory: not acquired.
+- Kext personality source candidate: documented in `macos/15.6/source-acquisition-log.md`.
 - IORegistry inventory: not acquired.
 - Release diff input: missing.
 
@@ -21,8 +22,14 @@ This is a placeholder index for macOS `15.6` release artifacts. No comparable re
 
 - Coverage README: `datasets/fixtures/acquisition-manifest/README.md`
 - Current evidence state: release folder and artifact index are derived.
-- Missing reduced inputs: kext personality inventory, IORegistry inventory, release diff input.
+- Missing reduced inputs: kext personality source, kext personality inventory, IORegistry inventory, release diff input.
 - Raw artifacts acquired: no.
+
+## Candidate Source Order
+
+1. User-provided `15.6` installer or mounted system volume with documented provenance.
+2. Official Apple `15.6` installer source acquired into `downloads/` and reduced locally.
+3. Local host already running `15.6`, using read-only extension paths and local runtime commands.
 
 ## Provenance Template
 
@@ -43,6 +50,7 @@ Validation:
 - IPSW metadata;
 - kernel collection metadata;
 - DriverKit metadata;
+- reduced kext or DriverKit `Info.plist` personality source;
 - reduced kext personality datasets.
 
 ## Rules
