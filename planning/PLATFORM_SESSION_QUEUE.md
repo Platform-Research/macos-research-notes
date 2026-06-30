@@ -29,6 +29,31 @@ Each cycle should produce one small committed result and stop before boot modifi
 | 19 | Which local-runtime examples must be labeled non-release evidence? | current host checks and fixture README files | Evidence-boundary update. |
 | 20 | Which one artifact would unblock the most platform-facing questions? | `planning/NEXT.md`, `macos/15.6/source-acquisition-log.md` | Next-work recommendation update. |
 
+## Cycles 21-40
+
+| Cycle | Question | Evidence | Target Output |
+| --- | --- | --- | --- |
+| 21 | Which provider-class join examples already exist? | `datasets/fixtures/provider-class-join/provider-class-join.fixture.json` | Candidate join summary note. |
+| 22 | Which candidate joins need ancestor context before interpretation? | provider-class join fixture, topology fixture | Ancestor requirement note. |
+| 23 | Which PCI ID decoder behavior is already tested? | `tools/pci-id-decode/`, decoder tests | Decoder readiness note. |
+| 24 | Which registry identity fields remain undecoded in fixtures? | IORegistry fixture and PCI device inventory experiment | PCI identity gap note. |
+| 25 | Which fixture fields are safe enough for a controller-family index? | helper outputs and schemas | Controller-family index draft. |
+| 26 | Which storage-facing personalities are visible in reduced examples? | kext personality fixture and parsed PCI fixture | Storage metadata note. |
+| 27 | Which networking-facing personalities are visible in reduced examples? | kext personality fixture or future reduced source | Networking metadata note or unresolved record. |
+| 28 | Which USB-facing provider classes need first notes? | `knowledge/iokit/IOService.md`, helper fixture, USB experiment context | USB provider shortlist. |
+| 29 | Which NVMe-facing classes or bundles need first notes? | parsed PCI fixture, kext personality fixture | NVMe provider shortlist. |
+| 30 | Which display-facing metadata can be cataloged without runtime claims? | personality fields only | Display metadata shortlist. |
+| 31 | Which DriverKit bundle fields appear in current schemas? | `datasets/schemas/kext-personality.schema.json` | DriverKit schema commentary. |
+| 32 | Which entitlement fields should stay omitted from first-pass records? | redaction policies in fixtures and tool READMEs | Entitlement redaction note. |
+| 33 | Which user-client surfaces are relevant to platform-facing services? | `knowledge/iokit/IOUserClient.md`, user-client fixture | User-client boundary note. |
+| 34 | Which registry topology fixture can feed a provider-class join smoke test? | topology fixture and provider join tool README | Reproducible smoke-test note. |
+| 35 | Which generated release-diff fixture preserves unresolved platform gaps? | generated release diff fixture, missing-artifacts fixture | Unresolved comparison guidance. |
+| 36 | Which acquisition manifest fields should be present before platform comparison? | acquisition manifest schema and fixtures | Manifest readiness checklist. |
+| 37 | Which source paths in fixtures are local-runtime examples only? | fixture README files and source fields | Local-runtime labeling pass. |
+| 38 | Which platform-facing note should be promoted next from an experiment? | registry ancestor, registry join, PCI parser experiments | Promotion candidate decision. |
+| 39 | Which tool README needs the clearest boundary against runtime claims? | provider-class join, PCI parser, kext personality tool READMEs | Boundary wording update. |
+| 40 | Which small dataset would best validate the platform-facing metadata note? | existing fixtures and schemas | One-dataset validation plan. |
+
 ## Selection Rule
 
 Choose the first cycle whose evidence already exists locally. If the evidence does not exist, either acquire it under the release acquisition rules or leave the cycle unresolved.
