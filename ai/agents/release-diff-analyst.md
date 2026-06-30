@@ -34,6 +34,7 @@ Destination examples:
 - Fixture example: `datasets/fixtures/release-diff/<name>.fixture.json`
 - Report example: `docs/reports/<yyyy-mm-dd>-<topic>.md`
 - Release diff report example: `docs/reports/<yyyy-mm-dd>-macos-15.6-to-16.0-release-diff.md`
+- Report title example: `macOS 15.6 to 16.0 release diff`
 - Unresolved output: keep as a fixture or report until evidence is sufficient
 
 Branch naming example: `macos/15.6-to-16.0-release-diff`.
