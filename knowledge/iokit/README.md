@@ -10,6 +10,10 @@ This track documents IOKit concepts needed to understand macOS drivers, device m
 4. `IOUserClient.md` - created.
 5. `kext-personalities.md` - created.
 
+## Related Tracks
+
+- `knowledge/platform/platform-facing-metadata.md`
+
 ## Rules
 
 - Keep one concept per note.

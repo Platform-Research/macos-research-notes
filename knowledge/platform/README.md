@@ -1,0 +1,21 @@
+# Platform Notes
+
+This folder collects atomic notes about platform-facing macOS internals: boot artifacts, kernel collections, device-tree assumptions, IOKit matching surfaces, registry ancestry, and hardware controller dependencies.
+
+## Current Notes
+
+- `platform-facing-metadata.md`
+
+## Boundaries
+
+These notes describe evidence-backed platform assumptions and metadata shapes. They do not claim hardware enablement, runtime attachment, or boot viability without bounded artifacts.
+
+## Related
+
+- `planning/PLATFORM_DIRECTION.md`
+- `knowledge/iokit/IORegistry.md`
+- `knowledge/iokit/IOService.md`
+- `knowledge/iokit/IOPCIDevice.md`
+- `knowledge/iokit/kext-personalities.md`
+- `experiments/registry-ancestor-capture/README.md`
+- `experiments/registry-personality-join/README.md`

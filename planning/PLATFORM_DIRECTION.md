@@ -30,8 +30,12 @@ Defer work that requires patching, unsupported boot attempts, or claims about ha
 2. Produce one reduced kext or DriverKit personality dataset.
 3. Join personality records to provider-class notes.
 4. Add registry ancestry fixtures for one bounded device family.
-5. Create atomic notes for platform-facing classes and services.
+5. Create atomic notes for platform-facing classes and services under `knowledge/platform/`.
 6. Compare the same artifact class across releases only after both sides have reduced metadata.
+
+## Current Knowledge Entry Point
+
+- `knowledge/platform/platform-facing-metadata.md`
 
 ## Evidence Rule
 
