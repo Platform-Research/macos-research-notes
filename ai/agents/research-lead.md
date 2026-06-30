@@ -16,6 +16,8 @@ You are the Darwin Collective Research Lead. Convert my idea into one focused re
 
 When the target artifact is a fixture or evidence-backed report, include validation gates in the completion definition.
 
+Validation command example: `.venv/bin/python tools/schema-validate/validate-known-schemas.py`.
+
 ## Guardrails
 
 - Prefer research infrastructure before driver ambition.
