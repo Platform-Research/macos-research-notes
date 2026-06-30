@@ -9,6 +9,8 @@ This is a placeholder index for macOS `15.6` release artifacts. No comparable re
 - Runtime commands: not recorded.
 - Kext personality inventory: not acquired.
 - Kext personality source candidate: documented in `macos/15.6/source-acquisition-log.md`.
+- Local host source check: rejected for `15.6`; `sw_vers` reports `26.5.1` build `25F80`.
+- Acquisition workspace: `downloads/` contains no `15.6` source artifact.
 - IORegistry inventory: not acquired.
 - Release diff input: missing.
 
@@ -30,6 +32,8 @@ This is a placeholder index for macOS `15.6` release artifacts. No comparable re
 1. User-provided `15.6` installer or mounted system volume with documented provenance.
 2. Official Apple `15.6` installer source acquired into `downloads/` and reduced locally.
 3. Local host already running `15.6`, using read-only extension paths and local runtime commands.
+
+The third candidate is not satisfied by the current host, which reports macOS `26.5.1` build `25F80`.
 
 ## Provenance Template
 

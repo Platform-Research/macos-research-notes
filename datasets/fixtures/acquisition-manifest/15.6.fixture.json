@@ -38,7 +38,16 @@
       "state": "derived",
       "redaction": "no raw local, installer, registry, or plist payload data",
       "output_path": "macos/15.6/source-acquisition-log.md",
-      "notes": "Records candidate source order, provenance requirements, and the 2026-06-30 stop condition."
+      "notes": "Records candidate source order, local host rejection, empty acquisition area, provenance requirements, and the 2026-06-30 stop condition."
+    },
+    {
+      "name": "local-host-source-check",
+      "source": "sw_vers; uname -a",
+      "acquisition_date": "2026-06-30",
+      "state": "derived",
+      "redaction": "records OS version, build, kernel version, and architecture only",
+      "output_path": "macos/15.6/source-acquisition-log.md",
+      "notes": "Current host reports macOS 26.5.1 build 25F80 and Darwin 25.5.0, so it is rejected as a 15.6 source."
     }
   ]
 }

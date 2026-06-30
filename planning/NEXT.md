@@ -4,13 +4,14 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`macos/15.6/source-acquisition-log.md` records twenty bounded acquisition cycles for `15.6`: the smallest useful next artifact is reduced kext or DriverKit `Info.plist` personality metadata derived from a legal `15.6` source, and no raw source artifact was acquired in the session.
+`macos/15.6/source-acquisition-log.md` records forty bounded acquisition cycles for `15.6`: the target is reduced kext or DriverKit `Info.plist` personality metadata, the current host was rejected as a `15.6` source because it reports `26.5.1` build `25F80`, and no raw source artifact is present in `downloads/`.
 
 ## Current Recommendation
 
 Pause on release-diff extraction until a `15.6` source artifact is available.
 
 Reason: the next useful step is no longer interpretation work inside the repo. It is obtaining or identifying one reproducible `15.6` source artifact that can feed the existing extraction tooling.
+The current local host cannot satisfy that requirement.
 
 ## Next Branch
 
@@ -57,6 +58,7 @@ Done means:
 
 ## Follow-Up Queue
 
-1. Identify the best `15.6` source candidate to acquire.
+1. Supply or acquire a legal `15.6` installer, mounted system volume, or other source with documented provenance.
 2. Record provenance and legality constraints for that source.
-3. Re-enter personality extraction only after the source exists in committed form.
+3. Derive one reduced kext or DriverKit personality dataset.
+4. Re-enter release-diff work only after comparable reduced metadata exists.

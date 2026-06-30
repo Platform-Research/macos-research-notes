@@ -9,6 +9,7 @@ This folder is reserved for reduced macOS `15.6` metadata. No release-specific a
 - Runtime facts: not recorded.
 - Artifact index: `macos/15.6/artifacts.md`.
 - Source acquisition log: `macos/15.6/source-acquisition-log.md`.
+- Local host source check: current host rejected as a `15.6` source because it reports `26.5.1` build `25F80`.
 - Reduced datasets: not created.
 - Raw artifacts: not committed.
 
@@ -40,3 +41,5 @@ This stub does not claim any macOS `15.6` behavior, build number, kernel version
 ## Current Acquisition Decision
 
 The next useful source target is reduced kext or DriverKit `Info.plist` personality metadata derived from a legal `15.6` source. Raw installers, IPSWs, full plist dumps, and binary payloads remain out of scope for committed files.
+
+The current local host must not be used as a substitute source for `15.6`; it reports macOS `26.5.1` build `25F80`.

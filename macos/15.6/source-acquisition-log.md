@@ -45,6 +45,60 @@ The first committed output should be reduced metadata, not a raw installer, IPSW
 | 19 | Define next command path | Once a source plist exists, run `tools/kext-personality-inventory/kext-personality-inventory.sh personalities-json <Info.plist>`. |
 | 20 | Define done state | The next successful session should add one provenance-backed reduced `15.6` dataset or record the exact acquisition failure. |
 
+## Cycles 21-40
+
+| Cycle | Focus | Result |
+| --- | --- | --- |
+| 21 | Check local host version | `sw_vers` reports ProductVersion `26.5.1`, BuildVersion `25F80`; this host is not a `15.6` source. |
+| 22 | Check local kernel version | `uname -a` reports Darwin Kernel Version `25.5.0`; this supports the host mismatch finding. |
+| 23 | Check temporary acquisition area | `downloads/` contains only `.gitkeep`; no temporary `15.6` source is present. |
+| 24 | Check release folder contents | `macos/15.6/` contains only stubs and this acquisition log; no source artifact is hidden there. |
+| 25 | Evaluate local-runtime candidate | The local-runtime source path is rejected for `15.6` because the host version does not match. |
+| 26 | Evaluate user-provided candidate | Still viable, but no user-provided path or mounted source has been supplied in this repository. |
+| 27 | Evaluate official-source candidate | Still viable, but no network acquisition was attempted in this session. |
+| 28 | Preserve raw-artifact boundary | Even if an installer is acquired later, it should remain outside committed files. |
+| 29 | Narrow the first useful dataset | The next committed dataset should be a reduced personality inventory sample or source manifest, not a full extension tree. |
+| 30 | Identify evidence command for local source | If a future host runs `15.6`, capture `sw_vers` and `uname -a` before reducing metadata. |
+| 31 | Identify evidence command for mounted source | If a mounted source is supplied, record the mount path and the exact `Info.plist` path before extraction. |
+| 32 | Identify evidence command for official installer | If an official installer is downloaded, record the URL or acquisition command and local storage path in `downloads/`. |
+| 33 | Avoid cross-release contamination | Do not use the current `26.5.1` host's extension metadata as evidence for `15.6`. |
+| 34 | Update manifest intent | The manifest should distinguish missing source from a derived host check. |
+| 35 | Update artifact index intent | The artifact index should state that the local host was checked and rejected as a `15.6` source. |
+| 36 | Keep release diff blocked | No `15.6` to `16.0` comparison can be improved from the `26.5.1` host check alone. |
+| 37 | Define smallest next success | One reduced, schema-shaped personality record from a verified `15.6` source would be enough to move from pure blocker to partial acquisition. |
+| 38 | Define next failure state | If a supplied source cannot be proven to be `15.6`, record it as unavailable rather than deriving metadata. |
+| 39 | Keep tooling unchanged | Existing extraction tooling remains sufficient for the next step once a source plist exists. |
+| 40 | Define branch outcome | This branch now records target selection, host rejection, empty acquisition area, and provenance requirements. |
+
+## Local Host Source Check
+
+The current host was checked as a possible local source and rejected for `15.6` acquisition.
+
+```text
+Command: sw_vers
+ProductName: macOS
+ProductVersion: 26.5.1
+BuildVersion: 25F80
+
+Command: uname -a
+Darwin Kernel Version: 25.5.0
+Architecture: arm64
+```
+
+Result: local runtime metadata from this host must not be used as evidence for macOS `15.6`.
+
+## Repository Source Check
+
+```text
+Command: find downloads -maxdepth 2 -type f -print
+Result: downloads/.gitkeep
+
+Command: find macos/15.6 -maxdepth 2 -type f -print
+Result: stubs and acquisition log only
+```
+
+Result: no committed or temporary `15.6` source artifact is currently available in the repository workspace.
+
 ## Required Provenance For The Next Artifact
 
 Use this minimum block before committing any reduced `15.6` output:
@@ -64,4 +118,4 @@ Stop condition, if unavailable:
 
 ## Next Step
 
-Acquire one legal `15.6` source artifact outside git or identify an existing local source, then derive a minimal kext personality JSON record set with committed provenance.
+Acquire one legal `15.6` source artifact outside git or identify an existing mounted/user-provided source, then derive a minimal kext personality JSON record set with committed provenance. Do not use the current `26.5.1` host as a substitute for `15.6`.
