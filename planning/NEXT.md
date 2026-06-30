@@ -4,60 +4,60 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`ai/agents/research-lead.md` now includes a note title example from the `ai/research-lead-note-title-example` cycle.
+`ai/agents/artifact-analyst.md` now includes a report title example from the `ai/artifact-analyst-report-title-example` cycle.
 
 ## Current Recommendation
 
-Continue by adding an artifact analyst report title example.
+Continue by adding a release diff analyst report title example.
 
-Reason: the artifact analyst already names report destinations, but a concrete report title example will make artifact comparison outputs easier to scan.
+Reason: the release diff analyst already names release reports by path, but a concrete title example will keep finished reports more uniform.
 
 ## Next Branch
 
 ```text
-ai/artifact-analyst-report-title-example
+ai/release-diff-analyst-report-title-example
 ```
 
 ## Session Goal
 
-Update artifact analyst agent:
+Update release diff analyst agent:
 
 ```text
-ai/agents/artifact-analyst.md
+ai/agents/release-diff-analyst.md
 ```
 
 ## Research Question
 
-How should artifact analyst show report title patterns?
+How should release diff analyst show report title patterns?
 
 ## Target Output
 
 A bounded agent update that captures:
 
 - Report title example.
-- Artifact report naming consistency.
+- Release report naming consistency.
 - Workflow alignment.
-- No unsupported artifact claims.
+- No unsupported release claims.
 - Existing validation expectations remain intact.
 
 ## Evidence To Collect
 
-- Existing artifact analyst instructions.
+- Existing release diff analyst instructions.
 - Existing workflow rules.
 - Existing report destination examples.
-- Existing note and report guidance.
+- Existing report and fixture guidance.
 
 ## Definition Of Done
 
 Done means:
 
-- `ai/agents/artifact-analyst.md` includes a report title example.
-- It keeps artifact reports easier to name consistently.
-- No unsupported artifact claims are made.
+- `ai/agents/release-diff-analyst.md` includes a report title example.
+- It keeps release reports easier to name consistently.
+- No unsupported release claims are made.
 - It keeps validation and unresolved handling intact.
 
 ## Follow-Up Queue
 
-1. Add release diff analyst report title example.
-2. Add publisher note title example.
-3. Add research lead follow-up branch example.
+1. Add publisher note title example.
+2. Add research lead follow-up branch example.
+3. Add artifact analyst note title example.

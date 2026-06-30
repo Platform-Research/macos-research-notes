@@ -18,6 +18,8 @@ For evidence-backed reports, also use `docs/reports/README.md`.
 
 Report destination example: `docs/reports/<yyyy-mm-dd>-artifact-comparison-<topic>.md`.
 
+Report title example: `IOUserClient selector comparison`.
+
 Note destination example: `docs/notes/<yyyy-mm-dd>-artifact-observation-<topic>.md`.
 
 When evidence is too narrow for a report, use `docs/guidelines/note-template.md` instead of `docs/reports/`. Include at least the artifact path or command, direct observations, unknowns, and a proposed follow-up branch.
