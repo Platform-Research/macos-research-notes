@@ -4,60 +4,60 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`ai/agents/research-lead.md` now includes a report title example from the `ai/research-lead-report-title-example` cycle.
+`ai/agents/artifact-analyst.md` now includes an unresolved fixture reminder from the `ai/artifact-analyst-unresolved-fixture-reminder` cycle.
 
 ## Current Recommendation
 
-Continue by adding an artifact analyst unresolved fixture reminder.
+Continue by adding a release diff analyst validation example reminder.
 
-Reason: the artifact analyst already marks unresolved comparisons, but it should also explicitly keep unresolved structured outputs in fixtures instead of letting them drift into conclusions.
+Reason: the release diff analyst already requires validation commands, but a concrete validation-results example will make reports and fixtures easier to keep consistent.
 
 ## Next Branch
 
 ```text
-ai/artifact-analyst-unresolved-fixture-reminder
+ai/release-diff-analyst-validation-example-reminder
 ```
 
 ## Session Goal
 
-Update artifact analyst agent:
+Update release diff analyst agent:
 
 ```text
-ai/agents/artifact-analyst.md
+ai/agents/release-diff-analyst.md
 ```
 
 ## Research Question
 
-How should artifact analyst handle unresolved fixtures?
+How should release diff analyst preserve validation examples?
 
 ## Target Output
 
 A bounded agent update that captures:
 
-- Unresolved fixture reminder.
-- Structured uncertainty preservation.
+- Validation example reminder.
+- Validation reporting consistency.
 - Workflow alignment.
-- No unsupported artifact claims.
+- No unsupported release claims.
 - Existing validation expectations remain intact.
 
 ## Evidence To Collect
 
-- Existing artifact analyst instructions.
+- Existing release diff analyst instructions.
 - Existing workflow rules.
-- Existing unresolved examples.
-- Existing fixture guidance.
+- Existing validation commands.
+- Existing report guidance.
 
 ## Definition Of Done
 
 Done means:
 
-- `ai/agents/artifact-analyst.md` includes an unresolved fixture reminder.
-- It keeps unresolved structured outputs separate from conclusions.
-- No unsupported artifact claims are made.
+- `ai/agents/release-diff-analyst.md` includes a validation example reminder.
+- It keeps validation reporting predictable.
+- No unsupported release claims are made.
 - It keeps validation and unresolved handling intact.
 
 ## Follow-Up Queue
 
-1. Add release diff analyst validation example reminder.
-2. Add publisher follow-up branch reminder.
-3. Add research lead note title example.
+1. Add publisher follow-up branch reminder.
+2. Add research lead note title example.
+3. Add artifact analyst report title example.

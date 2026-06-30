@@ -30,6 +30,7 @@ For structured fixtures:
 - Check known schema pairs with `.venv/bin/python tools/schema-validate/validate-known-schemas.py`.
 - Keep source artifact paths or commands in the note or fixture evidence.
 - Preserve the exact command or tool invocation behind each observation when available.
+- Keep unresolved structured outputs as fixtures or notes until the missing comparison evidence is committed.
 
 ## Guardrails
 
