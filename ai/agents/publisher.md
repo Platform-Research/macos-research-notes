@@ -40,6 +40,8 @@ Destination examples:
 - Knowledge example: `knowledge/iokit/<atomic-finding>.md`.
 - Unresolved output: keep as report or fixture; do not promote to `knowledge/`.
 
+If the output remains unresolved, keep the title visibly provisional, for example by including `unresolved`, `missing artifacts`, or the comparison scope directly.
+
 When a note ends with unresolved evidence gaps, keep the proposed follow-up branch visible instead of collapsing it into generic “future work” prose.
 
 Validation examples to preserve when relevant:

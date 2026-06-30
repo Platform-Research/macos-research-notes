@@ -4,60 +4,60 @@ Use this file to choose the next focused session.
 
 ## Last Completed
 
-`ai/agents/release-diff-analyst.md` now includes a report section reminder from the `ai/release-diff-analyst-report-section-reminder` cycle.
+`ai/agents/publisher.md` now includes an unresolved title reminder from the `ai/publisher-unresolved-title-reminder` cycle.
 
 ## Current Recommendation
 
-Continue by adding a publisher unresolved title reminder.
+Continue by adding a research lead fixture validation example.
 
-Reason: the publisher already preserves unresolved substance, but it should also keep unresolved titles visibly provisional instead of sounding final.
+Reason: the research lead already asks for validation gates, but a fixture-specific validation example will make structured work easier to scope precisely.
 
 ## Next Branch
 
 ```text
-ai/publisher-unresolved-title-reminder
+ai/research-lead-fixture-validation-example
 ```
 
 ## Session Goal
 
-Update publisher agent:
+Update research lead agent:
 
 ```text
-ai/agents/publisher.md
+ai/agents/research-lead.md
 ```
 
 ## Research Question
 
-How should publisher title unresolved outputs?
+How should research lead describe fixture validation?
 
 ## Target Output
 
 A bounded agent update that captures:
 
-- Unresolved title reminder.
-- Provisional-title consistency.
+- Fixture validation example.
+- Structured-session scoping consistency.
 - Workflow alignment.
-- No unsupported publication claims.
+- No unsupported planning claims.
 - Existing validation expectations remain intact.
 
 ## Evidence To Collect
 
-- Existing publisher instructions.
+- Existing research lead instructions.
 - Existing workflow rules.
-- Existing unresolved guidance.
+- Existing validation commands.
 - Existing note and report guidance.
 
 ## Definition Of Done
 
 Done means:
 
-- `ai/agents/publisher.md` includes an unresolved title reminder.
-- It keeps provisional outputs easier to title honestly.
-- No unsupported publication claims are made.
+- `ai/agents/research-lead.md` includes a fixture validation example.
+- It keeps structured-session scoping easier to standardize.
+- No unsupported planning claims are made.
 - It keeps validation and unresolved handling intact.
 
 ## Follow-Up Queue
 
-1. Add research lead fixture validation example.
-2. Add artifact analyst evidence-path reminder.
-3. Mark framework phase complete and pivot to macOS research.
+1. Add artifact analyst evidence-path reminder.
+2. Mark framework phase complete and pivot to macOS research.
+3. Start release-diff research kickoff.
