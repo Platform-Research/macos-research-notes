@@ -14,6 +14,7 @@ Reason: the next useful step is no longer interpretation work inside the repo. I
 The current local host cannot satisfy that requirement.
 
 If acquisition remains blocked, choose a platform-facing research task from `planning/PLATFORM_DIRECTION.md` that uses existing committed artifacts and does not claim hardware enablement.
+Use `planning/PLATFORM_SESSION_QUEUE.md` to pick the smallest local-evidence cycle.
 
 ## Next Branch
 
@@ -51,6 +52,7 @@ A bounded agent update that captures:
 - Existing macOS 15.6 and 16.0 artifacts.
 - Existing fixture and report guidance.
 - Platform direction guide: `planning/PLATFORM_DIRECTION.md`.
+- Platform session queue: `planning/PLATFORM_SESSION_QUEUE.md`.
 
 ## Definition Of Done
 
@@ -67,3 +69,4 @@ Done means:
 3. Derive one reduced kext or DriverKit personality dataset, preferably including PCI match keys if present.
 4. Re-enter release-diff work only after comparable reduced metadata exists.
 5. If acquisition is blocked, use `planning/PLATFORM_DIRECTION.md` to pick a bounded boot, registry, provider-class, or controller-facing note.
+6. Use `planning/PLATFORM_SESSION_QUEUE.md` to keep each platform-facing session small and evidence-backed.

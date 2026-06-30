@@ -23,6 +23,7 @@ Start here:
 - [FOCUS.md](FOCUS.md)
 - [planning/ROADMAP.md](planning/ROADMAP.md)
 - [planning/PLATFORM_DIRECTION.md](planning/PLATFORM_DIRECTION.md)
+- [planning/PLATFORM_SESSION_QUEUE.md](planning/PLATFORM_SESSION_QUEUE.md)
 - [docs/guidelines/research-principles.md](docs/guidelines/research-principles.md)
 - [docs/guidelines/scope-boundaries.md](docs/guidelines/scope-boundaries.md)
 - [docs/guidelines/workflow-rules.md](docs/guidelines/workflow-rules.md)

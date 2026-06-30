@@ -37,6 +37,10 @@ Defer work that requires patching, unsupported boot attempts, or claims about ha
 
 - `knowledge/platform/platform-facing-metadata.md`
 
+## Session Queue
+
+- `planning/PLATFORM_SESSION_QUEUE.md`
+
 ## Evidence Rule
 
 Each session should leave one of:
