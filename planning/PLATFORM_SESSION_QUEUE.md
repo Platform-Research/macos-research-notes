@@ -104,6 +104,56 @@ Each cycle should produce one small committed result and stop before boot modifi
 | 79 | Which claims should be blocked in reviews? | scope boundaries and platform direction | Review checklist update. |
 | 80 | Which next concrete note has the highest value today? | session queue and existing notes | Next-note decision. |
 
+## Cycles 81-100
+
+| Cycle | Question | Evidence | Target Output |
+| --- | --- | --- | --- |
+| 81 | Which platform notes now form the minimal reading path? | `knowledge/platform/README.md` | Reading-order update. |
+| 82 | Which matching layer should receive the next fixture-backed example? | matching path note and fixtures | Example selection note. |
+| 83 | Which topology field should be added before ancestor joins improve? | topology vocabulary note and schema | Schema follow-up note. |
+| 84 | Which candidate join reason is most ready for stronger evidence? | candidate joins note and fixtures | Join-priority note. |
+| 85 | Which redaction rule blocks unsafe registry expansion? | topology vocabulary and review checklist | Registry expansion boundary. |
+| 86 | Which provenance fields are mandatory for platform-facing release data? | acquisition manifests and review checklist | Provenance minimum note. |
+| 87 | Which artifact class should get a platform-facing index first? | release folders and platform metadata note | Artifact-index decision. |
+| 88 | Which boot terms should be defined without implementation claims? | roadmap and platform direction | Boot terminology note. |
+| 89 | Which kernel collection terms should be defined without binary analysis? | roadmap and acquisition rules | Kernel collection terminology note. |
+| 90 | Which DeviceTree terms should be defined from registry context first? | IORegistry note and topology vocabulary | DeviceTree terminology note. |
+| 91 | Which controller families need separate notes before release comparison? | platform metadata note | Controller note backlog. |
+| 92 | Which PCIe concepts are already covered by IOPCIDevice? | IOPCIDevice note | PCIe coverage map. |
+| 93 | Which USB concepts need a first source-backed note? | USB-related experiment examples | USB source plan. |
+| 94 | Which NVMe concepts need a first source-backed note? | parsed PCI fixture and future sources | NVMe source plan. |
+| 95 | Which display concepts should remain metadata-only? | review checklist and scope boundaries | Display scope note. |
+| 96 | Which networking concepts need a safe metadata-only first pass? | PCI and personality tools | Networking scope note. |
+| 97 | Which storage concepts need a safe metadata-only first pass? | PCI, NVMe, and personality tools | Storage scope note. |
+| 98 | Which power concepts need a redaction-first plan? | review checklist | Power scope note. |
+| 99 | Which interrupt/timer concepts need public references before notes? | platform direction | Source-needed note. |
+| 100 | Which current unknown should be retired or sharpened? | platform notes and queue | Unknowns cleanup. |
+
+## Cycles 101-120
+
+| Cycle | Question | Evidence | Target Output |
+| --- | --- | --- | --- |
+| 101 | Which platform notes should cite the review checklist? | `knowledge/platform/` notes | Review-link update. |
+| 102 | Which fixture README should cite candidate-only boundaries? | provider-class and candidate join fixtures | Fixture boundary update. |
+| 103 | Which tool README should cite platform review before promotion? | provider, ioreg, personality, PCI tools | Tool boundary update. |
+| 104 | Which schema README should describe platform-facing uncertainty? | schema validation and release diff docs | Schema guidance update. |
+| 105 | Which release report should point to the platform queue? | unresolved release diff report | Report follow-up update. |
+| 106 | Which acquisition blocker should reference platform-facing priorities? | `macos/15.6/source-acquisition-log.md` | Acquisition priority update. |
+| 107 | Which source target best unlocks provider-class, PCI, and topology questions together? | acquisition log and queue | Source target ranking. |
+| 108 | Which first release-backed dataset should be named now? | release acquisition notes | Dataset naming decision. |
+| 109 | Which validation command set should every platform data change run? | review checklist and schema tools | Validation command note. |
+| 110 | Which markdown-only changes need no schema validation? | workflow rules | Validation boundary note. |
+| 111 | Which local-runtime command outputs should not be repeated? | review checklist and experiments | Runtime command caution note. |
+| 112 | Which public references are needed before boot notes deepen? | boot terminology note | Reference acquisition list. |
+| 113 | Which public references are needed before kernel collection notes deepen? | kernel collection terminology note | Reference acquisition list. |
+| 114 | Which public references are needed before DeviceTree notes deepen? | DeviceTree terminology note | Reference acquisition list. |
+| 115 | Which project terms should enter a glossary? | platform notes and roadmap | Glossary candidate list. |
+| 116 | Which note should become a report only after release-backed data exists? | platform notes and release diff rules | Report deferral note. |
+| 117 | Which branch should own future platform note expansion? | workflow rules | Branch naming recommendation. |
+| 118 | Which platform items belong in parking lot instead of active queue? | parking lot and queue | Queue pruning note. |
+| 119 | Which completed cycles need commit references? | git log and queue | Completion audit update. |
+| 120 | Which next two-hour session should run first from a clean checkout? | queue and current notes | Session recommendation. |
+
 ## Selection Rule
 
 Choose the first cycle whose evidence already exists locally. If the evidence does not exist, either acquire it under the release acquisition rules or leave the cycle unresolved.
