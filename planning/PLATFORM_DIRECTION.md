@@ -50,6 +50,8 @@ Each session should leave one of:
 - an atomic knowledge note tied to paths, commands, or public references;
 - a report that preserves unknowns instead of inferring behavior.
 
+Before promoting platform-facing outputs, use `docs/guidelines/platform-review-checklist.md`.
+
 ## Stop Line
 
 Stop and rescope when the next step would require a boot modification, kernel patch, binary patch, or unsupported hardware claim.

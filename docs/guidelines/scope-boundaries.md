@@ -36,3 +36,7 @@ Pause and write down assumptions when:
 - The result cannot be reproduced.
 - The next step would risk boot stability.
 - The scope grows beyond the original session question.
+
+## Platform Review
+
+Use `docs/guidelines/platform-review-checklist.md` before promoting platform-facing notes, fixtures, or reports.
