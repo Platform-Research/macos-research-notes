@@ -6,6 +6,7 @@ This folder collects atomic notes about platform-facing macOS internals: boot ar
 
 - `boot-artifacts.md`
 - `candidate-joins.md`
+- `controller-family-backlog.md`
 - `device-tree-context.md`
 - `kernel-collections.md`
 - `matching-path.md`
@@ -21,6 +22,7 @@ This folder collects atomic notes about platform-facing macOS internals: boot ar
 5. `boot-artifacts.md`
 6. `kernel-collections.md`
 7. `device-tree-context.md`
+8. `controller-family-backlog.md`
 
 ## Boundaries
 
