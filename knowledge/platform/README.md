@@ -11,6 +11,7 @@ This folder collects atomic notes about platform-facing macOS internals: boot ar
 - `kernel-collections.md`
 - `matching-path.md`
 - `platform-facing-metadata.md`
+- `pcie-metadata-coverage.md`
 - `topology-vocabulary.md`
 
 ## Reading Order
@@ -23,6 +24,7 @@ This folder collects atomic notes about platform-facing macOS internals: boot ar
 6. `kernel-collections.md`
 7. `device-tree-context.md`
 8. `controller-family-backlog.md`
+9. `pcie-metadata-coverage.md`
 
 ## Boundaries
 

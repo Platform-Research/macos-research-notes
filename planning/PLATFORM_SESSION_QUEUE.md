@@ -173,6 +173,7 @@ Choose the first cycle whose evidence already exists locally. If the evidence do
 | 89 | `knowledge/platform/kernel-collections.md` |
 | 90 | `knowledge/platform/device-tree-context.md` |
 | 91 | `knowledge/platform/controller-family-backlog.md` |
+| 92 | `knowledge/platform/pcie-metadata-coverage.md` |
 
 ## Output Rule
 
