@@ -108,6 +108,16 @@ Each cycle should produce one small committed result and stop before boot modifi
 
 Choose the first cycle whose evidence already exists locally. If the evidence does not exist, either acquire it under the release acquisition rules or leave the cycle unresolved.
 
+## Completed Initial Outputs
+
+| Cycle | Output |
+| --- | --- |
+| 1 | `knowledge/platform/matching-path.md` |
+| 2 | `knowledge/platform/topology-vocabulary.md` |
+| 21 | `knowledge/platform/candidate-joins.md` |
+| 41 | `knowledge/platform/matching-path.md` |
+| 42 | `knowledge/platform/topology-vocabulary.md` |
+
 ## Output Rule
 
 Prefer one of these outputs per cycle:

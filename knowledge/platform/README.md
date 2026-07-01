@@ -9,6 +9,13 @@ This folder collects atomic notes about platform-facing macOS internals: boot ar
 - `platform-facing-metadata.md`
 - `topology-vocabulary.md`
 
+## Reading Order
+
+1. `platform-facing-metadata.md`
+2. `matching-path.md`
+3. `topology-vocabulary.md`
+4. `candidate-joins.md`
+
 ## Boundaries
 
 These notes describe evidence-backed platform assumptions and metadata shapes. They do not claim hardware enablement, runtime attachment, or boot viability without bounded artifacts.
