@@ -168,6 +168,7 @@ Choose the first cycle whose evidence already exists locally. If the evidence do
 | 41 | `knowledge/platform/matching-path.md` |
 | 42 | `knowledge/platform/topology-vocabulary.md` |
 | 79 | `docs/guidelines/platform-review-checklist.md` |
+| 101 | Review links added to `knowledge/platform/` notes. |
 
 ## Output Rule
 

@@ -50,6 +50,10 @@ The platform-facing matching path starts with a provider service, consumes perso
 - Summarize provider-class candidate fixture behavior in a platform note.
 - Add a release-backed personality record once a verified source artifact exists.
 
+## Review
+
+Use `docs/guidelines/platform-review-checklist.md` before treating a matching-path observation as runtime attachment or release-wide behavior.
+
 ## Sources
 
 - `knowledge/iokit/IOService.md`

@@ -56,6 +56,10 @@ First-pass platform research should prefer these reasons:
 - Keep provider-class joins low or medium confidence unless stronger evidence exists.
 - Add a platform review checklist item blocking runtime claims from candidate-only edges.
 
+## Review
+
+Use `docs/guidelines/platform-review-checklist.md` before promoting candidate joins into reports or release comparisons.
+
 ## Sources
 
 - `tools/provider-class-join/provider_class_join.py`

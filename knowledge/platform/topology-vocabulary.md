@@ -64,6 +64,10 @@ First-pass topology records should avoid:
 - Use topology vocabulary to improve provider-class join explanations.
 - Keep property-bearing registry evidence out of platform notes until a redaction schema exists.
 
+## Review
+
+Use `docs/guidelines/platform-review-checklist.md` before expanding topology records with new fields or property-bearing evidence.
+
 ## Sources
 
 - `experiments/registry-ancestor-capture/README.md`

@@ -61,6 +61,10 @@ The first platform-facing inventory should prefer these surfaces:
 - Which kernel collection or boot metadata can be indexed without committing raw payloads?
 - Which release-to-release metadata changes affect matching or platform services?
 
+## Review
+
+Use `docs/guidelines/platform-review-checklist.md` before promoting this note into a report, fixture policy, or release comparison.
+
 ## Sources
 
 - `planning/PLATFORM_DIRECTION.md`
