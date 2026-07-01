@@ -6,6 +6,7 @@ This folder collects atomic notes about platform-facing macOS internals: boot ar
 
 - `matching-path.md`
 - `platform-facing-metadata.md`
+- `topology-vocabulary.md`
 
 ## Boundaries
 

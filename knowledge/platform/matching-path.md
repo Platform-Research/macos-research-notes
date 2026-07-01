@@ -8,6 +8,7 @@ The platform-facing matching path starts with a provider service, consumes perso
 
 - Related IOKit notes: `knowledge/iokit/IOService.md`, `knowledge/iokit/IORegistry.md`, `knowledge/iokit/kext-personalities.md`, `knowledge/iokit/IOPCIDevice.md`
 - Related platform note: `knowledge/platform/platform-facing-metadata.md`
+- Related topology note: `knowledge/platform/topology-vocabulary.md`
 - Related fixtures: `datasets/fixtures/provider-class-join/README.md`, `datasets/fixtures/candidate-joins/README.md`
 - Related tools: `tools/provider-class-join/`, `tools/pci-match-parse/`, `tools/ioreg-inventory/`, `tools/kext-personality-inventory/`
 
