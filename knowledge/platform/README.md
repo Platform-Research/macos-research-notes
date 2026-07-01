@@ -4,7 +4,9 @@ This folder collects atomic notes about platform-facing macOS internals: boot ar
 
 ## Current Notes
 
+- `boot-artifacts.md`
 - `candidate-joins.md`
+- `kernel-collections.md`
 - `matching-path.md`
 - `platform-facing-metadata.md`
 - `topology-vocabulary.md`
@@ -15,6 +17,8 @@ This folder collects atomic notes about platform-facing macOS internals: boot ar
 2. `matching-path.md`
 3. `topology-vocabulary.md`
 4. `candidate-joins.md`
+5. `boot-artifacts.md`
+6. `kernel-collections.md`
 
 ## Boundaries
 

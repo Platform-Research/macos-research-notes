@@ -169,6 +169,8 @@ Choose the first cycle whose evidence already exists locally. If the evidence do
 | 42 | `knowledge/platform/topology-vocabulary.md` |
 | 79 | `docs/guidelines/platform-review-checklist.md` |
 | 101 | Review links added to `knowledge/platform/` notes. |
+| 88 | `knowledge/platform/boot-artifacts.md` |
+| 89 | `knowledge/platform/kernel-collections.md` |
 
 ## Output Rule
 
