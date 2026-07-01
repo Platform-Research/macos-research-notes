@@ -171,6 +171,7 @@ Choose the first cycle whose evidence already exists locally. If the evidence do
 | 101 | Review links added to `knowledge/platform/` notes. |
 | 88 | `knowledge/platform/boot-artifacts.md` |
 | 89 | `knowledge/platform/kernel-collections.md` |
+| 90 | `knowledge/platform/device-tree-context.md` |
 
 ## Output Rule
 
