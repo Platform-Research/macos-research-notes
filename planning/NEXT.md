@@ -53,6 +53,7 @@ A bounded agent update that captures:
 - Existing fixture and report guidance.
 - Platform direction guide: `planning/PLATFORM_DIRECTION.md`.
 - Platform session queue: `planning/PLATFORM_SESSION_QUEUE.md`.
+- Platform source ranking: `planning/15.6-platform-source-ranking.md`.
 
 ## Definition Of Done
 
@@ -70,3 +71,4 @@ Done means:
 4. Re-enter release-diff work only after comparable reduced metadata exists.
 5. If acquisition is blocked, use `planning/PLATFORM_DIRECTION.md` to pick a bounded boot, registry, provider-class, or controller-facing note.
 6. Use `planning/PLATFORM_SESSION_QUEUE.md` to keep each platform-facing session small and evidence-backed.
+7. Use `planning/15.6-platform-source-ranking.md` when choosing the next `15.6` source target.
