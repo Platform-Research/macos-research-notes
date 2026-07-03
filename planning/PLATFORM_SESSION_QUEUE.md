@@ -154,6 +154,151 @@ Each cycle should produce one small committed result and stop before boot modifi
 | 119 | Which completed cycles need commit references? | git log and queue | Completion audit update. |
 | 120 | Which next two-hour session should run first from a clean checkout? | queue and current notes | Session recommendation. |
 
+## Cycles 121-150
+
+| Cycle | Question | Evidence | Target Output |
+| --- | --- | --- | --- |
+| 121 | What is the minimal matching path from a kext personality to a live IORegistry service? | matching path note, IOService note, kext personality note | Minimal matching-path note. |
+| 122 | What does `IOClass` identify inside a personality record? | kext personality fixture and schema | `IOClass` semantics note. |
+| 123 | What does `CFBundleIdentifier` identify, and how is it different from matched service identity? | kext personality fixture and schema | Bundle identity note. |
+| 124 | What can `IONameMatch` express that `IOProviderClass` alone cannot? | kext personality fixture and IOService note | Name-match metadata note. |
+| 125 | What does `IOPCIPrimaryMatch` encode about PCI devices? | parsed PCI fixture and PCI match parser README | PCI primary match note. |
+| 126 | What does `IOPCIMatch` encode differently from `IOPCIPrimaryMatch`? | parsed PCI fixture and PCI parser tests | PCI match comparison note. |
+| 127 | How do PCI class-code matches differ from vendor/device matches? | PCI decoder tool and parsed PCI fixture | PCI class-code note. |
+| 128 | What does subsystem metadata add to PCI identity? | PCI decoder README and parsed PCI fixture | PCI subsystem identity note. |
+| 129 | Which reduced fields are enough to describe a platform-facing PCI candidate? | IOPCIDevice note and parsed PCI fixture | Minimal PCI candidate record. |
+| 130 | What is the difference between matching a provider class and proving runtime attachment? | provider-class join fixture and review checklist | Provider vs attachment note. |
+| 131 | How does IORegistry ancestry change interpretation of a direct match candidate? | registry ancestor experiment and topology fixture | Ancestry interpretation note. |
+| 132 | Which IORegistry fields describe topology without exposing sensitive runtime details? | topology vocabulary and ioreg inventory schema | Safe topology field note. |
+| 133 | What does a registry plane represent in IOKit? | IORegistry note and topology vocabulary | Registry plane concept note. |
+| 134 | How does the Service plane differ from DeviceTree context for platform research? | IORegistry note and DeviceTree context note | Service vs DeviceTree note. |
+| 135 | What can be learned from provider names before decoding device-specific properties? | topology fixture and registry ancestor experiment | Provider-name evidence note. |
+| 136 | What should not be inferred from provider names alone? | topology fixture and review checklist | Provider-name limitation note. |
+| 137 | What makes a kext personality platform-facing rather than purely software-facing? | kext personality schema and provider-class fixtures | Platform-facing personality criteria. |
+| 138 | Which personality fields suggest hardware family without proving hardware support? | kext personality fixture and controller backlog | Hardware-family signal note. |
+| 139 | How should `IOProbeScore` be interpreted as metadata? | kext personality fixture and matching path note | Probe score interpretation note. |
+| 140 | What does `IOMatchCategory` add to matching interpretation? | kext personality fixture and IOService note | Match category note. |
+| 141 | What platform facts can be stated from reduced fixture data only? | helper fixtures and schema examples | Reduced-data fact note. |
+| 142 | What platform facts require raw release artifacts before being trusted? | acquisition manifests and release folders | Raw-artifact boundary note. |
+| 143 | How do boot artifacts prepare the conditions for driver matching without describing driver behavior? | boot artifacts note and matching path note | Boot prerequisite note. |
+| 144 | What is the platform role of prelinked or collected kernel extension metadata? | kernel collections note and kext personality note | Kernel metadata role note. |
+| 145 | How should DeviceTree-derived identity be separated from PCI-derived identity? | DeviceTree context and IOPCIDevice note | DeviceTree vs PCI identity note. |
+| 146 | Which controller-family names appear to describe buses versus endpoint devices? | controller backlog and helper fixtures | Controller-family taxonomy note. |
+| 147 | Which controller-family names appear to describe storage, display, networking, or USB domains? | controller backlog and helper fixtures | Controller domain mapping note. |
+| 148 | Which platform knowledge claims are safe from local fixtures, and which need release provenance? | fixtures and acquisition manifests | Fixture-vs-release claim note. |
+| 149 | Which existing platform note should receive the first new knowledge expansion? | platform notes and cycles 121-148 | Knowledge expansion recommendation. |
+| 150 | Which platform question from 121-149 has the strongest local evidence today? | cycles 121-149 and local fixtures | Evidence-ranked cycle choice. |
+
+## Cycles 151-170
+
+| Cycle | Question | Evidence | Target Output |
+| --- | --- | --- | --- |
+| 151 | What is the relationship between user clients and platform services? | IOUserClient note and user-client fixture | User-client relationship note. |
+| 152 | Which user-client facts are metadata-only and do not imply reachable attack surface? | IOUserClient note and review checklist | User-client metadata boundary. |
+| 153 | How can DriverKit services participate in platform matching differently from kernel kexts? | kext personality schema and DriverKit-related entries | DriverKit matching note. |
+| 154 | What DriverKit metadata is visible before studying binaries or entitlements? | kext personality schema and helper fixtures | DriverKit visible metadata note. |
+| 155 | What does release-diff metadata tell us about platform evolution across macOS versions? | release-diff schema and generated release-diff fixture | Platform evolution metadata note. |
+| 156 | Which platform changes cannot be inferred from release-diff metadata alone? | release comparison report and review checklist | Release-diff limitation note. |
+| 157 | What makes a provider-class join a candidate relationship rather than a conclusion? | provider-class join README and candidate joins note | Candidate relationship concept. |
+| 158 | How can candidate joins be grouped by bus family, provider class, or bundle identity? | provider-class join fixture and kext personality fixture | Candidate grouping note. |
+| 159 | Which platform questions become answerable once a valid `15.6` source exists? | source acquisition log and platform source ranking | `15.6` unlock question list. |
+| 160 | Which platform questions remain answerable without new source acquisition? | platform notes and local fixtures | Offline platform question list. |
+| 161 | What is the smallest artifact-backed note that would improve understanding of IOKit matching? | IOService note, matching path note, fixtures | IOKit matching expansion plan. |
+| 162 | What is the smallest artifact-backed note that would improve understanding of PCI matching? | IOPCIDevice note and parsed PCI fixture | PCI matching expansion plan. |
+| 163 | What is the smallest artifact-backed note that would improve understanding of registry topology? | IORegistry note and topology fixture | Registry topology expansion plan. |
+| 164 | What is the smallest artifact-backed note that would improve understanding of boot-to-driver flow? | boot artifacts note and kernel collections note | Boot flow expansion plan. |
+| 165 | How should platform metadata distinguish buses, controllers, endpoints, and software services? | controller backlog, topology vocabulary, fixtures | Platform role taxonomy note. |
+| 166 | Which fields indicate a bus-level service rather than an endpoint device service? | topology fixture and kext personality fixture | Bus-vs-endpoint field note. |
+| 167 | Which fields indicate a software service that happens to sit near platform hardware? | IOResources examples and kext personality fixture | Software-adjacent service note. |
+| 168 | Which hardware-facing metadata should be excluded from public examples until redaction rules improve? | review checklist and fixture READMEs | Hardware metadata redaction note. |
+| 169 | Which platform concept from cycles 121-168 should become a first-class `knowledge/platform/` note? | cycles 121-168 and existing notes | First-class note recommendation. |
+| 170 | Which local-evidence platform cycle should be executed next rather than expanded further? | cycles 121-169 and local artifacts | Next execution recommendation. |
+
+## Cycles 171-200
+
+| Cycle | Question | Evidence | Target Output |
+| --- | --- | --- | --- |
+| 171 | What role does `IOService` play in matching drivers to platform devices? | `knowledge/iokit/IOService.md`, matching path note | IOService matching summary. |
+| 172 | How does `IOProviderClass` constrain which registry objects a personality can match? | kext personality note and provider-class fixtures | Provider-class semantics note. |
+| 173 | What does the IORegistry reveal about parent-child platform topology? | `knowledge/iokit/IORegistry.md`, topology fixture | Registry topology note. |
+| 174 | Which IORegistry planes matter for platform research before driver behavior claims? | IORegistry note and topology vocabulary | Registry plane comparison note. |
+| 175 | What information can be learned from `IOPCIDevice` metadata without touching hardware enablement? | `knowledge/iokit/IOPCIDevice.md`, parsed PCI fixtures | PCI metadata knowledge note. |
+| 176 | How do PCI vendor, device, subsystem, and class-code fields divide identity from capability? | PCI decoder tool and parsed PCI fixtures | PCI identity field note. |
+| 177 | What does a PCI match string encode in kext personalities? | PCI match parser README and parsed PCI fixture | PCI match-string explanation. |
+| 178 | Which personality keys influence matching order or priority? | kext personality fixture and `IOProbeScore` examples | Probe-priority metadata note. |
+| 179 | What is the difference between bundle identity and service identity in kext metadata? | kext personality schema and helper fixture | Bundle vs service note. |
+| 180 | How can DriverKit metadata be recognized separately from kernel extension metadata? | kext personality schema and DriverKit queue items | DriverKit metadata distinction note. |
+| 181 | Which platform-facing facts can be extracted from kext `Info.plist` files alone? | kext personality inventory README and schema | Info.plist fact inventory. |
+| 182 | Which platform-facing facts cannot be inferred from `Info.plist` metadata alone? | kext personality note and review checklist | Info.plist limitation note. |
+| 183 | What does a kernel collection represent in the macOS platform boot chain? | kernel collections note and boot artifacts note | Kernel collection role note. |
+| 184 | How do boot artifacts relate to later IOKit service publication? | boot artifacts note and IOService note | Boot-to-IOKit relationship note. |
+| 185 | What is safe to say about DeviceTree context from registry-derived evidence? | DeviceTree context note and IORegistry note | DeviceTree evidence note. |
+| 186 | Which DeviceTree concepts should stay distinct from IOService matching concepts? | DeviceTree context and matching path note | DeviceTree vs matching note. |
+| 187 | How do virtual providers such as `IOResources` affect platform matching interpretation? | kext personality fixture and IOService note | Virtual-provider note. |
+| 188 | What platform knowledge can be derived from controller-family names alone? | controller backlog and helper fixtures | Controller-family naming note. |
+| 189 | What are the limits of controller-family names as evidence? | controller backlog and review checklist | Controller-family limitation note. |
+| 190 | Which storage-facing platform concepts appear in current reduced metadata? | parsed PCI fixture and kext personality fixture | Storage platform concept note. |
+| 191 | Which networking-facing platform concepts appear in current reduced metadata? | PCI fixtures and kext personality fixture | Networking platform concept note. |
+| 192 | Which display-facing platform concepts can be described as metadata only? | personality schema and display queue items | Display metadata concept note. |
+| 193 | Which USB-facing platform concepts can be studied through provider classes and match keys? | IOService note and helper fixtures | USB platform concept note. |
+| 194 | Which NVMe-facing platform concepts can be studied through PCI metadata? | IOPCIDevice note and parsed PCI fixture | NVMe platform concept note. |
+| 195 | How should user-client surfaces be understood as platform-adjacent rather than device identity? | IOUserClient note and user-client fixture | User-client platform boundary note. |
+| 196 | What does provider ancestry add beyond a direct provider-class match? | registry ancestor experiment and provider join fixture | Provider ancestry knowledge note. |
+| 197 | How can candidate joins express uncertainty without losing useful platform relationships? | candidate joins note and registry join schema | Uncertain relationship note. |
+| 198 | Which metadata fields help compare platform support across macOS releases? | release-diff schema and acquisition manifests | Cross-release platform fields note. |
+| 199 | Which platform facts require release-backed artifacts before they can be trusted? | release folders, acquisition log, and review checklist | Release-backed fact boundary note. |
+| 200 | Which platform knowledge cycle from 171-199 should be executed first? | cycles 171-199 and existing local evidence | First platform-knowledge recommendation. |
+
+## Cycles 201-220
+
+| Cycle | Question | Evidence | Target Output |
+| --- | --- | --- | --- |
+| 201 | How does IOKit separate provider discovery from driver startup? | IOService note, matching path note | Provider discovery vs startup note. |
+| 202 | What does a published IOService object represent before any family-specific interpretation? | IOService note, IORegistry note | Published service concept note. |
+| 203 | Which registry ancestry patterns suggest bus nesting rather than device capability? | topology fixture, registry ancestor experiment | Bus nesting pattern note. |
+| 204 | How should PCI bridge objects be distinguished from endpoint PCI devices in reduced topology? | IOPCIDevice note, topology fixture | PCI bridge vs endpoint note. |
+| 205 | Which metadata fields can identify a controller family across multiple personalities? | kext personality fixture, controller backlog | Controller family identity note. |
+| 206 | How can platform services be grouped by bus domain without claiming support quality? | provider-class fixture, parsed PCI fixture | Bus-domain grouping note. |
+| 207 | What does a service dependency imply differently from a hardware dependency? | IOService note, topology vocabulary | Service vs hardware dependency note. |
+| 208 | Which boot-stage concepts must be understood before interpreting kernel collection contents? | boot artifacts note, kernel collections note | Boot-stage prerequisite note. |
+| 209 | How do kernel collections change where platform metadata is found compared with loose kexts? | kernel collections note, acquisition guide | Kernel collection metadata location note. |
+| 210 | What does DriverKit imply about user-space driver placement without proving device behavior? | DriverKit-related schema fields, kext personality note | DriverKit placement note. |
+| 211 | Which personality metadata suggests a dext/kext boundary? | kext personality schema, helper fixture | Dext/kext boundary signal note. |
+| 212 | How should IOUserClient names be connected to owning services without treating them as hardware IDs? | IOUserClient note, user-client fixture | User-client ownership note. |
+| 213 | Which reduced metadata can support a platform glossary entry for "provider"? | IOService note, provider-class fixture | Provider glossary draft. |
+| 214 | Which reduced metadata can support a platform glossary entry for "personality"? | kext personality note, kext personality schema | Personality glossary draft. |
+| 215 | Which reduced metadata can support a platform glossary entry for "registry plane"? | IORegistry note, topology vocabulary | Registry plane glossary draft. |
+| 216 | Which reduced metadata can support a platform glossary entry for "candidate join"? | candidate joins note, registry join schema | Candidate join glossary draft. |
+| 217 | What is the smallest safe explanation of platform support that avoids enablement claims? | review checklist, platform notes | Platform support wording note. |
+| 218 | Which current fixtures can demonstrate platform metadata layering from bundle to provider to registry? | helper fixtures, provider join fixture, topology fixture | Metadata layering example. |
+| 219 | Which platform concept from cycles 201-218 should become the next atomic note? | cycles 201-218, existing platform notes | Next atomic note choice. |
+| 220 | Which cycle from 201-219 can be completed using only committed evidence today? | cycles 201-219, repository files | Committed-evidence cycle pick. |
+
+## Cycles 221-240
+
+| Cycle | Question | Evidence | Target Output |
+| --- | --- | --- | --- |
+| 221 | What is the platform difference between a bus, a controller, and an endpoint device? | topology vocabulary, controller backlog, IOPCIDevice note | Bus/controller/endpoint concept note. |
+| 222 | How can reduced registry topology represent bus hierarchy without device properties? | topology fixture, ioreg inventory schema | Reduced bus hierarchy note. |
+| 223 | What does a bridge service imply in PCIe topology before endpoint interpretation? | IOPCIDevice note, PCIe metadata coverage | PCIe bridge concept note. |
+| 224 | Which PCI metadata fields identify topology position versus device identity? | IOPCIDevice note, parsed PCI fixture | PCI topology vs identity note. |
+| 225 | How should platform research distinguish ACPI-style provider names from DeviceTree-style provider names? | kext personality note, DeviceTree context note | ACPI vs DeviceTree naming note. |
+| 226 | What can `IOResources` matching teach about virtual platform providers? | IOService note, kext personality fixture | `IOResources` provider note. |
+| 227 | Why are virtual providers useful for platform bring-up without being hardware devices? | matching path note, provider discovery note | Virtual provider role note. |
+| 228 | How does `IOMatchCategory` affect interpretation of multiple possible clients? | IOService note, kext personality note | Match category interpretation note. |
+| 229 | How should `IOProbeScore` be treated when comparing competing personalities? | IOService note, kext personality note | Probe score comparison note. |
+| 230 | Which metadata distinguishes driver class selection from provider class selection? | kext personality schema, IOService note | Driver class vs provider class note. |
+| 231 | What platform knowledge can be derived from `IONameMatch` without registry properties? | kext personality note, helper fixture | `IONameMatch` knowledge note. |
+| 232 | How do family-specific match keys refine generic `IOProviderClass` matching? | IOPCIDevice note, PCI parser README | Generic vs family-specific match note. |
+| 233 | Which reduced metadata fields best support release-to-release platform comparison? | release-diff schema, platform-facing metadata note | Release comparison field note. |
+| 234 | What should a platform-facing release comparison avoid saying when one side lacks source artifacts? | release comparison report, acquisition log | Asymmetric evidence boundary note. |
+| 235 | How can kernel collection metadata and personality metadata be connected safely? | kernel collections note, kext personality note | Kernel collection/personality bridge note. |
+| 236 | Which boot artifact concepts are prerequisites for understanding IOKit service publication? | boot artifacts note, published IOService note | Boot-to-publication prerequisite note. |
+| 237 | What does "platform support" mean at the metadata layer only? | platform-facing metadata note, review checklist | Metadata-layer support definition. |
+| 238 | Which platform knowledge should stay separate from driver implementation knowledge? | roadmap, scope boundaries, platform notes | Platform vs implementation boundary note. |
+| 239 | Which concept from cycles 221-238 should become the next `knowledge/platform/` note? | cycles 221-238, current platform notes | Next concept selection note. |
+| 240 | Which cycle from 221-239 has the strongest evidence in committed notes and fixtures? | cycles 221-239, repository evidence | Evidence-ranked knowledge cycle. |
+
 ## Selection Rule
 
 Choose the first cycle whose evidence already exists locally. If the evidence does not exist, either acquire it under the release acquisition rules or leave the cycle unresolved.
@@ -175,6 +320,8 @@ Choose the first cycle whose evidence already exists locally. If the evidence do
 | 91 | `knowledge/platform/controller-family-backlog.md` |
 | 92 | `knowledge/platform/pcie-metadata-coverage.md` |
 | 107 | `planning/15.6-platform-source-ranking.md` |
+| 201 | `knowledge/platform/provider-discovery-vs-startup.md` |
+| 202 | `knowledge/platform/published-ioservice-concept.md` |
 
 ## Output Rule
 

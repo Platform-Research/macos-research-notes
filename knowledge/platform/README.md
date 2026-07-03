@@ -10,6 +10,8 @@ This folder collects atomic notes about platform-facing macOS internals: boot ar
 - `device-tree-context.md`
 - `kernel-collections.md`
 - `matching-path.md`
+- `published-ioservice-concept.md`
+- `provider-discovery-vs-startup.md`
 - `platform-facing-metadata.md`
 - `pcie-metadata-coverage.md`
 - `topology-vocabulary.md`
@@ -18,13 +20,15 @@ This folder collects atomic notes about platform-facing macOS internals: boot ar
 
 1. `platform-facing-metadata.md`
 2. `matching-path.md`
-3. `topology-vocabulary.md`
-4. `candidate-joins.md`
-5. `boot-artifacts.md`
-6. `kernel-collections.md`
-7. `device-tree-context.md`
-8. `controller-family-backlog.md`
-9. `pcie-metadata-coverage.md`
+3. `provider-discovery-vs-startup.md`
+4. `published-ioservice-concept.md`
+5. `topology-vocabulary.md`
+6. `candidate-joins.md`
+7. `boot-artifacts.md`
+8. `kernel-collections.md`
+9. `device-tree-context.md`
+10. `controller-family-backlog.md`
+11. `pcie-metadata-coverage.md`
 
 ## Boundaries
 
