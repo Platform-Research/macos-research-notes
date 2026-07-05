@@ -299,6 +299,41 @@ Each cycle should produce one small committed result and stop before boot modifi
 | 239 | Which concept from cycles 221-238 should become the next `knowledge/platform/` note? | cycles 221-238, current platform notes | Next concept selection note. |
 | 240 | Which cycle from 221-239 has the strongest evidence in committed notes and fixtures? | cycles 221-239, repository evidence | Evidence-ranked knowledge cycle. |
 
+## Cycles 241-270
+
+| Cycle | Question | Evidence | Target Output |
+| --- | --- | --- | --- |
+| 241 | Which metadata fields separate platform role from driver behavior? | platform-facing metadata note, provider discovery note, review checklist | Platform role vs behavior note. |
+| 242 | How should bus-domain grouping handle services that span multiple families? | controller backlog, topology vocabulary, candidate joins note | Cross-family grouping boundary. |
+| 243 | Which topology fields can describe containment without implying ownership? | topology vocabulary, IORegistry note, topology fixture | Containment vs ownership note. |
+| 244 | What does a parent service mean differently from a provider service? | IORegistry note, IOService note, published IOService note | Parent vs provider concept note. |
+| 245 | Which registry plane facts should be recorded before comparing families? | IORegistry note, topology vocabulary, ioreg inventory schema | Plane-first comparison checklist. |
+| 246 | Which personality keys should be treated as generic matching metadata? | kext personality note, kext personality schema | Generic personality-key note. |
+| 247 | Which personality keys should remain family-specific until decoded? | IOPCIDevice note, PCI parser README, kext personality schema | Family-specific key boundary. |
+| 248 | How should `IOProviderClass` subclasses be handled in candidate joins? | IOService note, candidate joins note, provider-class join fixture | Subclass matching caution note. |
+| 249 | Which source fields make a reduced personality record reproducible? | acquisition checklist, kext personality schema, source acquisition log | Personality provenance checklist. |
+| 250 | Which source fields make a reduced topology record reproducible? | ioreg inventory schema, topology vocabulary, platform review checklist | Topology provenance checklist. |
+| 251 | What is the safest first comparison between two platform-facing releases? | release-diff readiness guide, acquisition manifests, platform-facing metadata note | First release-comparison boundary. |
+| 252 | Which release comparison claims require matching artifact classes on both sides? | release comparison report, release-diff schema, acquisition log | Symmetric-evidence requirement note. |
+| 253 | Which release comparison claims can be stated when one side is missing? | missing-artifacts release-diff fixture, source acquisition log | Missing-side wording note. |
+| 254 | How should reduced datasets cite redaction policy inline? | platform review checklist, acquisition manifests, schema examples | Inline redaction citation note. |
+| 255 | Which registry properties should remain excluded until a dedicated schema exists? | topology vocabulary, scope boundaries, review checklist | Registry-property exclusion list. |
+| 256 | Which PCI fields can be normalized without attaching runtime meaning? | IOPCIDevice note, pci-id decoder README, parsed PCI fixture | PCI normalization boundary note. |
+| 257 | Which PCI fields need source-family context before comparison? | PCI parser README, IOPCIDevice note, PCIe metadata coverage note | PCI context requirement note. |
+| 258 | How should DriverKit PCI metadata be kept separate from kernel kext metadata? | IOPCIDevice note, kext personality schema, DriverKit queue items | DriverKit PCI split note. |
+| 259 | Which user-client fields belong in platform notes only as service adjacency? | IOUserClient note, user-client fixture, review checklist | User-client adjacency note. |
+| 260 | Which service names are safe as examples, and which need redaction review? | topology vocabulary, registry ancestor experiment, review checklist | Service-name redaction decision. |
+| 261 | Which platform note should define "attachment" without implying startup? | provider discovery note, matching path note, IOService note | Attachment glossary note. |
+| 262 | Which platform note should define "probe score" as ordering metadata? | IOService note, kext personality note, helper fixture | Probe-score glossary note. |
+| 263 | Which platform note should define "match category" as attachment-shaping metadata? | IOService note, kext personality note, helper fixture | Match-category glossary note. |
+| 264 | Which platform note should define "family-specific key" with PCI as the first example? | IOPCIDevice note, PCI parser README, kext personality note | Family-specific key glossary note. |
+| 265 | Which platform note should define "virtual provider" before `IOResources` examples expand? | IOService note, matching path note, kext personality fixture | Virtual-provider glossary note. |
+| 266 | Which knowledge notes need explicit "metadata only" callouts? | platform README, platform review checklist, current platform notes | Metadata-only callout pass. |
+| 267 | Which tool outputs need a warning against support-quality inference? | PCI parser README, provider-class join README, release-diff README | Tool inference-warning pass. |
+| 268 | Which schema examples best demonstrate uncertainty-preserving relationships? | registry join schema, candidate join fixture, generated release-diff fixture | Uncertainty example selection. |
+| 269 | Which cycles from 241-268 should become atomic notes first? | cycles 241-268, existing platform notes | Next atomic-note shortlist. |
+| 270 | Which cycle from 241-269 is most likely to unblock release-backed work later? | cycles 241-269, source ranking, acquisition log | Release-unblock priority note. |
+
 ## Selection Rule
 
 Choose the first cycle whose evidence already exists locally. If the evidence does not exist, either acquire it under the release acquisition rules or leave the cycle unresolved.
@@ -322,6 +357,26 @@ Choose the first cycle whose evidence already exists locally. If the evidence do
 | 107 | `planning/15.6-platform-source-ranking.md` |
 | 201 | `knowledge/platform/provider-discovery-vs-startup.md` |
 | 202 | `knowledge/platform/published-ioservice-concept.md` |
+| 241 | `knowledge/platform/platform-role-vs-driver-behavior.md` |
+
+## ARM Bring-Up Focus Outputs
+
+| Output | Purpose |
+| --- | --- |
+| `knowledge/platform/arm-bridge-readiness.md` | Establishes the future macOS/kernel-to-ARM bridge-readiness objective. |
+| `knowledge/platform/arm-bridge-readiness-matrix.md` | Maps macOS layers to translate, emulate, expose, compare, or ignore for a future bridge. |
+| `knowledge/platform/arm-macos-bringup-research.md` | Preserves ARM prerequisite mapping without claiming boot viability. |
+| `knowledge/platform/arm-release-evidence-ladder.md` | Separates planning, fixture, release-backed, runtime, and target-experiment evidence. |
+| `knowledge/platform/arm-artifact-checklist.md` | Lists artifact classes needed for ARM bridge-readiness research. |
+| `knowledge/platform/arm-question-map.md` | Keeps ARM sessions tied to one layer, artifact class, and stop condition. |
+| `knowledge/platform/arm-processor-scope-boundary.md` | Separates Apple Silicon, generic ARM, non-Apple SoCs, boards, and emulated targets. |
+| `knowledge/platform/darwin-vs-macos-arm-boundary.md` | Separates Darwin-level observations from full macOS bridge-readiness claims. |
+| `knowledge/platform/arm-soc-dependency-map.md` | Maps SoC dependencies beyond the CPU architecture label. |
+| `knowledge/platform/arm-boot-to-iokit-handoff.md` | Defines the boot-to-IOKit handoff as a dependency chain. |
+| `knowledge/platform/arm-platform-identity-boundaries.md` | Separates DeviceTree, topology, provider, name-match, and family-key identity surfaces. |
+| `knowledge/platform/arm-controller-prerequisites.md` | Prioritizes controller families for ARM bridge-readiness research. |
+| `knowledge/platform/arm-secure-boot-source-needed.md` | Tracks secure boot as source-needed, not implementation guidance. |
+| `knowledge/platform/arm-target-experiment-boundary.md` | Defines the minimum frame for any future target-processor experiment. |
 
 ## Output Rule
 

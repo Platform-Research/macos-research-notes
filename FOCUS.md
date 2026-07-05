@@ -4,7 +4,7 @@ Use this file before starting any work session.
 
 ## North Star
 
-Create a serious Apple platform internals research lab: knowledge base, release-diff pipeline, artifact indexing, graph of relationships, and publishable documentation.
+Create a serious Apple platform internals research lab oriented toward the long-range objective of understanding macOS and Darwin deeply enough to design a future bridge between macOS/kernel layers and an ARM environment: knowledge base, release-diff pipeline, artifact indexing, graph of relationships, and publishable documentation.
 
 Favor work that maps platform assumptions, boot artifacts, hardware-facing metadata, and IOKit matching before any hardware-specific enablement work.
 
@@ -46,6 +46,8 @@ After working, record:
 ## Parking Lot
 
 Use [planning/PARKING_LOT.md](planning/PARKING_LOT.md) for tempting ideas that are not today's work.
+
+Use [planning/ARM_BRIDGE_READINESS.md](planning/ARM_BRIDGE_READINESS.md) when choosing work that supports the future ARM bridge-readiness objective.
 
 Use [planning/PLATFORM_DIRECTION.md](planning/PLATFORM_DIRECTION.md) when choosing between acquisition, IOKit, boot, registry, and hardware-facing research tasks.
 

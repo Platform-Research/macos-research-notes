@@ -22,6 +22,8 @@ Start here:
 
 - [FOCUS.md](FOCUS.md)
 - [planning/ROADMAP.md](planning/ROADMAP.md)
+- [planning/ARM_BRIDGE_READINESS.md](planning/ARM_BRIDGE_READINESS.md)
+- [planning/BRIDGE_READINESS_GAPS.md](planning/BRIDGE_READINESS_GAPS.md)
 - [planning/PLATFORM_DIRECTION.md](planning/PLATFORM_DIRECTION.md)
 - [planning/PLATFORM_SESSION_QUEUE.md](planning/PLATFORM_SESSION_QUEUE.md)
 - [docs/guidelines/research-principles.md](docs/guidelines/research-principles.md)
