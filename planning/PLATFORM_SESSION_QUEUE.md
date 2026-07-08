@@ -357,6 +357,24 @@ Choose the first cycle whose evidence already exists locally. If the evidence do
 | 107 | `planning/15.6-platform-source-ranking.md` |
 | 201 | `knowledge/platform/provider-discovery-vs-startup.md` |
 | 202 | `knowledge/platform/published-ioservice-concept.md` |
+| 203 | `knowledge/platform/bus-nesting-patterns.md` |
+| 204 | `knowledge/platform/pci-bridge-vs-endpoint.md` |
+| 205 | `knowledge/platform/controller-family-identity.md` |
+| 206 | `knowledge/platform/bus-domain-grouping.md` |
+| 207 | `knowledge/platform/service-vs-hardware-dependency.md` |
+| 208 | `knowledge/platform/boot-stage-prerequisites.md` |
+| 209 | `knowledge/platform/kernel-collection-metadata-location.md` |
+| 210 | `knowledge/platform/driverkit-placement.md` |
+| 211 | `knowledge/platform/dext-kext-boundary-signals.md` |
+| 212 | `knowledge/platform/user-client-ownership.md` |
+| 213 | `knowledge/platform/provider-glossary.md` |
+| 214 | `knowledge/platform/personality-glossary.md` |
+| 215 | `knowledge/platform/registry-plane-glossary.md` |
+| 216 | `knowledge/platform/candidate-join-glossary.md` |
+| 217 | `knowledge/platform/platform-support-wording.md` |
+| 218 | `knowledge/platform/metadata-layering-example.md` |
+| 219 | `knowledge/platform/next-atomic-note-choice.md` |
+| 220 | `knowledge/platform/committed-evidence-cycle-pick.md` |
 | 241 | `knowledge/platform/platform-role-vs-driver-behavior.md` |
 
 ## ARM Bring-Up Focus Outputs
