@@ -11,6 +11,7 @@
 - IORegistry note: `knowledge/iokit/IORegistry.md`
 - Personality note: `knowledge/iokit/kext-personalities.md`
 - Matching path: `knowledge/platform/matching-path.md`
+- First-level inventory: `knowledge/platform/xnu-first-level-inventory.md`
 - Official source area: `https://github.com/apple-oss-distributions/xnu/tree/main/iokit`
 
 ## Bridge-Relevant Questions
@@ -37,14 +38,14 @@
 
 ## Unknowns
 
-- No `iokit` file-level inventory exists.
+- First-level `iokit` inventory exists in `knowledge/platform/xnu-first-level-inventory.md`; deeper per-file inventory is still pending.
 - No source path has been linked to `IOService` lifecycle behavior.
 - No source path has been linked to IORegistry plane implementation.
 - No source-backed user-client boundary exists.
 
 ## Next Work
 
-- Inventory first-level `iokit` source paths.
+- Done: first-level `iokit` source paths are inventoried in `knowledge/platform/xnu-first-level-inventory.md`.
 - Link one source path each to `IOService`, `IORegistry`, matching, and user-client concepts.
 - Add a `libkern` support-lane note.
 

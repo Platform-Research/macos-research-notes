@@ -9,6 +9,7 @@
 - Official XNU reference: `knowledge/platform/xnu-official-source-reference.md`
 - Kernel layer map: `knowledge/platform/macos-kernel-layer-map.md`
 - Userland boundary map: `knowledge/platform/userland-boundary-map.md`
+- First-level inventory: `knowledge/platform/xnu-first-level-inventory.md`
 - Official source area: `https://github.com/apple-oss-distributions/xnu/tree/main/bsd`
 
 ## Bridge-Relevant Questions
@@ -36,14 +37,14 @@
 
 ## Unknowns
 
-- No BSD file-level inventory exists in this repository.
+- First-level `bsd` inventory exists in `knowledge/platform/xnu-first-level-inventory.md`; deeper per-file inventory is still pending.
 - No syscall boundary map exists.
 - No process-versus-task note exists.
 - No userland milestone ladder exists.
 
 ## Next Work
 
-- Inventory first-level `bsd` source folders.
+- Done: first-level `bsd` source folders are inventoried in `knowledge/platform/xnu-first-level-inventory.md`.
 - Draft a process-versus-task boundary note.
 - Draft a syscall boundary note connecting `bsd`, `libsyscall`, and userland.
 

@@ -58,9 +58,9 @@ Stop before:
 
 ## Unknowns
 
-- The first public source reference is `https://github.com/apple-oss-distributions/xnu`, but no source-backed layer note has been written yet.
-- No XNU layer notes exist yet.
-- Version mapping between public source and local release folders is not recorded.
+- The first public source reference is `https://github.com/apple-oss-distributions/xnu`; four lane notes and a first-level inventory (`knowledge/platform/xnu-first-level-inventory.md`) now cite it.
+- Deeper per-file XNU layer notes do not exist yet.
+- Version mapping is recorded for macOS `15.6` (source tag `xnu-11417.140.69`) in the inventory note; other releases are not yet mapped.
 - The architecture-specific bridge surface is not identified.
 
 ## Sources
