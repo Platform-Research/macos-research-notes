@@ -41,6 +41,7 @@ Start with:
 27. `knowledge/platform/xnu-iokit-lane.md`
 28. `knowledge/platform/driverkit-bridge-boundary.md`
 29. `knowledge/platform/dyld-framework-source-needed.md`
+30. `knowledge/platform/xnu-first-level-inventory.md`
 
 ## Work Tracks
 
@@ -59,7 +60,7 @@ Start with:
 ## Immediate Backlog
 
 1. Acquire or identify one legal `15.6` source artifact that can produce reduced personality metadata.
-2. Inventory first-level XNU subdirectories for `osfmk`, `bsd`, `pexpert`, and `iokit`.
+2. Done: first-level XNU subdirectories for `osfmk`, `bsd`, `pexpert`, and `iokit` are inventoried in `knowledge/platform/xnu-first-level-inventory.md`.
 3. Define DriverKit entitlement redaction rules.
 4. Choose the first dyld/framework metadata inventory target.
 5. Convert DeviceTree fixture plan into a schema-compatible fixture only if redaction is clear.
@@ -82,7 +83,7 @@ Start with:
 - No DeviceTree fixture or schema exists.
 - No target ARM processor or board is recorded.
 - No interrupt, timer, or power-management reduced fixture exists.
-- XNU, Mach, BSD, VM, scheduler, DriverKit entitlement, dyld, and framework layers are still source-needed.
+- XNU first-level inventory exists for macOS `15.6` (source tag `xnu-11417.140.69`); Mach, BSD, VM, scheduler, DriverKit entitlement, dyld, and framework layers are still source-needed at the file level.
 
 ## Done Criteria For A Session
 

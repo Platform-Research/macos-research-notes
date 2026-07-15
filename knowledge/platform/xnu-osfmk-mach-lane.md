@@ -10,6 +10,7 @@
 - XNU study plan: `knowledge/platform/xnu-source-study-plan.md`
 - Kernel layer map: `knowledge/platform/macos-kernel-layer-map.md`
 - Bridge matrix: `knowledge/platform/arm-bridge-readiness-matrix.md`
+- First-level inventory: `knowledge/platform/xnu-first-level-inventory.md`
 - Official source area: `https://github.com/apple-oss-distributions/xnu/tree/main/osfmk`
 
 ## Bridge-Relevant Questions
@@ -36,14 +37,14 @@
 
 ## Unknowns
 
-- No `osfmk` file-level inventory exists in this repository.
+- First-level `osfmk` inventory exists in `knowledge/platform/xnu-first-level-inventory.md`; deeper per-file inventory is still pending.
 - No Mach concept map exists yet.
 - The ARM-specific subset of `osfmk` has not been identified.
 - Version mapping to a specific macOS release is unresolved.
 
 ## Next Work
 
-- Inventory top-level `osfmk` subdirectories from the official source.
+- Done: first-level `osfmk` subdirectories are inventoried in `knowledge/platform/xnu-first-level-inventory.md`.
 - Draft a Mach concept map for tasks, threads, ports, IPC, VM, and host abstractions.
 - Add VM/pmap and scheduler notes after the file inventory exists.
 

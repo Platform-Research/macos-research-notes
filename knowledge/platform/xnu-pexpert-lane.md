@@ -10,6 +10,7 @@
 - Platform Expert bridge surface: `knowledge/platform/platform-expert-bridge-surface.md`
 - Interrupt/timer note: `knowledge/platform/interrupt-timer-source-needed.md`
 - SoC dependency map: `knowledge/platform/arm-soc-dependency-map.md`
+- First-level inventory: `knowledge/platform/xnu-first-level-inventory.md`
 - Official source area: `https://github.com/apple-oss-distributions/xnu/tree/main/pexpert`
 
 ## Bridge-Relevant Questions
@@ -37,14 +38,14 @@
 
 ## Unknowns
 
-- No `pexpert` file-level inventory exists.
+- First-level `pexpert` inventory exists in `knowledge/platform/xnu-first-level-inventory.md`; deeper per-file inventory is still pending.
 - No source-backed Platform Expert behavior note exists.
 - The relationship between `pexpert`, `IOPlatformExpertDevice`, and IORegistry publication is unresolved.
 - Version mapping to macOS release artifacts is unresolved.
 
 ## Next Work
 
-- Inventory first-level `pexpert` paths.
+- Done: first-level `pexpert` paths are inventoried in `knowledge/platform/xnu-first-level-inventory.md`.
 - Identify ARM-relevant `pexpert` source paths without interpreting behavior.
 - Connect source paths to Platform Expert and DeviceTree notes.
 

@@ -97,6 +97,7 @@ This folder collects atomic notes about platform-facing macOS internals: boot ar
 - `xnu-osfmk-mach-lane.md`
 - `xnu-pexpert-lane.md`
 - `xnu-source-study-plan.md`
+- `xnu-first-level-inventory.md`
 
 ## Reading Order
 

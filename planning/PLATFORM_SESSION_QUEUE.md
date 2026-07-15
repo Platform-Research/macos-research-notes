@@ -435,6 +435,7 @@ Choose the first cycle whose evidence already exists locally. If the evidence do
 | `knowledge/platform/arm-controller-prerequisites.md` | Prioritizes controller families for ARM bridge-readiness research. |
 | `knowledge/platform/arm-secure-boot-source-needed.md` | Tracks secure boot as source-needed, not implementation guidance. |
 | `knowledge/platform/arm-target-experiment-boundary.md` | Defines the minimum frame for any future target-processor experiment. |
+| `knowledge/platform/xnu-first-level-inventory.md` | Records the first-level subdirectories of the four XNU lanes at the source tag mapped to macOS 15.6. |
 
 ## Output Rule
 

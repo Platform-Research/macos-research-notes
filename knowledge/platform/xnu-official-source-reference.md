@@ -65,7 +65,7 @@ Stop before:
 2. Add one source-backed note for `bsd` as the BSD lane.
 3. Add one source-backed note for `pexpert` as the platform hook lane.
 4. Add one source-backed note for `iokit` as the XNU-to-IOKit lane.
-5. Track version mapping separately before release-specific claims.
+5. Done: version mapping for macOS `15.6` (source tag `xnu-11417.140.69`) is recorded in `knowledge/platform/xnu-first-level-inventory.md`.
 
 ## Sources
 

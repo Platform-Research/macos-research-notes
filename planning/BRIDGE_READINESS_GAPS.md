@@ -7,7 +7,7 @@ Use this file to answer: "what else do we need before a future macOS/kernel-to-A
 | Gap | Why It Matters | Next Output |
 | --- | --- | --- |
 | Verified release source | Without release-backed metadata, comparisons stay unresolved. | Acquire or identify one legal `15.6` source artifact. |
-| XNU source map | Kernel core, Mach, BSD, VM, scheduler, and platform hooks are underdocumented. | First lane notes exist for `osfmk`, `bsd`, `pexpert`, and `iokit`; next output is first-level source inventory. |
+| XNU source map | Kernel core, Mach, BSD, VM, scheduler, and platform hooks are underdocumented. | First-level inventory exists (`knowledge/platform/xnu-first-level-inventory.md`, tag `xnu-11417.140.69`); next output is a per-lane file-level inventory for one ARM-relevant path. |
 | Platform Expert behavior | Platform identity likely starts near this surface. | Source-backed Platform Expert note. |
 | DeviceTree fixture | Bridge identity work needs safe topology examples. | Topology-only DeviceTree fixture plan or fixture. |
 | Kernel collection metadata | Release-owned platform metadata needs a reduced shape. | First reduced metadata record shape or fixture. |
@@ -27,7 +27,7 @@ Use this file to answer: "what else do we need before a future macOS/kernel-to-A
 
 ## Current Weaknesses
 
-- XNU core has a study plan, official source reference, and first lane notes, but no file-level inventories yet.
+- XNU core has a study plan, official source reference, first lane notes, and a first-level inventory; deeper per-file inventories do not exist yet.
 - Mach, BSD, VM, scheduler, and pmap notes do not exist.
 - Platform Expert is only represented by topology fixture evidence.
 - DeviceTree has no fixture.
@@ -37,7 +37,7 @@ Use this file to answer: "what else do we need before a future macOS/kernel-to-A
 
 ## Next Five Sessions
 
-1. Inventory first-level XNU subdirectories for `osfmk`, `bsd`, `pexpert`, and `iokit`.
+1. Done: first-level XNU subdirectories for `osfmk`, `bsd`, `pexpert`, and `iokit` are inventoried in `knowledge/platform/xnu-first-level-inventory.md`; next is a per-lane file-level inventory for one ARM-relevant path (for example `pexpert/arm`).
 2. Define DriverKit entitlement redaction rules.
 3. Choose the first dyld/framework metadata inventory target.
 4. Convert DeviceTree fixture plan into a schema-compatible fixture only if redaction is clear.
@@ -64,5 +64,6 @@ If a gap cannot be closed from committed evidence, record it as source-needed in
 - `knowledge/platform/xnu-bsd-lane.md`
 - `knowledge/platform/xnu-pexpert-lane.md`
 - `knowledge/platform/xnu-iokit-lane.md`
+- `knowledge/platform/xnu-first-level-inventory.md`
 - `knowledge/platform/driverkit-bridge-boundary.md`
 - `knowledge/platform/dyld-framework-source-needed.md`
